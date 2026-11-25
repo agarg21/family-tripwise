@@ -2944,13 +2944,19 @@
       ],
       "news": [
         {
+          "until": "2026-11-28",
+          "name": "Macy's parade",
+          "text": "moved to Sat Nov 28, 8:30 a.m., because of Thursday's storm, per a Macy's statement reported by NBC New York and AP (Nov 25). Thursday's NBC broadcast is a 2025 rerun.",
+          "href": "#macys-parade"
+        },
+        {
           "until": "2026-11-25",
           "name": "Balloon inflation",
           "text": "Wed Nov 25, 1 to 6 p.m., outside the Museum of Natural History; no backpacks, large bags, umbrellas or chairs, per NYC Event Management. 81 St station closed 11 a.m. to 8 p.m., per the MTA.",
           "href": "#macys-parade"
         },
         {
-          "until": "2026-11-26",
+          "until": "2026-11-24",
           "name": "Parade-day subway",
           "text": "parade day, Thu Nov 26, runs on a Sunday schedule; 81 St and 57 St stations close 4 to 11 a.m. and the Columbus Circle street elevator is shut (58 St elevator open), per the MTA. LIRR and Metro-North add parade trains.",
           "href": "#macys-parade"
@@ -3029,12 +3035,6 @@
         },
         {
           "until": "2026-11-26",
-          "name": "Macy's parade",
-          "text": "the 100th, Thu Nov 26, starts 8:30 a.m., with a new Bluey balloon.",
-          "href": "#macys-parade"
-        },
-        {
-          "until": "2026-11-26",
           "name": "Santa's Corner",
           "text": "free Santa photos at Bryant Park on five mid-December mornings, 10 a.m. to noon, no tickets, per the park; check the start date (Dec 14 or 15).",
           "href": "#bryant-park-santa"
@@ -3056,7 +3056,15 @@
             "macys-parade"
           ],
           "why": "Free parade from 8:30 a.m. Then Central Park Zoo, about $80 for 4, or the Coney Island aquarium, about $112 to $122 (estimates). Both say open 365 days. Closed: Grand Central trains.",
-          "until": "2026-11-26"
+          "until": "2026-11-24"
+        },
+        {
+          "label": "Parade day, now Sat Nov 28",
+          "ids": [
+            "macys-parade"
+          ],
+          "why": "Free, 8:30 a.m., moved from Thursday per a Macy's statement reported by NBC New York and AP. Saturday streets and subway changes are not posted yet; check macys.com and mta.info on Friday.",
+          "until": "2026-11-28"
         },
         {
           "label": "Thanksgiving weekend, Fri Nov 27 to Sun Nov 29",
@@ -3182,54 +3190,73 @@
           "id": "macys-parade",
           "name": "Macy's Thanksgiving Day Parade",
           "place": "Central Park West at W 77th St to Herald Square, Manhattan",
-          "dates": "Thursday, Nov 26, 2026; starts 8:30 a.m. ET (per Macy's, Nov 13)",
-          "start_on": "2026-11-26",
-          "end_on": "2026-11-26",
+          "dates": "Moved to Saturday, Nov 28, 2026, 8:30 a.m. ET, per a Macy's statement reported by NBC New York and AP on Nov 25 (storm). It was Thursday, Nov 26. We could not read macys.com: check it before you go",
+          "start_on": "2026-11-28",
+          "end_on": "2026-11-28",
           "free": true,
           "cost_note": "Free to watch, per NYC Tourism.",
           "free_note": "to watch",
           "kids": [
+            {
+              "text": "Why it moved: the city's emergency office forecast Thursday gusts of 50 to 60 mph with heavy rain, per AP. Macy's says it is still working out the details, per NBC New York",
+              "until": "2026-11-28"
+            },
+            {
+              "text": "Saturday streets, subway changes and viewing spots are not posted yet. The MTA and DOT notices we read were for Thursday; check mta.info and nyc.gov on Friday",
+              "until": "2026-11-28"
+            },
             {
               "text": "Balloon inflation, Wed, Nov 25, 1 to 6 p.m., outside the Museum of Natural History, per NYC Event Management. Not allowed: backpacks, large bags, umbrellas, chairs. 81 St subway station closed 11 a.m. to 8 p.m. (MTA)",
               "until": "2026-11-25"
             },
             {
               "text": "Wind: the Weather Service has a High Wind Watch from 10 a.m. Thursday to 1 a.m. Friday, and the forecast has gusts up to 55 mph. Big balloons may fly lower or stay down (city rule: steady winds over 23 mph or gusts over 34 mph, per FOX 5, Nov 19)",
-              "until": "2026-11-26"
+              "until": "2026-11-24"
             },
             {
               "text": "Rain forecast: rain mainly after 1 p.m., high near 52, per the National Weather Service Central Park forecast (updated Nov 24, read Nov 25). Bring rain jackets or ponchos, not umbrellas. Check weather.gov that morning",
-              "until": "2026-11-26"
+              "until": "2026-11-24"
             },
             {
               "text": "Leave the stroller home: last year the NYPD barred strollers, umbrellas, chairs and coolers from viewing areas (Mayor's Office, Nov 2025); check for the 2026 list",
-              "until": "2026-11-26"
+              "until": "2026-11-28"
             },
             {
               "text": "By subway: Sunday schedule with extra early trains. 81 St–Museum of Natural History and 57 St are closed 4 to 11 a.m.; the MTA suggests 47–50 Sts or 63 St–Lexington Av",
-              "until": "2026-11-26"
+              "until": "2026-11-24"
             },
             {
               "text": "Other exits: at 72 St only the 70 St entrance is open until 11 a.m., exits only. At 59 St–Columbus Circle the north-side exits and street elevator are shut; the 58 St elevator stays open. Per the MTA, posted Nov 23",
-              "until": "2026-11-26"
+              "until": "2026-11-24"
             },
             "About 2.5 miles, from the Upper West Side to Macy's Herald Square, per Macy's",
             "The 100th parade, with a record 100 inflatables, per NYC Tourism",
             "New balloons: Bluey in a Christmas crown, about 47 feet tall (BBC Studios), and Hello Kitty holding a red apple (Sanrio)",
-            "Watching at home? NBC and Telemundo, 8:30 a.m. to noon local time, streaming on Peacock; NBC replay at 2 p.m. ET/PT; audio description on the SAP channel",
+            {
+              "text": "Thanksgiving morning on TV: NBC shows a rerun of the 2025 parade instead, per AP (Nov 25). Saturday's TV times are not posted yet; check NBC",
+              "until": "2026-11-28"
+            },
             {
               "text": "Open later that day: Central Park Zoo, 10 a.m. to 4:30 p.m., last entry 3:30 p.m.; about $80 for 4, estimate ($22.95 adult, $16.95 ages 3 to 12; tax not shown); buy dated tickets online; read Nov 15",
-              "until": "2026-11-26"
+              "until": "2026-11-24"
             },
             {
               "text": "Open later that day: New York Aquarium, Coney Island, same hours; about $112 to $122 for 4, estimate (off-peak or peak, not shown for that day; tax not shown); read Nov 15",
-              "until": "2026-11-26"
+              "until": "2026-11-24"
             }
           ],
           "extra": "Travel and food.",
-          "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. NYC DOT (read Nov 22) says parade streets in Manhattan close Thursday, Nov 26, with police deciding which ones and when; it lists no streets or times. Check macys.com/parade and NYPD notices for viewing spots, arrival times and the 2026 banned-items list.",
+          "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. The street closures and MTA station closures we read (Nov 22 to 24) were for Thursday, Nov 26; Saturday's are not posted yet. Check macys.com/parade, mta.info and NYPD notices before you go.",
           "observed_on": "2026-11-03",
           "sources": [
+            {
+              "label": "NBC New York: parade postponed to Saturday, Macy's statement (third party, Nov 25, 2026; read Nov 25)",
+              "url": "https://www.nbcnewyork.com/new-york-city/macys-thanksgiving-day-parade-postponed-until-saturday-due-to-weather/6576395/"
+            },
+            {
+              "label": "AP via PBS NewsHour: parade postponed, 2025 rerun Thursday (third party, Nov 25, 2026; read Nov 25)",
+              "url": "https://www.pbs.org/newshour/nation/macys-thanksgiving-day-parade-postponed-to-saturday-due-to-expected-bad-weather"
+            },
             {
               "label": "NYC Tourism parade page",
               "url": "https://www.nyctourism.com/events/macys-thanksgiving-day-parade/"
@@ -3286,15 +3313,7 @@
               "label": "New York Aquarium hours and FAQs (Nov 15)",
               "url": "https://nyaquarium.com/plan-your-visit/hours-and-rates"
             }
-          ],
-          "event_markup": {
-            "locality": "New York",
-            "region": "NY",
-            "organizer": {
-              "name": "Macy's",
-              "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx"
-            }
-          }
+          ]
         },
         {
           "id": "dyker-heights-lights",
