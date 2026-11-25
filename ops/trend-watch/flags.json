@@ -183,39 +183,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-7a5f8b1ea4",
-      "city": "Orlando",
-      "title": "New scares coming: Universal Orlando revamps Horror Make-Up Show with Blumhouse",
-      "links": [
-        {
-          "outlet": "WFTV 9 (local news)",
-          "url": "https://www.wftv.com/news/local/new-scares-coming-universal-orlando-revamps-horror-make-up-show-with-blumhouse/ZAU3NCTB45BWLLYSKTXMWJIMVA/",
-          "published": "2026-11-25T15:41Z"
-        }
-      ],
-      "first_seen": "2026-11-25T16:06Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:universal"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 11"
-        ]
-      },
-      "matched_terms": [
-        "universal",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-989afd20ea",
       "city": "San Antonio",
       "title": "'Sea' the holiday magic: SeaWorld's Christmas Celebration brings festive fun to San Antonio",
@@ -247,73 +214,6 @@
         "seaworld",
         "christmas",
         "thanksgiving"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-8059ba9042",
-      "city": "New York City",
-      "title": "A new NYC Thanksgiving tradition: Stocking up at the legal weed dispensary",
-      "links": [
-        {
-          "outlet": "Gothamist",
-          "url": "https://gothamist.com/arts-entertainment/a-new-nyc-thanksgiving-tradition-stocking-up-at-the-legal-weed-dispensary",
-          "published": "2026-11-25T19:00Z"
-        }
-      ],
-      "first_seen": "2026-11-25T19:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:wednesday"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "new"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-1bd61b4a16",
-      "city": "San Diego",
-      "title": "Review: A shining ensemble cast mines angst for laughs in Diversionary's 'Arrowhead'",
-      "links": [
-        {
-          "outlet": "Times of San Diego (Arts)",
-          "url": "https://timesofsandiego.com/arts/2026/11/25/review-a-shining-ensemble-cast-mines-angst-for-laughs-in-diversionarys-arrowhead/",
-          "published": "2026-11-25T17:27Z"
-        }
-      ],
-      "first_seen": "2026-11-25T19:05Z",
-      "signals": {
-        "fit": [
-          "city:San Diego (local outlet)",
-          "topic:thanksgiving"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:dec. 6",
-          "place:palm springs"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "new"
       ],
       "score": 7,
       "priority": "normal"
