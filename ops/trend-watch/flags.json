@@ -357,6 +357,174 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-039134975e",
+      "city": "New York City",
+      "title": "New balloons will fly for the now-postponed 100th Macy's Thanksgiving Day Parade",
+      "links": [
+        {
+          "outlet": "KPBS (Arts & Culture)",
+          "url": "https://www.kpbs.org/news/arts-culture/2026/11/25/new-balloons-will-fly-for-the-now-postponed-100th-macys-thanksgiving-day-parade",
+          "published": "2026-11-25T10:00Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/macys-thanksgiving-day-parade-postponed-saturday-storm/",
+          "published": "2026-11-25T21:07Z"
+        },
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/25/macys-announces-thanksgiving-day-parade-postponed-to-saturday-due-to-expected-bad-weather/",
+          "published": "2026-11-25T21:14Z"
+        },
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/macys-thanksgiving-day-parade-postponed-saturday-due-severe-weather-threat/3CP5SH7EYFDQ3AXXU2GNWE7RUM/",
+          "published": "2026-11-25T21:15Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-thanksgiving-day-parade-postponed-until-saturday/",
+          "published": "2026-11-25T21:20Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/100th-macys-thanksgiving-day-parade-2026-guide-postponed-balloons/",
+          "published": "2026-11-25T21:56Z"
+        }
+      ],
+      "first_seen": "2026-11-25T22:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:5"
+        ],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first",
+        "new",
+        "announced",
+        "announces"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0906a7ed4d",
+      "city": "Chicago",
+      "title": "Black Friday store hours in Chicago: Kohl's, Walmart, Target, Costco, and more",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/black-friday-store-hours-in-chicago-2026/",
+          "published": "2026-11-25T21:33Z"
+        }
+      ],
+      "first_seen": "2026-11-25T22:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-246cc4c13d",
+      "city": "Orlando",
+      "title": "Macy's moves its Thanksgiving Day Parade to Saturday over weather worries",
+      "links": [
+        {
+          "outlet": "News 6 ClickOrlando (local news)",
+          "url": "https://www.clickorlando.com/news/local/2026/11/25/macys-moves-its-thanksgiving-day-parade-to-saturday-over-weather-worries/",
+          "published": "2026-11-25T21:23Z"
+        }
+      ],
+      "first_seen": "2026-11-25T22:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-208bc020ab",
+      "city": "San Antonio",
+      "title": "Bexar County residents can visit San Antonio Zoo for $8 on Thanksgiving, Black Friday",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/25/bexar-county-residents-can-visit-san-antonio-zoo-for-8-on-thanksgiving-black-friday/",
+          "published": "2026-11-25T21:24Z"
+        }
+      ],
+      "first_seen": "2026-11-25T22:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo,thanksgiving,black friday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday",
+          "place:san antonio zoo",
+          "price:$8"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "thanksgiving",
+        "black friday"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
