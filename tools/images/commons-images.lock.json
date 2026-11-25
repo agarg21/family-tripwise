@@ -271,6 +271,23 @@
     "credit": "Own work",
     "observed_on": "2026-11-15"
   },
+  "chestnut-mountain-mississippi-2016": {
+    "file": "Chestnut_Mountain_.jpg",
+    "path": "images/chestnut-mountain-mississippi-2016.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 161546,
+    "webp_quality": 74,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chestnut_Mountain_.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Chestnut_Mountain_.jpg/1920px-Chestnut_Mountain_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 2352,
+    "original_height": 1653,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Scooter2424",
+    "credit": "Own work",
+    "observed_on": "2026-11-25"
+  },
   "chicago-field-museum-sue-2017": {
     "file": "Sue_the_T._Rex_at_the_Field_Museum.jpg",
     "path": "images/chicago-field-museum-sue-2017.webp",
@@ -1954,6 +1971,23 @@
     "artist": "Philip Cohen",
     "credit": "Flickr: Rotunda (flickr.com/photos/55386431@N05/12164431265), uploaded by Flickr upload bot, licence reviewed 2014-01-27",
     "observed_on": "2026-11-08"
+  },
+  "wilmot-mid-hill": {
+    "file": "Wilmot-mid-hill.jpg",
+    "path": "images/wilmot-mid-hill.webp",
+    "width": 1600,
+    "height": 1200,
+    "bytes": 101632,
+    "webp_quality": 80,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Wilmot-mid-hill.jpg",
+    "downloaded_from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Wilmot-mid-hill.jpg/1920px-Wilmot-mid-hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original_width": 2000,
+    "original_height": 1500,
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "Rickdrew at English Wikipedia",
+    "credit": "Own work",
+    "observed_on": "2026-11-25"
   },
   "winter-park-village-base": {
     "file": "Winter_Park_Ski_Resort,_Colorado_-_panoramio.jpg",
