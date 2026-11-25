@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=6
-run: {id: 2026-11-25T12:05Z, started_at: 2026-11-25T12:05Z}
-last_public_release: Boston Pops card re-read, Muppet concert line
+today: 2026-11-25 transactions=7
+run: none
+last_public_release: NYC parade card High Wind Watch + rain timing (90cc20bc)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 11:05Z G16/R1: Boston Pops re-read (still unpriced); Muppet Christmas Carol Dec 27-28 line added.
+- 11-25 12:05Z G16 trend: NYC parade card wind watch (NWS Central Park, updated Nov 24) + rain after 1 p.m.; weather lines first; live 90cc20bc. Lines drop after Nov 26.
