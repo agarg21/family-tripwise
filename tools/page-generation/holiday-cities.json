@@ -1432,6 +1432,14 @@
           "until": "2027-01-11"
         }
       ],
+      "news": [
+        {
+          "until": "2026-12-06",
+          "name": "Alamo Church",
+          "text": "scaffolding now covers its famous front; no end date posted. The church stays open daily, 9 a.m. to 5:30 p.m., tickets reserved online (Alamo notice, Nov 23).",
+          "href": "https://www.thealamo.org/alamo-trust/pressroom/the-alamo-church-remains-open-during-preservation-work"
+        }
+      ],
       "picks": [
         {
           "label": "Kids under 6",
@@ -1609,7 +1617,7 @@
           ],
           "extra": "Parking; we saw no price.",
           "extra_stale": "Parking; we saw no price.",
-          "watch": "Dec 5 includes a musket firing, which is loud. The church and grounds are closed during the Nov 28 lighting. The film isn't named.",
+          "watch": "Dec 5 includes a musket firing, which is loud. The church and grounds are closed during the Nov 28 lighting. The film isn't named. Scaffolding now covers the church's front (west) facade, so front photos will show it; no end date is posted (Alamo notice Nov 23, read Nov 24).",
           "observed_on": "2026-11-04",
           "sources": [
             {
@@ -1627,6 +1635,10 @@
             {
               "label": "Movie night",
               "url": "https://www.thealamo.org/visit/movies-in-the-park"
+            },
+            {
+              "label": "Scaffolding notice (Nov 23)",
+              "url": "https://www.thealamo.org/alamo-trust/pressroom/the-alamo-church-remains-open-during-preservation-work"
             }
           ]
         },

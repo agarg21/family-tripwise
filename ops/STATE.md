@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-24 transactions=14
-run: {id: 2026-11-25T03:04:22Z, started_at: 2026-11-25T03:04:22Z}
-last_public_release: 8d90b521 BF page: Island H2O pass sale card (read Nov 24)
+today: 2026-11-24 transactions=15
+run: none
+last_public_release: SA Christmas page: Alamo Church scaffolding line (G16 trend)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -25,9 +25,8 @@ active: none
 - SD itin.: zoo hours to Nov 25; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests); NYC/Chi/SD/SA Nov 21; others Nov 22.
-- Six Flags Silver: GE/GA/FT end Nov 27.
 - DC ZooLights read Nov 10: re-read before queueing after Nov 24. Busch Fun Cards: Tampa ($94.99) + Williamsburg ($113.99) read 11-20, listed to Nov 27; re-read from Nov 27. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times still unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
-- SA Briscoe (read 11-22): drops after Dec 6.
+- SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); re-read from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card lines drop themselves; ends Dec 24.
 - Jay Peak: $ hide Dec 17. Stowe: $ hide Dec 17; opening TBD (hours fetch not granted 11-23; from Nov 24). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
 - Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
@@ -47,7 +46,7 @@ active: none
 - Boston Frog Pond: /ice-skating/ client_error 11-22; no dates/$; re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
-- Saks show: no official times/end (11-24); PRN release from Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
+- Saks: no official times (11-24); Nov 28. Disney dining (to Nov 30): en_CA client_error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair Kids Countdown Dec 31 on SA card, 11-24).
 - /this-week/ Mingei (drops Dec 7).
 - BF unpriced cards (11-24): Hersheypark lists to Nov 30, re-read from Dec 1; Fun Spot sale ends Nov 30 (drops itself).
@@ -65,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 02:04Z G16 trend: Orlando Chocolate Nutcracker unverifiable (DPC client_error); lead held; no page change.
+- 11-25 03:04Z G16 trend: Alamo Church scaffolding (official notice Nov 23) on SA Christmas page.
