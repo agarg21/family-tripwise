@@ -1,4 +1,45 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "club-med-deals",
+      "operator": "Club Med",
+      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "check_id": "club-med-all-inclusive-kids-under-4",
+      "kind": "changed",
+      "detected_at": "2026-11-25T05:28:57.370Z",
+      "previous_headline": "All-Inclusive Vacations",
+      "headline": "All-Inclusive Vacations",
+      "added": [
+        "Ends in: 5 days, 18 hours, 35 minutes and 18 seconds",
+        "Black Friday's Biggest Savings End Soon"
+      ],
+      "removed": [
+        "Ends in: 6 days, 8 hours, 1 minutes and 33 seconds",
+        "Black Friday's Biggest Savings Start Now​"
+      ],
+      "added_count": 2,
+      "removed_count": 2
+    },
+    {
+      "source_id": "atlantis-cyber-sale",
+      "operator": "Atlantis Paradise Island",
+      "url": "https://www.atlantisbahamas.com/offers/cyber-sale",
+      "check_id": "atlantis-bahamas-cyber-sale-2026",
+      "kind": "changed",
+      "detected_at": "2026-11-25T05:29:09.339Z",
+      "previous_headline": "Exclusive Cyber Sale | Atlantis Bahamas",
+      "headline": "Exclusive Cyber Sale | Atlantis Bahamas",
+      "added": [
+        "The Cove, Up to $600 Resort Credit + Up to 20% Off 5+ Nights",
+        "Save up to 20% on 5+ Nights"
+      ],
+      "removed": [
+        "The Cove, Up to $600 Resort Credit + Up to 20% Off 4+ Nights",
+        "Save up to 20% on 4+ Nights"
+      ],
+      "added_count": 2,
+      "removed_count": 2
+    }
+  ]
 }

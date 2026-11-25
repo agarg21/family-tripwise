@@ -92,12 +92,12 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "4186c4514205033a9d1e9bbab6de64c0",
-      "set_hash": "125a720acc42b5ffc68f9e05568f282a",
+      "signal_hash": "ad67f534574b8c401a2b1c662b205b18",
+      "set_hash": "4c87bcf556b9ff703e69830a30b0be0c",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 6 days, 8 hours, 1 minutes and 33 seconds",
-        "Black Friday's Biggest Savings Start Now​",
+        "Ends in: 5 days, 18 hours, 35 minutes and 18 seconds",
+        "Black Friday's Biggest Savings End Soon",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
         "Black Friday",
@@ -116,9 +116,9 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c adda2a2c 005eb32f 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c 2b76b70e 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-24T23:05:02.788Z"
+      "changed_at": "2026-11-25T05:28:57.370Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
@@ -416,8 +416,8 @@
       "source_sig": "b0625acd65a49ac9",
       "status": "ok",
       "headline": "Exclusive Cyber Sale | Atlantis Bahamas",
-      "signal_hash": "6353610e8064d799830915236f8c228d",
-      "set_hash": "d4e1d3ac8f82e4b7fa6e3c87047140cd",
+      "signal_hash": "988d229c47c1560cbf106b79b5924925",
+      "set_hash": "de455a714e4d84c2e57c306da121a53d",
       "signal": [
         "Book Now",
         "Discover Paradise & Save",
@@ -429,12 +429,12 @@
         "7-9 Nights, $350 Resort Credit",
         "6 Nights, $300 Resort Credit",
         "5 Nights, $250 Resort Credit",
-        "The Cove, Up to $600 Resort Credit + Up to 20% Off 4+ Nights",
+        "The Cove, Up to $600 Resort Credit + Up to 20% Off 5+ Nights",
         "Kids 5 & Under Eat Free",
         "Book now through December 8 for stays from December 1–27, 2026, and from January 3 through November 15, 2027.",
         "Save Up to 20% at The Cove + Up to $600 in Resort Credit",
         "The Cove Cyber Sale",
-        "Save up to 20% on 4+ Nights",
+        "Save up to 20% on 5+ Nights",
         "10+ Nights, $600 Resort Credit",
         "7-9 Nights, $450 Resort Credit",
         "6 Nights, $350 Resort Credit",
@@ -442,9 +442,9 @@
         "Book now through December 8 for stays from December 1–27, 2026, and from January 3 through November 15, 2027",
         "Up to 30% Savings"
       ],
-      "line_hashes": "1016c81a dd151943 caa5289b 45d10863 be34208a 8e0578d6 b33a5667 3d6cfcc4 b8570650 4e45787d ee78bed9 81f1b1c0 65d64251 42fc9b57 d3af1d4d 68a55e36 731dd679 126f7e2b dca00e73 73c8b9e4 72ade26b 420d105e e1e2e9f9 a9cb5781 3f97021a 8a85f0cf 12481936 d5c33f4f 04beb6ec 6537a457 f01f3348 29d4ca13 800e7297 20bd1713 3a1ee9a2 991ab1bb 0fee2fd0 d1c7f69c 2f2e7664 8016989c 03237ddc 31baef5c",
+      "line_hashes": "1016c81a dd151943 caa5289b 45d10863 be34208a 8e0578d6 b33a5667 3d6cfcc4 b8570650 4e45787d 101d4652 81f1b1c0 65d64251 42fc9b57 d3af1d4d ca7fb1fe 731dd679 126f7e2b dca00e73 73c8b9e4 72ade26b 420d105e e1e2e9f9 a9cb5781 3f97021a 8a85f0cf 12481936 d5c33f4f 04beb6ec 6537a457 f01f3348 29d4ca13 800e7297 20bd1713 3a1ee9a2 991ab1bb 0fee2fd0 d1c7f69c 2f2e7664 8016989c 03237ddc 31baef5c",
       "first_seen_at": "2026-11-24T12:38:52.599Z",
-      "changed_at": "2026-11-24T23:05:14.734Z"
+      "changed_at": "2026-11-25T05:29:09.339Z"
     },
     "walt-disney-world-special-offers": {
       "url": "https://disneyworld.disney.go.com/special-offers/",
