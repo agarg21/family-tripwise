@@ -1,30 +1,30 @@
 {
-  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Las Vegas ski hero (D54).",
+  "note": "Commons searches for reel and page photos. Run by .github/workflows/commons-search.yml; results are an artifact, not committed. 11-25: Schweitzer winter hero (G19).",
   "limit": 24,
   "queries": [
     {
-      "id": "lee-canyon",
-      "q": "Lee Canyon ski"
+      "id": "schweitzer",
+      "q": "Schweitzer Mountain"
     },
     {
-      "id": "las-vegas-ski",
-      "q": "Las Vegas Ski and Snowboard Resort"
+      "id": "schweitzer-ski",
+      "q": "Schweitzer ski Sandpoint"
     },
     {
-      "id": "mount-charleston-snow",
-      "q": "Mount Charleston snow winter"
+      "id": "schweitzer-winter",
+      "q": "Schweitzer Mountain Resort winter"
     },
     {
-      "id": "brian-head",
-      "q": "Brian Head ski"
+      "id": "sandpoint-ski",
+      "q": "Sandpoint Idaho ski"
     },
     {
-      "id": "brian-head-resort",
-      "q": "Brian Head Resort Utah"
+      "id": "selkirk-ski",
+      "q": "Selkirk Mountains Idaho snow ski"
     },
     {
-      "id": "spring-mountains-snow",
-      "q": "Spring Mountains Nevada snow"
+      "id": "lake-pend-oreille-winter",
+      "q": "Lake Pend Oreille winter snow"
     }
   ]
 }
