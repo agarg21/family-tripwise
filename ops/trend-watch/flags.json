@@ -425,6 +425,78 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-d1cdea3281",
+      "city": "New York City",
+      "title": "For first time ever, Macy's Thanksgiving Day Parade is postponed due to weather",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/for-first-time-ever-macys-thanksgiving-day-parade-is-postponed-due-to-weather/",
+          "published": "2026-11-25T22:40Z"
+        }
+      ],
+      "first_seen": "2026-11-25T23:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-24fad90e8e",
+      "city": "San Antonio",
+      "title": "Donor pays $150K to name new jaguar at San Antonio Zoo",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/25/donor-pays-150k-to-name-new-jaguar-at-san-antonio-zoo/",
+          "published": "2026-11-25T22:02Z"
+        }
+      ],
+      "first_seen": "2026-11-25T23:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:zoo"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:nov. 13",
+          "place:san antonio zoo",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "zoo",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
