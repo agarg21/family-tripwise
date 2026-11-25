@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=0
-run: {id: 2026-11-25T05:04:01Z, started_at: 2026-11-25T05:04:01Z}
-last_public_release: BF page Schlitterbahn NB unpriced card (G16)
+today: 2026-11-25 transactions=1
+run: none
+last_public_release: JetBlue bag card re-read 11-25, to Dec 16 (ea6893eb)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -18,7 +18,7 @@ active: none
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Nov 15 price); from Nov 28. Orlando: Nutcracker unpriced (Nov 25); Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read from Nov 27; NPS tree no viewing dates (Nov 25); Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo hides Dec 14); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20; self-reword confirmed 11-24); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield + Lightscape tickets Nov 25; prices hide Dec 5 (Metra Dec 14), Nov 26; parade time conflict shown; re-read Nov 25.
 - Holiday parks: re-read other $ before Nov 29 (GE $49 live 11-19; GE page re-read Nov 26). Dyker: from Nov 27.
-- JetBlue bag card: expires Dec 2; re-read legal/fees Nov 25 to extend through Jan 18 peak.
+- JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18 (P3s: drop past Nov range, split next-peak line).
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
 - Cancun, PV: regenerate Dec 18, 25, Jan 15 (PV example-stay by Jan 8); SD/NYC/Orlando/London listings Jan 8.
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking line: re-read or soften); next Dec 4.
@@ -62,4 +62,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-25 04:05Z G16 BF: Schlitterbahn NB $69 Silver Pass = day ticket card on BF page (page only, D22).
+- 11-25 05:04Z G16: JetBlue fees page re-read (unchanged); /this-week/ card to Dec 16 + next peak Feb 11-22; daily refresh; queue regenerated (Mingei in JetBlue slot). Live ea6893eb.
