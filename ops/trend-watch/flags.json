@@ -433,6 +433,111 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-9354f6b87e",
+      "city": "Orlando",
+      "title": "Universal Orlando hotel teams plan to pack more than 500,000 meals Thanksgiving weekend",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/universal-orlando-hotel-teams-plan-pack-more-than-500000-meals-thanksgiving-weekend/KWSA6JGVLNA7DC5KEVMM3SQC2I/",
+          "published": "2026-11-25T16:57Z"
+        }
+      ],
+      "first_seen": "2026-11-25T17:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:families",
+          "topic:universal,thanksgiving"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "universal",
+        "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-989afd20ea",
+      "city": "San Antonio",
+      "title": "'Sea' the holiday magic: SeaWorld's Christmas Celebration brings festive fun to San Antonio",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/sea-holiday-magic-seaworld-christmas-celebration-festive-fun-san-antonio-festivities-parade-camels-performances-mariachis-family/273-4f6a96b4-2d58-434b-9f72-8b1e918f5d7c",
+          "published": "2026-11-25T16:21Z"
+        }
+      ],
+      "first_seen": "2026-11-25T17:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:families",
+          "topic:holiday,seaworld,christmas"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:seaworld's christmas celebration"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "holiday",
+        "seaworld",
+        "christmas",
+        "thanksgiving"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0531f68421",
+      "city": "San Antonio",
+      "title": "VIA offering fare-free rides to Raul Jimenez Thanksgiving Dinner, H-E-B tree lighting",
+      "links": [
+        {
+          "outlet": "San Antonio Current",
+          "url": "https://www.sacurrent.com/news/san-antonio-news/via-offering-fare-free-rides-to-raul-jimenez-thanksgiving-dinner-h-e-b-tree-lighting/",
+          "published": "2026-11-25T16:50Z"
+        }
+      ],
+      "first_seen": "2026-11-25T17:05Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:thanksgiving,tree lighting,holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "tree lighting",
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [

@@ -41,12 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "l5f7eae71a543": "2026-11-25T17:00Z",
-    "tffb9e3af94ce": "2026-11-25T17:00Z",
-    "l98d2a2794346": "2026-11-25T17:00Z",
-    "tbcfe9efb0c77": "2026-11-25T17:00Z",
-    "l7d6e76b018f0": "2026-11-25T17:00Z",
-    "t25c662f664d1": "2026-11-25T17:00Z",
     "lcf5e4fd292f9": "2026-11-25T18:00Z",
     "t13e22a9330e8": "2026-11-25T18:00Z",
     "l717680df2fae": "2026-11-25T18:00Z",
@@ -778,11 +772,33 @@
     "l893321bd6a1d": "2026-11-30T16:00Z",
     "t9a68bda53f26": "2026-11-30T16:00Z",
     "lf85461f4b5c0": "2026-11-30T16:00Z",
-    "t07f2ee11b410": "2026-11-30T16:00Z"
+    "t07f2ee11b410": "2026-11-30T16:00Z",
+    "l67d44cae3e3b": "2026-11-30T17:00Z",
+    "tc35f2dc9ab90": "2026-11-30T17:00Z",
+    "lbb191df2856f": "2026-11-30T17:00Z",
+    "tce1d02f83369": "2026-11-30T17:00Z",
+    "l99b664ba3a35": "2026-11-30T17:00Z",
+    "t0d36cebda47e": "2026-11-30T17:00Z",
+    "l021250ca13d7": "2026-11-30T17:00Z",
+    "t7f73101358f5": "2026-11-30T17:00Z",
+    "leb3f108e0893": "2026-11-30T17:00Z",
+    "t1c03bbdbcf4a": "2026-11-30T17:00Z",
+    "l497eec8d1593": "2026-11-30T17:00Z",
+    "t4cc0d6dc30d6": "2026-11-30T17:00Z",
+    "l860e22b296b0": "2026-11-30T17:00Z",
+    "t70519dd911ac": "2026-11-30T17:00Z",
+    "lbc66ed5c0daf": "2026-11-30T17:00Z",
+    "t255e73959bd9": "2026-11-30T17:00Z",
+    "ld03324a1da1a": "2026-11-30T17:00Z",
+    "tc3b97b3978d7": "2026-11-30T17:00Z",
+    "lf89cef1378ae": "2026-11-30T17:00Z",
+    "t268636b631cb": "2026-11-30T17:00Z",
+    "l17978774601e": "2026-11-30T17:00Z",
+    "te06b643dc0d0": "2026-11-30T17:00Z",
+    "lb13ccaa588dd": "2026-11-30T17:00Z",
+    "t744e7c481a6b": "2026-11-30T17:00Z"
   },
   "recent": [
-    {"k":"9efde86ab720","c":"Chicago","o":"secretchicago.com","n":"Secret Chicago","u":"https://secretchicago.com/chicago-thanksgiving-travel-cda-projections-2026/","h":"More than 2 million travelers expected at Chicago airports over Thanksgiving week—what to know before you go","p":"2026-11-25T16:00Z","fs":"2026-11-25T16:06Z","t":"2026-11-25T16:00Z","s":4,"g":{"fit":["city:Chicago","topic:thanksgiving"],"novelty":["published<24h"],"actionable":[]}},
-    {"k":"76e52732a882","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/new-scares-coming-universal-orlando-revamps-horror-make-up-show-with-blumhouse/ZAU3NCTB45BWLLYSKTXMWJIMVA/","h":"New scares coming: Universal Orlando revamps Horror Make-Up Show with Blumhouse","p":"2026-11-25T15:41Z","fs":"2026-11-25T16:06Z","t":"2026-11-25T15:41Z","s":7,"g":{"fit":["city:Orlando","topic:universal"],"novelty":["new","published<24h"],"actionable":["date:dec. 11"]},"f":"t-7a5f8b1ea4","pr":"normal"},
-    {"k":"d885df0ad876","c":"New York City","o":"newyorkfamily.com","n":"amNewYork (Lifestyle)","u":"https://www.newyorkfamily.com/free-family-activities-nyc/","h":"10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1","p":"2026-11-25T15:34Z","fs":"2026-11-25T16:06Z","t":"2026-11-25T15:34Z","s":8,"g":{"fit":["city:New York City","family:kids"],"novelty":["new","published<24h"],"actionable":["date:nov. 25","price:free"]},"f":"t-d213186af7","pr":"normal"}
+    {"k":"497eec8d1593","c":"Orlando","o":"wftv.com","n":"WFTV 9 (local news)","u":"https://www.wftv.com/news/local/universal-orlando-hotel-teams-plan-pack-more-than-500000-meals-thanksgiving-weekend/KWSA6JGVLNA7DC5KEVMM3SQC2I/","h":"Universal Orlando hotel teams plan to pack more than 500,000 meals Thanksgiving weekend","p":"2026-11-25T16:57Z","fs":"2026-11-25T17:05Z","t":"2026-11-25T16:57Z","s":7,"g":{"fit":["city:Orlando","family:families","topic:universal,thanksgiving"],"novelty":["published<24h"],"actionable":["date:saturday"]},"f":"t-9354f6b87e","pr":"normal"}
   ]
 }
