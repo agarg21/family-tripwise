@@ -38,7 +38,7 @@ active: none
 - Crested Butte: hours 11-24; basecamp due. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
-- Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; from Nov 30.
+- Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
 - Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28.
 - Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
