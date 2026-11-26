@@ -72,7 +72,12 @@ export async function readAll({ resorts, fetchImpl = fetch, now = () => Date.now
     const at = new Date(now());
     const stamp = etStamp(at);
     if (res.kind !== "ok") { out[slug] = { url: r.status_page, read_at: at.toISOString(), read_et: stamp, error: res.reason || res.kind }; log(`${slug}: ${res.kind} ${res.reason || ""}`); continue; }
-    const counts = parseCounts(textOf(res.html));
+    const text = textOf(res.html);
+    const counts = parseCounts(text);
+    if (process.env.STATUS_CONTEXT) {
+      const L = text.split("\n");
+      L.forEach((l, i) => { if (/\b(lifts?|trails?|runs?)\b/i.test(l) && /open/i.test(l) && l.length < 80) log(`   ${slug} ctx: ${L.slice(Math.max(0, i - 2), i + 3).join(" | ")}`); });
+    }
     out[slug] = { url: r.status_page, read_at: at.toISOString(), read_et: stamp, ...counts };
     log(`${slug}: ${counts.lifts ? `lifts ${counts.lifts.join("/")}` : "no lift count"}${counts.trails ? `, trails ${counts.trails.join("/")}` : ""} ${JSON.stringify(counts.evidence || {})}`);
   }

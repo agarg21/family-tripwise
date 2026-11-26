@@ -43,6 +43,8 @@ jobs:
         run: node --test tools/resort-status.test.mjs
 
       - name: Read status pages
+        env:
+          STATUS_CONTEXT: ${{ inputs.dry_run && '1' || '' }}
         run: node tools/resort-status.mjs
 
       - name: Commit and deploy (fast-forward or merge, never force)
