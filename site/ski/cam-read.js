@@ -40,7 +40,8 @@
   const at = Date.parse(feedResort.read_at ?? "");
   if (!Number.isFinite(at)) return { state: "none", reason: "No recent read." };
   const mins = (now.getTime() - at) / 60000;
-  if (mins > HIDE_MIN || mins < -5) return { state: "none", reason: "No recent read: the last one is more than 6 hours old." };
+  if (mins < -5) return { state: "none", reason: "No recent read." };
+  if (mins > HIDE_MIN) return { state: "none", had: true, reason: "The last one is more than 6 hours old." };
   const status = Object.hasOwn(STATUSES, String(feedResort.status)) ? feedResort.status : "No read";
   const fields = [];
   const grades = gradeValues(feedResort.fields);
@@ -128,7 +129,7 @@
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">What our webcam check shows</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
+        <p class="cam-read-status">${read.js ? "" : r.history_below || read.had ? "No recent cam read from us. " : "No cam read from us yet. "}${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -136,7 +137,7 @@
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">What our webcam check shows</p>
-        <p class="holiday-note">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
+        <p class="cam-read-status">No cam read right now: our program could not read the pictures (checked ${e(localTime(read.read_at, r))} ${zoneLabel(r)}).${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -163,7 +164,7 @@
 }
   function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. ${read.js ? "Each cam's last read time shows here with JavaScript on." : r.history_below || read.had ? "Each cam's last read time shows here at our next recent read." : "Once our reads start, each cam's last read time shows here."}</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   // No cam readable at the last check (night, frozen feeds): one line instead of a table of "No read" rows (persona P2, 11-18).

@@ -31,7 +31,7 @@ test("one row per local day, last 5 days, dated, no 'today' wording, resort name
 
 test("a resort page shows the history table and points the empty card to it", () => {
   const feed = { resorts: { "mount-snow": { publish: true, cams_used: 0, cams_total: 5, status: "No read", read_at: "2026-11-24T22:30:00Z", cams: [] } },
-    history: { "mount-snow": [{ read_at: "2026-11-24T21:18:00Z", status: "Thin cover", line: "Mount Snow: thin cover." }] } };
+    history: { "mount-snow": [{ read_at: "2026-11-24T21:18:00Z", status: "Thin cover", line: "Mount Snow: thin cover.", fields: { snow_cover: { value: "thin", conf: 0.9 } } }] } };
   const html = resortPage("mount-snow", resortData(), "2026-11-24", feed, new Date("2026-11-24T22:40:00Z"));
   assert.match(html, /id="cam-history"/);
   assert.match(html, /history_below/);
@@ -60,7 +60,7 @@ test("days follow the resort's own time zone (Mountain time)", () => {
 test("the empty card points to the table only when the table is there", () => {
   const base = { resorts: { "mount-snow": { publish: true, cams_used: 0, cams_total: 5, status: "No read", read_at: "2026-11-24T22:30:00Z", cams: [] } } };
   const now = new Date("2026-11-24T22:40:00Z");
-  const withHist = resortPage("mount-snow", resortData(), "2026-11-24", { ...base, history: { "mount-snow": [{ read_at: "2026-11-24T21:18:00Z", status: "Thin cover", line: "x" }] } }, now);
+  const withHist = resortPage("mount-snow", resortData(), "2026-11-24", { ...base, history: { "mount-snow": [{ read_at: "2026-11-24T21:18:00Z", status: "Thin cover", line: "x", fields: { snow_cover: { value: "thin", conf: 0.9 } } }] } }, now);
   assert.match(withHist, /&quot;history_below&quot;:true/);
   assert.doesNotMatch(resortPage("mount-snow", resortData(), "2026-11-24", base, now), /history_below/);
 });
@@ -68,4 +68,13 @@ test("the empty card points to the table only when the table is there", () => {
 test("a status line with no chip keeps its own checked date", () => {
   const html = resortPage("park-city", resortData(), "2026-11-26").replace(/<[^>]+>/g, " ");
   assert.match(html, /first day[^]*?\(checked\s+Nov\s24\)/);
+});
+
+test("a day's row is its last read with a gradable field, not a later all-Can't-tell read (Muse 2026-11-26 #6)", () => {
+  const r = { ...resortData().resorts["mount-snow"], name: "Mount Snow", tz: "America/New_York" };
+  const entries = buildHistory([snap("2026-11-24T15:00:00Z"), snap("2026-11-24T21:00:00Z", { status: "Fair", fields: { snow_cover: { value: "thin", conf: 0.3 } } }),
+    snap("2026-11-23T21:00:00Z", { status: "Fair", fields: {} })])["mount-snow"];
+  const html = camHistory(r, entries, new Date("2026-11-24T23:00:00Z"));
+  assert.equal((html.match(/<tr><th scope="row">/g) ?? []).length, 1, "a day with no clear read gets no row");
+  assert.match(html, /Tue Nov 24<\/th><td class="cam-grade-watch">Thin or patchy/);
 });
