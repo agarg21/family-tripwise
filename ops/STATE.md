@@ -16,7 +16,7 @@ active: none
 - Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
 - SD December Nights: Getting There PDF from Dec 1.
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Lightscape Dec 26); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB from Nov 27; NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo read 11-25: $ hide Dec 26, train/parking $ Dec 15; event page/FAQs re-read from Dec 1); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
+- NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: Bryant Park Santa start (Dec 14/15) Nov 26; prices hide Dec 4 (Bronx Zoo 11-25: $ Dec 26, train/parking Dec 15; FAQs from Dec 1); Nov 25. Grand Central trains: from Nov 28. Santa selfies hours: re-read bfplny Nov 26. Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
 - Holiday parks: re-read other $ by Nov 29 (GE $49 11-19; GE page Nov 26). Dyker: from Nov 27.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
@@ -40,7 +40,7 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
-- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa 2024 (11-25); Dec 2. Christkindlmarket 11-28.
+- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28.
 - Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
