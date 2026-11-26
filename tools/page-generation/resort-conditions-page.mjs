@@ -184,12 +184,13 @@ function liveStatus(r, today) {
       text: `Yesterday's count (${when}). Check today's on ${page}.` };
   }
   if (lifts) {
-    const t = trails ? `${trails[0]} of ${trails[1]} trails${pct(trails)}${lifts[0] > 0 ? " open too" : " too"}. ` : "";
+    const t = !trails ? "" : lifts[0] > 0 ? `${trails[0]} of ${trails[1]} trails${pct(trails)} open too. `
+      : trails[0] === 0 ? `No trails open either (0 of ${trails[1]}). ` : `Its page also lists ${trails[0]} of ${trails[1]} trails open. `;
     return { chip: lifts[0] === 0 ? `No lifts open (0 of ${lifts[1]})` : `${lifts[0]} of ${lifts[1]} lifts open`, variant: lifts[0] === 0 ? "skip" : "neutral",
       open: lifts[0] > 0, today: true, text: `${t}Checked ${when} on ${page}.` };
   }
   return { chip: trails[0] === 0 ? `No trails open (0 of ${trails[1]})` : `${trails[0]} of ${trails[1]} trails open${pct(trails)}`, variant: trails[0] === 0 ? "skip" : "neutral",
-    open: trails[0] > 0, today: true, text: `${poss(r.name)} page doesn't list open lifts. Checked ${when} on ${page}.` };
+    open: trails[0] > 0, today: true, text: `Checked ${when} on ${page}.` };
 }
 
 function resortStatus(r, today) {
@@ -197,7 +198,7 @@ function resortStatus(r, today) {
   // Today's count leads when lifts or trails are open, or from opening day on, so an early opening or a
   // postponed one is never hidden behind a date chip (integrity review 11-26).
   const live = liveStatus(r, today);
-  if (live?.today && (live.open || !r.opening || today >= r.opening.date)) return live;
+  if (live && (live.open || (live.today && (!r.opening || today >= r.opening.date)))) return live;
   if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   // A target date the resort says can move with weather never earns a positive chip on the day (integrity review 11-18).

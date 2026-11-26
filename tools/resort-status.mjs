@@ -124,7 +124,7 @@ async function main() {
   // At most one read per resort per ET day (D57); a second run the same day keeps the first read.
   // A dry run reads one resort (STATUS_ONLY, default vail) so testing never re-reads every page (review 11-26).
   const only = process.env.STATUS_DRY_RUN ? (process.env.STATUS_ONLY || "vail") : null;
-  const due = Object.fromEntries(Object.entries(resorts).filter(([slug]) => (only ? slug === only : prev.resorts?.[slug]?.read_et?.date !== today)));
+  const due = Object.fromEntries(Object.entries(resorts).filter(([slug]) => (!only || slug === only) && prev.resorts?.[slug]?.read_et?.date !== today));
   const fresh = await readAll({ resorts: due, prev: prev.resorts || {}, log: console.log });
   const merged = { note: "Lift and trail counts printed on each resort's own status page, read once a day by tools/resort-status.mjs (D57). Missing count = the page did not print one as text.", resorts: { ...prev.resorts, ...fresh } };
   for (const slug of Object.keys(merged.resorts)) if (!resorts[slug]) delete merged.resorts[slug];
