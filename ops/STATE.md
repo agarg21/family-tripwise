@@ -51,7 +51,7 @@ active: none
 - Goodman Carol (11-23): no $; from Nov 30. Hip Hop Nutcracker card (11-25, unpriced) drops after Nov 29. Boston Pops no $ 11-25; Dec 2.
 - Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
-- Macy's parade: Sat Nov 28 per NBC NY/AP; MTA (11-25) confirms postponed, no date; markup off till official; Nov 27 search macysinc/nyc.gov/mta for Sat plan; lines drop after Nov 28.
+- Macy's parade: Sat Nov 28 per NBC NY/AP; MTA confirms postponed (11-25); nyc.gov closures Thu-only (11-26); Nov 27 search for Sat plan; lines drop after Nov 28.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -63,5 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 03:04Z G16 trend: Macy's officials-update flag checked; nyc.gov closures PDF still Thursday-only, no Saturday plan on nyc.gov/MTA/Macy's; nothing published. Parade + Thursday weather flags dropped. Not a transaction.
-- Next: normal NYC flags (rinks, Bronx Zoo lights) or Nov 27 Saturday-plan search.
+- 11-26 03:04Z G16: parade officials flag: nyc.gov closures still Thu-only; nothing published; 2 flags dropped. Next: NYC rinks/Bronx Zoo flags.
