@@ -18,7 +18,8 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const e = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const short = (iso) => { const [, m, d] = iso.split("-").map(Number); return `${MONTHS[m - 1]} ${d}`; };
 const ageDays = (from, to) => (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000;
-export const priceIsFresh = (ev, today = easternDate()) => ageDays(ev.observed_on, today) <= MAX_PRICE_AGE_DAYS;
+// price_until: a sale price with no stated end hides after this date even inside the age limit.
+export const priceIsFresh = (ev, today = easternDate()) => ageDays(ev.observed_on, today) <= MAX_PRICE_AGE_DAYS && !(ev.price_until && today > ev.price_until);
 const priced = (ev) => ev.cost_low > 0;
 // A field may be a string or dated parts: [{ text, until }, "always"]. Parts past their date drop, and a part-list that ends up empty renders nothing.
 const dated = (v, today) => (Array.isArray(v) ? v.filter((p) => typeof p === "string" || today <= p.until).map((p) => (typeof p === "string" ? p : p.text)).join(" ") : v ?? "");
@@ -36,6 +37,7 @@ export function validateHolidayCity(city) {
     for (const key of ["cost_note", "watch", "dates", "figure_note_priced", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
     if (/\$\d/.test(ev.extra) && !ev.extra_stale) errors.push(`${ev.id}: extra needs extra_stale`);
     if (ev.extra_observed_on && !ISO.test(ev.extra_observed_on)) errors.push(`${ev.id}: bad extra_observed_on`);
+    if (ev.price_until && !ISO.test(ev.price_until)) errors.push(`${ev.id}: bad price_until`);
     for (const k of ev.kids ?? []) if (/\$\d/.test(typeof k === "string" ? k : k.stale ?? "") ) errors.push(`${ev.id}: kid line holds a price without a stale form`);
   }
   for (const ev of city.events.filter((x) => x.event_markup)) {

@@ -62,8 +62,8 @@
       "end_on": "2027-01-04",
       "dates": "Select dates, Nov 12 to Jan 4",
       "admission": "included",
-      "ticket_each": 53.99,
-      "price_note": "$53.99 each for a chosen date when we read it. Other dates may cost more. Tax, fees and parking extra.",
+      "ticket_each": 49.99,
+      "price_note": "$49.99 each for a chosen date when we read it, during a Black Friday ticket sale. Other dates may cost more. Tax, fees and parking extra.",
       "kids": [
         "Photos with a cowboy-hat Texas Santa",
         "Walk through the Tunnel of Lights",
@@ -75,10 +75,12 @@
       "source_url": "https://seaworld.com/san-antonio/events/christmas/",
       "price_source_label": "SeaWorld San Antonio tickets page",
       "price_source_url": "https://seaworld.com/san-antonio/tickets/",
-      "price_observed_on": "2026-11-01",
-      "observed_on": "2026-11-03",
+      "price_observed_on": "2026-11-22",
+      "price_until": "2026-11-29",
+      "observed_on": "2026-11-26",
+      "date_note": "Nov 12 to Jan 4 is from our Nov 3 read; the page now says only select days.",
       "tip": "Kids 5 and under: SeaWorld's home page (read Nov 1) offers a free Preschool Fun Card for 2026 visits. Check it's still open.",
-      "tip_price": "It could cut this party to about $162.",
+      "tip_price": "It could cut this party to about $150.",
       "tip_until": "2026-12-31"
     },
     {

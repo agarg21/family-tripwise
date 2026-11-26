@@ -50,9 +50,9 @@ test("a price past the age limit is replaced by check live, never shown as curre
 });
 
 test("the preschool tip drops its price when stale and the whole tip after 2026", () => {
-  assert.match(holidayParksPage(data, today), /about \$162/);
+  assert.match(holidayParksPage(data, today), /about \$150/);
   const stale = holidayParksPage(data, "2026-12-04");
-  assert.doesNotMatch(stale, /\$162/);
+  assert.doesNotMatch(stale, /\$150/);
   assert.match(stale, /Preschool Fun Card/);
   assert.doesNotMatch(holidayParksPage(data, "2027-01-02"), /Preschool Fun Card/);
 });
@@ -67,4 +67,14 @@ test("the committed page matches today's render", () => {
   const committed = readFileSync(new URL(`../site/${holidayParksPath}`, import.meta.url), "utf8");
   assert.ok(committed.includes("Theme Park Christmas Events With Kids"));
   assert.equal(committed.includes("Hersheypark"), easternDate() <= "2027-01-03");
+});
+
+test("SeaWorld San Antonio sale price (read Nov 22, no end stated) shows to Nov 29 and hides after", () => {
+  const sa = data.parks.find((p) => p.id === "seaworld-san-antonio");
+  assert.equal(priceIsFresh(sa, "2026-11-29"), true);
+  assert.equal(priceIsFresh(sa, "2026-11-30"), false);
+  assert.match(holidayParksPage(data, "2026-11-29"), /about \$150/);
+  const after = holidayParksPage(data, "2026-11-30");
+  assert.doesNotMatch(after, /about \$150|≈ \$200/);
+  assert.match(after, /Nov 12 to Jan 4 is from our Nov 3 read/);
 });

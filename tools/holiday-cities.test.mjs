@@ -88,9 +88,9 @@ test("San Antonio: family ranges follow their published prices and stale reads h
   assert.equal(o.illuminate.cost_low, Math.round(2 * (29.99 + 3) + 2 * (26.99 + 3)));
   assert.equal(o["six-flags"].cost_low, 4 * 35);
   assert.equal(o["zoo-lights"].cost_low, 4 * 8);
-  assert.equal(o.seaworld.cost_low, Math.round(4 * 53.99));
+  assert.equal(o.seaworld.cost_low, Math.round(4 * 49.99));
   const html = holidayCityPage("san-antonio", data, "2026-11-04");
-  assert.match(html, /≈ \$32 to \$216/);
+  assert.match(html, /≈ \$32 to \$200/);
   assert.match(html, /No strollers, ice chests or carriers/
   );
   assert.match(html, /3 more below/);
@@ -477,4 +477,14 @@ test("R1 #12: NYC compact cards open from a name, cost and date row; nothing dro
   const chi = holidayCityPage("chicago", undefined, "2026-11-20");
   assert.doesNotMatch(chi, /holiday-card-compact|holiday-news-more/);
   assert.match(chi, /<details class="ds-card-more"><summary>Ticket details, tips and sources<\/summary>/);
+});
+
+test("San Antonio SeaWorld sale price (read Nov 22, no end stated) shows to Nov 29 and hides after", () => {
+  const ev = data.cities["san-antonio"].events.find((x) => x.id === "seaworld");
+  assert.equal(priceIsFresh(ev, "2026-11-29"), true);
+  assert.equal(priceIsFresh(ev, "2026-11-30"), false);
+  assert.match(holidayCityPage("san-antonio", data, "2026-11-29"), /From ≈ \$200/);
+  const after = holidayCityPage("san-antonio", data, "2026-11-30");
+  assert.doesNotMatch(after, /≈ \$200|\$49\.99 each/);
+  assert.match(after, /dates read Nov 3/);
 });

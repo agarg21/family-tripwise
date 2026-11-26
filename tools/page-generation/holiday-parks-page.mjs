@@ -23,7 +23,8 @@ export const familyCost = (park) => Math.round(park.ticket_each * 4);
 const ageDays = (from, to) => (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000;
 export const priceObservedOn = (park) => park.price_observed_on ?? park.observed_on;
 // An old price is never shown as current: past the limit the park stays listed but says "check live".
-export const priceIsFresh = (park, today = easternDate()) => ageDays(priceObservedOn(park), today) <= MAX_PRICE_AGE_DAYS;
+// price_until: a sale price with no stated end hides after this date even inside the age limit.
+export const priceIsFresh = (park, today = easternDate()) => ageDays(priceObservedOn(park), today) <= MAX_PRICE_AGE_DAYS && !(park.price_until && today > park.price_until);
 
 export function validateHolidayParks(data, today = easternDate()) {
   const errors = [];
