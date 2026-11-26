@@ -16,7 +16,10 @@ test("every listed Black Friday 'can't price yet' card is short lines that keep 
     for (const n of nums(u.text)) assert.ok(joined.includes(n), `${u.operator}: lines drop ${n}`);
   }
   const html = readFileSync(new URL("../site/deals/black-friday-family-travel-deals.html", import.meta.url), "utf8");
-  assert.match(html, /<p>3rd and 4th guests in your cabin pay \$0 cruise fare on select cruises\.<\/p>\s*<p>Eligible sailings[^<]*<\/p>[\s\S]*?<p class="deal-deadline"><strong>Deadline:<\/strong> book Nov 17 to 26<\/p>/);
+  // Each card leaves the page after its list_until, so a rendering check holds only while its card is listed (Carnival: Nov 26).
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+  if (today <= "2026-11-26") assert.match(html, /<p>3rd and 4th guests in your cabin pay \$0 cruise fare on select cruises\.<\/p>\s*<p>Eligible sailings[^<]*<\/p>[\s\S]*?<p class="deal-deadline"><strong>Deadline:<\/strong> book Nov 17 to 26<\/p>/);
+  if (today <= "2026-12-01") assert.match(html, /<h3>Norwegian Cruise Line, cruises<\/h3>\s*<p>Kids as guests 3 and 4 pay \$0 fare[^<]*<\/p>[\s\S]*?<p class="deal-deadline"><strong>Deadline:<\/strong> free service charges: book by Dec 1, 11:59 p\.m\. ET ·[^<]*<\/p>/);
   // Persona P2 (Nov 20): every dated sale shows the same bold Deadline row as the priced cards above it.
   for (const u of listed.filter((x) => !/^Walt Disney/.test(x.operator))) assert.ok(u.deadline, `${u.operator}: add deadline`);
 });

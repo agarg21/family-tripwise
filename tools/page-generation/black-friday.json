@@ -166,6 +166,24 @@
       "list_until": "2026-11-26"
     },
     {
+      "operator": "Norwegian Cruise Line, cruises",
+      "deadline": "free service charges: book by Dec 1, 11:59 p.m. ET · no end date confirmed for the 50% off",
+      "kind": "Cruise sale",
+      "text": "Kids as guests 3 and 4 pay $0 fare on select sailings when guests 1 and 2 pay full fare. No child ages stated. No deposit for guests 3 and 4. Not in Studio or Solo cabins. Their taxes and fees are not stated. Also advertises \"50% off all cruises\"; its FAQ says \"select sailings are included\" (Black Friday page, read Nov 19). Which guests or fares it covers isn't stated. Whether the 50% off combines with kids sailing free isn't stated. Free pre-paid service charges for guests 1 and 2 (ages 3+) on select sailings, booked Nov 19 to Dec 1, 2026. No fares shown, so we can't total it. Ask for a quote for 2 adults + 2 kids in one cabin, with taxes, fees and port charges for all 4.",
+      "lines": [
+        "Kids as guests 3 and 4 pay $0 fare on select sailings when guests 1 and 2 pay full fare. No child ages stated.",
+        "No deposit for guests 3 and 4. Not in Studio or Solo cabins. Their taxes and fees are not stated.",
+        "Also advertises \"50% off all cruises\"; its FAQ says \"select sailings are included\" (Black Friday page, read Nov 19). Which guests or fares it covers isn't stated.",
+        "Whether the 50% off combines with kids sailing free isn't stated.",
+        "Free pre-paid service charges for guests 1 and 2 (ages 3+) on select sailings, booked Nov 19 to Dec 1, 2026.",
+        "No fares shown, so we can't total it. Ask for a quote for 2 adults + 2 kids in one cabin, with taxes, fees and port charges for all 4."
+      ],
+      "source_label": "Norwegian promotion terms",
+      "url": "https://www.ncl.com/cruise-deals/promotion-terms",
+      "observed_on": "2026-11-26",
+      "list_until": "2026-12-01"
+    },
+    {
       "operator": "LEGOLAND California, Carlsbad, CA",
       "deadline": "sale ends Nov 29",
       "kind": "Theme park sale",
