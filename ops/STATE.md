@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-25 transactions=16
-run: {id: 2026-11-26T02:04Z, started_at: 2026-11-26T02:04Z}
-last_public_release: 0ebda3b5 NYC Rockefeller lighting night (official)
+today: 2026-11-25 transactions=17
+run: none
+last_public_release: SHA_PENDING Chicago Hip Hop Nutcracker card
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -29,7 +29,7 @@ active: none
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card ends Dec 24 (self-drops).
 - Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (11-25; Dec 2). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
-- Schweitzer held (no photo). Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
+- Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
 - Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
 - Killington: tubing $ hide Dec 17; day ticket $ unread.
 - Stratton: $ hide Dec 16; opening postponed, no date (11-23; from Nov 30). Seven Springs: no opening day (11-24); chip hides Dec 2, from Dec 1; parking $ hide ~Dec 17.
@@ -39,8 +39,8 @@ active: none
 - Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - Villa del Palmar BF: re-read Nov 28 (meta Nov 23-29). Atlantis Cyber Sale (read 11-23, page only, unpriced): ends Dec 8; from Nov 30.
-- Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27. Gracie open house: no 2026 nyc.gov page (11-25); Nov 30.
-- D55 11-25 done. Mt Snow/7 Springs counts look like defaults: use hours pages. Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa 2024 (11-25); Dec 2. Christkindlmarket 11-28.
+- Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
+- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa 2024 (11-25); Dec 2. Christkindlmarket 11-28.
 - Menorah: NYC drops Dec 12 (Manhattan schedule: re-search Nov 26); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
@@ -48,7 +48,7 @@ active: none
 - Saks: no times (11-24); Nov 28. Disney dining (to Nov 30): error 11-21. Chanukah on Ice: zeffy error; Nov 28.
 - NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair countdown on SA card).
 - BF unpriced cards (11-24): Hersheypark lists to Nov 30, from Dec 1; Fun Spot sale ends Nov 30 (drops itself); Schlitterbahn NB drops after Nov 27. Mingei drops Dec 7.
-- Goodman Carol (11-23): no $; from Nov 30. Boston Pops no $ 11-25; Dec 2.
+- Goodman Carol (11-23): no $; from Nov 30. Hip Hop Nutcracker card (11-25, unpriced) drops after Nov 29. Boston Pops no $ 11-25; Dec 2.
 - Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
 - SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
 - Macy's parade: Sat Nov 28 per NBC NY/AP; MTA (11-25) confirms postponed, no date; markup off till official; Nov 27 search macysinc/nyc.gov/mta for Sat plan; lines drop after Nov 28.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 01:05Z G16 row 8: Boston/Chicago Hanukkah no 2026 listing; Nov 30. No release.
+- 11-26 02:04Z G16 trend: Chicago Hip Hop Nutcracker card (Broadway In Chicago, read 11-25; unpriced, on-sale conflict shown). Club Med timer-only flag cleared. Next: Macy's parade update flag t-1bc12a156a.
