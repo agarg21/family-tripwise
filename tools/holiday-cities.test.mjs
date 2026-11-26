@@ -74,9 +74,14 @@ test("Orlando: family ranges follow their published prices and stale reads hide 
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-23"), /festival-of-trees/);
   assert.match(html, /where-to-stay\/orlando-family-hotels\.html/);
   // Magic Show price read Nov 22 stays fresh to Dec 22.
-  // On Dec 21 every other read has gone stale: the only dollars left are on the Magic Show card.
+  // On Dec 21 every other read has gone stale: the only dollars left are on the Magic Show card and
+  // Wekiva Island's last listed day (read Nov 26; its card leaves after Dec 21).
   const dec21 = holidayCityPage("orlando", data, "2026-12-21").match(/<main[\s\S]*<\/main>/)[0];
-  assert.deepEqual([...new Set(dec21.match(/\$[\d.,]+/g))].sort(), ["$200", "$360", "$49.99", "$89.99"]);
+  assert.deepEqual([...new Set(dec21.match(/\$[\d.,]+/g))].sort(), ["$10,", "$15", "$15,", "$200", "$360", "$49.99", "$5", "$89.99"]);
+  // Wekiva Island: the admission fee has no stated unit, so it stays in Ticket details and the figure says Check live.
+  const wek = holidayCityPage("orlando", data, "2026-11-26");
+  assert.match(wek, /\$5 admission fee but doesn&#39;t say if it is per person or per car/);
+  assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-22"), /wekiva/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
   assert.doesNotMatch(holidayCityPage("orlando", data, "2026-11-10"), /id="[^"]*san-diego/);
 });

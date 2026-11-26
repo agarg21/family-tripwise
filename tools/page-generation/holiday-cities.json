@@ -908,6 +908,44 @@
           ]
         },
         {
+          "id": "wekiva-winter-wonderland",
+          "name": "Winter Wonderland at Wekiva Island",
+          "place": "Wekiva Island, 1014 Miami Springs Drive, Longwood (north of Orlando)",
+          "dates": "Sun Nov 29 to Mon Dec 21, 2026 (listed events); Santa's Workshop Fri 7 to 9 p.m., Sat 1 to 8 p.m. and Sun 1 to 7 p.m., Dec 4 to 20",
+          "start_on": "2026-11-29",
+          "end_on": "2026-12-21",
+          "table_when": "Nov 29 to Dec 21, mostly Fri to Sun",
+          "answer_when": "Nov 29 to Dec 21",
+          "figure_note_priced": "entry fee and event prices in Ticket details",
+          "cost_priced": "Wekiva Island lists a $5 admission fee but doesn't say if it is per person or per car. Ornament decorating with the elves and making reindeer feed with Mrs. Claus are $15, stories with Mrs. Claus $10, and Donuts with Santa (Sun Dec 6 and 20, 9 to 11 a.m.) $15; each includes cocoa (read Nov 26).",
+          "cost_note": "Select events need an extra ticket, booked on the island's FareHarbor page. The page doesn't say if the Santa visit, movies or tree lighting cost extra.",
+          "kids": [
+            {
+              "text": "Tree lighting Sun Nov 29, 6:30 to 9 p.m.; stilt walkers 6 to 8 p.m. and Santa's Workshop from 7:30 p.m.",
+              "until": "2026-11-29"
+            },
+            "Visit Santa in his Workshop and Mrs. Claus in her bakery; nightly \"snow\" flurries and a 30-foot tree",
+            {
+              "text": "Outdoor movies 7 to 9 p.m. (no price listed): The Polar Express Dec 6, The Grinch Dec 13 (Grinch visit 1 to 5 p.m.), A Christmas Carol Dec 20",
+              "until": "2026-12-20"
+            },
+            {
+              "text": "Bring a new, unwrapped toy for the toy drive, to Dec 13",
+              "until": "2026-12-13"
+            }
+          ],
+          "extra": "Event tickets and food. We saw no parking price.",
+          "extra_label": "Costs extra",
+          "watch": "The page has no year on its schedule (its copyright reads 2026). Only Dec 6, 11, 12 and 13 say \"with Santa\"; other Workshop lines just say open. No age, stroller or rain rules posted.",
+          "observed_on": "2026-11-26",
+          "sources": [
+            {
+              "label": "Wekiva Island Winter Wonderland",
+              "url": "https://wekivaisland.com/winter-wonderland/"
+            }
+          ]
+        },
+        {
           "id": "gatorland-ho-down",
           "name": "Holiday Ho, Ho, Ho-Down",
           "place": "Gatorland, south Orlando",
@@ -1474,6 +1512,12 @@
           "name": "FusionFest",
           "text": "a free world-culture festival at Loch Haven Park with a Family Village for kids, Sat Nov 28 and Sun Nov 29.",
           "href": "#fusionfest"
+        },
+        {
+          "until": "2026-12-03",
+          "name": "Wekiva Island",
+          "text": "(Longwood, north of Orlando) opens Winter Wonderland with a tree lighting Sun Nov 29, then Santa's Workshop on December weekends.",
+          "href": "#wekiva-winter-wonderland"
         }
       ]
     },
