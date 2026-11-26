@@ -492,6 +492,14 @@ test("San Antonio SeaWorld sale price (read Nov 22, no end stated) shows to Nov 
 test("NYC Thanksgiving storm news line (governor release Nov 25): shows through Nov 27, drops Nov 28", () => {
   const on = holidayCityPage("new-york-city", data, "2026-11-26");
   assert.match(on, /Thanksgiving storm<\/a>: state of emergency for the NYC area/);
-  assert.match(on, /gusts to 60 mph Thu 10 a\.m\. until 1 a\.m\. Fri/);
+  assert.match(on, /[Gg]usts to 60 mph Thu 10 a\.m\. until 1 a\.m\. Fri/);
   assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-11-28"), /Thanksgiving storm<\/a>/);
+});
+
+test("NYC parade move credits the Mayor's Office (Nov 25 advisory); start time stays third-party; drops after Nov 28", () => {
+  const on = holidayCityPage("new-york-city", data, "2026-11-26");
+  assert.match(on, /Mayor&#39;s Office says \(Nov 25\)/);
+  assert.match(on, /8:30 a\.m\. ET per a Macy&#39;s statement reported by NBC New York and AP; the city gives no time/);
+  assert.match(on, /mayor-mamdani-issues-travel-advisory-for-thanksgiving-day-as-coa/);
+  assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-11-29"), /Mayor&#39;s Office says \(Nov 25\)/);
 });

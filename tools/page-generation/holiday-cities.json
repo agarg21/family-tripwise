@@ -2927,7 +2927,7 @@
         {
           "id": "macys-parade",
           "label": "Moved to Sat Nov 28",
-          "note": "8:30 a.m., not Thursday, as reported by NBC New York and AP; check macys.com",
+          "note": "city confirms the move; 8:30 a.m. per NBC New York and AP; check macys.com",
           "until": "2026-11-28"
         },
         {
@@ -2953,13 +2953,13 @@
         {
           "until": "2026-11-27",
           "name": "Thanksgiving storm",
-          "text": "state of emergency for the NYC area. NYC and Long Island: gusts to 60 mph Thu 10 a.m. until 1 a.m. Fri, 1 to 2 inches of rain, coastal flooding into Fri. Flying: allow extra time, check your airline (governor's office, Nov 25).",
+          "text": "state of emergency for the NYC area. Gusts to 60 mph Thu 10 a.m. until 1 a.m. Fri, 1 to 2 inches of rain, coastal flooding into Fri. Avoid travel Thu afternoon and evening if you can; flyers, check your airline (governor, Mayor's Office, Nov 25).",
           "href": "https://www.governor.ny.gov/news/governor-hochul-declares-state-emergency-ahead-thanksgiving-coastal-storm"
         },
         {
           "until": "2026-11-28",
           "name": "Macy's parade",
-          "text": "moved to Sat Nov 28, 8:30 a.m., because of Thursday's storm, per a Macy's statement reported by NBC New York and AP (Nov 25). Thursday's NBC broadcast is a 2025 rerun.",
+          "text": "moved to Sat Nov 28 because of Thursday's storm, the Mayor's Office says (Nov 25). Start 8:30 a.m. per Macy's via NBC New York and AP. Thursday's NBC broadcast is a 2025 rerun.",
           "href": "#macys-parade"
         },
         {
@@ -3076,7 +3076,7 @@
           "ids": [
             "macys-parade"
           ],
-          "why": "Free, 8:30 a.m., moved from Thursday (reported by NBC New York and AP). Saturday streets and subway changes aren't posted yet; check macys.com and mta.info Friday.",
+          "why": "Free; moved from Thursday, the Mayor's Office says; 8:30 a.m. per NBC New York and AP. Saturday streets and subway changes aren't posted yet; check macys.com and mta.info Friday.",
           "until": "2026-11-28"
         },
         {
@@ -3203,7 +3203,7 @@
           "id": "macys-parade",
           "name": "Macy's Thanksgiving Day Parade",
           "place": "Central Park West at W 77th St to Herald Square, Manhattan",
-          "dates": "Moved to Saturday, Nov 28, 2026, 8:30 a.m. ET, per a Macy's statement reported by NBC New York and AP on Nov 25 (storm). It was Thursday, Nov 26. We could not read macys.com: check it before you go",
+          "dates": "Moved to Saturday, Nov 28, 2026, per the NYC Mayor's Office, with Macy's and the NYPD (Nov 25; storm). Start 8:30 a.m. ET per a Macy's statement reported by NBC New York and AP; the city gives no time. It was Thursday, Nov 26. We could not read macys.com: check it before you go.",
           "start_on": "2026-11-28",
           "end_on": "2026-11-28",
           "free": true,
@@ -3215,7 +3215,7 @@
               "until": "2026-11-28"
             },
             {
-              "text": "The MTA confirms the postponement (weekend service notice, Nov 25). Saturday subway, street and viewing details aren't posted yet; check mta.info and nyc.gov Friday",
+              "text": "The MTA confirms the postponement (weekend service notice, Nov 25). Saturday subway, street and viewing details aren't posted yet; check mta.info and nyc.gov Friday, or text THANKSGIVING to 692-692 for city updates (Mayor's Office)",
               "until": "2026-11-28"
             },
             {
@@ -3262,6 +3262,10 @@
           "watch": "Macy's says public viewing is at designated spots along the route but doesn't list them. The street closures and MTA station closures we read (Nov 22 to 24) were for Thursday, Nov 26; Saturday's are not posted yet. Check macys.com/parade, mta.info and NYPD notices before you go.",
           "observed_on": "2026-11-03",
           "sources": [
+            {
+              "label": "NYC Mayor's Office travel advisory: parade moved to Saturday, Nov 28 (Nov 25, 2026; read Nov 26)",
+              "url": "https://www.nyc.gov/mayors-office/news/2026/11/mayor-mamdani-issues-travel-advisory-for-thanksgiving-day-as-coa"
+            },
             {
               "label": "NBC New York: parade postponed to Saturday, Macy's statement (third party, Nov 25, 2026; read Nov 25)",
               "url": "https://www.nbcnewyork.com/new-york-city/macys-thanksgiving-day-parade-postponed-until-saturday-due-to-weather/6576395/"
@@ -3331,7 +3335,7 @@
               "url": "https://nyaquarium.com/plan-your-visit/hours-and-rates"
             }
           ],
-          "table_when": "Sat Nov 28 (reported; was Thu Nov 26)"
+          "table_when": "Sat Nov 28 (city confirmed; was Thu Nov 26)"
         },
         {
           "id": "dyker-heights-lights",
