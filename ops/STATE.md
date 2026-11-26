@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=15
-run: {id: 2026-11-26T22:04Z, started_at: 2026-11-26T22:04Z}
+today: 2026-11-26 transactions=16
+run: none
 last_public_release: 2c74f38b G19 cam card copy (Nov 26)
 active: none
 
@@ -20,7 +20,7 @@ active: none
 - Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: from Nov 27.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
-- Cancun, PV: regenerate Dec 18, 25, Jan 15 (PV example-stay by Jan 8); SD/NYC/Orlando/London listings Jan 8.
+- Cancun, PV: regen Dec 18, 25, Jan 15 (PV example-stay Jan 8); SD/NYC/Orlando/London listings Jan 8.
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking line: re-read or soften); next Dec 4.
 - SD itin.: zoo hours (11-25: only Nov 1-25 shown) from Dec 2; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
@@ -46,13 +46,13 @@ active: none
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
-- Saks times, Chanukah on Ice: Nov 28.
+- Saks times, Chanukah on Ice: Nov 28. Bloomingdale's windows: page stub 11-26; Dec 3.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - BF unpriced: Hersheypark to Nov 30; Fun Spot, Schlitterbahn, Mingei self-drop.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2).
 - Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
-- Macy's parade Sat Nov 28 (city: 8:30 a.m., rain or shine, 11-26): Nov 27 search Sat streets/subway.
+- Macy's parade Sat Nov 28 (8:30 a.m., 11-26): Nov 27 search streets/subway.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 21:04Z G09w deal flags: RC "Bonus Offer! Black Friday" heading (no amounts; terms re-read Nov 28) + Club Med countdown tick; no public change, flags deleted.
+- 11-26 22:04Z G16 triage: 3 flags dropped (Bloomingdale's unverifiable; hospice story off-fit; Seven Seas spring). No public change.
