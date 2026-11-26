@@ -90,6 +90,12 @@ Crystal Mountain (webcam), Winter Park and Jay Peak (snow report), Bogus Basin a
   Timberline, Heavenly, Keystone, Copper, Telluride, Bogus Basin, Schweitzer, Kirkwood, Northstar, Wolf Creek, Crested Butte.
 - Pending cam access: Crystal Mountain, Snowshoe, Sunday River, Mountain Creek, Mt Baker, Boyne Mountain; video-only:
   Steamboat, Big Sky, Loon (its YouTube images are promo covers, not live frames). Not possible: Whiteface, Gore, Mammoth, Mt Hood Meadows, Camelback, Blue Mountain, Belleayre.
+- In the feed since 2026-11-26 (snowcam): Crystal Mountain (niche: webcam), Boyne Mountain, Mt Hood Meadows from the list
+  above; and 12 more by search demand, owner 2026-11-26 ("keep expanding high quality ski condition pages"): Beaver Creek,
+  Arapahoe Basin, Aspen Snowmass, Taos Ski Valley, Grand Targhee, Solitude, Eldora, Alyeska, Sierra-at-Tahoe, Cannon,
+  Smugglers' Notch, Whitefish. Same rule: one page each once the feed lists it; pages show cam reads only once published.
+  Still not possible (snowcam docs/cam-inventory-2026-11-26*): Snowshoe, Sunday River, Steamboat, Big Sky, Loon, Whiteface,
+  Gore, Mammoth; Mountain Creek and Mt Baker need a direct cam link.
 - Intent fit: "<resort> snow report" searchers want new snow, base depth and lifts open. Cam reads answer part of
   that; do not title these pages "snow report" unless the page carries the resort's own dated report numbers.
 
