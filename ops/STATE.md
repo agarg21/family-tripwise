@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=9
-run: {id: 2026-11-26T14:05:09Z, started_at: 2026-11-26T14:05:09Z}
+today: 2026-11-26 transactions=10
+run: none
 last_public_release: 52fc8262 NYC Ballet Nutcracker re-read (Nov 26)
 active: none
 
@@ -50,6 +50,7 @@ active: none
 - BF unpriced cards: Hersheypark to Nov 30 (from Dec 1); Fun Spot, Schlitterbahn, Mingei self-drop.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2).
 - Choc. Nutcracker: no official page; re-search by Nov 28.
+- Orlando leads (city list summary-only 11-26): Heritage Square projection Dec 4, Luminary Dec 16 movie; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - Macy's parade: Sat Nov 28 (Mayor's Office 11-25); Nov 27 search Sat plan.
 
@@ -63,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 13:05Z G16: NYC Ballet Nutcracker show + policies re-read (still unpriced; fees apply; no exchanges into Nutcracker; rush excluded). Reviews pass (integrity c2). Live 52fc8262.
+- 11-26 14:05Z G16 trend: Bungalower Orlando lead; article not granted, orlando.gov lists summary-only. No public change; flag deleted.

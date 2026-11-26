@@ -108,41 +108,6 @@
       ],
       "score": 8,
       "priority": "normal"
-    },
-    {
-      "id": "t-60cc4581b3",
-      "city": "Orlando",
-      "title": "Bungalower Weekend Event Picks: Nov 26–29",
-      "links": [
-        {
-          "outlet": "Bungalower",
-          "url": "https://bungalower.com/2026/11/26/bungalower-weekend-event-picks-november-26-2026/",
-          "published": "2026-11-26T12:31Z"
-        }
-      ],
-      "first_seen": "2026-11-26T13:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:holiday,lights"
-        ],
-        "novelty": [
-          "opening",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:nov 26",
-          "place:luminary green park"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "lights",
-        "opening"
-      ],
-      "score": 8,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
