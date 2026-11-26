@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-25 transactions=16
-run: {id: 2026-11-26T01:04:58Z, started_at: 2026-11-26T01:04:58Z}
+run: none
 last_public_release: 0ebda3b5 NYC Rockefeller lighting night (official)
 active: none
 
@@ -63,4 +63,5 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
+- 11-26 01:05Z G16 row 8: Boston (Faneuil pages 2024/25) + Chicago Hanukkah: no 2026 listing; re-search Nov 30. No release.
 - 11-26 00:05Z G16: Rockefeller lighting night (official); live 0ebda3b5.
