@@ -98,7 +98,7 @@ test("San Antonio: family ranges follow their published prices and stale reads h
   assert.match(html, /≈ \$32 to \$200/);
   assert.match(html, /No strollers, ice chests or carriers/
   );
-  assert.match(html, /3 more below/);
+  assert.match(html, /4 more below/);
   assert.doesNotMatch(holidayCityPage("san-antonio", data, "2026-12-20").match(/<main[\s\S]*<\/main>/)[0], /\$\d/);
 });
 

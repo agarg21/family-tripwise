@@ -1544,6 +1544,12 @@
       ],
       "news": [
         {
+          "until": "2026-11-27",
+          "name": "Travis Park tree lighting",
+          "text": "free, Fri Nov 27, 4 to 7 p.m.; the tree is lit at 6 p.m. (City of San Antonio, Nov 18).",
+          "href": "https://www.sa.gov/Directory/News-Releases/Celebrate-the-Holidays-in-Downtown-San-Antonio-2026"
+        },
+        {
           "until": "2026-12-06",
           "name": "Alamo Church",
           "text": "scaffolding now covers its famous front; no end date posted. The church stays open daily, 9 a.m. to 5:30 p.m., tickets reserved online (Alamo notice, Nov 23).",
@@ -1582,6 +1588,7 @@
           "ids": [
             "river-lights",
             "alamo-saturdays",
+            "downtown-free-holidays",
             "esperanza",
             "rock-holidays",
             "bass-pro-santa"
@@ -1749,6 +1756,53 @@
             {
               "label": "Scaffolding notice (Nov 23)",
               "url": "https://www.thealamo.org/alamo-trust/pressroom/the-alamo-church-remains-open-during-preservation-work"
+            }
+          ]
+        },
+        {
+          "id": "downtown-free-holidays",
+          "name": "Free downtown holiday days (City of San Antonio)",
+          "place": "Travis Park, Market Square and La Villita, downtown",
+          "dates": "Select days, Nov 27 to Dec 23; dates and times are in the list below",
+          "start_on": "2026-11-27",
+          "end_on": "2026-12-23",
+          "table_when": "Select days, Nov 27 to Dec 23",
+          "answer_when": "select days to Dec 23",
+          "free": true,
+          "cost_note": "Free: the city lists each of these as free; Painting in the Plaza is free with registration.",
+          "kids": [
+            {
+              "text": "H-E-B Christmas Tree Lighting at Travis Park, Fri Nov 27, 4 to 7 p.m.; the tree is lit at 6 p.m., and the city lists free VIA rides",
+              "until": "2026-11-27"
+            },
+            {
+              "text": "Free photos with Holiday Elves at Market Square: Dec 5, 6 and 13, noon to 2 p.m.; Dec 19, noon to 3 p.m.",
+              "until": "2026-12-19"
+            },
+            {
+              "text": "Free photos with Santa and Mrs. Claus at Market Square, Sat Dec 12, noon to 2 p.m.",
+              "until": "2026-12-12"
+            },
+            {
+              "text": "Free photos with Santa at Market Square: Sun Dec 20, noon to 2 p.m., and Wed Dec 23, noon to 3 p.m.",
+              "until": "2026-12-23"
+            },
+            {
+              "text": "Painting in the Plaza at La Villita, Sun Dec 6 and Dec 20, 11 a.m. to 1 p.m.; registration opens a week before each date",
+              "until": "2026-12-20"
+            },
+            {
+              "text": "Chanukah on the River menorah lighting, Arneson River Theatre, Sun Dec 6, 4 to 6 p.m.",
+              "until": "2026-12-06"
+            }
+          ],
+          "extra": "Parking and food. The city warns downtown is very busy Nov 27 to 29; city-owned garages are free after 5 p.m. on Thursdays.",
+          "watch": "The tree lighting is the same night as the ticketed River Parade (6 p.m.). The city's release gives no age rules, stroller notes or VIA ride details.",
+          "observed_on": "2026-11-26",
+          "sources": [
+            {
+              "label": "City of San Antonio holiday release (Nov 18)",
+              "url": "https://www.sa.gov/Directory/News-Releases/Celebrate-the-Holidays-in-Downtown-San-Antonio-2026"
             }
           ]
         },
