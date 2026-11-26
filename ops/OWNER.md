@@ -29,12 +29,12 @@ Approved.
 - D44 Review (11-11): Approved: review-2026-11-11.md is plan of record; backlog = QUEUE R1.
 - D45 (11-11): keep pace; 4 city ski pages; #15 no; no analytics.
 - D46 (11-11): Approved: page per pass brand; ended deal pages point there, off sitemap; social 3/day, reels off; Bing later; review deck.
-- D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after an automated check (early 11-16).
+- D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after an automated check.
 - D50–D52: Approved: no-offer brand pages use the guide bar; holiday Event markup fields; #12 shorten 10 pages, keep all facts.
 - D53 (11-24): Approved: ended deals link what's on now; recurring-deal pages (RC/NCL/MSC/Great Wolf); #12 layout-only, D39 re-reads queued; NYC hotels 4th design round. Holidays first.
 - D54 (11-25): Approved: ski city pages; shortlist resorts as cams allow; NYC snow tubing; NYE page per holiday city.
-- D55 (11-25): unopened resorts' status pages daily to 12-15.
-- D56 (11-26): Approved: R2 school-break pages + DataForSEO; expand deal/snow pages; no local parent FB groups.
+- D55/D57 (11-25/26): every resort's status page daily to 04-15; counts by code.
+- D56 (11-26): Approved: R2 school breaks + DataForSEO; expand deals/snow; no local parent FB groups.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.

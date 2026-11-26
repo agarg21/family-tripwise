@@ -1,0 +1,62 @@
+name: Resort status
+
+# Daily lift and trail counts from each resort's own status page (owner D57, 2026-11-26, to 2027-04-15).
+# Code only, no model: tools/resort-status.mjs obeys robots.txt and Crawl-delay and reads each page at
+# most once per ET day. Runs in lift hours (1:31 pm ET, 11:31 am MT, 10:31 am PT); Vail Resorts pages
+# show 0 lifts overnight. Then it starts a deploy so the pages show the new counts.
+on:
+  schedule:
+    - cron: "31 18 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Read and print counts, commit nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: resort-status
+  cancel-in-progress: false
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+
+      - name: Test the reader
+        run: node --test tools/resort-status.test.mjs
+
+      - name: Read status pages
+        run: node tools/resort-status.mjs
+
+      - name: Commit and deploy (fast-forward or merge, never force)
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "family-tripwise-operator"
+          git config user.email "family-tripwise-operator@users.noreply.github.com"
+          git add tools/page-generation/resort-status.json
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git commit -q -m "resort-status: daily lift and trail counts (D57)"
+          for attempt in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then gh workflow run deploy-pages.yml -R "$GITHUB_REPOSITORY"; exit 0; fi
+            sleep $((attempt * 5))
+            git fetch -q origin main
+            git merge -q --no-edit origin/main || { git merge --abort; exit 1; }
+          done
+          exit 1
