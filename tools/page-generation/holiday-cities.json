@@ -2963,6 +2963,12 @@
           "href": "#macys-parade"
         },
         {
+          "until": "2026-12-03",
+          "name": "The Met Christmas tree",
+          "text": "its 20-foot tree over a Neapolitan Nativity is on view to Tue Jan 5 (closed Wednesdays), free with admission: ≈ $60 for 4 (2 × $30 adults, kids 12 and under free), per the Met (Nov 26).",
+          "href": "#met-christmas-tree"
+        },
+        {
           "until": "2026-11-24",
           "name": "Balloon inflation",
           "text": "Wed Nov 25, 1 to 6 p.m., outside the Museum of Natural History; no backpacks, large bags, umbrellas or chairs, per NYC Event Management. 81 St station closed 11 a.m. to 8 p.m., per the MTA.",
@@ -3980,6 +3986,47 @@
               "url": "https://www.amnh.org/exhibitions/origami-holiday-tree"
             }
           ]
+        },
+        {
+          "id": "met-christmas-tree",
+          "name": "Christmas Tree and Neapolitan Crèche at The Met",
+          "place": "The Met Fifth Avenue, 1000 Fifth Ave, Upper East Side: Medieval Sculpture Hall, Gallery 305, Floor 1",
+          "dates": "On view through Wed Jan 6, 2027, but the Met is closed Wednesdays, so the last day to see it is Tue Jan 5. Fri and Sat 10 a.m. to 9 p.m.; also closed Dec 25 and Jan 1. Check other days’ hours on the Met page.",
+          "table_when": "To Tue Jan 5 (last open day)",
+          "answer_when": "to Jan 5",
+          "start_on": "2026-11-26",
+          "end_on": "2027-01-05",
+          "free": false,
+          "cost_low": 60,
+          "cost_high": 60,
+          "cost_basis": "2 × $30 adults; kids 12 and under free",
+          "table_cost_note": "kids 12 and under free; New York State residents pay what you wish",
+          "cost_priced": "General admission: adult $30, senior $22, student $17, kids 12 and under free. New York State residents and NY, NJ and CT students: pay what you wish (at least 1 cent).",
+          "cost_note": "The tree and crèche are free with museum admission, per the Met.",
+          "kids": [
+            "A lit 20-foot blue spruce with silk-robed angels over an 18th-century Neapolitan Nativity scene, indoors",
+            "No tree-lighting ceremony this year, per the Met",
+            "Kids 12 and under get in free; the 81st Street Studio has hands-on play for all ages"
+          ],
+          "watch": "Pay what you wish online needs a New York State billing address; NJ and CT students pay what you wish in person with ID. No advance tickets needed.",
+          "observed_on": "2026-11-26",
+          "sources": [
+            {
+              "label": "The Met: Christmas Tree and Neapolitan Baroque Crèche (2026)",
+              "url": "https://www.metmuseum.org/exhibitions/christmas-tree-and-neapolitan-baroque-creche-2026"
+            },
+            {
+              "label": "The Met: Holidays at The Met",
+              "url": "https://metmuseum.org/hubs/holidays-at-the-met"
+            },
+            {
+              "label": "The Met: Plan your visit (hours, prices)",
+              "url": "https://www.metmuseum.org/plan-your-visit"
+            }
+          ],
+          "extra_label": "Getting there",
+          "extra": "Subway 4, 5 or 6 to 86 St, then three blocks west; M1 to M4 buses on Fifth Ave. Step-free entrances at 81st St and Fifth Ave. On-site parking only weekday evenings and weekends ($25 up to 1 hour), not guaranteed.",
+          "extra_stale": "Transit and parking details were read Nov 26; check the Met page."
         },
         {
           "id": "bronx-zoo",
