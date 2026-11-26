@@ -236,7 +236,7 @@ function readCard(r, read, today) {
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">What our webcam check shows</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
+        <p class="holiday-note">${r.history_below ? `${e(read.reason)} Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : `No cam read from us yet. ${e(read.reason)}`}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -272,7 +272,7 @@ function readCard(r, read, today) {
 
 function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. ${r.history_below ? "Each cam's last read time shows here, with JavaScript on, while a recent read is up." : "Once our reads start, each cam's last read time shows here."}</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   // No cam readable at the last check (night, frozen feeds): one line instead of a table of "No read" rows (persona P2, 11-18).
@@ -299,7 +299,7 @@ ${rows}
 
 /** Recent days (owner 11-25: "mention what we saw in the last few days" instead of an empty card at night).
  * Built at deploy from the feed's own snapshot history: only reads the feed marked publishable, from a
- * usable picture, with a known status; one row per resort-local day (that day's latest read), newest first,
+ * usable picture, with a known status; one row per resort-local day (that day's latest clear read), newest first,
  * at most HISTORY_DAYS days back counting today. */
 export const HISTORY_DAYS = 5;
 export function buildHistory(snapshots) {
@@ -327,15 +327,20 @@ export function camHistory(r, entries, now = new Date()) {
     if (!Number.isFinite(at) || at > now.getTime() + 5 * 60000) continue;
     const day = localDay(h.read_at, r);
     if (day < minDay || day > todayLocal || !Object.hasOwn(STATUSES, String(h.status)) || h.status === "No read" || h.status === "Closed") continue;
-    if (!byDay.has(day) || Date.parse(byDay.get(day).read_at) < at) byDay.set(day, h);
+    // Each day keeps its latest read that can tell at least one of the table's grades; a day with no such
+    // read says so in one cell instead of a row of "Can't tell" (Muse review 11-26).
+    const clear = gradeValues(h.fields).some((x) => HISTORY_GRADES.includes(x.key) && x.value !== null);
+    const cur = byDay.get(day);
+    if (!cur || (clear && !cur.clear) || (clear === cur.clear && Date.parse(cur.h.read_at) < at)) byDay.set(day, { h, clear });
   }
   const days = [...byDay.keys()].sort().reverse();
-  if (!days.length) return "";
+  if (!days.length || ![...byDay.values()].some((x) => x.clear)) return "";
   // Same grades as the card, one row per day, no time of day (owner 11-25: conditions hold over a day).
   const cols = GRADES.filter(([key]) => HISTORY_GRADES.includes(key));
   const rows = days.map((day) => {
-    const h = byDay.get(day);
+    const { h, clear } = byDay.get(day);
     const label = new Date(`${day}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" }).replace(",", "");
+    if (!clear) return `              <tr><th scope="row">${e(label)}</th><td class="cam-grade-unknown" colspan="${cols.length}">No clear read that day</td></tr>`;
     const g = new Map(gradeValues(h.fields).map((x) => [x.key, x]));
     return `              <tr><th scope="row">${e(label)}</th>${cols.map(([key]) => `<td class="cam-grade-${e(g.get(key)?.tone ?? "unknown")}">${e(g.get(key)?.value ?? "Can't tell")}</td>`).join("")}</tr>`;
   }).join("\n");

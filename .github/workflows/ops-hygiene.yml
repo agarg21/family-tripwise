@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: read
+  actions: write   # to start a GSC snapshot when the scheduled one was skipped
 
 jobs:
   check:
@@ -27,5 +28,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Early warnings (90% of size limits; GSC snapshot older than 4 days starts a new one)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          node tools/ops-headroom.mjs --stale-gsc-exit
+          code=$?
+          set -e
+          if [ "$code" = 3 ]; then
+            recent=$(gh run list -R "$GITHUB_REPOSITORY" -w gsc-snapshot.yml -L 1 --json createdAt -q '.[0].createdAt')
+            if [ -z "$recent" ] || [ $(( $(date +%s) - $(date -d "$recent" +%s) )) -gt 21600 ]; then
+              gh workflow run gsc-snapshot.yml -R "$GITHUB_REPOSITORY" && echo "started a GSC snapshot"
+            else
+              echo "a GSC snapshot run started within 6 hours; not starting another"
+            fi
+          fi
       - name: Ops state and size checks
         run: node --test --test-reporter=dot tools/ops-state.test.mjs

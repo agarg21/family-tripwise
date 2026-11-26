@@ -128,7 +128,7 @@
     return `<section id="ski-answer" class="container answer-box cam-read" aria-label="${e(r.name)} today">
         ${statusBlock}
         <p class="cam-read-label">What our webcam check shows</p>
-        <p class="holiday-note">No cam read from us yet. ${e(read.reason)}${r.history_below ? ` Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : ""}</p>
+        <p class="holiday-note">${r.history_below ? `${e(read.reason)} Our last clear reads, <a href="#cam-history">day by day, are below</a>.` : `No cam read from us yet. ${e(read.reason)}`}</p>
         <p>${camLink}</p>
       </section>`;
   }
@@ -163,7 +163,7 @@
 }
   function camTable(r, read) {
   if (read.state === "none") {
-    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. Once our reads start, each cam's last read time shows here.</p>`;
+    return `<p>${r.cams_note ? `${e(r.cams_note)} (see ${poss(r.name)} own <a href="${e(r.cam_page)}">cam page</a>, ${r.cams_from_feed ? "as listed in our cam feed" : "read"} ${short(r.observed_on)})` : `${poss(r.name)} ${r.cams.length} public cams, as named on its <a href="${e(r.cam_page)}">cam page</a> (read ${short(r.observed_on)})`}: ${r.cams.map((c) => e(c.name)).join(", ")}. ${r.history_below ? "Each cam's last read time shows here, with JavaScript on, while a recent read is up." : "Once our reads start, each cam's last read time shows here."}</p>`;
   }
   const byName = new Map((read.cams ?? []).map((c) => [c.name, c]));
   // No cam readable at the last check (night, frozen feeds): one line instead of a table of "No read" rows (persona P2, 11-18).
