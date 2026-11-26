@@ -35,6 +35,7 @@ Approved.
 - D54 (11-25): Approved: ski city pages; shortlist resorts as cams allow; NYC snow tubing; NYE page per holiday city.
 - D55/D57 (11-25/26): every resort's status page daily to 04-15; counts by code.
 - D56 (11-26): Approved: R2 school breaks + DataForSEO; expand deals/snow; no local parent FB groups.
+- D58 (11-27): Approved: OWNER.md limit 4 KB -> 6 KB; Muse reviews answered daily (AGENTS).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.

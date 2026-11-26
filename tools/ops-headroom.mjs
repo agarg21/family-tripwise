@@ -8,7 +8,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const LIMITS = { "ops/STATE.md": 8 * 1024, "ops/QUEUE.md": 12 * 1024, "ops/OWNER.md": 4 * 1024 };
+const LIMITS = { "ops/STATE.md": 8 * 1024, "ops/QUEUE.md": 12 * 1024, "ops/OWNER.md": 6 * 1024 };
 export const WARN_AT = 0.9;
 export const GSC_MAX_DAYS = 4;
 

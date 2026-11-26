@@ -11,7 +11,7 @@ const bytes = (p) => statSync(join(root, p)).size;
 test("lean operator state files exist and stay within size limits", () => {
   assert.ok(bytes("ops/STATE.md") <= 8 * 1024, "ops/STATE.md must be ≤8 KB");
   assert.ok(bytes("ops/QUEUE.md") <= 12 * 1024, "ops/QUEUE.md must be ≤12 KB");
-  assert.ok(bytes("ops/OWNER.md") <= 4 * 1024, "ops/OWNER.md must be ≤4 KB");
+  assert.ok(bytes("ops/OWNER.md") <= 6 * 1024, "ops/OWNER.md must be ≤6 KB (owner raised from 4 KB, 2026-11-27)");
 });
 
 test("STATE.md carries the fields each run depends on", () => {
