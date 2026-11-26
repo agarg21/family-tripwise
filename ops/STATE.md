@@ -45,13 +45,13 @@ active: none
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
-- Saks: no times (11-24); Nov 28. Disney dining (to Nov 30): error 11-21. Chanukah on Ice: zeffy error; Nov 28.
-- NYE row 10: SA pages unreadable 11-23; Nov 30 (Hemisfair countdown on SA card).
-- BF unpriced cards (11-24): Hersheypark lists to Nov 30, from Dec 1; Fun Spot sale ends Nov 30 (drops itself); Schlitterbahn NB drops after Nov 27. Mingei drops Dec 7.
-- Goodman Carol (11-23): no $; from Nov 30. Hip Hop Nutcracker card (11-25, unpriced) drops after Nov 29. Boston Pops no $ 11-25; Dec 2.
-- Choc. Nutcracker: no official page (11-24); re-search by Nov 28.
-- SA Hemisfair card (11-24): no $; kid lines drop themselves; ends Dec 31. SA Nutcracker drops after Dec 13. SA Grinch: $ hide ~Dec 19; drops Dec 24.
-- Macy's parade: Sat Nov 28 per NBC NY/AP; MTA confirms postponed (11-25); nyc.gov closures Thu-only (11-26); Nov 27 search for Sat plan; lines drop after Nov 28.
+- Saks no times, Chanukah on Ice zeffy error: Nov 28. Disney dining error 11-21.
+- NYE row 10: SA pages unreadable 11-23; Nov 30.
+- BF unpriced cards: Hersheypark to Nov 30 (from Dec 1); Fun Spot, Schlitterbahn, Mingei self-drop.
+- Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2).
+- Choc. Nutcracker: no official page; re-search by Nov 28.
+- SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
+- Macy's parade: Sat Nov 28 (NBC NY/AP; MTA: postponed); nyc.gov Thu-only (11-26); Nov 27 search Sat plan.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
