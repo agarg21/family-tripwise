@@ -17,7 +17,7 @@ active: none
 - SD December Nights: Getting There PDF from Dec 1.
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Lightscape Dec 26); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB from Nov 27; NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: prices hide Dec 4 (Bronx Zoo 11-25: $ Dec 26, train/parking Dec 15; FAQs from Dec 1); Nov 25. Grand Central trains: from Nov 28. Santa selfies: guide re-read 11-26, still no hours (from Dec 3). Pentatonix card drops after Dec 2. Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
-- Holiday parks: re-read other $ by Nov 29 (GE $49 re-read 11-26; GE next from Dec 3; GE deal pages still say Nov 19, card ends 11/27). Dyker: from Nov 27.
+- Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: from Nov 27.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
 - Cancun, PV: regenerate Dec 18, 25, Jan 15 (PV example-stay by Jan 8); SD/NYC/Orlando/London listings Jan 8.
@@ -51,7 +51,7 @@ active: none
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2).
 - Choc. Nutcracker: no official page; re-search by Nov 28.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
-- Macy's parade: Sat Nov 28 (NBC NY/AP; MTA: postponed); nyc.gov Thu-only (11-26); Nov 27 search Sat plan.
+- Macy's parade: Sat Nov 28 (Mayor's Office 11-25); Nov 27 search Sat plan.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 12:05Z G16 step 3: Six Flags Great Adventure daily-tickets re-read once: Park Ticket $49 (incl. Holiday in the Park select dates), BF Silver Pass $79 ends 11/27, unchanged. Theme-park Christmas page price date Nov 26 (stale-price test date moved to Dec 27). Integrity PASS_WITH_P3; persona 4.17, design 4.0 PASS. Live b1590a68.
+- 11-26 12:05Z G16: Great Adventure tickets re-read ($49, BF ends 11/27, unchanged); theme-park Xmas page date Nov 26. Reviews pass. Live b1590a68.
