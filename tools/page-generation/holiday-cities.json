@@ -1769,7 +1769,7 @@
           "table_when": "Select days, Nov 27 to Dec 23",
           "answer_when": "select days to Dec 23",
           "free": true,
-          "cost_note": "Free: the city lists each of these as free; Painting in the Plaza is free with registration.",
+          "cost_note": "Free: the city lists each of these as free; some need free registration.",
           "kids": [
             {
               "text": "H-E-B Christmas Tree Lighting at Travis Park, Fri Nov 27, 4 to 7 p.m.; the tree is lit at 6 p.m., and the city lists free VIA rides",
@@ -1796,8 +1796,14 @@
               "until": "2026-12-06"
             }
           ],
-          "extra": "Parking and food. The city warns downtown is very busy Nov 27 to 29; city-owned garages are free after 5 p.m. on Thursdays.",
-          "watch": "The tree lighting is the same night as the ticketed River Parade (6 p.m.). The city's release gives no age rules, stroller notes or VIA ride details.",
+          "extra": "Parking and food. City-owned parking is free after 5 p.m. on Thursdays.",
+          "watch": [
+            {
+              "text": "The tree lighting is the same night as the River Parade (free viewing area, paid seats optional), both around 6 p.m., and the city warns downtown is very busy Nov 27 to 29.",
+              "until": "2026-11-27"
+            },
+            "The city's release gives no age rules, stroller notes or VIA ride details."
+          ],
           "observed_on": "2026-11-26",
           "sources": [
             {
