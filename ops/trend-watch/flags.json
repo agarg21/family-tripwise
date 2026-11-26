@@ -2,43 +2,6 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-d7ddba988b",
-      "city": "New York City",
-      "title": "10 best ice skating rinks in NYC for 2026: dates, prices and a brand-new rink on Staten Island",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/best-ice-skating-rinks-nyc/",
-          "published": "2026-11-20T19:32Z"
-        }
-      ],
-      "first_seen": "2026-11-20T20:04Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:ice skating"
-        ],
-        "novelty": [
-          "new",
-          "first",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:staten island"
-        ]
-      },
-      "matched_terms": [
-        "ice skating",
-        "new",
-        "first",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-bf827b9ff5",
       "city": "New York City",
       "title": "Sienna Spiro performs as Bloomingdale's unveils holiday windows in NYC",
@@ -105,42 +68,6 @@
         "family",
         "kid",
         "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-8a300ff5cb",
-      "city": "Orlando",
-      "title": "New Orlando Theatre Company, Stone Table Theatre, to Debut This December",
-      "links": [
-        {
-          "outlet": "Bungalower",
-          "url": "https://bungalower.com/2026/11/26/new-orlando-theatre-company-stone-table-theatre-to-debut-this-december/",
-          "published": "2026-11-26T14:21Z"
-        }
-      ],
-      "first_seen": "2026-11-26T15:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:holidays"
-        ],
-        "novelty": [
-          "new",
-          "debut",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:december 11",
-          "place:orlando theatre"
-        ]
-      },
-      "matched_terms": [
-        "holidays",
-        "new",
-        "debut"
       ],
       "score": 8,
       "priority": "normal"
@@ -253,77 +180,6 @@
         "2026"
       ],
       "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-760926a84e",
-      "city": "New York City",
-      "title": "Dec. 15 is the last day to enroll in New York health coverage that starts Jan. 1, 2027: sign up after that and you wait until Feb. 1",
-      "links": [
-        {
-          "outlet": "Secret NYC",
-          "url": "https://secretnyc.co/health-insurance-enrollment-ny-deadline/",
-          "published": "2026-11-26T18:40Z"
-        }
-      ],
-      "first_seen": "2026-11-26T19:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:child"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [
-          "buzz:instagram"
-        ],
-        "actionable": [
-          "date:dec. 15",
-          "price:$1"
-        ]
-      },
-      "matched_terms": [
-        "child",
-        "new",
-        "instagram"
-      ],
-      "score": 10,
-      "priority": "normal"
-    },
-    {
-      "id": "t-b6b323f1ab",
-      "city": "New York City",
-      "title": "NYC's true Thanksgiving Day heroes: Greyhound bus drivers",
-      "links": [
-        {
-          "outlet": "Gothamist",
-          "url": "https://gothamist.com/news/v",
-          "published": "2026-11-26T19:00Z"
-        }
-      ],
-      "first_seen": "2026-11-26T19:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,holidays"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "holidays",
-        "new"
-      ],
-      "score": 7,
       "priority": "normal"
     }
   ],
