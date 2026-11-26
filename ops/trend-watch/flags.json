@@ -251,6 +251,143 @@
       ],
       "score": 9,
       "priority": "normal"
+    },
+    {
+      "id": "t-2e6f2de427",
+      "city": "New York City",
+      "title": "New York Gov. Kathy Hochul declares state of emergency with Thanksgiving storm expected to impact travel",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/new-york-state-of-emergency-thanksgiving-storm/",
+          "published": "2026-11-26T04:25Z"
+        }
+      ],
+      "first_seen": "2026-11-26T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:long island"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5bd3296f2d",
+      "city": "New York City",
+      "title": "First Alert Weather Day for stormy Thanksgiving in New York - 11/25/26",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-day-for-stormy-thanksgiving-in-new-york-112526/",
+          "published": "2026-11-26T04:25Z"
+        }
+      ],
+      "first_seen": "2026-11-26T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:11/25"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "first",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d1aa66c8d1",
+      "city": "New York City",
+      "title": "N.Y., N.J. both under state of emergency due to Thanksgiving storm",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/n-y-n-j-both-under-state-of-emergency-due-to-thanksgiving-storm/",
+          "published": "2026-11-26T04:17Z"
+        }
+      ],
+      "first_seen": "2026-11-26T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-21f55f9141",
+      "city": "San Antonio",
+      "title": "San Antonio cheerleaders adjust to historic Macy's Thanksgiving Day Parade postponement",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/26/san-antonio-cheerleaders-adjust-to-historic-macys-thanksgiving-day-parade-postponement/",
+          "published": "2026-11-26T04:16Z"
+        }
+      ],
+      "first_seen": "2026-11-26T05:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
