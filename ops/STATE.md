@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=0
-run: {id: 2026-11-26T05:04:24Z, started_at: 2026-11-26T05:04:24Z}
-last_public_release: 13671825 NYC Bronx Zoo Holiday Lights card
+today: 2026-11-26 transactions=1
+run: none
+last_public_release: 950635b1 SeaWorld SA Christmas re-price
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 04:05Z G16 trend: Bronx Zoo Holiday Lights card re-read (prices unchanged; Farmyard hours, daytime window, train ages) live 13671825. 8 off-fit flags dropped. Next: NYC rinks / free-activities flags.
+- 11-26 05:04Z G16 trend: SeaWorld SA Christmas re-read (event page Nov 26, no dates now; price $49.99 Nov 22 sale, new price_until clock to Nov 29) on SA Christmas + theme-park pages, live 950635b1. Next: NYC rinks/free-activities flags; G05 sweep after 06:00 ET.
