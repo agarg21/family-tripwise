@@ -497,6 +497,111 @@
       ],
       "score": 9,
       "priority": "normal"
+    },
+    {
+      "id": "t-25c505e293",
+      "city": "New York City",
+      "title": "Jersey Shore preparing for Thanksgiving Day storm",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/jersey-shore-preparing-for-thanksgiving-day-storm/",
+          "published": "2026-11-25T22:46Z"
+        }
+      ],
+      "first_seen": "2026-11-26T00:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-72eacda228",
+      "city": "Orlando",
+      "title": "Universal Studios unveils new Blumhouse-boosted Horror Make-Up Show in December",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/orlando-theme-parks/universal-studios-unveils-new-blumhouse-boosted-horror-make-up-show-in-december/",
+          "published": "2026-11-25T23:29Z"
+        }
+      ],
+      "first_seen": "2026-11-26T00:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:universal"
+        ],
+        "novelty": [
+          "unveils",
+          "new",
+          "opening",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:universal studios"
+        ]
+      },
+      "matched_terms": [
+        "universal",
+        "unveils",
+        "new",
+        "opening",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d750413e5e",
+      "city": "Orlando",
+      "title": "24 essential Orlando dive bars",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/food-drink/24-essential-orlando-dive-bars/",
+          "published": "2026-11-25T23:17Z"
+        }
+      ],
+      "first_seen": "2026-11-26T00:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "family:family",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "family",
+        "holiday",
+        "first"
+      ],
+      "score": 8,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
