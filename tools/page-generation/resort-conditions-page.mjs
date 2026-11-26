@@ -10,6 +10,11 @@ import { easternDate } from "./sitemap.mjs";
 import { withLinkPreview } from "./link-previews.mjs";
 
 export const resortData = () => JSON.parse(readFileSync(new URL("./resort-conditions.json", import.meta.url), "utf8"));
+// Daily lift and trail counts read by code from each resort's own status page (tools/resort-status.mjs, D57).
+export const statusData = () => {
+  try { return JSON.parse(readFileSync(new URL("./resort-status.json", import.meta.url), "utf8")); } catch { return { resorts: {} }; }
+};
+
 export const resortPath = (slug) => `ski/${slug}-conditions.html`;
 // The snowcam feed (docs/plan/resort-conditions-pages.md): the only interface to the cam pipeline.
 export const FEED_URL = "https://raw.githubusercontent.com/agarg21/snowcam-feed/main/conditions.json";
@@ -158,13 +163,48 @@ const nextTubing = (t, today) => t.blocks.find(([, end]) => end >= today);
 /** The resort's own dated status as a short chip plus its line, or null (persona review 11-16: a one-word
  * open/closed chip, attributed and dated). "Not open yet" only before an opening date the resort posted;
  * a lift count only from the resort's status page and only within 7 days of that read. */
+// A count read by code from the resort's own status page (tools/resort-status.mjs, D57): today's or
+// yesterday's, and only when its total is within 20% of the resort's known total, so a partial list
+// ("0 / 7 trails" before the season) or a misread number never shows (integrity review 11-26).
+function liveStatus(r, today) {
+  const live = r.live;
+  if (!live?.read_et || !live.read_at) return null;
+  const age = ageDays(live.read_et.date, today);
+  if (age < 0 || age > 1) return null;
+  const near = (got, known) => Array.isArray(got) && typeof known === "number" && Math.abs(got[1] - known) <= known * 0.2;
+  const lifts = near(live.lifts, r.lifts_total) ? live.lifts : null;
+  const trails = near(live.trails, r.trails_total) ? live.trails : null;
+  if (!lifts && !trails) return null;
+  const when = `${localTime(live.read_at, r)} ${zoneLabel(r)} ${short(localDay(live.read_at, r)).replace(" ", "\u00a0")}`;
+  const page = `${poss(r.name)} status page`;
+  const pct = (x) => (x[0] > 0 && x[1] >= 20 ? ` (about ${Math.max(1, Math.round((100 * x[0]) / x[1]))}%)` : "");
+  if (age === 1) {
+    const what = lifts ? `${lifts[0]} of ${lifts[1]} lifts` : `${trails[0]} of ${trails[1]} trails`;
+    return { chip: `${what} open yesterday`, variant: "only_for", open: (lifts ?? trails)[0] > 0, today: false,
+      text: `Yesterday's count (${when}). Check today's on ${page}.` };
+  }
+  if (lifts) {
+    const t = !trails ? "" : lifts[0] > 0 ? `${trails[0]} of ${trails[1]} trails${pct(trails)} open too. `
+      : trails[0] === 0 ? `No trails open either (0 of ${trails[1]}). ` : `Its page also lists ${trails[0]} of ${trails[1]} trails open. `;
+    return { chip: lifts[0] === 0 ? `No lifts open (0 of ${lifts[1]})` : `${lifts[0]} of ${lifts[1]} lifts open`, variant: lifts[0] === 0 ? "skip" : "neutral",
+      open: lifts[0] > 0, today: true, text: `${t}Checked ${when} on ${page}.` };
+  }
+  return { chip: trails[0] === 0 ? `No trails open (0 of ${trails[1]})` : `${trails[0]} of ${trails[1]} trails open${pct(trails)}`, variant: trails[0] === 0 ? "skip" : "neutral",
+    open: trails[0] > 0, today: true, text: `Checked ${when} on ${page}.` };
+}
+
 function resortStatus(r, today) {
   const nb = (iso) => short(iso).replace(" ", "\u00a0");
+  // Today's count leads when lifts or trails are open, or from opening day on, so an early opening or a
+  // postponed one is never hidden behind a date chip (integrity review 11-26).
+  const live = liveStatus(r, today);
+  if (live && (live.open || (live.today && (!r.opening || today >= r.opening.date)))) return live;
   if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   // A target date the resort says can move with weather never earns a positive chip on the day (integrity review 11-18).
   if (r.opening && r.opening.target && today === r.opening.date) return { chip: "Target opening day", variant: "neutral", text: `${e(r.opening.text)} Check ${poss(r.name)} own status before you drive (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
+  if (live && !(r.opening && today < r.opening.date)) return live;
   const read = r.status_read ?? r.observed_on;
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
@@ -314,8 +354,8 @@ ${rows}
 `;
 }
 
-export function resortPage(slug, data = resortData(), today = easternDate(), feed = null, now = new Date()) {
-  const base = withZone(data.resorts[slug]);
+export function resortPage(slug, data = resortData(), today = easternDate(), feed = null, now = new Date(), status = statusData()) {
+  const base = { ...withZone(data.resorts[slug]), live: status.resorts?.[slug] };
   const history = camHistory(base, feed?.history?.[base.feed_key ?? slug], now);
   const r = history ? { ...base, history_below: true } : base;
   const errors = validateResort(r);
@@ -415,15 +455,15 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label", "history_below"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label", "history_below", "live", "lifts_total", "trails_total"];
   return { ...Object.fromEntries(keep.filter((k) => r[k] !== undefined).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };
 }
 
 /** The card and cam table the page script draws for a feed read (tests and fixture QA). */
-export function drawnRead(slug, data, today, feed, now = new Date()) {
-  const r = withZone(data.resorts[slug]);
+export function drawnRead(slug, data, today, feed, now = new Date(), status = statusData()) {
+  const r = { ...withZone(data.resorts[slug]), live: status.resorts?.[slug] };
   const read = camRead(feedEntry(slug, r, feed), now);
   return { card: readCard(r, read, today), table: camTable(r, read) };
 }
@@ -437,7 +477,7 @@ export function drawnRead(slug, data, today, feed, now = new Date()) {
 export const REFRESH_MIN = 60;
 export function clientScript() {
   const consts = { STALE_MIN, HIDE_MIN, MIN_CONF, MONTHS, STATUSES, CHIP_LABELS, FIELD_LABELS, GRADES, LIFTS_GRADE, TONES, FEED_URL, REFRESH_MIN };
-  const fns = { e, poss, short, hasPrice, etTime, etDay, localTime, localDay, zoneLabel, gradeValues };
+  const fns = { e, poss, short, hasPrice, etTime, etDay, localTime, localDay, zoneLabel, gradeValues, ageDays };
   // resortStatus is copied in below with readCard.
   return `// Generated by tools/page-generation/resort-conditions-page.mjs (QUEUE G19). Do not edit.
 (() => {
@@ -446,6 +486,7 @@ ${Object.entries(consts).map(([k, v]) => `  const ${k} = ${JSON.stringify(v)};`)
   const BANNED = ${BANNED};
 ${Object.entries(fns).map(([k, v]) => `  const ${k} = ${v};`).join("\n")}
   ${camRead}
+  ${liveStatus}
   ${resortStatus}
   ${readCard}
   ${camTable}
@@ -493,7 +534,7 @@ ${Object.entries(fns).map(([k, v]) => `  const ${k} = ${v};`).join("\n")}
 }
 
 export function writeResortPages(writeSite, today = easternDate(), feed = null) {
-  const data = resortData();
+  const data = resortData(), status = statusData();
   writeSite(CLIENT_PATH, clientScript());
-  for (const slug of Object.keys(data.resorts)) writeSite(resortPath(slug), resortPage(slug, data, today, feed));
+  for (const slug of Object.keys(data.resorts)) writeSite(resortPath(slug), resortPage(slug, data, today, feed, new Date(), status));
 }

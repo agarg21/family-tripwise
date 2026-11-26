@@ -34,6 +34,8 @@ test("reads 'of' phrasings and ignores impossible counts", () => {
   assert.deepEqual(parseCounts("Lifts open 30/20"), {});          // open > total
   assert.deepEqual(parseCounts("2026 / 2027 lifts open"), {});     // a season, not a count
   assert.deepEqual(parseCounts("Check the lift status page"), {});
+  assert.deepEqual(parseCounts("Trails Open 0/60 Lifts Open 0/12"), {});              // two counts on one line
+  assert.deepEqual(parseCounts("3 of 12 lifts open\n0 of 12 lifts open"), {});       // same total, different counts
 });
 
 test("readAll obeys robots.txt, records the ET date and never invents a count", async () => {
@@ -58,4 +60,13 @@ test("readAll obeys robots.txt, records the ET date and never invents a count", 
   assert.match(out.b.error, /robots/);
   assert.equal(out.c.lifts, undefined);
   assert.equal(out.c.error, undefined);
+});
+
+test("a denied page stays parked and is not fetched again", async () => {
+  let fetched = 0;
+  const fetchImpl = async () => { fetched++; return new Response("", { status: 200 }); };
+  const prev = { a: { url: "https://a.example/status", kind: "denied", error: "HTTP 403", read_et: { date: "2026-11-25" } } };
+  const out = await readAll({ resorts: { a: { status_page: "https://a.example/status" } }, prev, fetchImpl, sleep: async () => {} });
+  assert.equal(fetched, 0);
+  assert.equal(out.a.kind, "denied");
 });

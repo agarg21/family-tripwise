@@ -764,3 +764,43 @@ test("NYC-set pages keep western conditions pages out of the NYC guide list (per
     assert.doesNotMatch(nav, /(vail|alta|timberline|heavenly)-conditions\.html/);
   }
 });
+
+test("D57: today's count leads the status line, in the resort's own time; yesterday's is marked; partial totals hide", () => {
+  const st = (date, at, lifts, trails) => ({ resorts: { vail: { read_et: { date, time: "13:31" }, read_at: at, lifts, trails } } });
+  const now = new Date("2026-12-05T19:00:00Z");
+  const page = visible(resortPage("vail", resortData(), "2026-12-05", null, now, st("2026-12-05", "2026-12-05T18:31:00Z", [8, 34], [13, 277])));
+  assert.match(page, /8 of 34 lifts open\s+13 of 277 trails \(about 5%\) open too\. Checked 11:31am MT Dec\s?5 on Vail(&#39;|')s\s+status page/);
+  const zero = visible(resortPage("vail", resortData(), "2026-12-05", null, now, st("2026-12-05", "2026-12-05T18:31:00Z", [0, 34], [0, 277])));
+  assert.match(zero, /No lifts open \(0 of 34\)\s+No trails open either \(0 of 277\)\./);
+  const yday = visible(resortPage("vail", resortData(), "2026-12-06", null, now, st("2026-12-05", "2026-12-05T18:31:00Z", [8, 34])));
+  assert.match(yday, /8 of 34 lifts open yesterday\s+Yesterday(&#39;|')s count \(11:31am MT Dec\s?5\)\. Check today(&#39;|')s on Vail(&#39;|')s\s+status page/);
+  const old = visible(resortPage("vail", resortData(), "2026-12-08", null, now, st("2026-12-05", "2026-12-05T18:31:00Z", [8, 34])));
+  assert.doesNotMatch(old, /8 of 34 lifts/);
+  const partial = visible(resortPage("vail", resortData(), "2026-12-05", null, now, st("2026-12-05", "2026-12-05T18:31:00Z", [8, 20], [5, 7])));
+  assert.doesNotMatch(partial, /of 20 lifts|of 7 trails/);
+});
+
+test("D57: a trail-only count; and a count with lifts open beats a future opening date", () => {
+  const now = new Date("2026-12-05T19:00:00Z");
+  const k = { resorts: { killington: { read_et: { date: "2026-12-05", time: "13:31" }, read_at: "2026-12-05T18:31:00Z", trails: [3, 155] } } };
+  assert.match(visible(resortPage("killington", resortData(), "2026-12-05", null, now, k)), /3 of 155 trails open \(about 2%\)\s+Checked 1:31pm ET Dec\s?5/);
+  const data = resortData();
+  data.resorts.vail = { ...data.resorts.vail, opening: { date: "2026-12-12", when: "Dec 12", read: "2026-11-20" } };
+  const st = { resorts: { vail: { read_et: { date: "2026-12-05", time: "13:31" }, read_at: "2026-12-05T18:31:00Z", lifts: [4, 34] } } };
+  assert.match(visible(resortPage("vail", data, "2026-12-05", null, now, st)), /4 of 34 lifts open/);
+  const yday = { resorts: { vail: { ...st.resorts.vail, read_et: { date: "2026-12-04", time: "13:31" }, read_at: "2026-12-04T18:31:00Z" } } };
+  assert.match(visible(resortPage("vail", data, "2026-12-05", null, now, yday)), /4 of 34 lifts open yesterday/);
+  const closed = { resorts: { vail: { ...st.resorts.vail, lifts: [0, 34] } } };
+  assert.match(visible(resortPage("vail", data, "2026-12-05", null, now, closed)), /Not open yet/);
+});
+
+test("D57: the page script keeps the count when it redraws the card from the feed", () => {
+  const now = new Date("2026-12-05T19:00:00Z");
+  const st = { resorts: { vail: { read_et: { date: "2026-12-05", time: "13:31" }, read_at: "2026-12-05T18:31:00Z", lifts: [8, 34] } } };
+  const html = resortPage("vail", resortData(), "2026-12-05", null, now, st);
+  const cfg = JSON.parse(html.match(/data-cam-read='([^']*)'/)?.[1]?.replaceAll("&#39;", "'").replaceAll("&quot;", '"').replaceAll("&amp;", "&") ?? html.match(/data-cam-read="([^"]*)"/)[1].replaceAll("&quot;", '"').replaceAll("&#39;", "'").replaceAll("&amp;", "&"));
+  assert.deepEqual(cfg.live.lifts, [8, 34]);
+  assert.equal(cfg.lifts_total, 34);
+  const { card } = drawnRead("vail", resortData(), "2026-12-05", null, now, st);
+  assert.match(card, /8 of 34 lifts open/);
+});

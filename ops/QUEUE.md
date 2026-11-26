@@ -15,7 +15,7 @@ Steps 1-5 done · 6 done c942ebd9 (re-render with each G18 holiday refresh) · 7
 
 ## G19 Resort conditions pages (D47/D48, 11-14: fast)
 open · M · owner: D47/D48 · gate: none
-D55 daily to Dec 15 (D57 counts: code, to 04-15): first run each ET day re-reads status pages of resorts not open yet (status_not_open, 0 lifts, future opening), updates status_*; drop a resort once open. docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West; Holiday Valley (woods hero; swap if a slope photo appears). P2s: dedupe sources; status card cost line (cam times + status link done 27215b93). Schweitzer held (no winter photo). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $ (SHAs: ops/runs). P3: plan line home/childcare/getting-here undated keys, plainer "unless dated"; next P3s: NY vs states, region field; rest in ops/runs.
+D55/D57: code reads each status_page daily (resort-status.json); never re-read by hand. First run each ET day: from that file + hours/opening pages, update status_* for resorts not open yet; drop a resort once open. docs/plan/resort-conditions-pages.md. Live: 12 East + 12 West; Holiday Valley (woods hero; swap if a slope photo appears). P2s: dedupe sources; status card cost line (cam times + status link done 27215b93). Schweitzer held (no winter photo). cost_cue(+_basis) live: Wolf Creek, Jay Peak, Timberline, Mt Bachelor, Snowbird; Jackson Hole waits for a youth ticket $ (SHAs: ops/runs). P3: plan line home/childcare/getting-here undated keys, plainer "unless dated"; next P3s: NY vs states, region field; rest in ops/runs.
 
 ## G18 Hotel prices: weekend + holiday samples (owner D39, 11-05)
 open · M · owner: D39 Approved (all hotel pages) · gate: D8 budget

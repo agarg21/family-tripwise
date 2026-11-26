@@ -28,8 +28,9 @@ const FRACTION = /^(\d{1,3})\s*(?:\/|of|out of)\s*(\d{1,3})$/i;
 //   Vail Resorts:   "8" | "/ 34" | "Lifts Open" | "See Lifts"   (number above the label)
 //   Windham, Jay:   "Lifts Open" | "0/12"   or  "Open Lifts" | "0 / 9"   (number below the label)
 //   Holiday Valley: "0 of 13 OPEN LIFTS"   (one line)
-// When a page gives one kind several different totals (Holiday Valley counts trails per difficulty),
-// the count is ambiguous and we report none for that kind.
+// When a page gives one kind several different counts (Holiday Valley counts trails per difficulty),
+// the count is ambiguous and we report none for that kind. The page then checks each total against the
+// resort's known total (lifts_total / trails_total in resort-conditions.json) before showing it.
 export function parseCounts(text) {
   const raw = String(text).split("\n").map((l) => l.replace(/\s+/g, " ").trim()).filter(Boolean);
   const lines = [];
@@ -55,9 +56,11 @@ export function parseCounts(text) {
   const out = {};
   for (const kind of ["lifts", "trails"]) {
     const w = WORD[kind];
+    // One count per line, and the line is only that count: "Trails Open 0/60 Lifts Open 0/12" on one
+    // line gives nothing rather than a trails number read as lifts (integrity review 11-26).
     const inline = [
-      new RegExp(`(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})\\s+(?:open\\s+${w}|${w}\\s+open)\\b`, "i"),
-      new RegExp(`(?:open\\s+${w}|${w}\\s+open)\\s*:?\\s*(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})\\b`, "i"),
+      new RegExp(`^(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})\\s+(?:open\\s+${w}|${w}\\s+open)(?:\\s+(?:today|now))?$`, "i"),
+      new RegExp(`^(?:open\\s+${w}|${w}\\s+open)\\s*:?\\s*(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})$`, "i"),
     ];
     const found = [];
     lines.forEach((l, i) => {
@@ -73,7 +76,7 @@ export function parseCounts(text) {
     });
     const [lo, hi] = LIMITS[kind];
     const ok = found.filter(([o, t]) => o <= t && t >= lo && t <= hi);
-    if (!ok.length || new Set(ok.map(([, t]) => t)).size > 1) continue;
+    if (!ok.length || new Set(ok.map(([o, t]) => `${o}/${t}`)).size > 1) continue;
     out[kind] = [ok[0][0], ok[0][1]];
     out.evidence = { ...(out.evidence || {}), [kind]: ok[0][2].slice(0, 60) };
   }
@@ -91,14 +94,16 @@ function etStamp(d) {
   return { date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour === "24" ? "00" : p.hour}:${p.minute}` };
 }
 
-export async function readAll({ resorts, fetchImpl = fetch, now = () => Date.now(), sleep = (ms) => new Promise((r) => setTimeout(r, ms)), log = () => {} }) {
+export async function readAll({ resorts, prev = {}, fetchImpl = fetch, now = () => Date.now(), sleep = (ms) => new Promise((r) => setTimeout(r, ms)), log = () => {} }) {
   const robotsCache = new Map(), lastFetchAt = new Map(), out = {};
   for (const [slug, r] of Object.entries(resorts)) {
     if (!r.status_page) continue;
+    // A page that denied us stays parked: never retried unchanged (AGENTS.md). Delete its entry to retry.
+    if (prev[slug]?.kind === "denied" && prev[slug].url === r.status_page) { out[slug] = prev[slug]; log(`${slug}: parked (denied ${prev[slug].read_et?.date})`); continue; }
     const res = await fetchSource(r.status_page, { fetchImpl, robotsCache, lastFetchAt, sleep, now, userAgent: UA, token: UA_TOKEN });
     const at = new Date(now());
     const stamp = etStamp(at);
-    if (res.kind !== "ok") { out[slug] = { url: r.status_page, read_at: at.toISOString(), read_et: stamp, error: res.reason || res.kind }; log(`${slug}: ${res.kind} ${res.reason || ""}`); continue; }
+    if (res.kind !== "ok") { out[slug] = { url: r.status_page, read_at: at.toISOString(), read_et: stamp, kind: res.kind, error: res.reason || res.kind }; log(`${slug}: ${res.kind} ${res.reason || ""}`); continue; }
     const text = textOf(res.html);
     const counts = parseCounts(text);
     if (process.env.STATUS_CONTEXT) {
@@ -117,8 +122,10 @@ async function main() {
   const { resorts } = JSON.parse(fs.readFileSync(DATA, "utf8"));
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { resorts: {} };
   // At most one read per resort per ET day (D57); a second run the same day keeps the first read.
-  const due = Object.fromEntries(Object.entries(resorts).filter(([slug]) => prev.resorts?.[slug]?.read_et?.date !== today));
-  const fresh = await readAll({ resorts: due, log: console.log });
+  // A dry run reads one resort (STATUS_ONLY, default vail) so testing never re-reads every page (review 11-26).
+  const only = process.env.STATUS_DRY_RUN ? (process.env.STATUS_ONLY || "vail") : null;
+  const due = Object.fromEntries(Object.entries(resorts).filter(([slug]) => (!only || slug === only) && prev.resorts?.[slug]?.read_et?.date !== today));
+  const fresh = await readAll({ resorts: due, prev: prev.resorts || {}, log: console.log });
   const merged = { note: "Lift and trail counts printed on each resort's own status page, read once a day by tools/resort-status.mjs (D57). Missing count = the page did not print one as text.", resorts: { ...prev.resorts, ...fresh } };
   for (const slug of Object.keys(merged.resorts)) if (!resorts[slug]) delete merged.resorts[slug];
   fs.writeFileSync(OUT, JSON.stringify(merged, null, 2) + "\n");
