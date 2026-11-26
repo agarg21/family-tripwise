@@ -1,4 +1,46 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "royal-caribbean-promotion-terms",
+      "operator": "Royal Caribbean",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions?country=USA",
+      "check_id": "royal-caribbean-kids-sail-free",
+      "kind": "changed",
+      "detected_at": "2026-11-26T11:02:34.137Z",
+      "previous_headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
+      "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
+      "added": [
+        "Black Friday",
+        "BOGO60, Free 3rd & 4th, Cyber Bonus and Black Friday",
+        "BOGO60, Free 3rd & 4th, Cyber Bonus, and Black Friday",
+        "November Caribbean Air Promotion",
+        "and provides up to $50 USD instant savings per person, varying by the airline traveled with. Guests must book outside of 90 days prior to sailing to be eligibl…",
+        "To redeem, guests must book an Offer Cruise and book airfare during the Offer Period at"
+      ],
+      "removed": [
+        "Black Friday Preview Sale"
+      ],
+      "added_count": 6,
+      "removed_count": 3
+    },
+    {
+      "source_id": "club-med-deals",
+      "operator": "Club Med",
+      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "check_id": "club-med-all-inclusive-kids-under-4",
+      "kind": "changed",
+      "detected_at": "2026-11-26T11:02:38.817Z",
+      "previous_headline": "All-Inclusive Vacations",
+      "headline": "All-Inclusive Vacations",
+      "added": [
+        "Ends in: 4 days, 12 hours, 57 minutes and 18 seconds"
+      ],
+      "removed": [
+        "Ends in: 5 days, 5 hours, 55 minutes and 35 seconds"
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    }
+  ]
 }
