@@ -280,6 +280,190 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-30f2fecd93",
+      "city": "New York City",
+      "title": "\"Outpouring of kindness\": Texas band raises $350,000 to stay for delayed Macy's Thanksgiving parade",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-parade-marching-bands-delay-cost/",
+          "published": "2026-11-26T16:44Z"
+        }
+      ],
+      "first_seen": "2026-11-26T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday",
+          "price:$3"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c593390a90",
+      "city": "New York City",
+      "title": "Stormy weather in NYC postpones Thanksgiving Day Parade, impacting holiday travel | Team coverage",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/stormy-weather-in-nyc-postpones-thanksgiving-day-parade-impacting-holiday-travel-team-coverage/",
+          "published": "2026-11-26T16:35Z"
+        }
+      ],
+      "first_seen": "2026-11-26T17:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "holiday",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-b515ddf2f5",
+      "city": "Chicago",
+      "title": "Winterland at Gallagher Way returns to Chicago's Wrigleyville with its beloved Christkindlmarket, an outdoor skating rink, holiday movies & more",
+      "links": [
+        {
+          "outlet": "Secret Chicago",
+          "url": "https://secretchicago.com/winterland-gallagher-way-christkindlmarket/",
+          "published": "2026-11-26T16:34Z"
+        }
+      ],
+      "first_seen": "2026-11-26T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:christkindlmarket,skating rink,holiday"
+        ],
+        "novelty": [
+          "returns",
+          "is back",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:christkindlmarket"
+        ]
+      },
+      "matched_terms": [
+        "christkindlmarket",
+        "skating rink",
+        "holiday",
+        "santa",
+        "holidays",
+        "returns",
+        "is back"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-d923fe603e",
+      "city": "Orlando",
+      "title": "SeaWorld Orlando's Seven Seas Food Festival returns with nearly 30 concerts, global food lineup",
+      "links": [
+        {
+          "outlet": "News 6 ClickOrlando (theme parks)",
+          "url": "https://www.clickorlando.com/theme-parks/2026/11/26/seaworld-orlandos-seven-seas-food-festival-returns-with-nearly-30-concerts-global-food-lineup/",
+          "published": "2026-11-26T16:58Z"
+        }
+      ],
+      "first_seen": "2026-11-26T17:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:seaworld,festival"
+        ],
+        "novelty": [
+          "returns",
+          "unveiled",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:jan. 30",
+          "place:orlando's seven seas food festival",
+          "price:admission"
+        ]
+      },
+      "matched_terms": [
+        "seaworld",
+        "festival",
+        "returns",
+        "unveiled"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-50da1ed371",
+      "city": "San Antonio",
+      "title": "Ready to get the 2026 holiday started? Here's a list of events in San Antonio.",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/2026-holiday-season-events-san-antonio/",
+          "published": "2026-11-26T17:00Z"
+        }
+      ],
+      "first_seen": "2026-11-26T17:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:holiday,snow"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 26"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "snow",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
