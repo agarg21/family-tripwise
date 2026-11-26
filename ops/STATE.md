@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=10
-run: {id: 2026-11-26T15:05Z, started_at: 2026-11-26T15:05Z}
-last_public_release: 52fc8262 NYC Ballet Nutcracker re-read (Nov 26)
+today: 2026-11-26 transactions=11
+run: none
+last_public_release: 69c46301 NYC Met Christmas tree card (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -41,6 +41,7 @@ active: none
 - RC Black Friday (up to $900 off, BF page read 11-26, no window): terms re-read Nov 28. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
 - Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28.
+- NYC Met tree: Thursday hours conflict (read on Thanksgiving); stroller/coat check unread; from Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
@@ -63,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 14:05Z G16 trend: Bungalower Orlando lead; article not granted, orlando.gov lists summary-only. No public change; flag deleted.
+- 11-26 15:05Z G16 trend: NYC trees lead (amNY fetch not granted). Met tree + crèche card from 3 official Met pages: ≈ $60 for 4, last open day Tue Jan 5 (closed Wed), no lighting. Live 69c46301.
