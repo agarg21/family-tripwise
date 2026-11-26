@@ -6,8 +6,8 @@
       "source_sig": "d3df1a793506eadd",
       "status": "ok",
       "headline": "Promotions & Deals Terms and Conditions | Royal Caribbean Cruises",
-      "signal_hash": "15d871166819dd24fc714287ef6a3f06",
-      "set_hash": "e095e24c5a768339621ae13cd3325638",
+      "signal_hash": "c4a5901709163f5c350eb88f88f1f888",
+      "set_hash": "68d740267f7ec0d7d8f0b71666afa9a8",
       "signal": [
         "Biggest Sale of the Year",
         "Score incredible deals on your boldest vacation yet. Act now before this offer sets sail.",
@@ -24,9 +24,9 @@
         "OBC has no cash value, is applicable to cruise only, non-transferable, not redeemable for cash, and will expire if not used by 10:00PM on the final night.",
         "Black Friday"
       ],
-      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 0a560b71 831c72e8 5409bb09 d8da8387 98b7f3a2 43022c2d 53261a84 bd6f2774 50018a15 a29697e4 d9833c08 47f70544 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 3a049695 dbe0ff61 b8eda397 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e ab8c74e5 20111022 812f0bd2 d5b151d1",
+      "line_hashes": "223dd902 5b91ab1e 77ecc636 c89cd9b9 7374e0ca 93cf0bbb 2c8978ef 1a4e31ee 80488761 b8e6d519 3ca2678a 0b67cb5e 637bcabb 0a560b71 831c72e8 5409bb09 d8da8387 98b7f3a2 43022c2d 53261a84 bd6f2774 50018a15 a29697e4 d9833c08 47f70544 3232e6c7 3394a2d9 74ac894b 9fb3fdf5 3a049695 dbe0ff61 b8eda397 88c1465e b3216e06 c8acd7ce e5aa3f9a e184415f 88a7ee38 5a5c4160 c8b64be1 66eba39e b0020d56 20111022 812f0bd2 d5b151d1",
       "first_seen_at": "2026-10-29T18:59:45.734Z",
-      "changed_at": "2026-11-26T11:02:34.137Z"
+      "changed_at": "2026-11-26T20:15:19.315Z"
     },
     "great-wolf-deals": {
       "url": "https://www.greatwolf.com/deals",
@@ -92,11 +92,11 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "3a98c9be5dd300d837b39f6edb6f5d22",
-      "set_hash": "c32866713a8a22706dc0ab8f1a569796",
+      "signal_hash": "425b6f38a504f61c61794cbee58e330d",
+      "set_hash": "6a7f027d7262b6066450d254aaa4b4fa",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 4 days, 12 hours, 57 minutes and 18 seconds",
+        "Ends in: 4 days, 7 hours, 21 minutes and 53 seconds",
         "Black Friday's Biggest Savings End Soon",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
@@ -116,9 +116,9 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c a6c30119 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c ed222eab 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-26T11:02:38.817Z"
+      "changed_at": "2026-11-26T20:15:23.019Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
