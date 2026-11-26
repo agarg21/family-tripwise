@@ -10,9 +10,13 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Read and print counts, commit nothing"
+        description: "Read one resort and print its counts, commit nothing"
         type: boolean
         default: false
+      only:
+        description: "Resort slug for a dry run (default vail)"
+        type: string
+        default: "vail"
 
 permissions:
   contents: write
@@ -45,6 +49,8 @@ jobs:
       - name: Read status pages
         env:
           STATUS_CONTEXT: ${{ inputs.dry_run && '1' || '' }}
+          STATUS_DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+          STATUS_ONLY: ${{ inputs.only }}
         run: node tools/resort-status.mjs
 
       - name: Commit and deploy (fast-forward or merge, never force)

@@ -194,6 +194,8 @@
       "hero_alt": "Mount Snow's ski trails on a sunny winter day, seen from the base area with lodges and lifts in front",
       "hero_place": "Mount Snow, Vermont: a file photo, not today's conditions.",
       "cam_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 19,
+      "trails_total": 86,
       "status_page": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "status_note": "Mount Snow's lift and terrain status page showed 0 of 19 lifts open and no opening date",
       "status_lifts_open": 0,
@@ -328,6 +330,7 @@
       "hero_alt": "Skiers at the base of the Kaatskill Flyer chairlift at Hunter Mountain on a winter day",
       "hero_place": "The Kaatskill Flyer chairlift at Hunter Mountain, December 2021: an older photo, not today's conditions.",
       "cam_page": "https://www.huntermtn.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 12,
       "status_page": "https://www.huntermtn.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "cams": [
         {
@@ -448,6 +451,8 @@
       "hero_alt": "Snow-covered wooded Catskill peaks under a blue winter sky, seen from Blackhead Mountain",
       "hero_place": "A winter view from Blackhead Mountain in the northern Catskills, near Windham: not the ski area, and not today's conditions.",
       "cam_page": "https://www.windhammountainclub.com/mountain-cam/",
+      "lifts_total": 12,
+      "trails_total": 60,
       "status_page": "https://www.windhammountainclub.com/mountain-report/",
       "cams": [
         {
@@ -586,6 +591,7 @@
       "hero_alt": "Black-and-white winter view of Killington's ski trails cut through snowy forest, seen from across the valley",
       "hero_place": "Killington's trails from a distance, March 2018: an older photo, not today's conditions.",
       "cam_page": "https://killington.com/webcams",
+      "trails_total": 155,
       "status_page": "https://killington.com/mountain-report",
       "opening": {
         "date": "2026-11-18",
@@ -755,6 +761,8 @@
       "hero_alt": "Jay Peak summit covered in fresh snow under a blue sky, with snow-laden fir trees in front and the tram cable at right",
       "hero_place": "Jay Peak's summit after a snowfall: an older photo, not today's conditions.",
       "cam_page": "https://jaypeakresort.com/resort/photo-day",
+      "lifts_total": 9,
+      "trails_total": 82,
       "status_page": "https://digital.jaypeakresort.com/conditions/snow-report/",
       "opening": {
         "date": "2026-11-28",
@@ -919,6 +927,8 @@
       "hero_alt": "A wide snowy ski trail at Stowe with a snow gun at left, looking down over forested valleys and a distant reservoir",
       "hero_place": "A trail at Stowe looking down the valley: an older photo, not today's conditions.",
       "cam_page": "https://www.stowe.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 12,
+      "trails_total": 130,
       "status_page": "https://www.stowe.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "cams_note": "The 4 Stowe cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -1486,6 +1496,8 @@
           "url": "https://www.7springs.com/the-mountain/mountain-conditions/mountain-cams.aspx"
         }
       },
+      "lifts_total": 14,
+      "trails_total": 47,
       "status_page": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "getting_heading": "Getting there by car"
     },
@@ -1825,6 +1837,8 @@
       "hero_alt": "Breckenridge's ski trails cut through forest below the snowy Tenmile Range, seen from Keystone in winter",
       "hero_place": "Breckenridge seen from Keystone in January 2013: an older photo, not today's conditions.",
       "cam_page": "https://www.breckenridge.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 35,
+      "trails_total": 226,
       "status_page": "https://www.breckenridge.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "status_note": "Breckenridge's home page shows no opening date or lift count on our read. For lifts open today, check its terrain and lift status page",
       "status_read": "2026-11-17",
@@ -1969,6 +1983,8 @@
       "hero_alt": "The First Time beginner lift at Park City's Mountain Village base, with snowy slopes and a few skiers under a cloudy blue sky",
       "hero_place": "Park City's First Time lift in March 2012: an older photo, not today's conditions.",
       "cam_page": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 44,
+      "trails_total": 349,
       "status_page": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "status_note": "Park City's hours page gives Nov 25 as its first day (moved from Nov 20). For lifts open today, check its terrain and lift status page",
       "status_read": "2026-11-24",
@@ -2153,6 +2169,8 @@
       "hero_alt": "The Mountaintop Express lift station on a snowy run at Vail, with pine trees under a blue sky",
       "hero_place": "Vail's Mountaintop Express lift in November 2013: an older photo, not today's conditions.",
       "cam_page": "https://www.vail.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 34,
+      "trails_total": 277,
       "status_page": "https://www.vail.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "status_note": "Vail's hours page says \"Open For The Season!\" with lifts 9am to 3:30pm daily. For lifts open today, check its terrain and lift status page",
       "status_read": "2026-11-17",
@@ -2298,6 +2316,8 @@
       "hero_alt": "A family sitting in orange and red snow tubes beside the tubing lanes at Keystone, with snowy pine trees behind",
       "hero_place": "Keystone's tubing hill in January 2009: an older photo, not today's conditions.",
       "cam_page": "https://www.keystoneresort.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 21,
+      "trails_total": 144,
       "status_page": "https://www.keystoneresort.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "status_note": "Keystone says \"We are open for Winter 26/27 Season!\" River Run lifts only for now, 9am to 4pm. Check today's lifts on its status page",
       "status_read": "2026-11-17",
@@ -2777,6 +2797,8 @@
       "hero_alt": "Crested Butte's snowy base area at dusk, with lodges, chairlifts and a few skiers on the beginner slope below mountains",
       "hero_place": "Crested Butte's base area in an earlier winter (photo date not stated): not today's conditions.",
       "cam_page": "https://www.skicb.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 15,
+      "trails_total": 168,
       "status_page": "https://www.skicb.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
       "opening": {
         "date": "2026-11-25",
@@ -3893,6 +3915,8 @@
       "hero_alt": "Skiers waiting at a Heavenly chairlift station, with the lift climbing a snowy run between snow-covered pines",
       "hero_place": "A Heavenly chairlift in an earlier winter (photo date not stated): not today's conditions.",
       "cam_page": "https://www.skiheavenly.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 27,
+      "trails_total": 113,
       "status_page": "https://www.skiheavenly.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "opening": {
         "date": "2026-11-20",
@@ -4063,6 +4087,8 @@
       "hero_alt": "Skiers on a sunny groomed slope at Kirkwood, with pines and a rocky snow-covered ridge behind",
       "hero_place": "Kirkwood in March 2008: not today's conditions.",
       "cam_page": "https://www.kirkwood.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 13,
+      "trails_total": 84,
       "status_page": "https://www.kirkwood.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "opening": {
         "date": "2026-12-04",
@@ -4209,6 +4235,8 @@
       "hero_alt": "View from a Northstar chairlift over a groomed snowy run lined with snow-covered pines",
       "hero_place": "Northstar from the Tahoe Zephyr Express in an earlier winter (photo date not stated): not today's conditions.",
       "cam_page": "https://www.northstarcalifornia.com/the-mountain/mountain-conditions/mountain-cams.aspx",
+      "lifts_total": 19,
+      "trails_total": 108,
       "status_page": "https://www.northstarcalifornia.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
       "opening": {
         "date": "2026-11-20",
@@ -4859,6 +4887,7 @@
       "hero_alt": "Snow-dusted pine trunks lit orange by a winter sunset in the woods at Holiday Valley",
       "hero_place": "Woods at Holiday Valley at sunset: an older photo, not today's conditions.",
       "cam_page": "https://www.holidayvalley.com/webcams/",
+      "lifts_total": 13,
       "status_page": "https://www.holidayvalley.com/snow-report/",
       "opening": {
         "date": "2026-11-27",

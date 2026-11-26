@@ -34,7 +34,6 @@
   });
 };
   const ageDays = (from, to) => (Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86400000;
-  const clock = (hhmm) => { const [h, m] = hhmm.split(":").map(Number); return `${h % 12 || 12}:${String(m).padStart(2, "0")}\u00a0${h < 12 ? "a.m." : "p.m."}`; };
   function camRead(feedResort, now = new Date()) {
   if (!feedResort) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
   if (feedResort.publish !== true) return { state: "none", reason: "Cam reads show here only when a recent one has passed a separate automated accuracy check." };
@@ -61,25 +60,43 @@
     cams: feedResort.cams ?? [],
   };
 }
+  function liveStatus(r, today) {
+  const live = r.live;
+  if (!live?.read_et || !live.read_at) return null;
+  const age = ageDays(live.read_et.date, today);
+  if (age < 0 || age > 1) return null;
+  const near = (got, known) => Array.isArray(got) && typeof known === "number" && Math.abs(got[1] - known) <= known * 0.2;
+  const lifts = near(live.lifts, r.lifts_total) ? live.lifts : null;
+  const trails = near(live.trails, r.trails_total) ? live.trails : null;
+  if (!lifts && !trails) return null;
+  const when = `${localTime(live.read_at, r)} ${zoneLabel(r)} ${short(localDay(live.read_at, r)).replace(" ", "\u00a0")}`;
+  const page = `${poss(r.name)} status page`;
+  const pct = (x) => (x[0] > 0 && x[1] >= 20 ? ` (about ${Math.max(1, Math.round((100 * x[0]) / x[1]))}%)` : "");
+  if (age === 1) {
+    const what = lifts ? `${lifts[0]} of ${lifts[1]} lifts` : `${trails[0]} of ${trails[1]} trails`;
+    return { chip: `${what} open yesterday`, variant: "only_for", open: (lifts ?? trails)[0] > 0, today: false,
+      text: `Yesterday's count (${when}). Check today's on ${page}.` };
+  }
+  if (lifts) {
+    const t = trails ? `${trails[0]} of ${trails[1]} trails${pct(trails)}${lifts[0] > 0 ? " open too" : " too"}. ` : "";
+    return { chip: lifts[0] === 0 ? `No lifts open (0 of ${lifts[1]})` : `${lifts[0]} of ${lifts[1]} lifts open`, variant: lifts[0] === 0 ? "skip" : "neutral",
+      open: lifts[0] > 0, today: true, text: `${t}Checked ${when} on ${page}.` };
+  }
+  return { chip: trails[0] === 0 ? `No trails open (0 of ${trails[1]})` : `${trails[0]} of ${trails[1]} trails open${pct(trails)}`, variant: trails[0] === 0 ? "skip" : "neutral",
+    open: trails[0] > 0, today: true, text: `${poss(r.name)} page doesn't list open lifts. Checked ${when} on ${page}.` };
+}
   function resortStatus(r, today) {
   const nb = (iso) => short(iso).replace(" ", "\u00a0");
+  // Today's count leads when lifts or trails are open, or from opening day on, so an early opening or a
+  // postponed one is never hidden behind a date chip (integrity review 11-26).
+  const live = liveStatus(r, today);
+  if (live?.today && (live.open || !r.opening || today >= r.opening.date)) return live;
   if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   // A target date the resort says can move with weather never earns a positive chip on the day (integrity review 11-18).
   if (r.opening && r.opening.target && today === r.opening.date) return { chip: "Target opening day", variant: "neutral", text: `${e(r.opening.text)} Check ${poss(r.name)} own status before you drive (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   if (r.opening && today === r.opening.date) return { chip: "Opening day", variant: "worth_it", text: `${e(r.opening.text)} (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
-  // A count read by code from the resort's own status page today or yesterday leads; it carries its time.
-  const live = r.live;
-  if ((live?.lifts || live?.trails) && live.read_et && ageDays(live.read_et.date, today) >= 0 && ageDays(live.read_et.date, today) <= 1) {
-    const when = `${clock(live.read_et.time)} ET ${nb(live.read_et.date)}`;
-    if (live.lifts) {
-      const [o, t] = live.lifts;
-      const trails = live.trails && live.trails[0] > 0 ? `${live.trails[0]} of ${live.trails[1]} trails open too. ` : "";
-      return { chip: `${o} of ${t} lifts open, ${when}`, variant: o === 0 ? "skip" : "neutral", text: `${trails}Counts from ${poss(r.name)} status page.` };
-    }
-    const [o, t] = live.trails;
-    return { chip: `${o} of ${t} trails open, ${when}`, variant: o === 0 ? "skip" : "neutral", text: `Count from ${poss(r.name)} status page; it shows no open-lift count.` };
-  }
+  if (live && !(r.opening && today < r.opening.date)) return live;
   const read = r.status_read ?? r.observed_on;
   if (!r.status_note || (Date.parse(`${today}T00:00:00Z`) - Date.parse(`${read}T00:00:00Z`)) / 864e5 > 7) return null;
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
