@@ -33,6 +33,8 @@ function patterns(kind) {
   ];
 }
 
+// Matches may not cross a blank line between unrelated blocks, so read line by line with one line of
+// lookahead ("8 / 34" on one line, "Lifts Open" on the next is the Vail Resorts layout).
 export function parseCounts(text) {
   const out = {};
   for (const kind of ["lifts", "trails"]) {
@@ -41,7 +43,11 @@ export function parseCounts(text) {
       if (!m) continue;
       const [open, total] = [Number(m[1]), Number(m[2])];
       const [lo, hi] = LIMITS[kind];
-      if (open <= total && total >= lo && total <= hi) { out[kind] = [open, total]; break; }
+      if (open <= total && total >= lo && total <= hi) {
+        out[kind] = [open, total];
+        out.evidence = { ...(out.evidence || {}), [kind]: m[0].replace(/\s+/g, " ").slice(0, 60) };
+        break;
+      }
     }
   }
   return out;
@@ -68,7 +74,7 @@ export async function readAll({ resorts, fetchImpl = fetch, now = () => Date.now
     if (res.kind !== "ok") { out[slug] = { url: r.status_page, read_at: at.toISOString(), read_et: stamp, error: res.reason || res.kind }; log(`${slug}: ${res.kind} ${res.reason || ""}`); continue; }
     const counts = parseCounts(textOf(res.html));
     out[slug] = { url: r.status_page, read_at: at.toISOString(), read_et: stamp, ...counts };
-    log(`${slug}: ${counts.lifts ? `lifts ${counts.lifts.join("/")}` : "no lift count"}${counts.trails ? `, trails ${counts.trails.join("/")}` : ""}`);
+    log(`${slug}: ${counts.lifts ? `lifts ${counts.lifts.join("/")}` : "no lift count"}${counts.trails ? `, trails ${counts.trails.join("/")}` : ""} ${JSON.stringify(counts.evidence || {})}`);
   }
   return out;
 }

@@ -6,12 +6,14 @@ test("reads Vail Resorts style counts", () => {
   const html = `<html><head><title>Terrain and Lift Status</title></head><body><div class="terrain-status">
     <div><span class="c">0</span> / <span>34</span></div><p>Lifts Open</p>
     <div><span>13</span>/<span>277</span></div><p>trails Open</p></div></body></html>`;
-  assert.deepEqual(parseCounts(textOf(html)), { lifts: [0, 34], trails: [13, 277] });
+  const c = parseCounts(textOf(html)); delete c.evidence;
+  assert.deepEqual(c, { lifts: [0, 34], trails: [13, 277] });
 });
 
 test("reads 'of' phrasings and ignores impossible counts", () => {
-  assert.deepEqual(parseCounts("Lifts open: 8 of 21\nRuns open 45/155"), { lifts: [8, 21], trails: [45, 155] });
-  assert.deepEqual(parseCounts("12 of 20 lifts open today"), { lifts: [12, 20] });
+  const strip = (c) => { delete c.evidence; return c; };
+  assert.deepEqual(strip(parseCounts("Lifts open: 8 of 21\nRuns open 45/155")), { lifts: [8, 21], trails: [45, 155] });
+  assert.deepEqual(strip(parseCounts("12 of 20 lifts open today")), { lifts: [12, 20] });
   assert.deepEqual(parseCounts("Lifts open 30/20"), {});          // open > total
   assert.deepEqual(parseCounts("2026 / 2027 lifts open"), {});     // a season, not a count
   assert.deepEqual(parseCounts("Check the lift status page"), {});
