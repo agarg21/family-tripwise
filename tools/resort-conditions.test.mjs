@@ -764,3 +764,21 @@ test("NYC-set pages keep western conditions pages out of the NYC guide list (per
     assert.doesNotMatch(nav, /(vail|alta|timberline|heavenly)-conditions\.html/);
   }
 });
+
+test("D57: a lift count read today leads the status line, with its time; stale counts are ignored", () => {
+  const status = (date, lifts, trails) => ({ resorts: { vail: { url: "https://www.vail.com/x", read_et: { date, time: "13:31" }, lifts, trails } } });
+  const page = visible(resortPage("vail", resortData(), "2026-12-05", null, new Date("2026-12-05T19:00:00Z"), status("2026-12-05", [8, 34], [13, 277])));
+  assert.match(page, /8 of 34 lifts open, 1:31\s?p\.m\. ET Dec\s?5/);
+  assert.match(page, /13 of 277 trails open too\. Counts from Vail(&#39;|')s\s+status page/);
+  const none = visible(resortPage("vail", resortData(), "2026-12-05", null, new Date("2026-12-05T19:00:00Z"), status("2026-12-05", [0, 34], [0, 277])));
+  assert.match(none, /0 of 34 lifts open/);
+  assert.doesNotMatch(none, /0 of 277 trails/);
+  const stale = visible(resortPage("vail", resortData(), "2026-12-08", null, new Date("2026-12-08T19:00:00Z"), status("2026-12-05", [8, 34])));
+  assert.doesNotMatch(stale, /8 of 34 lifts/);
+});
+
+test("D57: a page with only a trail count shows that", () => {
+  const status = { resorts: { killington: { read_et: { date: "2026-12-05", time: "13:31" }, trails: [3, 155] } } };
+  const page = visible(resortPage("killington", resortData(), "2026-12-05", null, new Date("2026-12-05T19:00:00Z"), status));
+  assert.match(page, /3 of 155 trails open, 1:31\s?p\.m\. ET Dec\s?5/);
+});
