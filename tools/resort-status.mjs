@@ -21,34 +21,61 @@ export const LAST_DAY = "2027-04-15";
 
 const LIMITS = { lifts: [1, 80], trails: [2, 450] };
 const WORD = { lifts: "lifts?", trails: "(?:trails?|runs?)" };
+const FRACTION = /^(\d{1,3})\s*(?:\/|of|out of)\s*(\d{1,3})$/i;
 
-// Count patterns seen on resort pages, most specific first. Each returns [open, total].
-function patterns(kind) {
-  const w = WORD[kind];
-  return [
-    new RegExp(`(\\d{1,3})\\s*/\\s*(\\d{1,3})\\s*${w}\\s+open`, "i"),            // Vail Resorts: "8 / 34 Lifts Open"
-    new RegExp(`${w}\\s+open\\s*:?\\s*(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})`, "i"), // "Lifts Open 8/34", "Trails open: 13 of 277"
-    new RegExp(`(\\d{1,3})\\s*(?:of|out of)\\s*(\\d{1,3})\\s*${w}(?:\\s+(?:are\\s+)?open)?`, "i"), // "8 of 34 lifts open"
-    new RegExp(`open\\s+${w}\\s*:?\\s*(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})`, "i"),  // "Open lifts 8/34"
-  ];
-}
-
-// Matches may not cross a blank line between unrelated blocks, so read line by line with one line of
-// lookahead ("8 / 34" on one line, "Lifts Open" on the next is the Vail Resorts layout).
+// Layouts seen on resort pages (11-26 dry runs). Only labels that say "open" count: Killington's
+// "Scheduled Lifts" is not an open count, and a bare number with no total ("Lifts Open 10") gives nothing.
+//   Vail Resorts:   "8" | "/ 34" | "Lifts Open" | "See Lifts"   (number above the label)
+//   Windham, Jay:   "Lifts Open" | "0/12"   or  "Open Lifts" | "0 / 9"   (number below the label)
+//   Holiday Valley: "0 of 13 OPEN LIFTS"   (one line)
+// When a page gives one kind several different totals (Holiday Valley counts trails per difficulty),
+// the count is ambiguous and we report none for that kind.
 export function parseCounts(text) {
+  const raw = String(text).split("\n").map((l) => l.replace(/\s+/g, " ").trim()).filter(Boolean);
+  const lines = [];
+  for (let i = 0; i < raw.length; i++) {  // join a fraction split over lines ("8" | "/ 34", "8" | "/" | "34")
+    const [a, b, c] = [raw[i], raw[i + 1] ?? "", raw[i + 2] ?? ""];
+    if (/^\d{1,3}$/.test(a) && /^\/\s*\d{1,3}$/.test(b)) { lines.push(`${a} ${b}`); i += 1; }
+    else if (/^\d{1,3}$/.test(a) && b === "/" && /^\d{1,3}$/.test(c)) { lines.push(`${a} / ${c}`); i += 2; }
+    else lines.push(a);
+  }
+  const isLabel = (kind, l) => new RegExp(`^(?:open\\s+${WORD[kind]}|${WORD[kind]}\\s+open)$`, "i").test(l);
+  // Which side of its label a page prints the number on, decided by labels with only one fraction next
+  // to them (or Vail's "See Lifts" line below). A label with fractions on both sides follows the page.
+  const votes = { above: 0, below: 0 };
+  // Any count label votes, including ones we don't report ("Scheduled Lifts", "Open Terrain Parks").
+  const anyLabel = /^(?:open\s+|scheduled\s+)?(?:lifts?|trails?|runs?|terrain parks?|uphill trails?)(?:\s+open)?$/i;
+  lines.forEach((l, i) => {
+    if (!anyLabel.test(l)) return;
+    const above = FRACTION.test(lines[i - 1] ?? ""), below = FRACTION.test(lines[i + 1] ?? "");
+    if (/^see\s/i.test(lines[i + 1] ?? "") && above) votes.above++;
+    else if (above !== below) votes[above ? "above" : "below"]++;
+  });
+  const side = votes.above > votes.below ? "above" : votes.below > votes.above ? "below" : null;
   const out = {};
   for (const kind of ["lifts", "trails"]) {
-    for (const re of patterns(kind)) {
-      const m = text.match(re);
-      if (!m) continue;
-      const [open, total] = [Number(m[1]), Number(m[2])];
-      const [lo, hi] = LIMITS[kind];
-      if (open <= total && total >= lo && total <= hi) {
-        out[kind] = [open, total];
-        out.evidence = { ...(out.evidence || {}), [kind]: m[0].replace(/\s+/g, " ").slice(0, 60) };
-        break;
+    const w = WORD[kind];
+    const inline = [
+      new RegExp(`(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})\\s+(?:open\\s+${w}|${w}\\s+open)\\b`, "i"),
+      new RegExp(`(?:open\\s+${w}|${w}\\s+open)\\s*:?\\s*(\\d{1,3})\\s*(?:/|of|out of)\\s*(\\d{1,3})\\b`, "i"),
+    ];
+    const found = [];
+    lines.forEach((l, i) => {
+      if (isLabel(kind, l)) {
+        const prev = lines[i - 1] ?? "", next = lines[i + 1] ?? "";
+        const above = FRACTION.test(prev), below = FRACTION.test(next);
+        const pick = above && below ? (side === "above" ? prev : side === "below" ? next : "") : above ? prev : below ? next : "";
+        const m = pick.match(FRACTION);
+        if (m) found.push([Number(m[1]), Number(m[2]), side === "below" || (!above && below) ? `${l} ${pick}` : `${pick} ${l}`]);
+        return;
       }
-    }
+      for (const re of inline) { const m = l.match(re); if (m) { found.push([Number(m[1]), Number(m[2]), l]); break; } }
+    });
+    const [lo, hi] = LIMITS[kind];
+    const ok = found.filter(([o, t]) => o <= t && t >= lo && t <= hi);
+    if (!ok.length || new Set(ok.map(([, t]) => t)).size > 1) continue;
+    out[kind] = [ok[0][0], ok[0][1]];
+    out.evidence = { ...(out.evidence || {}), [kind]: ok[0][2].slice(0, 60) };
   }
   return out;
 }
