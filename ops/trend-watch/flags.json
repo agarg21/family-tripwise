@@ -398,6 +398,144 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-24e3aa8942",
+      "city": "New York City",
+      "title": "Met Opera donates potatoes to Harlem community food kitchen, restaurant",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/met-opera-donates-potatoes-to-harlem-community-food-kitchen-restaurant/",
+          "published": "2026-11-26T02:15Z"
+        }
+      ],
+      "first_seen": "2026-11-26T03:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "this year",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "price:free"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "this year",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-2a1e419181",
+      "city": "New York City",
+      "title": "Americans especially concerned about foodborne illnesses this Thanksgiving",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/americans-especially-concerned-about-foodborne-illnesses-this-thanksgiving/",
+          "published": "2026-11-26T02:11Z"
+        }
+      ],
+      "first_seen": "2026-11-26T03:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "family:family",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "family",
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-7e2b66856e",
+      "city": "New York City",
+      "title": "Macy's Thanksgiving Day Parade balloons deflated due to parade postponement",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/macys-thanksgiving-day-parade-balloons-deflated-due-to-parade-postponement/",
+          "published": "2026-11-26T01:56Z"
+        }
+      ],
+      "first_seen": "2026-11-26T03:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-3fae3ce70d",
+      "city": "San Antonio",
+      "title": "As Fort Hood shooter looks to delay execution, families shift focus back onto the loved ones lost",
+      "links": [
+        {
+          "outlet": "San Antonio Report",
+          "url": "https://sanantonioreport.org/fort-hood-shooter-delay-execution-mass-shooting/",
+          "published": "2026-11-26T03:02Z"
+        }
+      ],
+      "first_seen": "2026-11-26T03:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "family:families"
+        ],
+        "novelty": [
+          "first",
+          "2026",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:november 25"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "first",
+        "2026"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
