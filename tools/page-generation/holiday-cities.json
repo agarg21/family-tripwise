@@ -4824,6 +4824,34 @@
           ]
         },
         {
+          "id": "hip-hop-nutcracker",
+          "name": "The Hip Hop Nutcracker",
+          "place": "Cadillac Palace Theatre, 151 W. Randolph St, the Loop",
+          "dates": "Fri Nov 27 to Sun Nov 29, 2026 (run began Nov 24): Fri 1 and 7 p.m.; Sat 2 and 7:30 p.m.; Sun 1 p.m.",
+          "table_when": "Nov 27 to 29; recommended for all ages",
+          "answer_when": "Nov 27 to 29",
+          "start_on": "2026-11-24",
+          "end_on": "2026-11-29",
+          "cost_label": "Check live",
+          "cost_note": "The show page lists no regular ticket prices.",
+          "kids": [
+            "Check before you go: on Nov 25 the official page listed shows with ticket links but also said \"Tickets are not yet on sale!\"",
+            "Recommended for all ages (Broadway In Chicago); everyone needs a ticket",
+            "About 2 hours, with an intermission",
+            "A digital lottery runs for every show, with at least 20 seats (see Costs extra)"
+          ],
+          "extra": "Tickets (price not listed). Lottery: at least 20 seats at $25 each plus a $5 handling fee per ticket, every show. Parking: InterPark, 177 N. Wells St (price not posted).",
+          "watch": "Short run: the last show is Sun Nov 29 at 1 p.m. The ticket conflict above was on the page we read Nov 25; check live before you plan around it.",
+          "observed_on": "2026-11-25",
+          "sources": [
+            {
+              "label": "Broadway In Chicago, The Hip Hop Nutcracker page",
+              "url": "https://www.broadwayinchicago.com/shows/the-hip-hop-nutcracker-3/"
+            }
+          ],
+          "extra_stale": "Tickets, lottery seats (plus a handling fee) and parking cost extra. Check live."
+        },
+        {
           "id": "goodman-christmas-carol",
           "name": "A Christmas Carol at Goodman Theatre",
           "place": "Goodman Theatre (Albert Theatre), 170 N Dearborn St, the Loop",
@@ -4923,6 +4951,12 @@
         }
       ],
       "news": [
+        {
+          "until": "2026-11-29",
+          "name": "The Hip Hop Nutcracker",
+          "text": "Thanksgiving-week run at the Cadillac Palace, shows left Fri Nov 27 to Sun Nov 29; recommended for all ages, about 2 hours. Check live: on Nov 25 the official page also said tickets weren't on sale.",
+          "href": "#hip-hop-nutcracker"
+        },
         {
           "until": "2026-12-01",
           "name": "New Year's Eve",
