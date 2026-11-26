@@ -108,6 +108,50 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-3706f31b0b",
+      "city": "New York City",
+      "title": "See these amazing NYC Christmas trees that are NOT in Rockefeller Center",
+      "links": [
+        {
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/lifestyle/holidays/nyc-christmas-trees-not-rockefeller-center/",
+          "published": "2026-11-26T14:00Z"
+        },
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/arrowhead-provincial-park-fire-and-ice-skating-trail-nyc/",
+          "published": "2026-11-26T13:30Z"
+        }
+      ],
+      "first_seen": "2026-11-26T14:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "place:rockefeller center"
+        ]
+      },
+      "matched_terms": [
+        "ice skating",
+        "snow",
+        "festival",
+        "christmas",
+        "holiday",
+        "new"
+      ],
+      "score": 9,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
