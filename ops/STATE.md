@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=5
-run: {id: 2026-11-26T10:05Z, started_at: 2026-11-26T10:05Z}
-last_public_release: ebec4599 BF page: Norwegian BF terms card (to Dec 1)
+today: 2026-11-26 transactions=6
+run: none
+last_public_release: 6f1bf05c NYC Bryant Park Santa Dec 14-18 (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 09:05Z G16 BF: NCL promotion-terms read (allowed from Nov 26): kids 3rd/4th $0 fare (no ages), free service charges guests 1-2 book Nov 19-Dec 1; 50% end date unverified (not shown). Unpriced card on BF page to Dec 1; Carnival test date-guarded (would fail Nov 27). Live ebec4599.
+- 11-26 10:05Z G16 NYC: Bryant Park Santa hold resolved: park calendar + Club Santa page say Mon Dec 14-Fri Dec 18 (one heading still Dec 15-19, noted); Club Santa ticketed Sat-Sun Nov 28-29/Dec 5-6, unpriced. Live 6f1bf05c.
