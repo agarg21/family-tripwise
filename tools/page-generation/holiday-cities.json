@@ -3200,6 +3200,37 @@
           "free_note": "advance tickets sold out"
         },
         {
+          "id": "bfpl-pentatonix",
+          "name": "Under the Palms with Pentatonix at Brookfield Place",
+          "place": "Winter Garden, Brookfield Place, Lower Manhattan (check in at 230 Vesey St, between Theory and Warby Parker)",
+          "dates": "Wed Dec 2, 2026 at 7 p.m.; line opens 5 p.m.",
+          "table_when": "Wed Dec 2, 7 p.m.",
+          "answer_when": "Wed Dec 2, 7 p.m. (sold out ahead, walk-ins if space)",
+          "start_on": "2026-12-02",
+          "end_on": "2026-12-02",
+          "free": true,
+          "cost_note": "Free, but all advance tickets are sold out; walk-ins only if space is left, first come, first served, Brookfield Place says.",
+          "kids": [
+            "Ticket holders check in from 6 p.m. and must arrive by 6:30 to keep their spot; walk-ins if space allows",
+            "Limited stroller parking, first come, first served, Brookfield Place says"
+          ],
+          "extra_label": "Food and seats",
+          "extra": "Snacks and drinks are sold on site; no outside food or drink in the performance area. A ticket doesn't guarantee a chair. No pets (service animals allowed).",
+          "watch": "Walk-in entry isn't promised and it's a 7 p.m. weeknight show, so in our view it suits older kids more than toddlers. The page gives no end time or age guidance.",
+          "observed_on": "2026-11-26",
+          "sources": [
+            {
+              "label": "Brookfield Place Pentatonix page",
+              "url": "https://www.bfplny.com/events/under-the-palms-with-pentatonix/"
+            },
+            {
+              "label": "Brookfield Place 2026 holiday guide",
+              "url": "https://www.bfplny.com/visit/guides/holidays-at-brookfield-place-2026/"
+            }
+          ],
+          "free_note": "advance tickets sold out"
+        },
+        {
           "id": "macys-parade",
           "name": "Macy's Thanksgiving Day Parade",
           "place": "Central Park West at W 77th St to Herald Square, Manhattan",
