@@ -3674,28 +3674,36 @@
           "id": "rockefeller-tree",
           "name": "Rockefeller Center tree",
           "place": "Midtown Manhattan",
-          "dates": "Lights on Dec 2; up to Jan 9, per NY1",
+          "dates": "Lighting ceremony Wed Dec 2, 7 to 10 p.m.; on display through mid-January (NY1 says Jan 9)",
           "start_on": "2026-12-02",
           "end_on": "2027-01-09",
           "free": false,
           "cost_label": "No ticket listed",
-          "cost_note": "None of the pages we read lists a ticket to see the lit tree. Rockefeller Center says the lighting is Dec 2.",
+          "cost_note": "Rockefeller Center says there are no public tickets for the lighting ceremony: the area by the tree is for invited guests and the broadcast, and everyone else watches from nearby streets, first come, first served. No page we read lists a ticket to see the lit tree afterward.",
           "kids": [
             {
               "text": "Nov 7: free Meet the Tree Day with Care Bears and crafts, 10 a.m. to 1 p.m., first come",
               "until": "2026-11-07"
             },
             {
-              "text": "Time Out says the lighting-night crowd is an attraction in itself",
+              "text": "Lighting night Dec 2: on TV from 7 p.m. ET on some NBC stations; main show 8 p.m. ET on NBC and Peacock",
+              "until": "2026-12-02"
+            },
+            {
+              "text": "Lighting night: no public tickets; security checks, street closures and a crowd that builds from early afternoon",
               "until": "2026-12-02"
             },
             "In Midtown, like Radio City and Bryant Park"
           ],
           "extra": "We could not read prices for the rink by the tree.",
-          "watch": "Rockefeller Center's November guide gives the Dec 2 lighting; the Jan 9 end comes from NY1. Check Rockefeller Center's site for visiting hours.",
-          "observed_on": "2026-11-04",
-          "table_note": "end date per NY1",
+          "watch": "With small kids, any later evening shows the same lit tree, which stays up to mid-January; lighting-night crowds build from early afternoon. Rockefeller Center's ceremony page lists no stroller rules, viewing hours or exact last day (it says mid-January; NY1 says Jan 9). Check Rockefeller Center's site for visiting hours.",
+          "observed_on": "2026-11-25",
+          "table_note": "end date per NY1 (Rockefeller Center: mid-January)",
           "sources": [
+            {
+              "label": "Rockefeller Center lighting ceremony page, read Nov 25",
+              "url": "https://www.rockefellercenter.com/events/2026-rockefeller-center-christmas-tree-lighting-ceremony/"
+            },
             {
               "label": "Rockefeller Center November guide",
               "url": "https://www.rockefellercenter.com/magazine/events/things-to-do-in-new-york-city-in-november/"
