@@ -4,7 +4,7 @@
     {
       "id": "t-d213186af7",
       "city": "New York City",
-      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 \u2013 Dec. 1",
+      "title": "10 Best Free Kids & Family Activities in NYC: Nov. 25 – Dec. 1",
       "links": [
         {
           "outlet": "amNewYork (Lifestyle)",
@@ -107,6 +107,113 @@
         "2026"
       ],
       "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5b0e15ac6b",
+      "city": "New York City",
+      "title": "Brooklyn community rallies around building collapse families on Thanksgiving",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/brooklyn-community-rallies-around-building-collapse-families-on-thanksgiving/",
+          "published": "2026-11-26T22:30Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/flatbush-building-collapse-brooklyn-thanksgiving/",
+          "published": "2026-11-26T22:58Z"
+        }
+      ],
+      "first_seen": "2026-11-26T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:thanksgiving,holiday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "families",
+        "holiday",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-bfd78e66f0",
+      "city": "New York City",
+      "title": "Postponement of Macy's Thanksgiving Day Parade creates hardship for some",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/postponement-of-macys-thanksgiving-day-parade-creates-hardship-for-some/",
+          "published": "2026-11-26T22:24Z"
+        }
+      ],
+      "first_seen": "2026-11-26T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-6ee52173b9",
+      "city": "New York City",
+      "title": "Thanksgiving storm pummels Tri-State Area | Team coverage",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/thanksgiving-storm-pummels-tri-state-area-team-coverage/",
+          "published": "2026-11-26T22:17Z"
+        }
+      ],
+      "first_seen": "2026-11-26T23:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:long island"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "new"
+      ],
+      "score": 7,
       "priority": "normal"
     }
   ],
