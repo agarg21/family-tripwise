@@ -1,0 +1,11 @@
+# Deal-watch flags, 2026-11-26 11:05Z (QUEUE G09w): Royal Caribbean Black Friday, Club Med countdown
+
+Flags are leads. The Royal Caribbean promotion terms were read 2026-11-21 (<7 days; weekly limit), so the terms page was not re-read; one other official page was read once instead.
+
+| Source | Observed | Observed value | Change vs previous |
+|---|---|---|---|
+| royal-caribbean-promotion-terms (watcher extract, 2026-11-26 11:02Z) | automated watch | "Black Friday" offer name added; "BOGO60, Free 3rd & 4th, Cyber Bonus and Black Friday" combinability lines; "November Caribbean Air Promotion" (up to $50 per person instant air savings, book outside 90 days); "Black Friday Preview Sale" removed | Preview Sale (read 11-21, card ended Nov 23) replaced by a Black Friday offer; amounts and booking window not in the extract |
+| https://www.royalcaribbean.com/cruise-deals/black-friday (first read; HTTP 200) | 2026-11-26 ~11:10Z | Hero "Up to $900 off" + "Cyber Bonus: Up to $100 credit to spend onboard*" + "3rd and 4th guests sail free"; Black Friday Nov 27, Cyber Monday Nov 30, Travel Tuesday Dec 1, 2026; no booking window or end date (countdown placeholders unfilled "00 Days"); "Starting from* $X /person" cards (e.g. 4-night Wonder of the Seas from Miami, sail 2026-11-30, $329/person; 3-night Oasis from Fort Lauderdale, sail 2026-12-04, $298/person) with no occupancy basis or taxes; footnote only links the promotions terms | New. Page shows "Previewing: Promo Dashboard Campaigns" and a preview promo code, so it may be a preview render |
+| club-med-deals (watcher extract) | automated watch | Countdown tick only ("Ends in: 4 days, 12 hours...") | None; consistent with ~Dec 1 (11-24 note) |
+
+Decision: no public change. The Black Friday amounts are maxima with no per-sailing basis, no booking window and no readable terms; the "from" fares have no party/occupancy or tax basis, so no family-of-4 spend-vs-save card can be built (D21/D22). The existing Free 3rd & 4th card (book Nov 6-Dec 7, read 11-21) already covers the kids-sail-free part and stays. Re-read the promotions terms from Nov 28 (weekly limit) for the Black Friday amounts, booking window and stateroom tiers; then decide on an unpriced page-only card. Club Med: unchanged plan, retry from Dec 1. Both flags deleted.

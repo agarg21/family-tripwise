@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=6
-run: {id: 2026-11-26T11:05Z, started_at: 2026-11-26T11:05Z}
+today: 2026-11-26 transactions=7
+run: none
 last_public_release: 6f1bf05c NYC Bryant Park Santa Dec 14-18 (Nov 26)
 active: none
 
@@ -38,7 +38,7 @@ active: none
 - Crested Butte: hours 11-24; basecamp due. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
-- Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
+- RC Black Friday (up to $900 off, BF page read 11-26, no window): terms re-read Nov 28. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
 - Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 10:05Z G16 NYC: Bryant Park Santa hold resolved: park calendar + Club Santa page say Mon Dec 14-Fri Dec 18 (one heading still Dec 15-19, noted); Club Santa ticketed Sat-Sun Nov 28-29/Dec 5-6, unpriced. Live 6f1bf05c.
+- 11-26 11:05Z G09w: RC + Club Med flags triaged, no public change. RC /cruise-deals/black-friday read once: "Up to $900 off" + up to $100 OBC + 3rd/4th free, no booking window, preview render; terms re-read from Nov 28. Flags cleared.
