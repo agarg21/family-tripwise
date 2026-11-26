@@ -1799,8 +1799,12 @@
           "extra": "Parking and food. City-owned parking is free after 5 p.m. on Thursdays.",
           "watch": [
             {
-              "text": "The tree lighting is the same night as the River Parade (free viewing area, paid seats optional), both around 6 p.m., and the city warns downtown is very busy Nov 27 to 29.",
+              "text": "The tree lighting is the same night as the River Parade (free viewing area, paid seats optional), both around 6 p.m.",
               "until": "2026-11-27"
+            },
+            {
+              "text": "The city warns downtown is very busy Nov 27 to 29.",
+              "until": "2026-11-29"
             },
             "The city's release gives no age rules, stroller notes or VIA ride details."
           ],
