@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=8
-run: {id: 2026-11-26T13:05:09Z, started_at: 2026-11-26T13:05:09Z}
-last_public_release: b1590a68 theme-park Xmas GE price re-read (Nov 26)
+today: 2026-11-26 transactions=9
+run: none
+last_public_release: 52fc8262 NYC Ballet Nutcracker re-read (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -45,7 +45,7 @@ active: none
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
-- Saks no times, Chanukah on Ice zeffy error: Nov 28. Disney dining error 11-21.
+- Saks no times, Chanukah on Ice zeffy error: Nov 28. NYCB Nutcracker unpriced (11-26): from Dec 3. Disney dining error 11-21.
 - NYE row 10: SA pages unreadable 11-23; Nov 30.
 - BF unpriced cards: Hersheypark to Nov 30 (from Dec 1); Fun Spot, Schlitterbahn, Mingei self-drop.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2).
@@ -63,4 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 12:05Z G16: Great Adventure tickets re-read ($49, BF ends 11/27, unchanged); theme-park Xmas page date Nov 26. Reviews pass. Live b1590a68.
+- 11-26 13:05Z G16: NYC Ballet Nutcracker show + policies re-read (still unpriced; fees apply; no exchanges into Nutcracker; rush excluded). Reviews pass (integrity c2). Live 52fc8262.
