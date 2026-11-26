@@ -214,6 +214,107 @@
       ],
       "score": 8,
       "priority": "normal"
+    },
+    {
+      "id": "t-e66e072873",
+      "city": "Chicago",
+      "title": "92nd annual Thanksgiving Parade steps off downtown",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/92nd-annual-thanksgiving-parade-steps-off-downtown/",
+          "published": "2026-11-26T15:11Z"
+        }
+      ],
+      "first_seen": "2026-11-26T16:04Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "family:families",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "thanksgiving",
+        "parade"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-5fd2496daa",
+      "city": "Orlando",
+      "title": "Santa is everywhere this season: Your Central Florida guide to his holiday stops",
+      "links": [
+        {
+          "outlet": "WFTV 9 (local news)",
+          "url": "https://www.wftv.com/news/local/santa-is-everywhere-this-season-your-central-florida-guide-his-holiday-stops/JSRPKVAGEVFWTKXVHOOVW6Q6SI/",
+          "published": "2026-11-26T15:48Z"
+        }
+      ],
+      "first_seen": "2026-11-26T16:04Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:santa,holiday"
+        ],
+        "novelty": [
+          "this season",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "place:wekiva island"
+        ]
+      },
+      "matched_terms": [
+        "santa",
+        "holiday",
+        "this season"
+      ],
+      "score": 7,
+      "priority": "normal"
+    },
+    {
+      "id": "t-c9a1d7c42a",
+      "city": "San Antonio",
+      "title": "Raul Jimenez Thanksgiving dinner to feed 25,000 on 47th anniversary",
+      "links": [
+        {
+          "outlet": "KSAT 12 (local news)",
+          "url": "https://www.ksat.com/news/local/2026/11/26/raul-jimenez-thanksgiving-dinner-to-feed-25000-on-47th-anniversary/",
+          "published": "2026-11-26T15:22Z"
+        }
+      ],
+      "first_seen": "2026-11-26T16:04Z",
+      "signals": {
+        "fit": [
+          "city:San Antonio",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
