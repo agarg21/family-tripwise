@@ -38,42 +38,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-50da1ed371",
-      "city": "San Antonio",
-      "title": "Ready to get the 2026 holiday started? Here's a list of events in San Antonio.",
-      "links": [
-        {
-          "outlet": "San Antonio Report",
-          "url": "https://sanantonioreport.org/2026-holiday-season-events-san-antonio/",
-          "published": "2026-11-26T17:00Z"
-        }
-      ],
-      "first_seen": "2026-11-26T17:04Z",
-      "signals": {
-        "fit": [
-          "city:San Antonio",
-          "topic:holiday,snow"
-        ],
-        "novelty": [
-          "first",
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:november 26"
-        ]
-      },
-      "matched_terms": [
-        "holiday",
-        "snow",
-        "first",
-        "2026"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
       "id": "t-35b77e4727",
       "city": "New York City",
       "title": "Best Holiday Shows in NYC for Families",

@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=16
-run: {id: 2026-11-26T23:04Z, started_at: 2026-11-26T23:04Z}
-last_public_release: 2c74f38b G19 cam card copy (Nov 26)
+today: 2026-11-26 transactions=17
+run: none
+last_public_release: 98ad2f61 G16 SA free downtown card (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 22:04Z G16 triage: 3 flags dropped (Bloomingdale's unverifiable; hospice story off-fit; Seven Seas spring). No public change.
+- 11-26 23:04Z G16 trend: SA free downtown holiday days card (city release Nov 18) + Travis Park tree lighting news line (drops Nov 27). Live 98ad2f61.
