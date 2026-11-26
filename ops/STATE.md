@@ -41,7 +41,7 @@ active: none
 - RC Black Friday (up to $900 off, BF page read 11-26, no window): terms re-read Nov 28. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
 - Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28.
-- NYC Met tree: Thursday hours conflict (read on Thanksgiving); stroller/coat check unread; from Dec 3.
+- NYC Met tree: Thu hours conflict; stroller unread; from Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
 - Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
