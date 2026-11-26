@@ -145,41 +145,6 @@
       "priority": "normal"
     },
     {
-      "id": "t-d6306e326d",
-      "city": "New York City",
-      "title": "Macy's Thanksgiving Day Parade 2026 to march through NYC Saturday. How and when to watch in person",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/macys-thanksgiving-day-parade-2026-how-to-watch/",
-          "published": "2026-11-26T14:03Z"
-        }
-      ],
-      "first_seen": "2026-11-26T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade",
-        "2026"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
       "id": "t-8a300ff5cb",
       "city": "Orlando",
       "title": "New Orlando Theatre Company, Stone Table Theatre, to Debut This December",

@@ -501,10 +501,14 @@ test("NYC Thanksgiving storm news line (governor release Nov 25): shows through 
   assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-11-28"), /Thanksgiving storm<\/a>/);
 });
 
-test("NYC parade move credits the Mayor's Office (Nov 25 advisory); start time stays third-party; drops after Nov 28", () => {
+test("NYC parade move credits the Mayor's Office (Nov 25); 8:30 a.m. start credits NYC Event Management (read Nov 26); drops after Nov 28", () => {
   const on = holidayCityPage("new-york-city", data, "2026-11-26");
-  assert.match(on, /Mayor&#39;s Office says \(Nov 25\)/);
-  assert.match(on, /8:30 a\.m\. ET per a Macy&#39;s statement reported by NBC New York and AP; the city gives no time/);
+  assert.match(on, /Thursday&#39;s storm \(Mayor&#39;s Office, Nov 25\)/);
+  assert.match(on, /8:30 a\.m\. ET, rain or shine, per NYC Event Management \(read Nov 26/);
+  assert.doesNotMatch(on, /the city gives no time/);
   assert.match(on, /mayor-mamdani-issues-travel-advisory-for-thanksgiving-day-as-coa/);
-  assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-11-29"), /Mayor&#39;s Office says \(Nov 25\)/);
+  assert.match(on, /cecm\/cultural-events\/community-notices\.page/);
+  const after = holidayCityPage("new-york-city", data, "2026-11-29");
+  assert.doesNotMatch(after, /Thursday&#39;s storm \(Mayor&#39;s Office, Nov 25\)/);
+  assert.doesNotMatch(after, /per NYC Event Management \(read Nov 26/);
 });
