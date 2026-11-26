@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=13
-run: {id: 2026-11-26T18:04Z, started_at: 2026-11-26T18:04Z}
-last_public_release: 3b93e01a Orlando Wekiva Winter Wonderland card (Nov 26)
+today: 2026-11-26 transactions=14
+run: none
+last_public_release: 2c74f38b G19 cam card copy (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 17:05Z G16 trend: WFTV Santa lead (not read). wekivaisland.com Winter Wonderland read once: $5 admission (unit unstated), $10-$15 extras, tree lighting Nov 29, Santa's Workshop Fri-Sun Dec 4-20. Orlando page card + news line. Live 3b93e01a.
+- 11-26 18:04Z G19 (Muse #6): resort cam card/cam table no longer say 'no read yet' beside past reads; day rows use last graded read. Response: reviews/responses/2026-11-26-response.md.

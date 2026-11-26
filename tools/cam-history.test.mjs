@@ -70,13 +70,11 @@ test("a status line with no chip keeps its own checked date", () => {
   assert.match(html, /first day[^]*?\(checked\s+Nov\s24\)/);
 });
 
-test("a day keeps its latest read that can tell something; a day with none says so in one cell (Muse 11-26)", () => {
+test("a day's row is its last read with a gradable field, not a later all-Can't-tell read (Muse 2026-11-26 #6)", () => {
   const r = { ...resortData().resorts["mount-snow"], name: "Mount Snow", tz: "America/New_York" };
-  const blind = { fields: { snow_cover: { value: "thin", conf: 0.2 }, snowmaking: { value: "on", conf: 0.1 } } };
-  const entries = buildHistory([snap("2026-11-24T14:00:00Z"), snap("2026-11-24T21:00:00Z", blind), snap("2026-11-25T15:00:00Z", blind)])["mount-snow"];
-  const html = camHistory(r, entries, new Date("2026-11-25T23:00:00Z"));
+  const entries = buildHistory([snap("2026-11-24T15:00:00Z"), snap("2026-11-24T21:00:00Z", { status: "Fair", fields: { snow_cover: { value: "thin", conf: 0.3 } } }),
+    snap("2026-11-23T21:00:00Z", { status: "Fair", fields: {} })])["mount-snow"];
+  const html = camHistory(r, entries, new Date("2026-11-24T23:00:00Z"));
+  assert.equal((html.match(/<tr><th scope="row">/g) ?? []).length, 1, "a day with no clear read gets no row");
   assert.match(html, /Tue Nov 24<\/th><td class="cam-grade-watch">Thin or patchy/);
-  assert.match(html, /Wed Nov 25<\/th><td class="cam-grade-unknown" colspan="3">No clear read that day<\/td>/);
-  const none = buildHistory([snap("2026-11-25T15:00:00Z", blind)])["mount-snow"];
-  assert.equal(camHistory(r, none, new Date("2026-11-25T23:00:00Z")), "", "no table when no day has a clear read");
 });

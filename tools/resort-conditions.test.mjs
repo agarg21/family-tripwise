@@ -25,7 +25,8 @@ test("no feed or an unpublished resort shows No read and no condition claims", (
 test("a published fresh read shows labelled fields, drops low-confidence ones, and keeps its time", () => {
   const page = visible(resortPage("okemo", resortData(), "2026-12-19", feed(), now));
   assert.doesNotMatch(page, /Looks good|Snow stake:/, "the HTML itself never carries a read");
-  assert.match(page, /Our latest read shows here with JavaScript on/);
+  assert.match(page, /Our latest cam read shows here with JavaScript on/);
+  assert.doesNotMatch(page, /No cam read from us yet|Once our reads start/, "a deploy-time read never reads as no read yet without JavaScript");
   const d = drawnRead("okemo", resortData(), "2026-12-19", feed(), now);
   const html = visible(d.card + d.table) + page;
   assert.match(html, /New snow\s+Light/);
@@ -207,7 +208,7 @@ test("page script: committed copy matches the generator, requests only the feed,
   assert.equal(same.card, drawn.card, "same clock: the build's card");
   assert.equal(same.table, drawn.table);
   assert.match(run(built, new Date("2026-12-19T16:50:00Z")).card, /Older read[\s\S]*more than 90 minutes ago/);
-  assert.match(run(built, new Date("2026-12-19T21:20:00Z")).card, /No cam read from us yet\. No recent read: the last one is more than 6 hours old\./);
+  assert.match(run(built, new Date("2026-12-19T21:20:00Z")).card, /No recent cam read from us\. The last one is more than 6 hours old\./);
   assert.equal(run(resortPage("okemo", resortData(), "2026-12-19", feed({ publish: false }), now), now).card, "unchanged", "no read, nothing to redraw");
 });
 
@@ -254,7 +255,7 @@ test("page script: fetches the feed once on open (no cookies, no referrer), draw
     const minute = timers.find(([, ms]) => ms === 60000);
     assert.ok(minute, "a minute re-age timer");
     t = new Date("2026-12-19T21:20:00Z").getTime(); minute[0]();
-    assert.match(card.outerHTML, /No recent read: the last one is more than 6 hours old/);
+    assert.match(card.outerHTML, /No recent cam read from us\. The last one is more than 6 hours old/);
   }
   assert.match((await run(built, ok(feed({ read_at: "2026-12-19T15:20:00Z", status: "constructor" })))).card, /No cam read right now/, "a status that is not a listed one shows no read");
   const hunterPage = resortPage("hunter-mountain", resortData(), "2026-12-19", null, now);
@@ -803,4 +804,14 @@ test("D57: the page script keeps the count when it redraws the card from the fee
   assert.equal(cfg.lifts_total, 34);
   const { card } = drawnRead("vail", resortData(), "2026-12-05", null, now, st);
   assert.match(card, /8 of 34 lifts open/);
+});
+
+test("with past reads below and no recent read, the card and cam table never say our reads have not started (Muse 2026-11-26 #6)", () => {
+  const old = { ...feed().resorts.okemo, read_at: "2026-12-18T15:10:00Z" };
+  const f = { resorts: { okemo: old }, history: { okemo: [old] } };
+  const html = visible(resortPage("okemo", resortData(), "2026-12-19", f, now));
+  assert.match(html, /Our webcam check, last/);
+  assert.match(html, /No recent cam read from us\. The last one is more than 6 hours old\./);
+  assert.match(html, /day by day, are below/);
+  assert.doesNotMatch(html, /No cam read from us yet|Once our reads start/);
 });
