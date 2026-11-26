@@ -3941,33 +3941,38 @@
           "free": false,
           "cost_low": 90,
           "cost_high": 122,
-          "cost_note": "We did not see whether tax or fees are added, or whether these prices cover the 2-in-1 ticket.",
+          "cost_note": "The tickets page says one Holiday Lights ticket gives two experiences: animals from 1 p.m., then the lights. It does not say which nights are Deal Days (other dated nights may cost the struck price), or whether tax or fees are added.",
           "kids": [
-            "Arrive from 1 p.m. with the 2-in-1 ticket to see animals by day; check your ticket type includes it",
-            "New this year: the Children's Zoo Farmyard opens for the lights",
+            "Arrive from 1 p.m. with a Holiday Lights ticket to see animals by day, then stay for the lights",
+            "New this year: the Children's Zoo Farmyard opens for the lights, 3 to 8:30 p.m.",
             "Warm up indoors: World of Darkness (sloths) and World of Reptiles stay open to 8:30 p.m.",
             {
               "text": "Sensory Inclusive Night on Dec 3, reserve ahead",
               "until": "2026-12-03"
             }
           ],
-          "extra": "Holiday Train $4 a ride; car parking $22.",
-          "watch": "Open 1-9 p.m.; lights from 4:30 p.m., last entry 8 p.m. Bring your own stroller; some buildings ask you to park it outside. Rentals are limited. Rain or shine; a storm closure gets new tickets.",
-          "observed_on": "2026-11-14",
-          "cost_priced": "Dated tickets: adult $29.95 or $37.95, child 3-12 $14.95 or $22.95, age 2 and under free. An any-night ticket is ≈ $142 for 4.",
+          "extra": "Holiday Train: tickets for ages 3 and up, 4:30 to 9 p.m. ($4 a ride, Nov 14 read). Car parking $22 (Nov 14 read).",
+          "watch": "Everyone entering after noon needs a Holiday Lights ticket; a daytime-only visit means arriving 10 a.m. to noon and leaving by 4:30 p.m. Event page and FAQs (Nov 14): open 1-9 p.m., lights from 4:30 p.m., last entry 8 p.m.; bring your own stroller (some buildings ask you to park it outside; rentals are limited); rain or shine, and a storm closure gets new tickets.",
+          "observed_on": "2026-11-25",
+          "cost_priced": "Dated tickets: adult $29.95 on the zoo's \"Deal Days\" (shown struck from $37.95), child 3-12 $14.95 (from $22.95), age 2 and under free. An any-night ticket ($42.95 adult, $27.95 child) is ≈ $142 for 4.",
           "sensory_until": "2026-12-03",
-          "extra_stale": "Holiday Train and parking; check live.",
+          "extra_stale": "Holiday Train (tickets for ages 3 and up) and parking; check live.",
+          "extra_observed_on": "2026-11-14",
           "sources": [
             {
               "label": "Bronx Zoo tickets page",
               "url": "https://bronxzoo.com/holiday-lights/tickets"
             },
             {
+              "label": "Holiday Lights schedule",
+              "url": "https://bronxzoo.com/holiday-lights/schedule"
+            },
+            {
               "label": "Bronx Zoo event page (read Nov 14)",
               "url": "https://bronxzoo.com/holiday-lights"
             },
             {
-              "label": "Holiday Lights FAQs",
+              "label": "Holiday Lights FAQs (read Nov 14)",
               "url": "https://bronxzoo.com/holiday-lights/faqs"
             }
           ]

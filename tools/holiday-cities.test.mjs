@@ -133,7 +133,12 @@ test("NYC: published prices, what's free, and passed sessions leave", () => {
   const later = holidayCityPage("new-york-city", data, "2026-11-17");
   assert.doesNotMatch(later, /id="vessel-lighting"/);
   assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-12-04"), /Sensory Inclusive Night/);
-  const stale = holidayCityPage("new-york-city", data, "2026-12-23").match(/<main[\s\S]*<\/main>/)[0]; // day after the newest NYC price read (Nov 22) goes stale
+  // Bronx Zoo extra line keeps its own Nov 14 read: train/parking $ hide after Dec 14 while the Nov 25 ticket range still shows.
+  const dec15 = holidayCityPage("new-york-city", data, "2026-12-15").match(/<article id="bronx-zoo"[\s\S]*?<\/article>/)[0];
+  assert.match(dec15, /≈ \$90 to \$122/);
+  assert.doesNotMatch(dec15, /\$4 a ride|parking \$22/);
+  assert.match(dec15, /Holiday Train \(tickets for ages 3 and up\) and parking; check live/);
+  const stale = holidayCityPage("new-york-city", data, "2026-12-26").match(/<main[\s\S]*<\/main>/)[0]; // day after the newest NYC price read (Nov 25) goes stale
   assert.doesNotMatch(stale, /\$\d/);
   assert.match(stale, /Free with your own skates/);
   assert.equal(openEvents(nyc, "2027-03-01").length, 0);

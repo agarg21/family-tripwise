@@ -35,6 +35,7 @@ export function validateHolidayCity(city) {
     // Dollar text must be able to hide when the read goes stale.
     for (const key of ["cost_note", "watch", "dates", "figure_note_priced", "place", "table_when", "answer_when"]) if (/\$\d/.test(ev[key] ?? "")) errors.push(`${ev.id}: ${key} holds a price`);
     if (/\$\d/.test(ev.extra) && !ev.extra_stale) errors.push(`${ev.id}: extra needs extra_stale`);
+    if (ev.extra_observed_on && !ISO.test(ev.extra_observed_on)) errors.push(`${ev.id}: bad extra_observed_on`);
     for (const k of ev.kids ?? []) if (/\$\d/.test(typeof k === "string" ? k : k.stale ?? "") ) errors.push(`${ev.id}: kid line holds a price without a stale form`);
   }
   for (const ev of city.events.filter((x) => x.event_markup)) {
@@ -121,6 +122,7 @@ function glanceCost(ev, today) {
 }
 function card(ev, today, compact = false) {
   const isFresh = fresh(ev, today);
+  // extra_observed_on: the extra line's own read date when it is older than the card's; its $ text hides on its own clock.
   const kids = ev.kids.map((k) => kidLine(typeof k === "string" ? k : { observed_on: ev.observed_on, ...k }, today)).filter(Boolean);
   const sources = ev.sources.map((s) => `<a href="${e(s.url)}">${e(s.label)}</a>`).join(" · ");
   const details = `<p><strong>Ticket:</strong> ${isFresh && ev.cost_priced ? `${e(ev.cost_priced)} ` : ""}${e(ev.cost_note)}</p>
@@ -130,7 +132,7 @@ function card(ev, today, compact = false) {
             ${figure(ev, today)}
             <p class="holiday-dates"><strong>When:</strong> ${e(ev.dates)}</p>
             <ul>${kids.map((k) => `<li>${e(k)}</li>`).join("")}</ul>
-            <p><strong>${e(ev.extra_label ?? "Costs extra")}:</strong> ${e(isFresh ? ev.extra : ev.extra_stale ?? ev.extra)}</p>`;
+            <p><strong>${e(ev.extra_label ?? "Costs extra")}:</strong> ${e(fresh({ observed_on: ev.extra_observed_on ?? ev.observed_on }, today) ? ev.extra : ev.extra_stale ?? ev.extra)}</p>`;
   // compact (city.compact_cards, R1 #12): the card opens from a one-line row (name, cost, dates); nothing is dropped.
   if (compact) return `          <article id="${e(ev.id)}" class="holiday-card holiday-card-compact">
             <details><summary><h3>${e(ev.name)}</h3><span class="holiday-card-glance">${glanceCost(ev, today)} · ${whenText(ev)}</span></summary>
