@@ -63,5 +63,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 01:05Z G16 row 8: Boston (Faneuil pages 2024/25) + Chicago Hanukkah: no 2026 listing; re-search Nov 30. No release.
-- 11-26 00:05Z G16: Rockefeller lighting night (official); live 0ebda3b5.
+- 11-26 01:05Z G16 row 8: Boston/Chicago Hanukkah no 2026 listing; Nov 30. No release.
