@@ -43,7 +43,7 @@ test("a price past the age limit is replaced by check live, never shown as curre
   const williamsburg = data.parks.find((p) => p.id === "busch-gardens-williamsburg");
   assert.equal(priceIsFresh(williamsburg, "2026-12-03"), true);
   assert.equal(priceIsFresh(williamsburg, "2026-12-04"), false);
-  const html = holidayParksPage(data, "2026-12-20");
+  const html = holidayParksPage(data, "2026-12-27");
   assert.doesNotMatch(html, /≈ \$/);
   assert.match(html, /Check live/);
   assert.doesNotMatch(html, /Ticket Costs for a Family of 4|lowest price first|lowest published price/);
