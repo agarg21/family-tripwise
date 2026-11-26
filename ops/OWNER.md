@@ -20,21 +20,21 @@ Approved.
 - D24 Q17b bar (10-31): Approved: Q17b pages ship on integrity + design pass, clarity ≥4 each.
 - D25–D27: Approved: drop past-stay samples; unpriced page-only deal cards (no posts); 3rd FB post for late fast-lane deal.
 - D28 (11-02): Approved, standing: guide pages (not deals/posts/cards) ship on integrity + design pass, clarity ≥4 each, persona avg ≥3.5.
-- D30 Social (11-02): Approved: "for US families"; IG photo tag + 1 confirmed brand @mention; hashtags IG ≤5, Threads 1, FB 0; no automated follows/likes/comments.
+- D30 Social (11-02): Approved: "for US families"; IG photo tag + 1 confirmed brand @mention; hashtags IG ≤5, Threads 1, FB 0; no auto follows/likes/comments.
 - D32 Growth (11-03): Approved: all in on durable holiday + Black Friday pages (new URLs, QUEUE G16). Not yet: newsletter, analytics, press, Pinterest.
 - D34 Holiday fast track (11-04): Approved for G16 pages/posts: integrity pass, clarity ≥4 each, persona and design avg ≥3.5, no design item <3; 4th cycle ok; design P2s fixed in 48 h.
-- D35/D37/D38: Approved: shareability for deals/posts/cards only; G17; reels; LEGOLAND FL photo.
+- D35–D43: Approved: shareability for deals/posts/cards only; G17; reels; LEGOLAND FL photo; O46–O50; Zernio stats; LV page.
 - D39 Hotel prices (11-05): Approved: no Tuesday samples; normal Fri–Sun weekend + Christmas/New Year weekend tables, dated (G18).
-- D40/D41/D43: Approved: O46–O50; Zernio stats; LV page.
 - D42 Outreach (11-10): Approved: owner session emails/DMs venues' public contacts for facts; cite "<venue>, by email, date"; no names/addresses in repo.
-- D44 Review (11-11): Approved: docs/plan/review-2026-11-11.md is plan of record; approval-free backlog = QUEUE R1.
+- D44 Review (11-11): Approved: review-2026-11-11.md is plan of record; backlog = QUEUE R1.
 - D45 (11-11): keep pace; 4 city ski pages; #15 no; no analytics.
 - D46 (11-11): Approved: page per pass brand; ended deal pages point there, off sitemap; social 3/day, reels off; Bing later; review deck.
-- D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after a separate automated check (snowcam-accuracy-check.md; early release 11-16).
-- D50–D52: Approved: no-offer brand pages use the guide bar; holiday Event markup fields; #12 shorten 10 pages, no facts dropped.
-- D53 (11-24): Approved: ended deal pages link what's on now; recurring-deal pages (RC, NCL, MSC, Great Wolf); #12 layout-only, D39 re-reads queued; NYC hotels 4th design round. Holidays first.
+- D47–D49 (11-14/15): Approved: resort conditions pages; cam reads publish after an automated check (early 11-16).
+- D50–D52: Approved: no-offer brand pages use the guide bar; holiday Event markup fields; #12 shorten 10 pages, keep all facts.
+- D53 (11-24): Approved: ended deals link what's on now; recurring-deal pages (RC/NCL/MSC/Great Wolf); #12 layout-only, D39 re-reads queued; NYC hotels 4th design round. Holidays first.
 - D54 (11-25): Approved: ski city pages; shortlist resorts as cams allow; NYC snow tubing; NYE page per holiday city.
 - D55 (11-25): unopened resorts' status pages daily to 12-15.
+- D56 (11-26): Approved: R2 school-break pages + DataForSEO; expand deal/snow pages; no local parent FB groups.
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
