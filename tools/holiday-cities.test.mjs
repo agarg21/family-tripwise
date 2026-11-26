@@ -488,3 +488,10 @@ test("San Antonio SeaWorld sale price (read Nov 22, no end stated) shows to Nov 
   assert.doesNotMatch(after, /≈ \$200|\$49\.99 each/);
   assert.match(after, /dates read Nov 3/);
 });
+
+test("NYC Thanksgiving storm news line (governor release Nov 25): shows through Nov 27, drops Nov 28", () => {
+  const on = holidayCityPage("new-york-city", data, "2026-11-26");
+  assert.match(on, /Thanksgiving storm<\/a>: state of emergency for the NYC area/);
+  assert.match(on, /gusts to 60 mph Thu 10 a\.m\. until 1 a\.m\. Fri/);
+  assert.doesNotMatch(holidayCityPage("new-york-city", data, "2026-11-28"), /Thanksgiving storm<\/a>/);
+});

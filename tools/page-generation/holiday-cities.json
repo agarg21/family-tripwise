@@ -2951,6 +2951,12 @@
       ],
       "news": [
         {
+          "until": "2026-11-27",
+          "name": "Thanksgiving storm",
+          "text": "state of emergency for the NYC area. NYC and Long Island: gusts to 60 mph Thu 10 a.m. until 1 a.m. Fri, 1 to 2 inches of rain, coastal flooding into Fri. Flying: allow extra time, check your airline (governor's office, Nov 25).",
+          "href": "https://www.governor.ny.gov/news/governor-hochul-declares-state-emergency-ahead-thanksgiving-coastal-storm"
+        },
+        {
           "until": "2026-11-28",
           "name": "Macy's parade",
           "text": "moved to Sat Nov 28, 8:30 a.m., because of Thursday's storm, per a Macy's statement reported by NBC New York and AP (Nov 25). Thursday's NBC broadcast is a 2025 rerun.",
