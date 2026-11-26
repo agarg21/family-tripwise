@@ -4,7 +4,7 @@
   "property": "sc-domain:familytripwise.com",
   "visibility": "public-summary",
   "collection_mode": "search-console-api-readonly",
-  "collected_at": "2026-11-26T17:25:12.655Z",
+  "collected_at": "2026-11-26T19:39:19.387Z",
   "data_through": "2026-11-24",
   "requested_period_end": "2026-11-24",
   "completeness": "finalized-conservative",
@@ -765,16 +765,16 @@
         {
           "url": "https://familytripwise.com/family-itinerary/boston-with-kids.html",
           "clicks": 1,
-          "impressions": 8,
-          "ctr_percent": 12.5,
-          "average_position": 5.63
+          "impressions": 9,
+          "ctr_percent": 11.11,
+          "average_position": 5.44
         },
         {
           "url": "https://familytripwise.com/holidays/san-diego-christmas-with-kids.html",
           "clicks": 1,
-          "impressions": 14,
-          "ctr_percent": 7.14,
-          "average_position": 8.86
+          "impressions": 15,
+          "ctr_percent": 6.67,
+          "average_position": 8.73
         },
         {
           "url": "https://familytripwise.com/ski/stratton-conditions.html",
@@ -835,9 +835,9 @@
         {
           "url": "https://familytripwise.com/deals/busch-gardens-passes.html",
           "clicks": 0,
-          "impressions": 20,
+          "impressions": 21,
           "ctr_percent": 0,
-          "average_position": 20.6
+          "average_position": 22.86
         },
         {
           "url": "https://familytripwise.com/deals/busch-gardens-tampa-2027-fun-card.html",
@@ -1073,9 +1073,9 @@
         {
           "url": "https://familytripwise.com/ski/heavenly-conditions.html",
           "clicks": 0,
-          "impressions": 19,
+          "impressions": 20,
           "ctr_percent": 0,
-          "average_position": 25.95
+          "average_position": 27.45
         },
         {
           "url": "https://familytripwise.com/ski/holiday-valley-conditions.html",
@@ -1150,9 +1150,9 @@
         {
           "url": "https://familytripwise.com/ski/stowe-conditions.html",
           "clicks": 0,
-          "impressions": 11,
+          "impressions": 12,
           "ctr_percent": 0,
-          "average_position": 27.36
+          "average_position": 25.42
         },
         {
           "url": "https://familytripwise.com/ski/sugarbush-conditions.html",
@@ -1199,9 +1199,9 @@
         {
           "url": "https://familytripwise.com/things-to-do/chicago-with-kids.html",
           "clicks": 0,
-          "impressions": 2,
+          "impressions": 3,
           "ctr_percent": 0,
-          "average_position": 68.5
+          "average_position": 67.33
         },
         {
           "url": "https://familytripwise.com/things-to-do/chicago-with-teens.html",
@@ -1297,9 +1297,9 @@
         {
           "url": "https://familytripwise.com/where-to-stay/chicago-family-hotels.html",
           "clicks": 0,
-          "impressions": 34,
+          "impressions": 35,
           "ctr_percent": 0,
-          "average_position": 31.32
+          "average_position": 32.14
         },
         {
           "url": "https://familytripwise.com/where-to-stay/chicago-with-kids.html",
@@ -1311,9 +1311,9 @@
         {
           "url": "https://familytripwise.com/where-to-stay/las-vegas-family-hotels.html",
           "clicks": 0,
-          "impressions": 26,
+          "impressions": 29,
           "ctr_percent": 0,
-          "average_position": 46.12
+          "average_position": 48.76
         },
         {
           "url": "https://familytripwise.com/where-to-stay/las-vegas-with-kids.html",
@@ -1325,9 +1325,9 @@
         {
           "url": "https://familytripwise.com/where-to-stay/london-family-hotels.html",
           "clicks": 0,
-          "impressions": 6,
+          "impressions": 7,
           "ctr_percent": 0,
-          "average_position": 10.5
+          "average_position": 21.43
         },
         {
           "url": "https://familytripwise.com/where-to-stay/new-york-city-family-hotels.html",
@@ -1381,9 +1381,9 @@
         {
           "url": "https://familytripwise.com/where-to-stay/san-diego-with-kids.html",
           "clicks": 0,
-          "impressions": 29,
+          "impressions": 30,
           "ctr_percent": 0,
-          "average_position": 36.55
+          "average_position": 36.93
         },
         {
           "url": "https://familytripwise.com/where-to-stay/washington-dc-family-hotels.html",
@@ -2315,7 +2315,7 @@
           "url": "https://familytripwise.com/ski/okemo-conditions.html",
           "indexed": false,
           "verdict": "NEUTRAL",
-          "coverage_state": "URL is unknown to Google",
+          "coverage_state": "Discovered - currently not indexed",
           "indexing_state": "INDEXING_STATE_UNSPECIFIED",
           "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
           "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
