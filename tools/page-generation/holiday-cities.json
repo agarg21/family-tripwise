@@ -3072,6 +3072,12 @@
         },
         {
           "until": "2026-12-03",
+          "name": "Big Apple Circus",
+          "text": "opens Fri Nov 27 at Marx Brothers Playground, E 96th St and 2nd Ave, through Jan 18; all ages, under-2s on a lap free, per the circus (Nov 26). Prices are on its ticketing page.",
+          "href": "#big-apple-circus"
+        },
+        {
+          "until": "2026-12-03",
           "name": "The Met Christmas tree",
           "text": "its 20-foot tree over a Neapolitan Nativity is on view to Tue Jan 5 (closed Wednesdays), free with admission: ≈ $60 for 4 (2 × $30 adults, kids 12 and under free), per the Met (Nov 26).",
           "href": "#met-christmas-tree"
@@ -4343,6 +4349,36 @@
             }
           ],
           "extra_stale": "Everyone needs a ticket, even a child on a lap. No refunds, and the ballet's policy says tickets can't be exchanged into The Nutcracker, so pick your date carefully."
+        },
+        {
+          "id": "big-apple-circus",
+          "name": "Big Apple Circus",
+          "place": "Marx Brothers Playground, 2nd Ave at E 96th St, Upper East Side, Manhattan",
+          "dates": "Fri Nov 27, 2026 to Mon Jan 18, 2027. Showtimes vary by date; see the circus's ticketing page.",
+          "table_when": "Nov 27 to Jan 18, shows about 2 hr 10 min",
+          "answer_when": "Nov 27 to Jan 18",
+          "start_on": "2026-11-27",
+          "end_on": "2027-01-18",
+          "free": false,
+          "price_read_on": "2026-11-26",
+          "cost_note": "The circus's own page shows no ticket prices; seats, times and prices are on its ticketing page. It says prices and fees are the same at the box office as online.",
+          "kids": [
+            "All ages, per the circus; under-2s on a ticket holder's lap don't need a ticket",
+            "2 hours 10 minutes with an intermission; you may arrive up to 45 minutes early",
+            "Stroller check just inside the main entrance; no coat check",
+            "Uses fog, haze, strobes and lasers, per its FAQ"
+          ],
+          "extra_label": "Before you buy",
+          "extra": "No refunds. Date changes are possible up to 48 hours before your show: a $9.99 exchange option at checkout, or a $19.95 fee later, per the circus's FAQ.",
+          "extra_stale": "No refunds. Date changes are possible up to 48 hours before your show, for a fee, per the circus's FAQ.",
+          "watch": "Subway: 6 to 96 St (Lexington Ave), then about two blocks east; Q to 96 St; M96 or M15 bus. Garages nearby, limited free street parking. No outside food or drinks.",
+          "observed_on": "2026-11-26",
+          "sources": [
+            {
+              "label": "Big Apple Circus New York page and FAQ",
+              "url": "https://bigapplecircus.com/"
+            }
+          ]
         }
       ],
       "hero_slug": "rockefeller-center-christmas-snow",
