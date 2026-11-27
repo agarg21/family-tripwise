@@ -270,6 +270,11 @@ export function renderMarkdown(snapshot) {
   return lines.join("\n");
 }
 
+// Page rows come back sorted by clicks, so a low cap silently drops 0-click pages with many impressions: at 100 the
+// 11-26 28-day table lost the San Diego, Orlando, San Antonio and DC family-hotel pages (528/124/112/132 impr. on 11-24;
+// Muse 11-27 #3). The API allows 25,000.
+export const PAGE_ROW_LIMIT = 1000;
+
 export async function collectSnapshot({ credentials, monitor, now = new Date() }) {
   const accessToken = await getAccessToken(credentials);
   const fallbackWindow = performanceWindow(now);
@@ -296,7 +301,7 @@ export async function collectSnapshot({ credentials, monitor, now = new Date() }
     dataState: "final",
     type: "web",
     dimensions: ["page"],
-    rowLimit: 100,
+    rowLimit: PAGE_ROW_LIMIT,
   });
   // Fresh, not finalized: the last 3 days by page (dataState "all"), labelled preliminary, to see new pages early.
   const freshStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 3));
@@ -306,7 +311,7 @@ export async function collectSnapshot({ credentials, monitor, now = new Date() }
     dataState: "all",
     type: "web",
     dimensions: ["page"],
-    rowLimit: 100,
+    rowLimit: PAGE_ROW_LIMIT,
   });
   const sitemapPayload = await getSitemap(accessToken, monitor.sitemap);
   // 118+ URLs one at a time ran past the 10-minute job limit (11-19, 11-23). Inspect 6 at a time; a URL whose

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { base64url, finalizedThroughFromProbe, normalizeAggregate, normalizePageRows, performanceWindow, renderMarkdown, sitemapCounts, sitemapStatus, summarizeInspection, validatePublicSnapshot } from "./gsc-snapshot.mjs";
+import { PAGE_ROW_LIMIT, base64url, finalizedThroughFromProbe, normalizeAggregate, normalizePageRows, performanceWindow, renderMarkdown, sitemapCounts, sitemapStatus, summarizeInspection, validatePublicSnapshot } from "./gsc-snapshot.mjs";
 import { allDealUrls } from "./page-generation/deals-pages.mjs";
 
 test("inspects every canonical sitemap URL", async () => {
@@ -180,4 +180,14 @@ test("omits GSC page rows that are not published pages, keeping only their count
   keepPublishedPageRows(snapshot, new Set(["https://familytripwise.com/"]));
   assert.deepEqual(snapshot.gsc.performance.page_rows, [{ url: "https://familytripwise.com/" }]);
   assert.equal(snapshot.gsc.performance.page_rows_omitted, 1);
+});
+
+test("page queries ask for every published page, not the top 100 by clicks", async () => {
+  // 11-26: rowLimit 100 cut four 0-click family-hotel pages out of the 28-day table (Muse 11-27 #3).
+  const sitemap = await readFile(new URL("../site/sitemap.xml", import.meta.url), "utf8");
+  const pages = [...sitemap.matchAll(/<loc>/g)].length;
+  assert.ok(PAGE_ROW_LIMIT >= 5 * pages, `PAGE_ROW_LIMIT ${PAGE_ROW_LIMIT} leaves room for URL variants of ${pages} sitemap pages`);
+  assert.ok(PAGE_ROW_LIMIT <= 25000, "the Search Analytics API caps rowLimit at 25,000");
+  const source = await readFile(new URL("./gsc-snapshot.mjs", import.meta.url), "utf8");
+  assert.equal(/dimensions: \["page"\],\s*rowLimit: \d/.test(source), false, "page queries use PAGE_ROW_LIMIT");
 });
