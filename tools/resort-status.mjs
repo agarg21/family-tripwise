@@ -119,6 +119,11 @@ export async function readAll({ resorts, prev = {}, fetchImpl = fetch, now = () 
 async function main() {
   const today = etStamp(new Date()).date;
   if (today > LAST_DAY) { console.log(`D57 daily reads end ${LAST_DAY}; nothing to do.`); return; }
+  // Read only while lifts turn coast to coast: 12:30-3:29pm ET is 9:30am-12:29pm PT in either season,
+  // inside the pages' 9:30am-3:30pm resort-time window. A late cron start reads nothing rather than a
+  // closed-for-the-night 0 (11-26 ran at 01:51 UTC).
+  const { time } = etStamp(new Date());
+  if (!process.env.STATUS_DRY_RUN && (time < "12:30" || time > "15:29")) { console.log(`outside lift hours (${time} ET); nothing read.`); return; }
   const { resorts } = JSON.parse(fs.readFileSync(DATA, "utf8"));
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { resorts: {} };
   // At most one read per resort per ET day (D57); a second run the same day keeps the first read.

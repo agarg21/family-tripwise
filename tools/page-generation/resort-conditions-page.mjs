@@ -172,6 +172,11 @@ function liveStatus(r, today) {
   if (!live?.read_et || !live.read_at) return null;
   const age = ageDays(live.read_et.date, today);
   if (age < 0 || age > 1) return null;
+  // Only a count read in lift hours (9:30am to 3:30pm at the resort) means anything: after closing,
+  // resort pages show 0 lifts open (11-26: GitHub started the read at 8:52pm ET).
+  const [hh, mm] = new Date(live.read_at).toLocaleTimeString("en-GB", { timeZone: r.tz ?? "America/New_York", hour: "2-digit", minute: "2-digit", hour12: false }).split(":").map(Number);
+  const mins = (hh % 24) * 60 + mm;
+  if (mins < 9 * 60 + 30 || mins > 15 * 60 + 30) return null;
   const near = (got, known) => Array.isArray(got) && typeof known === "number" && Math.abs(got[1] - known) <= known * 0.2;
   const lifts = near(live.lifts, r.lifts_total) ? live.lifts : null;
   const trails = near(live.trails, r.trails_total) ? live.trails : null;

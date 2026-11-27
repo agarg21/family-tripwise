@@ -815,3 +815,9 @@ test("with past reads below and no recent read, the card and cam table never say
   assert.match(html, /day by day, are below/);
   assert.doesNotMatch(html, /No cam read from us yet|Once our reads start/);
 });
+
+test("D57: a count read after the lifts close is ignored", () => {
+  const now = new Date("2026-11-27T15:00:00Z");
+  const night = { resorts: { vail: { read_et: { date: "2026-11-26", time: "20:52" }, read_at: "2026-11-27T01:52:00Z", lifts: [0, 34], trails: [14, 277] } } };
+  assert.doesNotMatch(visible(resortPage("vail", resortData(), "2026-11-27", null, now, night)), /of 34 lifts/);
+});
