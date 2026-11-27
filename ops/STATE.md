@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=11
-run: {id: 2026-11-27T17:04Z, started_at: 2026-11-27T17:04Z}
+today: 2026-11-27 transactions=12
+run: none
 last_public_release: 2aaf4b81 G19 openings: Holiday Valley Dec 4, Snowbird moved up to Nov 25, Jackson Hole re-read (Nov 27)
 active: none
 
@@ -58,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 16:04Z G16 step 2: 5 trend flags triaged; NYCB Nutcracker already on NYC page; mall/band off-fit; Orlando drive-thru lights lead (Mommy Poppins) fetch not granted, no 2026 official page found: re-search from Nov 29. No public change.
+- 11-27 17:04Z G16 step 2: trend flag t-6cd1d97f4d (amNY holiday-movie spots roundup, NYC) fetch not granted (no retry); generic movie-location listicle, NYC Christmas page already covers the landmarks; deleted. No public change.

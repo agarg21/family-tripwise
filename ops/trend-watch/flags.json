@@ -1,42 +1,6 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [
-    {
-      "id": "t-6cd1d97f4d",
-      "city": "New York City",
-      "title": "How to spend the holidays in New York based on iconic holiday movies",
-      "links": [
-        {
-          "outlet": "amNewYork (Lifestyle)",
-          "url": "https://www.amny.com/entertainment/arts-entertainment/holidays-new-york-iconic-holiday-movies/",
-          "published": "2026-11-27T16:00Z"
-        }
-      ],
-      "first_seen": "2026-11-27T16:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "family:children",
-          "topic:holidays,holiday,christmas"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "children",
-        "holidays",
-        "holiday",
-        "christmas",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    }
-  ],
+  "flags": [],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
