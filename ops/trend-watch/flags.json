@@ -75,6 +75,39 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-57aad8c922",
+      "city": "Orlando",
+      "title": "Merry Mobile bus connects Orlando's Main Street districts on Small Business Saturday",
+      "links": [
+        {
+          "outlet": "Orlando Weekly",
+          "url": "https://www.orlandoweekly.com/arts/things-to-do/merry-mobile-bus-connects-orlandos-main-street-districts-on-small-business-saturday/",
+          "published": "2026-11-27T01:37Z"
+        }
+      ],
+      "first_seen": "2026-11-27T02:05Z",
+      "signals": {
+        "fit": [
+          "city:Orlando",
+          "topic:holiday"
+        ],
+        "novelty": [
+          "first",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:saturday"
+        ]
+      },
+      "matched_terms": [
+        "holiday",
+        "first"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
