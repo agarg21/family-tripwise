@@ -2952,11 +2952,15 @@
       "hero_place": "Snowbird's Aerial Tram at Hidden Peak in an earlier winter (photo date not stated): not today's conditions.",
       "cam_page": "https://www.snowbird.com/the-mountain/webcams/view-all-webcams/",
       "status_page": "https://www.snowbird.com/the-mountain/mountain-report/current-conditions-weather/",
+      "status_chip": "Opening moved up to Nov 25",
+      "status_note": "For lifts running today, see its mountain report. Snowbird's opening-day page and Nov 21 press release moved opening day up from Nov 27 to Wed, Nov 25",
+      "status_read": "2026-11-27",
       "opening": {
-        "date": "2026-11-27",
+        "date": "2026-11-25",
         "source": "opening-day page",
-        "when": "Fri, Nov 27 (tentative)",
-        "text": "Snowbird's opening-day page says lifts open Friday, Nov 27, 2026 (tentative, conditions permitting), 9am to 4pm.",
+        "read": "2026-11-27",
+        "when": "Wed, Nov 25 (moved up from Nov 27)",
+        "text": "Snowbird's opening-day page says opening day is Wed, Nov 25, 2026 (moved up from Nov 27), 9am; lifts and terrain may change with conditions.",
         "target": true
       },
       "cams_note": "The 7 Snowbird cam views our reader uses (6 names: two summit views share one), in our own descriptive words",
@@ -2997,7 +3001,7 @@
       "plan": [
         {
           "label": "Season and hours",
-          "text": "Snowbird's opening-day page says lifts open Fri, Nov 27, 2026, tentatively and conditions permitting, 9am to 4pm. Its page summary says Nov 26. No closing date posted.",
+          "text": "Snowbird's opening-day page lists opening day as Wed, Nov 25, 2026, moved up from Nov 27, with the Aerial Tram, Little Cloud, Gadzoom, Wilbere and Chickadee planned. Opening-day lift hours start 9am and end 3:45pm (Aerial Tram, Little Cloud) to 5pm (Chickadee); lifts and terrain may change with conditions. Its page summary says Nov 26. No closing date posted.",
           "source": "hours"
         },
         {
@@ -3098,6 +3102,7 @@
       "sources": {
         "hours": {
           "label": "Snowbird Opening Day 2026-27",
+          "read": "2026-11-27",
           "url": "https://www.snowbird.com/activities-events/events/events-calendar/opening-day/"
         },
         "first-timers": {
@@ -3359,7 +3364,8 @@
         "date": "2026-11-27",
         "source": "opening-day page",
         "when": "Fri, Nov 27",
-        "text": "Jackson Hole's opening-day page lists Friday, Nov 27, 2026 for the 2026-27 winter; it names no lifts or hours."
+        "read": "2026-11-27",
+        "text": "Jackson Hole's opening-day page lists Fri, Nov 27, 2026 and says \"It's Opening Day!\"; it names no lifts or hours"
       },
       "cams_note": "The 4 Jackson Hole cam views our reader uses, in our own descriptive words",
       "cams": [
@@ -3495,6 +3501,7 @@
       "sources": {
         "hours": {
           "label": "Jackson Hole Opening Day Winter 2026-27",
+          "read": "2026-11-27",
           "url": "https://www.jacksonhole.com/events/opening-day-winter"
         },
         "first-timers": {
@@ -4890,10 +4897,11 @@
       "lifts_total": 13,
       "status_page": "https://www.holidayvalley.com/snow-report/",
       "opening": {
-        "date": "2026-11-27",
+        "date": "2026-12-04",
         "source": "opening day page",
-        "text": "Holiday Valley says it opens Fri, Nov 27, date subject to change with the weather.",
-        "when": "Fri, Nov 27 (weather permitting)",
+        "read": "2026-11-27",
+        "text": "Holiday Valley's opening day page now gives a new tentative opening date of Fri, Dec 4, 9am to 4:30pm (moved from Nov 27; its page summary still says Nov 27), subject to change with the weather.",
+        "when": "Fri, Dec 4 (new tentative date, weather permitting)",
         "target": true
       },
       "cams_note": "The 5 Holiday Valley cam views our reader uses, in our own descriptive words",
@@ -5024,6 +5032,7 @@
       "sources": {
         "hours": {
           "label": "Holiday Valley opening day page",
+          "read": "2026-11-27",
           "url": "https://www.holidayvalley.com/event/opening-day-2026-27/"
         },
         "tickets": {

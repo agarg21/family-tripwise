@@ -470,12 +470,21 @@ test("Crested Butte: opens Nov 25, no childcare, lesson ages, meeting-point and 
   assert.doesNotMatch(html, /holiday-nudge|related-this-week|More New York City family guides/);
 });
 
-test("Snowbird: opens Nov 27 (tentative), group lessons from Dec 12, childcare 6 weeks-12 years, starting-at ticket sums, no NYC lines", () => {
+test("Snowbird: opening moved up to Nov 25 (read Nov 27), group lessons from Dec 12, childcare 6 weeks-12 years, starting-at ticket sums, no NYC lines", async () => {
   const data = resortData();
   const html = resortPage("snowbird", data, "2026-11-17");
   const page = visible(html);
   assert.match(page, /Not open yet/);
-  assert.match(page, /Nov 27/);
+  assert.match(page, /Opens Wed, Nov 25 \(moved up from Nov 27\)/);
+  // After opening day: no chip from our read, a dated line pointing to today's mountain report.
+  const after = visible(resortPage("snowbird", data, "2026-11-27"));
+  assert.match(after, /Opening moved up to Nov 25\s*For lifts running today, see its\s+mountain report\s*\.[^]*up from Nov 27 to Wed, Nov 25 \(read\u00a0?\s?Nov\s?27\)/);
+  assert.match(resortPage("snowbird", data, "2026-11-27"), /cam-read-chip deal-verdict-neutral">Opening moved up to Nov 25</);
+  assert.doesNotMatch(visible(resortPage("snowbird", data, "2026-12-05")), /Opening moved up/, "the dated chip drops a week after the read");
+  const { validateResort } = await import("./page-generation/resort-conditions-page.mjs");
+  for (const bad of ["Opening today", "Now opening", "Open now", "Opening moved: open today"]) assert.ok(validateResort({ ...data.resorts.snowbird, status_chip: bad }).some((x) => /status_chip/.test(x)), bad);
+  assert.ok(!validateResort(data.resorts.snowbird).some((x) => /status_chip/.test(x)));
+  assert.doesNotMatch(after, /Target opening day|>Opening day</);
   assert.match(page, /Dec 12, 2026 to Apr 11, 2027/);
   assert.match(page, /6 weeks to 12 years/);
   assert.match(page, /from \$624/);
@@ -609,9 +618,9 @@ test("A target opening date gets a neutral chip on the day, never 'Opening day'"
   assert.doesNotMatch(html, />Opening day</);
 });
 
-test("Conditions-permitting openings (Alta, Snowbird, Holiday Valley) get the neutral chip on the day; Alta's read is dated Nov 24", () => {
+test("Conditions-permitting openings (Alta, Holiday Valley) get the neutral chip on the day; Alta's read is dated Nov 24", () => {
   const data = resortData();
-  for (const [slug, day] of [["alta", "2026-11-25"], ["snowbird", "2026-11-27"], ["holiday-valley", "2026-11-27"]]) {
+  for (const [slug, day] of [["alta", "2026-11-25"], ["holiday-valley", "2026-12-04"]]) {
     const html = resortPage(slug, data, day);
     assert.match(html, /Target opening day/, slug);
     assert.doesNotMatch(html, />Opening day</, slug);
@@ -696,10 +705,11 @@ test("cam by cam: sits after the planning facts, and an all-dark read is one lin
   assert.doesNotMatch(t2, /No cam gave a usable picture/);
 });
 
-test("Holiday Valley: opens Nov 27 (weather permitting), first-screen family-of-4 sum with RFID cards, no NYC drive time invented, prices hide after 30 days", () => {
+test("Holiday Valley: new tentative opening Dec 4 (read Nov 27), first-screen family-of-4 sum with RFID cards, no NYC drive time invented, prices hide after 30 days", () => {
   const data = resortData();
   const page = visible(resortPage("holiday-valley", data, "2026-11-18"));
-  assert.match(page, /Not open yet\s*Opens Fri, Nov 27 \(weather permitting\)/);
+  assert.match(page, /Not open yet\s*Opens Fri, Dec 4 \(new tentative date, weather permitting\)/);
+  assert.match(visible(resortPage("holiday-valley", data, "2026-11-27")), /Not open yet\s*Opens Fri, Dec 4 \(new tentative date, weather permitting\)\s*\(Holiday Valley's opening day page, read\u00a0?\s?Nov\s?27\)/);
   assert.match(page, /Family of 4: about \$450 a weekend or holiday day, \$382 a weekday/);
   assert.match(page, /about \$450 on a weekend or holiday, \$382 on a weekday/);
   assert.match(page, /lists no time from New York City/);

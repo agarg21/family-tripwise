@@ -103,6 +103,8 @@ export function validateResort(r) {
   if (r.opening?.read && !/^\d{4}-\d{2}-\d{2}$/.test(r.opening.read)) errors.push("opening.read must be an ISO date");
   if (r.status_lifts_open !== undefined && (!r.status_note || !Number.isInteger(r.status_lifts_open) || r.status_lifts_open < 0)) errors.push("status_lifts_open needs status_note and a whole number");
   if (r.status_not_open !== undefined && (r.status_not_open !== true || !r.status_note)) errors.push("status_not_open must be true and needs status_note");
+  // A short neutral chip of our own words for a dated note with no count (Snowbird moved up, design review 11-27); never "open".
+  if (r.status_chip !== undefined && (typeof r.status_chip !== "string" || !r.status_note || !r.status_read || r.status_lifts_open !== undefined || r.status_not_open || !/^Opening (moved|delayed|postponed)\b/.test(r.status_chip) || /\bopen(s|ed)?\b|\b(today|now)\b/i.test(r.status_chip))) errors.push("status_chip needs status_note and status_read, no count, and must start 'Opening moved/delayed/postponed' without saying open, today or now");
   if (r.status_read && (!r.status_note || !/^\d{4}-\d{2}-\d{2}$/.test(r.status_read))) errors.push("status_read needs status_note and an ISO date");
   for (const k of ["name", "town", "observed_on", "drive", "subhead", "cam_page", "status_page", "unpriced", "hero_alt", "hero_place"]) if (!r[k]) errors.push(`missing ${k}`);
   if ((r.prices ?? []).length && !r.price_basis) errors.push("missing price_basis");
@@ -216,8 +218,9 @@ function resortStatus(r, today) {
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
   // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : "";
-  // The chip carries the date; with no chip the line keeps its own (integrity review 11-25).
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : r.status_chip ? e(r.status_chip) : "";
+  // The chip carries the date; with no chip (or our own undated chip) the line keeps its own (integrity review 11-25).
+  if (r.status_chip && typeof n !== "number" && !r.status_not_open) return { chip, variant: "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
   return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: chip ? `${e(r.status_note)}.` : `${e(r.status_note)} (checked\u00a0${nb(read)}).` };
 }
 
@@ -465,7 +468,7 @@ ${body}
 // `entry` is the deploy-time feed read, only when it was publishable then.
 const ENTRY_KEYS = ["publish", "status", "line", "read_at", "cams_used", "cams_total", "fields", "stake_inches", "stake_conf", "cams"];
 function clientConfig(slug, r, entry, read) {
-  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "opening", "cams_note", "tz", "tz_label", "status_label", "history_below", "live", "lifts_total", "trails_total"];
+  const keep = ["name", "observed_on", "cam_page", "status_page", "status_note", "status_read", "status_lifts_open", "status_not_open", "status_chip", "opening", "cams_note", "tz", "tz_label", "status_label", "history_below", "live", "lifts_total", "trails_total"];
   return { ...Object.fromEntries(keep.filter((k) => r[k] !== undefined).map((k) => [k, r[k]])), feed_key: r.feed_key ?? slug,
     ...(read.state !== "none" ? { entry: Object.fromEntries(ENTRY_KEYS.filter((k) => entry[k] !== undefined).map((k) => [k, entry[k]])) } : {}),
     cams: r.cams.map((c) => ({ name: c.name, reads: c.reads, ...(c.feed_name ? { feed_name: c.feed_name } : {}) })) };

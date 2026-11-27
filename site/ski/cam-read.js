@@ -109,8 +109,9 @@
   // The chip carries its own date, so a week-old count never reads as today's (integrity review 11-16).
   const n = r.status_lifts_open;
   // A resort page that says it has not opened (no lift count) gets a dated "Not open" chip (Stratton postponed, 11-23).
-  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : "";
-  // The chip carries the date; with no chip the line keeps its own (integrity review 11-25).
+  const chip = typeof n === "number" ? `${n === 0 ? "No" : n} lift${n === 1 ? "" : "s"} open when we checked ${nb(read)}` : r.status_not_open ? `Not open when we checked ${nb(read)}` : r.status_chip ? e(r.status_chip) : "";
+  // The chip carries the date; with no chip (or our own undated chip) the line keeps its own (integrity review 11-25).
+  if (r.status_chip && typeof n !== "number" && !r.status_not_open) return { chip, variant: "neutral", text: `${e(r.status_note)} (read\u00a0${nb(read)}).` };
   return { chip, variant: n === 0 || (typeof n !== "number" && r.status_not_open) ? "skip" : "neutral", text: chip ? `${e(r.status_note)}.` : `${e(r.status_note)} (checked\u00a0${nb(read)}).` };
 }
   function readCard(r, read, today) {
