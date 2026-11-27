@@ -2,182 +2,38 @@
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
   "flags": [
     {
-      "id": "t-938fbb847f",
+      "id": "t-6cd1d97f4d",
       "city": "New York City",
-      "title": "\"The Nutcracker\" returns to NYC's Lincoln Center for the holiday season",
+      "title": "How to spend the holidays in New York based on iconic holiday movies",
       "links": [
         {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/the-nutcracker-returns-to-nycs-lincoln-center-for-the-holiday-season/",
-          "published": "2026-11-27T14:39Z"
+          "outlet": "amNewYork (Lifestyle)",
+          "url": "https://www.amny.com/entertainment/arts-entertainment/holidays-new-york-iconic-holiday-movies/",
+          "published": "2026-11-27T16:00Z"
         }
       ],
-      "first_seen": "2026-11-27T15:05Z",
+      "first_seen": "2026-11-27T16:05Z",
       "signals": {
         "fit": [
           "city:New York City",
-          "topic:nutcracker,holiday"
+          "family:children",
+          "topic:holidays,holiday,christmas"
         ],
         "novelty": [
-          "returns",
-          "opens",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:friday",
-          "place:nyc's lincoln center"
-        ]
-      },
-      "matched_terms": [
-        "nutcracker",
-        "holiday",
-        "returns",
-        "opens"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-083d3069b6",
-      "city": "New York City",
-      "title": "Black Friday shopppers flock to American Dream Mall in N.J. for special sales",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/video/black-friday-shopppers-flock-to-american-dream-mall-in-n-j-for-special-sales/",
-          "published": "2026-11-27T14:36Z"
-        }
-      ],
-      "first_seen": "2026-11-27T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "first",
           "new",
           "published<24h"
         ],
         "momentum": [],
-        "actionable": [
-          "date:black friday",
-          "place:american dream mall"
-        ]
+        "actionable": []
       },
       "matched_terms": [
-        "black friday",
-        "first",
-        "new"
-      ],
-      "score": 8,
-      "priority": "normal"
-    },
-    {
-      "id": "t-d156432bce",
-      "city": "Orlando",
-      "title": "Best Drive-Thru Christmas Lights and Holiday Light Shows in Orlando 2026",
-      "links": [
-        {
-          "outlet": "Mommy Poppins",
-          "url": "https://mommypoppins.com/orlando-kids/christmashanukkah/holiday-lights-drive-thrus-orlando-christmas-light-shows",
-          "published": "2026-11-27T00:00Z"
-        }
-      ],
-      "first_seen": "2026-11-27T15:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:families",
-          "topic:christmas lights,holiday,christmas"
-        ],
-        "novelty": [
-          "2026",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:drive thru christmas lights"
-        ]
-      },
-      "matched_terms": [
-        "families",
-        "christmas lights",
+        "children",
+        "holidays",
         "holiday",
         "christmas",
-        "holiday lights",
-        "2026"
-      ],
-      "score": 9,
-      "priority": "normal"
-    },
-    {
-      "id": "t-28ae4579a1",
-      "city": "New York City",
-      "title": "Texas HS band raises $350,000 to stay in NYC for rescheduled Macy's Thanksgiving Day Parade",
-      "links": [
-        {
-          "outlet": "KENS 5 (local news)",
-          "url": "https://www.kens5.com/article/news/local/pearland-band-macys-parade-rescheduled-nyc-fundraiser/285-e9fdcad0-604e-4cc0-9509-bc6569348016",
-          "published": "2026-11-27T14:20Z"
-        }
-      ],
-      "first_seen": "2026-11-27T15:05Z",
-      "signals": {
-        "fit": [
-          "city:New York City",
-          "topic:thanksgiving,parade"
-        ],
-        "novelty": [
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:thanksgiving day",
-          "place:macy's thanksgiving day parade",
-          "price:$3"
-        ]
-      },
-      "matched_terms": [
-        "thanksgiving",
-        "parade"
-      ],
-      "score": 7,
-      "priority": "normal"
-    },
-    {
-      "id": "t-f5a07c2280",
-      "city": "New York City",
-      "title": "Black Friday shoppers flock to American Dream mall in N.J. for special deals and sales",
-      "links": [
-        {
-          "outlet": "CBS New York",
-          "url": "https://www.cbsnews.com/newyork/news/black-friday-deals-sales-american-dream-mall-nj-shopping/",
-          "published": "2026-11-27T15:05Z"
-        }
-      ],
-      "first_seen": "2026-11-27T15:34Z",
-      "signals": {
-        "fit": [
-          "city:New York City (local outlet)",
-          "topic:black friday"
-        ],
-        "novelty": [
-          "new",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "date:black friday",
-          "place:american dream mall"
-        ]
-      },
-      "matched_terms": [
-        "black friday",
         "new"
       ],
-      "score": 7,
+      "score": 8,
       "priority": "normal"
     }
   ],
