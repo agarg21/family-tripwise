@@ -96,11 +96,11 @@ Crystal Mountain (webcam), Winter Park and Jay Peak (snow report), Bogus Basin a
   Smugglers' Notch, Whitefish. Same rule: one page each once the feed lists it; pages show cam reads only once published.
   Still not possible (snowcam docs/cam-inventory-2026-11-26*): Snowshoe, Sunday River, Steamboat, Big Sky, Loon, Whiteface,
   Gore, Mammoth; Mountain Creek and Mt Baker need a direct cam link.
-- In the feed from 2026-11-27 (owner D59, "ok to add 55 more"): 53 resorts from snowcam's 150-resort cam scan
+- In the feed from 2026-11-27 (owner D59, "ok to add 55 more"): 52 resorts from snowcam's 150-resort cam scan
   (snowcam docs/cam-inventory-2026-11-27): 49 Degrees North, Afton Alps, Angel Fire, Attitash, Bear Creek, Bear Valley,
   Beech Mountain, Boreal, Boston Mills Brandywine, Brian Head, Bridger Bowl, Bristol Mountain, Bromley, Buck Hill,
   Caberfae Peaks, Canaan Valley, Crotched, Diamond Peak, Dodge Ridge, Donner Ski Ranch, Granby Ranch, Great Divide,
-  Greek Peak, Hidden Valley PA, Jack Frost Big Boulder, Liberty, Lookout Pass, Loveland, Lutsen, Mad River Glen,
+  Greek Peak, Hidden Valley PA, Jack Frost Big Boulder, Liberty, Lookout Pass, Lutsen, Mad River Glen,
   Mad River Mountain, Monarch, Mount Sunapee, Mt Ashland, Mt Brighton, Mt Shasta Ski Park, Powder Mountain, Powderhorn,
   Sipapu, Ski Santa Fe, Snow Trails, Snowbasin, Summit at Snoqualmie, Sunlight, Tamarack, Terry Peak, White Pass,
   Whitetail, Wildcat, Wilmot, Wintergreen, Winterplace, Wisp. Same rule, plus: build a page only once the feed lists
