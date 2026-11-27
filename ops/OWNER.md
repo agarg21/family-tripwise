@@ -43,3 +43,4 @@ Approved.
 
 ## Open
 - O52 Open (owner): #9 go/no-go, #18 questions.
+- O53 (11-27): Release Atlantis book-by fix (Dec 8 -> Nov 29, seen by our watch; branch q/G09w-atlantis-bf) despite persona 3.47 < 3.5 (unpriced card)? Rec: yes, the live Dec 8 is likely wrong.
