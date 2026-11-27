@@ -1,40 +1,6 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [
-    {
-      "id": "t-6be354cd7a",
-      "city": "Orlando",
-      "title": "Angel Tree, Salvation Army bring Christmas magic to Central Florida families",
-      "links": [
-        {
-          "outlet": "News 6 ClickOrlando (local news)",
-          "url": "https://www.clickorlando.com/news/local/2026/11/27/angel-tree-salvation-army-bring-christmas-magic-to-central-florida-families/",
-          "published": "2026-11-27T10:00Z"
-        }
-      ],
-      "first_seen": "2026-11-27T10:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "family:families",
-          "topic:christmas"
-        ],
-        "novelty": [
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": []
-      },
-      "matched_terms": [
-        "families",
-        "christmas",
-        "this year"
-      ],
-      "score": 8,
-      "priority": "normal"
-    }
-  ],
+  "flags": [],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
