@@ -750,34 +750,41 @@
       "title": "Dyker Heights Christmas lights, Brooklyn: free to walk",
       "when": "Expected from about Friday, November 27, 2026. Sources put the end between Christmas and early January. Best after dark, from about 5 p.m.; some homes switch off as early as 9 p.m.",
       "cost": "Free to walk. Optional tours for a family of 4, estimate: walking about $140 ($35 each), bus from Midtown about $300 ($75 a seat). We saw no lower child price; check when booking.",
-      "booking": "No ticket to walk it. Tours book on the company's page; its first 2026 tour is November 27.",
-      "family": "Weeknights are quieter; mid-December weekends from 5 to 9 p.m. are busiest. Around 83rd to 86th Streets, 11th to 13th Avenues; R to 86 St or D to 79 St, then a 10 to 20 minute walk. It's a street of private homes, so stay on the sidewalk. We found nothing on strollers or restrooms.",
-      "official_url": "https://secretnyc.co/dyker-heights-christmas-lights-brooklyn/",
-      "source_label": "Secret NYC guide",
+      "booking": "No ticket to walk it. Tours book on the company's page; its first 2026 tour is November 27, and on Nov 27 it showed a sold-out notice with a waitlist (tour and date not stated).",
+      "family": "Weeknights are quieter; mid-December weekends from 5 to 9 p.m. are busiest. Around 83rd to 86th Streets, 11th to 13th Avenues; R to 86 St or D to 79 St, then a 10 to 20 minute walk. It's a street of private homes, so stay on the sidewalk. Few public bathrooms nearby, per a 2026 guide; we found nothing on strollers.",
+      "official_url": "https://www.dykerheightschristmaslights.com/book-now.php",
+      "source_label": "tour company page",
       "more_sources": [
         {
-          "label": "Brooklyn Paper guide",
-          "url": "https://www.brooklynpaper.com/dyker-heights-christmas-lights-guide-2025/"
+          "label": "NYC Guest Guide 2026 guide",
+          "url": "https://nycguestguide.com/blog/dyker-heights-christmas-lights-2026"
         },
         {
-          "label": "tour company page",
-          "url": "https://www.dykerheightschristmaslights.com/book-now.php"
+          "label": "Secret NYC guide",
+          "url": "https://secretnyc.co/dyker-heights-christmas-lights-brooklyn/",
+          "checked_on": "2026-11-04"
+        },
+        {
+          "label": "Brooklyn Paper guide",
+          "url": "https://www.brooklynpaper.com/dyker-heights-christmas-lights-guide-2025/",
+          "checked_on": "2026-11-04"
         },
         {
           "label": "Secret NYC headline (article not read)",
-          "url": "https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/"
+          "url": "https://secretnyc.co/dyker-heights-christmas-lights-40-years-bryant-park-tour/",
+          "checked_on": "2026-11-04"
         }
       ],
-      "observed_on": "2026-11-04",
+      "observed_on": "2026-11-27",
       "starts_on": "2026-11-27",
       "sort_on": "2026-11-27",
       "expires_on": "2026-12-31",
       "third_party": true,
-      "third_party_note": "We found no organizer or official 2026 dates. The start comes from a tour company and a Secret NYC headline; the guides describe last season.",
+      "third_party_note": "We found no organizer or official 2026 dates. The start comes from a tour company; a Nov 18, 2026 guide says most homes light up the weekend after Thanksgiving.",
       "post": {
         "when": "From about Nov 27. Best after dark, about 5 p.m.",
         "cost": "Free to walk.",
-        "catch": "Weeknights are quieter. We found nothing on strollers or restrooms."
+        "catch": "Weeknights are quieter. Few public bathrooms nearby, per a 2026 guide."
       }
     },
     {

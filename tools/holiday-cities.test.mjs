@@ -143,7 +143,7 @@ test("NYC: published prices, what's free, and passed sessions leave", () => {
   assert.match(dec15, /≈ \$90 to \$122/);
   assert.doesNotMatch(dec15, /\$4 a ride|parking \$22/);
   assert.match(dec15, /Holiday Train \(tickets for ages 3 and up\) and parking; check live/);
-  const stale = holidayCityPage("new-york-city", data, "2026-12-27").match(/<main[\s\S]*<\/main>/)[0]; // day after the newest NYC price read (Nov 26, NYC Ballet) goes stale
+  const stale = holidayCityPage("new-york-city", data, "2026-12-28").match(/<main[\s\S]*<\/main>/)[0]; // day after the newest NYC price read (Nov 27, Dyker tours) goes stale
   assert.doesNotMatch(stale, /\$\d/);
   assert.match(stale, /Free with your own skates/);
   assert.equal(openEvents(nyc, "2027-03-01").length, 0);

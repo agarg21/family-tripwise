@@ -3520,14 +3520,15 @@
           "cost_note": "Free to walk the streets, per Brooklyn Paper and Secret NYC. Paid tours are optional.",
           "kids": [
             "Displays on people's homes, some with music and moving figures, per NYC Tourism",
-            "Lit after dark, about 5 p.m.; most stay on until midnight, some go off as early as 9 p.m., per Secret NYC",
+            "Lit after dark, about 5 p.m.; most stay on until midnight, some go off as early as 9 p.m., per Secret NYC; a 2026 guide says most switch off after 9, so go early",
             "Weeknights are quieter; mid-December weekends, 5 to 9 p.m., are busiest, per Brooklyn Paper",
-            "We found nothing on strollers or restrooms"
+            "Few public bathrooms nearby, per a 2026 guide (third party); we found nothing on strollers"
           ],
-          "extra": "Optional tours for 4, estimate: walking about $140 ($35 each); bus from Midtown about $300 ($75 a seat, about 4 hours). We saw no lower child price; check when booking.",
+          "extra": "Optional tours for 4, estimate: walking about $140 ($35 each); bus from Midtown about $300 ($75 a seat, about 4 hours; the coach has a restroom). We saw no lower child price, and the booking page showed a sold-out notice with a waitlist on Nov 27 (tour and date not stated); check when booking.",
           "extra_stale": "Optional walking and bus tours; check live.",
           "watch": "We found no organizer: it's a neighborhood of private homes, and no official dates. Stay on the sidewalk. Parking is limited. By subway, R to 86 St or D to 79 St, then a 10 to 20 minute walk, sources differ.",
           "observed_on": "2026-11-04",
+          "extra_observed_on": "2026-11-27",
           "sources": [
             {
               "label": "Brooklyn Paper 2025 guide (third party)",
@@ -3538,8 +3539,12 @@
               "url": "https://secretnyc.co/dyker-heights-christmas-lights-brooklyn/"
             },
             {
-              "label": "Tour company booking page, first 2026 tour Nov 27",
+              "label": "Tour company booking page, first 2026 tour Nov 27 (read Nov 27)",
               "url": "https://www.dykerheightschristmaslights.com/book-now.php"
+            },
+            {
+              "label": "NYC Guest Guide 2026 guide, Nov 18 (third party, read Nov 27)",
+              "url": "https://nycguestguide.com/blog/dyker-heights-christmas-lights-2026"
             },
             {
               "label": "NYC Tourism tour listing",
