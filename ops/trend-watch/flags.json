@@ -1,6 +1,43 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-2a4800c8aa",
+      "city": "New York City",
+      "title": "It's officially Christmas season in NYC. Can you afford a tree?",
+      "links": [
+        {
+          "outlet": "Gothamist",
+          "url": "https://gothamist.com/news/its-officially-christmas-season-in-nyc-can-you-afford-a-tree",
+          "published": "2026-11-27T11:00Z"
+        }
+      ],
+      "first_seen": "2026-11-27T11:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:christmas"
+        ],
+        "novelty": [
+          "new",
+          "is back",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:december 03",
+          "place:east village"
+        ]
+      },
+      "matched_terms": [
+        "christmas",
+        "new",
+        "is back"
+      ],
+      "score": 8,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
