@@ -5025,12 +5025,12 @@
           "id": "winter-wonderfest",
           "name": "Wintrust Winter WonderFest",
           "place": "Festival Hall, Navy Pier",
-          "dates": "Nov 27, 2026 to Jan 3, 2027, from 10 a.m.; closing time varies. Closed Dec 25; Nov 30 to Dec 2 not listed",
+          "dates": "Nov 27, 2026 to Jan 3, 2027, from 10 a.m.; opening weekend to 10 p.m. Fri and Sat, 8 p.m. Sun; Tue Dec 1 closes at 5 p.m. Closed Dec 25",
           "start_on": "2026-11-27",
           "end_on": "2027-01-03",
           "cost_low": 108,
           "cost_high": 128,
-          "cost_basis": "$27 online a day ahead, $32 at the door, age 3 and up",
+          "cost_basis": "$27 online 48+ hours ahead, $32 later or at the door, age 3 and up",
           "kids": [
             "In Festival Hall; its photos show an indoor rink. Skating is in every ticket",
             "Age 2 and under free"
@@ -5038,13 +5038,23 @@
           "extra": "Centennial Wheel $10 each, same day.",
           "extra_stale": "The Centennial Wheel costs extra; check live.",
           "cost_note": "Children 2 and under are free; everyone 3 and up needs a ticket.",
-          "cost_priced": "$27 online at least 24 hours ahead; $32 later or at the door.",
-          "watch": "Some dates close at 5 p.m., as do Dec 24 and 31. The page doesn't mention strollers or Santa.",
-          "observed_on": "2026-11-04",
+          "cost_priced": "$27 online at least 48 hours ahead; $32 within 48 hours or at the door.",
+          "watch": [
+            "Some dates close at 5 p.m.; Dec 24 and 31 have holiday hours, times not shown. The page doesn't mention strollers.",
+            {
+              "text": "Santa photos are a separate Navy Pier event (to Dec 24).",
+              "until": "2026-12-24"
+            },
+            {
+              "text": "Free Winter Fireworks Saturdays 8 p.m., Nov 28 to Dec 26 (Navy Pier event listing).",
+              "until": "2026-12-26"
+            }
+          ],
+          "observed_on": "2026-11-27",
           "sources": [
             {
               "label": "Navy Pier",
-              "url": "https://navypier.org/winterwonderfest/"
+              "url": "https://navypier.org/pier-events/wintrust-winter-wonderfest/"
             }
           ]
         },
@@ -5209,7 +5219,7 @@
             "Expect it late and loud for little kids: Navy Pier's event page lists only the midnight show"
           ],
           "extra": "Travel and food.",
-          "watch": "Navy Pier says arrive early for a spot and posts no viewing, stroller or security notes. Winter WonderFest closes at 5 p.m. that day (Nov 4 read).",
+          "watch": "Navy Pier says arrive early for a spot and posts no viewing, stroller or security notes. Winter WonderFest has holiday hours that day; Navy Pier shows no times (Nov 27 read), so check live.",
           "observed_on": "2026-11-24",
           "sources": [
             {
@@ -5221,6 +5231,12 @@
         }
       ],
       "news": [
+        {
+          "until": "2026-12-04",
+          "name": "Winter WonderFest",
+          "text": "open now at Navy Pier through Jan 3. Tickets for 4 (ages 3 and up) ≈ $108 bought online 2+ days ahead, $128 later or at the door (checked Nov 27).",
+          "href": "#winter-wonderfest"
+        },
         {
           "until": "2026-11-29",
           "name": "The Hip Hop Nutcracker",
