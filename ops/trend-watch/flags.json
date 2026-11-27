@@ -1,6 +1,44 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-fb515ffee1",
+      "city": "Chicago",
+      "title": "Winter WonderFest opens Friday at Navy Pier",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/winter-wonderfest-opens-friday-at-navy-pier/",
+          "published": "2026-11-27T19:34Z"
+        }
+      ],
+      "first_seen": "2026-11-27T20:05Z",
+      "signals": {
+        "fit": [
+          "city:Chicago",
+          "topic:winter wonderland,christmas,lights"
+        ],
+        "novelty": [
+          "opens",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:navy pier"
+        ]
+      },
+      "matched_terms": [
+        "winter wonderland",
+        "christmas",
+        "lights",
+        "ice rink",
+        "opens"
+      ],
+      "score": 8,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
