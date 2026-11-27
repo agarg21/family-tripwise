@@ -126,7 +126,7 @@
       "lastmod": "2026-11-25"
     },
     "holidays/orlando-christmas-with-kids.html": {
-      "sha256": "b3ef30711564cc223a665e4266e11e9487d1ffdc96d9a313f34f894386881f40",
+      "sha256": "385a3c6b55085d8c38afcb2556d8d3b8b72d107f0f29a4888e21b6dcb051f14b",
       "lastmod": "2026-11-26"
     },
     "holidays/san-antonio-christmas-with-kids.html": {
@@ -182,19 +182,19 @@
       "lastmod": "2026-11-26"
     },
     "ski/mount-snow-conditions.html": {
-      "sha256": "9d4d27f9de2457ea17899fbfec4253efe4de9713d3f308be58e156bea58bf72a",
+      "sha256": "42fa95302976cd71784702b3470cff2533c25f076f03fecc5776cb9908e1f359",
       "lastmod": "2026-11-26"
     },
     "ski/hunter-mountain-conditions.html": {
-      "sha256": "0f3e470ff5c5c684a4aacf8668376cf3fabbd5a1ebc49712bd4e7589f31e219e",
+      "sha256": "aa47d2accf2b6c958a02f273bbdfbd23e2aaac6616ed16fbb7d2a1ae4271f248",
       "lastmod": "2026-11-26"
     },
     "ski/windham-conditions.html": {
-      "sha256": "12a5de0f7c201337d35ced6a48e3a0b051c19b7e27816decce34289882b0d505",
+      "sha256": "9c6166f231a6cf4f3c6fb720c7a72437d1ea2eadc2843059d33f0fc71870513f",
       "lastmod": "2026-11-26"
     },
     "ski/killington-conditions.html": {
-      "sha256": "12d3a3e4e6fe1f7027b6e0b9c85c11dc354de912e8566e7fd16cd01bd302717d",
+      "sha256": "7d6aaeca2370d7d051154d9c01ef1de78bcd5e29dc9a313c07015f6be9312032",
       "lastmod": "2026-11-26"
     },
     "ski/jay-peak-conditions.html": {
@@ -202,7 +202,7 @@
       "lastmod": "2026-11-26"
     },
     "ski/stowe-conditions.html": {
-      "sha256": "cd077ba5c5328b841eb7a022ab2421966a7f6e12c4f320635f7ed55befae535a",
+      "sha256": "d370794b562e5bad6858d964e74f085904e38d820aca5fd88749c34abf054c70",
       "lastmod": "2026-11-26"
     },
     "ski/sugarbush-conditions.html": {
@@ -214,7 +214,7 @@
       "lastmod": "2026-11-26"
     },
     "ski/seven-springs-conditions.html": {
-      "sha256": "c83fb0de3967cca8bf9336f7bdb2954dd14f95c0c278e4a86b4f0bc90175f2b9",
+      "sha256": "1d9bfd2e723ed26ffcb8656f83b5ce3fc8dbfc03acdec9e75ba4d0e18b7c38c4",
       "lastmod": "2026-11-26"
     },
     "ski/winter-park-conditions.html": {
@@ -226,19 +226,19 @@
       "lastmod": "2026-11-26"
     },
     "ski/breckenridge-conditions.html": {
-      "sha256": "84f9c02023f4268d71e163b40e5abf15f378e485712123301454c300e77cc28e",
+      "sha256": "d70dd5d59842b83912a669f3263ae59f2c8f9138bc83df1a4a20a834543ebb8c",
       "lastmod": "2026-11-26"
     },
     "ski/park-city-conditions.html": {
-      "sha256": "af9b934d300a326f223f91ecddc6884a16b6cfcd83d3d8e2261dc3947fe8afb9",
+      "sha256": "ae61d7792fb68c71b7139a7d1417bb27d3ae52ffdc1e26b45a093509e6508d48",
       "lastmod": "2026-11-26"
     },
     "ski/vail-conditions.html": {
-      "sha256": "9c9f4c698e546f101a03202f2b1e21d6b43618586572818c084371223a37cabe",
+      "sha256": "4156540aa9fd0fed7f3c802b4296989809bc1fc1560b9416b17eb7f1bd1c1cb7",
       "lastmod": "2026-11-26"
     },
     "ski/keystone-conditions.html": {
-      "sha256": "d25fcc4722d0c0a1e39825bc08224a3001629e78bbb6366c29535ea78d6636ef",
+      "sha256": "dd33fe0d0367e2201ecd30a213265c0c928be04c270983d23da66e72d7aab292",
       "lastmod": "2026-11-26"
     },
     "ski/copper-mountain-conditions.html": {
@@ -250,7 +250,7 @@
       "lastmod": "2026-11-26"
     },
     "ski/crested-butte-conditions.html": {
-      "sha256": "1ac9bd9f523114504f2777df7186254302267ebdea86f147e95887203c6a07dc",
+      "sha256": "4437244af3ee77ed6a646bdfad762a1779e554b5c3f211e279e833a1b3821225",
       "lastmod": "2026-11-26"
     },
     "ski/snowbird-conditions.html": {
@@ -274,7 +274,7 @@
       "lastmod": "2026-11-26"
     },
     "ski/heavenly-conditions.html": {
-      "sha256": "c23bc4d4eaecc3c8b9874222359d46d36835e58bb1e17c161b203e441c9bb3e6",
+      "sha256": "fc1c7c6a691fdf36cb8fc52883c52e350f8df2e3e2ffd4839e0b98e19018c642",
       "lastmod": "2026-11-26"
     },
     "ski/kirkwood-conditions.html": {
@@ -282,7 +282,7 @@
       "lastmod": "2026-11-26"
     },
     "ski/northstar-conditions.html": {
-      "sha256": "a601d85af47436c41c45225bbc38c47588ff01d544fc0691cc9d660440b1f949",
+      "sha256": "6b6b91bcdc5f90b97c41dbf179ae3475af1b5bcad82257cfbc3d9854316da792",
       "lastmod": "2026-11-26"
     },
     "ski/stevens-pass-conditions.html": {

@@ -2,14 +2,14 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=18
-run: {id: 2026-11-27T02:04:53Z, started_at: 2026-11-27T02:04:53Z}
-last_public_release: 94449bb3 G16 NYC Big Apple Circus card (Nov 26)
+today: 2026-11-26 transactions=19
+run: none
+last_public_release: <SHA> G16 Orlando SeaWorld Miracles + deploy test fix (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29; re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
-- /deals/ checks end Nov 26 (Carnival BF card, unpriced), Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
+- /deals/ checks end Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; first run each ET day: `node tools/this-week.mjs`, commit. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only. Skips: Six Flags GA P2s; LEGOLAND NY unit_short "by Jan 2"; reword Air and Space, Bronx birds; Gaylord ice! (no $). SeaWorld SA queueable (11-22). Records change → regenerate queue + cards together.
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
@@ -53,6 +53,7 @@ active: none
 - Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - Macy's parade Sat Nov 28 (8:30 a.m., 11-26): Nov 27 search streets/subway.
+- Universal USF new market (WESH 11-26): unverified; from Dec 1.
 
 ## Scoreboard (refresh on Mondays from the newest ops/gsc-snapshots/*.md and live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -64,4 +65,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 00:05Z G16 trend: NYC Big Apple Circus card (Nov 27-Jan 18, Check live: no $ on circus page) + news line to Dec 3. Live 94449bb3. resort-status.yml not started (00:05Z, after Western lift close; Vail pages show 0 overnight): start after 18:30Z Nov 27.
+- 11-27 02:05Z G16 trend: Orlando SeaWorld Miracles line + news to Dec 3; fixed red deploy (3a88567: cam-history test vs D57 live counts). Start resort-status.yml after 18:30Z Nov 27.

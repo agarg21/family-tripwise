@@ -1080,6 +1080,7 @@
           "cost_basis": "from $59.99 each, lowest day price we saw; tax and fees extra",
           "cost_read": "price checked Nov 2",
           "kids": [
+            "New: Miracles, a nighttime orca show, back for the first time since 2019; times on the park's show schedule",
             "Meet Santa, Rudolph and Bumble",
             "Sesame Street Christmas Parade",
             "Many shows indoors, rain or shine"
@@ -1093,6 +1094,10 @@
             {
               "label": "SeaWorld event page (read Nov 3)",
               "url": "https://seaworld.com/orlando/events/christmas-celebration/"
+            },
+            {
+              "label": "SeaWorld shows page (read Nov 26)",
+              "url": "https://seaworld.com/orlando/events/christmas-celebration/shows/"
             },
             {
               "label": "Tickets",
@@ -1500,6 +1505,12 @@
           "name": "Universal Orlando",
           "text": "holidays run Nov 14 to Jan 3, with new holiday decor at Epic Universe this year.",
           "href": "#universal-holidays"
+        },
+        {
+          "until": "2026-12-03",
+          "name": "SeaWorld Orlando",
+          "text": "Miracles, its nighttime Christmas orca show, is back for the first time since 2019, with a new Christmas Market in the park.",
+          "href": "#seaworld-christmas"
         },
         {
           "until": "2026-11-29",

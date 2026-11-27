@@ -66,7 +66,8 @@ test("the empty card points to the table only when the table is there", () => {
 });
 
 test("a status line with no chip keeps its own checked date", () => {
-  const html = resortPage("park-city", resortData(), "2026-11-26").replace(/<[^>]+>/g, " ");
+  // No code-read count (D57) for this case: a live count, when present, replaces the hand-read line.
+  const html = resortPage("park-city", resortData(), "2026-11-26", null, new Date("2026-11-26T15:00:00Z"), { resorts: {} }).replace(/<[^>]+>/g, " ");
   assert.match(html, /first day[^]*?\(checked\s+Nov\s24\)/);
 });
 

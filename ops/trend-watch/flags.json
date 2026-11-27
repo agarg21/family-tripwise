@@ -36,45 +36,6 @@
       ],
       "score": 8,
       "priority": "normal"
-    },
-    {
-      "id": "t-4efb76dc9a",
-      "city": "Orlando",
-      "title": "What's new this year as Central Florida theme parks celebrate the holidays",
-      "links": [
-        {
-          "outlet": "WESH 2 (local news)",
-          "url": "https://www.wesh.com/article/orlando-theme-parks-holiday-events-2026/74543701",
-          "published": "2026-11-26T23:36Z"
-        }
-      ],
-      "first_seen": "2026-11-27T00:05Z",
-      "signals": {
-        "fit": [
-          "city:Orlando",
-          "topic:holidays,holiday market,universal"
-        ],
-        "novelty": [
-          "new",
-          "this year",
-          "published<24h"
-        ],
-        "momentum": [],
-        "actionable": [
-          "place:universal studios"
-        ]
-      },
-      "matched_terms": [
-        "holidays",
-        "holiday market",
-        "universal",
-        "seaworld",
-        "theme park",
-        "new",
-        "this year"
-      ],
-      "score": 7,
-      "priority": "normal"
     }
   ],
   "source_alerts": [
