@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=17
-run: {id: 2026-11-27T00:05Z, started_at: 2026-11-27T00:05Z}
-last_public_release: 98ad2f61 G16 SA free downtown card (Nov 26)
+today: 2026-11-26 transactions=18
+run: none
+last_public_release: 94449bb3 G16 NYC Big Apple Circus card (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
@@ -64,4 +64,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-26 23:04Z G16 trend: SA free downtown holiday days card (city release Nov 18) + Travis Park tree lighting news line (drops Nov 27). Live 98ad2f61.
+- 11-27 00:05Z G16 trend: NYC Big Apple Circus card (Nov 27-Jan 18, Check live: no $ on circus page) + news line to Dec 3. Live 94449bb3. resort-status.yml not started (00:05Z, after Western lift close; Vail pages show 0 overnight): start after 18:30Z Nov 27.
