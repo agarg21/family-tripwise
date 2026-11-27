@@ -145,6 +145,40 @@
       ],
       "score": 7,
       "priority": "normal"
+    },
+    {
+      "id": "t-f5a07c2280",
+      "city": "New York City",
+      "title": "Black Friday shoppers flock to American Dream mall in N.J. for special deals and sales",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/news/black-friday-deals-sales-american-dream-mall-nj-shopping/",
+          "published": "2026-11-27T15:05Z"
+        }
+      ],
+      "first_seen": "2026-11-27T15:34Z",
+      "signals": {
+        "fit": [
+          "city:New York City (local outlet)",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday",
+          "place:american dream mall"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
     }
   ],
   "source_alerts": [
