@@ -241,6 +241,23 @@
       "list_until": "2026-12-09"
     },
     {
+      "operator": "Belmont Park: beachfront amusement park in Mission Beach, San Diego, CA",
+      "deadline": "buy Nov 23 to 30, 2026; no end time stated",
+      "kind": "Theme park sale",
+      "text": "For San Diego locals or repeat visitors. Four annual passes: about $405 with the deal vs $540 without, about $135 (25%) less, plus any tax or fees. Our estimate. Belmont Park says buy one annual pass for $135, get a second 50% off ($67.50). The $540 assumes $135 is the usual price; none is shown, nor a promo code. Season Pass page (not said to be the same pass): 365 days from purchase, unlimited rides and attractions, no blockout dates, non-refundable, not shareable. One visit costs less: Ride & Play wristbands are about $65 each full price ($34 Wednesdays, limited time). Four passes cost less than two full-price visits for 4 (about $520). No child price or height rules shown, so check which rides small kids can use.",
+      "lines": [
+        "For San Diego locals or repeat visitors. Four annual passes: about $405 with the deal vs $540 without, about $135 (25%) less, plus any tax or fees. Our estimate.",
+        "Belmont Park says buy one annual pass for $135, get a second 50% off ($67.50). The $540 assumes $135 is the usual price; none is shown, nor a promo code.",
+        "Season Pass page (not said to be the same pass): 365 days from purchase, unlimited rides and attractions, no blockout dates, non-refundable, not shareable.",
+        "One visit costs less: Ride & Play wristbands are about $65 each full price ($34 Wednesdays, limited time). Four passes cost less than two full-price visits for 4 (about $520).",
+        "No child price or height rules shown, so check which rides small kids can use."
+      ],
+      "source_label": "Belmont Park Black Friday page (pass perks and wristband price: Season Passes page; $34 Wednesdays: Park Promotions page)",
+      "url": "https://www.belmontpark.com/black-friday",
+      "observed_on": "2026-11-27",
+      "list_until": "2026-11-30"
+    },
+    {
       "operator": "Gatorland: alligator and wildlife park in Orlando, FL",
       "deadline": "sale ends Nov 29",
       "kind": "Attraction sale",
