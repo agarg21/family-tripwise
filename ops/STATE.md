@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-27 transactions=10
-run: {id: 2026-11-27T15:05:11Z, started_at: 2026-11-27T15:05:11Z}
+run: none
 last_public_release: 2aaf4b81 G19 openings: Holiday Valley Dec 4, Snowbird moved up to Nov 25, Jackson Hole re-read (Nov 27)
 active: none
 
@@ -44,7 +44,8 @@ active: none
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - Macy's parade Sat Nov 28: Saturday plan live from Mayor's Nov 25 briefing (11-27); MTA pages re-readable Dec 1-2 (after parade); lines self-drop Nov 28.
-- GSC: first run after 11:00Z Nov 30: did the scheduled snapshot commit on its own (Muse 11-27 Q4)? Hotel rows now uncapped (1000).
+- GSC: first run after 11:00Z Nov 30: did the scheduled snapshot commit on its own (Muse 11-27 Q4)? 
+- Adventuredome Cyber $40/$20 (press only, 11-27): official page from Nov 29.
 - Universal USF new market (WESH 11-26): unverified; from Dec 1.
 
 ## Scoreboard (Mondays: newest ops/gsc-snapshots/*.md + live checks)
@@ -57,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 14:06Z G19 openings: Holiday Valley now tentative Dec 4 (was Nov 27 target chip today), Snowbird moved up to Nov 25 (new neutral status_chip), Jackson Hole re-read. Live 2aaf4b81.
+- 11-27 15:05Z G16: Adventuredome BF lead not on official page; no card. 2 off-fit trend flags deleted. No public change.
