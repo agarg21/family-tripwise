@@ -45,7 +45,7 @@ active: none
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - Macy's parade Sat Nov 28: Saturday plan live from Mayor's Nov 25 briefing (11-27); MTA pages re-readable Dec 1-2 (after parade); lines self-drop Nov 28.
 - GSC: first run after 11:00Z Nov 30: did the scheduled snapshot commit on its own (Muse 11-27 Q4)? 
-- Belmont Park BF card (read 11-27) self-drops after Nov 30; no regular pass $ or child $. Boomers BLACKFRIDAY25 (to Dec 6) + SD Fair BOGO (Patch 11-25) unread; Flower Fields "sale" not on official page.
+- SD BF leads (Patch 11-25) unread: Boomers code to Dec 6, SD Fair BOGO to Nov 30.
 - Adventuredome Cyber $40/$20 (press only, 11-27): official page from Nov 29.
 - Universal USF new market (WESH 11-26): unverified; from Dec 1.
 
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 18:05Z G16 step 1: Patch SD roundup lead; Belmont Park BF page read once ($135 pass, 2nd 50% off, Nov 23-30). "Can't price yet" card: 4 passes ≈ $405 vs $540, ≈ $135 (25%), our estimate; not posted (D22). Reviews: integrity PASS, persona c2 3.5 (D34), design 4.0. Live 72dd20f3.
+- 11-27 18:05Z G16: Belmont Park BF card (4 passes ≈ $405 vs $540, to Nov 30; not posted). Reviews PASS (persona 3.5 D34, design 4.0). Live 72dd20f3.
