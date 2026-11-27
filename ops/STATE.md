@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=7
-run: {id: 2026-11-27T12:05Z, started_at: 2026-11-27T12:05Z}
-last_public_release: f70dea16 G16 BF page: Meow Wolf Omega Mart BOGO50 (Nov 27)
+today: 2026-11-27 transactions=8
+run: none
+last_public_release: 16504960 G16 BF page: Gatorland annual pass sale (Nov 27)
 active: none
 
 ## Holds (what, unblock)
@@ -40,7 +40,7 @@ active: none
 - Boston Frog Pond: no dates/$ (11-22); Nov 29. Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-27; Dec 1). SI Mall rink: news only (Nov 29).
 - Saks times, Chanukah on Ice: Nov 28. Bloomingdale's windows: page stub 11-26; Dec 3. NYE row 10: SA pages unreadable 11-23; Nov 30.
-- BF unpriced: Hersheypark to Nov 30; Meow Wolf LV to Dec 9 (self-drops). Neon Museum NEON40 (Attractions Mag): not on neonmuseum.org 11-27; Dec 4.
+- BF unpriced: Gatorland passes to Nov 29 (read 11-27); Hersheypark to Nov 30; Meow Wolf LV to Dec 9 (self-drops). Neon Museum NEON40 (Attractions Mag): not on neonmuseum.org 11-27; Dec 4.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - Macy's parade Sat Nov 28: Saturday plan live from Mayor's Nov 25 briefing (11-27); MTA pages re-readable Dec 1-2 (after parade); lines self-drop Nov 28.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 11:05Z G16 step 1: BF page adds Meow Wolf Omega Mart BOGO50 (≈$135 vs $180 for 4 at the $45 starting price, est.), live f70dea16; Angel Tree flag deleted (off-fit).
+- 11-27 12:05Z G16 step 1: BF page adds Gatorland annual pass sale (family of 4 $161.96 vs $189.96, ≈$28/15% less, est.; one visit cheaper), live 16504960; NYC tree-price trend flag deleted (off-fit, article unreadable).
