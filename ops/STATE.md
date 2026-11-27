@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=14
-run: {id: 2026-11-27T20:04Z, started_at: 2026-11-27T20:04Z}
-last_public_release: 72dd20f3 G16 BF page: Belmont Park (Mission Beach SD) BOGO 50% annual pass card, to Nov 30 (Nov 27)
+today: 2026-11-27 transactions=15
+run: none
+last_public_release: 6e8eec43 G19 deploy fix: passholder-day chip leads over the code-read count (Jay Peak); daily resort counts live (Nov 27)
 active: none
 
 ## Holds (what, unblock)
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 19:04Z G16: 3 trend flags off-fit/covered, deleted; resort-status.yml started. No public change.
+- 11-27 20:04Z G19 live defect: 19:06Z deploy failed (Jay Peak passholder test vs today's 1/9 count). Chip "Not open to the public today" leads, count on own line; live 6e8eec43.
