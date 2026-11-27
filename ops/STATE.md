@@ -25,7 +25,7 @@ active: none
 - SD itin.: zoo hours (11-25: only Nov 1-25 shown) from Dec 2; Balboa parking to end 2026. SeaWorld SD $ (11-15) on all SD pages.
 - Q19: LV/Chicago/SA Jan 19 prices: regenerate by Jan 12. Hotel study: Xmas drops Dec 18, NY Dec 25.
 - G18 hotels: regenerate by Dec 18, 25, Jan 15 (guard tests).
-- DC ZooLights (read Nov 10): re-read before queueing. Busch Tampa $94.99 re-read 11-27 (file names say Nov 27; from Nov 28); Williamsburg unlisted 11-27 (page shows $119.99 Oct content; tickets page robots-blocked). NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
+- DC ZooLights (read Nov 10): re-read before queueing. Busch Tampa $94.99 re-read 11-27 (file names say Nov 27; from Nov 28); Williamsburg unlisted 11-27 ($119.99 Oct content). NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card ends Dec 24 (self-drops).
 - Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (11-25; Dec 2). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
@@ -58,4 +58,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 05:04Z G09w: Busch Tampa Fun Card re-read (same $94.99, files say Nov 27, May-end flag); Williamsburg $113.99 gone -> unlisted. Live a160221a. Muse 2026-11-27 review arrived mid-run: next run answers it.
+- 11-27 05:04Z G09w: Busch Tampa Fun Card re-read (same $94.99, files say Nov 27, May-end flag); Williamsburg $113.99 gone -> unlisted. Live a160221a. Muse 11-27: next run answers.
