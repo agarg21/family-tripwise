@@ -239,6 +239,23 @@
       "url": "https://meowwolf.com/promotions/bogo50",
       "observed_on": "2026-11-27",
       "list_until": "2026-12-09"
+    },
+    {
+      "operator": "Gatorland: alligator and wildlife park in Orlando, FL",
+      "deadline": "sale ends Nov 29",
+      "kind": "Attraction sale",
+      "text": "Family of 4 (2 adults, 2 kids 3-12), four annual passes: $161.96 on sale vs $189.96 regular, about $28 (15%) less, plus tax. Our estimate. Per pass: adult 13+ $45.99 (regular $54.99), child 3-12 $34.99 ($39.99), senior over 60 $42.99 ($49.99). Kids 2 and under get in free (day-ticket page). Buy by 11:59 p.m. Nov 29, online or at the Gatorland gate. Pick up passes at admissions by Feb 28, 2027. Regular pass prices rise Dec 1, 2026. One visit costs less: four day tickets were $119.96 at the gate on Nov 20 ($3 off each online). The passes cost less than two visits. Perks: 30% off admission for up to 6 guests, free Gatorland Express train wristband, 20% off gift shop. Blackout dates are not stated.",
+      "lines": [
+        "Family of 4 (2 adults, 2 kids 3-12), four annual passes: $161.96 on sale vs $189.96 regular, about $28 (15%) less, plus tax. Our estimate.",
+        "Per pass: adult 13+ $45.99 (regular $54.99), child 3-12 $34.99 ($39.99), senior over 60 $42.99 ($49.99). Kids 2 and under get in free (day-ticket page).",
+        "Buy by 11:59 p.m. Nov 29, online or at the Gatorland gate. Pick up passes at admissions by Feb 28, 2027. Regular pass prices rise Dec 1, 2026.",
+        "One visit costs less: four day tickets were $119.96 at the gate on Nov 20 ($3 off each online). The passes cost less than two visits.",
+        "Perks: 30% off admission for up to 6 guests, free Gatorland Express train wristband, 20% off gift shop. Blackout dates are not stated."
+      ],
+      "source_label": "Gatorland Black Friday Savings 2026 page (ages and perks: Annual Pass page; day tickets: Hours and Prices page, read Nov 20)",
+      "url": "https://www.gatorland.com/specials/black-friday-2026/",
+      "observed_on": "2026-11-27",
+      "list_until": "2026-11-29"
     }
   ]
 }
