@@ -1,4 +1,148 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "great-wolf-deals",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/deals",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:11.638Z",
+      "previous_headline": "Find The Best Deals For Your Pack",
+      "headline": "Find The Best Deals For Your Pack",
+      "added": [
+        "Black Friday Sale",
+        "Get 1 night free"
+      ],
+      "removed": [
+        "Holiday Savings Flash Sale",
+        "Save up to"
+      ],
+      "added_count": 2,
+      "removed_count": 2
+    },
+    {
+      "source_id": "club-med-deals",
+      "operator": "Club Med",
+      "url": "https://www.clubmed.us/o/best-all-inclusive-vacation-deals",
+      "check_id": "club-med-all-inclusive-kids-under-4",
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:14.111Z",
+      "previous_headline": "All-Inclusive Vacations",
+      "headline": "All-Inclusive Vacations",
+      "added": [
+        "Ends in: 3 days, 18 hours, 41 minutes and 28 seconds"
+      ],
+      "removed": [
+        "Ends in: 3 days, 23 hours, 11 minutes and 28 seconds"
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    },
+    {
+      "source_id": "legoland-california-hotel-package",
+      "operator": "LEGOLAND California",
+      "url": "https://www.legoland.com/california/places-to-stay/vacation-packages/hotel-plus-ticket-package/",
+      "check_id": "legoland-california-hotel-kids-tickets-39",
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:19.590Z",
+      "previous_headline": "Hotel + Ticket Package",
+      "headline": "Hotel + Ticket Package",
+      "added": [
+        "Last Chance! Black Friday Sale:",
+        "Last Chance for Black Friday Savings!",
+        "Save up to 50% on Tickets, Passes, & Hotels!",
+        "Save Now"
+      ],
+      "removed": [
+        "Black Friday Sale:"
+      ],
+      "added_count": 4,
+      "removed_count": 1
+    },
+    {
+      "source_id": "six-flags-great-adventure-silver-pass",
+      "operator": "Six Flags Great Adventure",
+      "url": "https://www.sixflags.com/greatadventure/special-offers",
+      "check_id": "six-flags-great-adventure-2027-silver-pass",
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:20.833Z",
+      "previous_headline": "Special Offers",
+      "headline": "Special Offers",
+      "added": [
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends TODAY!"
+      ],
+      "removed": [
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27."
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    },
+    {
+      "source_id": "six-flags-great-america-silver-pass",
+      "operator": "Six Flags Great America",
+      "url": "https://www.sixflags.com/greatamerica/special-offers",
+      "check_id": "six-flags-great-america-2027-silver-pass",
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:23.013Z",
+      "previous_headline": "Special Offers",
+      "headline": "Special Offers",
+      "added": [
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends TODAY!"
+      ],
+      "removed": [
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27."
+      ],
+      "added_count": 1,
+      "removed_count": 1
+    },
+    {
+      "source_id": "great-wolf-november-web-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
+      "check_id": "great-wolf-lodge-november-web-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:31.439Z",
+      "previous_headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
+      "added": [
+        "Black Friday Sale .",
+        "Flash Sale Today Only: Buy one night, Get one free!",
+        "Black Friday Sale",
+        "Get 1 night free"
+      ],
+      "removed": [
+        "Holiday Savings Flash Sale .",
+        "Book by Nov 26 and save up to 40%.",
+        "Holiday Savings Flash Sale",
+        "Save up to"
+      ],
+      "added_count": 4,
+      "removed_count": 4
+    },
+    {
+      "source_id": "great-wolf-early-black-friday-sale",
+      "operator": "Great Wolf Lodge",
+      "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
+      "check_id": "great-wolf-lodge-early-black-friday-sale",
+      "kind": "changed",
+      "detected_at": "2026-11-27T12:44:33.963Z",
+      "previous_headline": "Find The Best Deals For Your Pack in Poconos, PA",
+      "headline": "Find The Best Deals For Your Pack in Poconos, PA",
+      "added": [
+        "Black Friday Sale .",
+        "Flash Sale Today Only: Buy one night, Get one free!",
+        "Black Friday Sale",
+        "Get 1 night free"
+      ],
+      "removed": [
+        "Holiday Savings Flash Sale .",
+        "Book by Nov 26 and save up to 40%.",
+        "Holiday Savings Flash Sale",
+        "Save up to"
+      ],
+      "added_count": 4,
+      "removed_count": 4
+    }
+  ]
 }

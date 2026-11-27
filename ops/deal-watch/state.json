@@ -33,11 +33,11 @@
       "source_sig": "760b3cb707bfd131",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack",
-      "signal_hash": "a3645fea2e0b9347b5b5d7110c87df10",
-      "set_hash": "ddecebaadf6a4f7ddcdc5ceef0083c2b",
+      "signal_hash": "838f81d5338f7662cca019bc12dedba7",
+      "set_hash": "ccc8f9a85bf041af4d8cbefad4ab4b5f",
       "signal": [
-        "Holiday Savings Flash Sale",
-        "Save up to",
+        "Black Friday Sale",
+        "Get 1 night free",
         "Book your next getaway and save on your stay.",
         "View Deal",
         "Find The Best Deal For Your Pack",
@@ -52,9 +52,9 @@
         "Flexible installments as low as 0% APR",
         "Always Free. Always Fun."
       ],
-      "line_hashes": "216dea27 3a0fc4ac 3c7d8c60 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 4050982d bc5b2d76",
+      "line_hashes": "d3c2d482 b86bcf36 3c7d8c60 e65c0479 6196e3c2 42420030 d2e4bd0b a912d000 533e7ff8 169b8fe4 fdf55a91 75ffb9bb 1c9ab0c6 4050982d bc5b2d76",
       "first_seen_at": "2026-10-29T18:59:48.008Z",
-      "changed_at": "2026-11-23T14:54:25.459Z"
+      "changed_at": "2026-11-27T12:44:11.638Z"
     },
     "great-wolf-fall-flash-sale": {
       "url": "https://www.greatwolf.com/deals/fall-flash-sale",
@@ -92,11 +92,11 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "0ccc4ea499291927b4822ab9d73d1760",
-      "set_hash": "60f4e40110a04a748758e9e0580b8565",
+      "signal_hash": "8e6dcf24860320f386f54c1b59dff990",
+      "set_hash": "7220155d18320c2cdcc3ca55816daf19",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 3 days, 23 hours, 11 minutes and 28 seconds",
+        "Ends in: 3 days, 18 hours, 41 minutes and 28 seconds",
         "Black Friday's Biggest Savings End Soon",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
@@ -116,9 +116,9 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c 6dd60dde 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c 98c173de 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-27T02:56:26.190Z"
+      "changed_at": "2026-11-27T12:44:14.111Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
@@ -290,13 +290,13 @@
       "source_sig": "aad8cefa2857d8e6",
       "status": "ok",
       "headline": "Hotel + Ticket Package",
-      "signal_hash": "db8ffbd191b7ef4a47de6e0a0e6466dc",
-      "set_hash": "fb0de0c83fe16495126c8f7949c7344f",
+      "signal_hash": "ddfc8ebc496e44a5b2f0e3917b46263b",
+      "set_hash": "09daa75a0ab69c672ab2c3098fe37e87",
       "signal": [
         "Black Friday Package",
         "Black Friday Passholder Hotel Rates",
         "Black Friday Sale",
-        "Black Friday Sale:",
+        "Last Chance! Black Friday Sale:",
         "Save up to 50% on Tickets, Passes & Hotel!",
         "View Black Friday Offers.",
         "Don't miss out on holiday fun! Make your next family getaway even more AWESOME with a stay at one of our kid-themed hotels starting at just $144 per person, pe…",
@@ -306,17 +306,17 @@
         "Errors will be corrected where discovered, and LEGOLAND California Resort and/or LEGOLAND Vacations reserve the right to revoke any stated offer and to correct…",
         "Trip protection can provide you with peace of mind in case unexpected events, such as illness, injury, or unforeseen circumstances force you to cancel or delay…"
       ],
-      "line_hashes": "33a1476f 90c6b51b d3c2d482 ae3900ac 5b4f1c38 07a020ba a85144ee d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856",
+      "line_hashes": "33a1476f 90c6b51b d3c2d482 8121c8a8 5b4f1c38 07a020ba a85144ee d37b94f1 4d8bef99 831e4d66 ba7543fa b9fc9856 b318241f 3013e60a b86557fc",
       "first_seen_at": "2026-10-29T18:59:57.757Z",
-      "changed_at": "2026-11-18T14:14:35.741Z"
+      "changed_at": "2026-11-27T12:44:19.590Z"
     },
     "six-flags-great-adventure-silver-pass": {
       "url": "https://www.sixflags.com/greatadventure/special-offers",
       "source_sig": "51671cce7475c0cf",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "f2f1e4b95376c86958bbdb14abca49a1",
-      "set_hash": "1bbda41809748456a304b4ac42e0d019",
+      "signal_hash": "2314520900ada4a845b3015686c27484",
+      "set_hash": "67eb39e9bec2d48eb5936d199199bb40",
       "signal": [
         "Hurry! Black Friday Deal Ends 11/27",
         "Buy a day, get the summer free! Get a 2027 Silver Pass for the price of a Good Any Day ticket before time runs out.",
@@ -331,13 +331,13 @@
         "Payment plans available on select orders $49+",
         "Save time and buy parking online before you get to the park!",
         "Off-Site Vacation Packages",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27.",
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends TODAY!",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "55046fd6 576b73de c97fe8eb d0f4fbc9 26dacf8f f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 2a7aff2e 1a77f051 b1aa8bc3",
+      "line_hashes": "55046fd6 576b73de c97fe8eb d0f4fbc9 26dacf8f f3c96747 edc9f1ad 472785b0 8d8ffec7 c66dea1f b4b1a22b f5757b73 6d2c1cfa 7043d5e6 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T09:30:15.459Z",
-      "changed_at": "2026-11-19T13:28:12.547Z"
+      "changed_at": "2026-11-27T12:44:20.833Z"
     },
     "six-flags-fiesta-texas-silver-pass": {
       "url": "https://www.sixflags.com/fiestatexas/special-offers",
@@ -370,8 +370,8 @@
       "source_sig": "bd1c7accdecb6e49",
       "status": "ok",
       "headline": "Special Offers",
-      "signal_hash": "c7d653de72cb7261b2512a3fc2d622c0",
-      "set_hash": "9219ce78b325a6714d3f333fb76fcd1c",
+      "signal_hash": "25f75a78d5fa3b7f9c71f9f28517f222",
+      "set_hash": "2177d700422aada32fdf173d79dce5b8",
       "signal": [
         "Black Friday Deal: a season of visits for the price of a day",
         "Get a 2027 Silver Pass for $69. Ends 11/27. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
@@ -381,13 +381,13 @@
         "Save $118",
         "*Plus processing fee of up to $9.99 & applicable taxes.",
         "Payment plans available on select orders $49+",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends 11/27.",
+        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends TODAY!",
         "Promo Code",
         "Enter Promo Code"
       ],
-      "line_hashes": "b7fb697a 2b08f0f2 c97fe8eb d0f4fbc9 9e69f211 a198061a edc9f1ad b4b1a22b 2a7aff2e 1a77f051 b1aa8bc3",
+      "line_hashes": "b7fb697a 2b08f0f2 c97fe8eb d0f4fbc9 9e69f211 a198061a edc9f1ad b4b1a22b 7043d5e6 1a77f051 b1aa8bc3",
       "first_seen_at": "2026-11-06T17:33:41.665Z",
-      "changed_at": "2026-11-19T13:28:14.688Z"
+      "changed_at": "2026-11-27T12:44:23.013Z"
     },
     "atlantis-fall-into-paradise": {
       "url": "https://www.atlantisbahamas.com/fall-into-paradise-offer",
@@ -508,16 +508,16 @@
       "source_sig": "58646f3b678dfa87",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack in Sandusky, OH",
-      "signal_hash": "2b25f1bfce77c94ae322481ecb682eec",
-      "set_hash": "4b7931556d193fcae77e4c51a2a83015",
+      "signal_hash": "f873523d33f5207f93b2770fd5f83cd4",
+      "set_hash": "d7448354897faf36da626605e95e3ade",
       "signal": [
         "Book Now",
         "Promo Code",
-        "Holiday Savings Flash Sale .",
-        "Book by Nov 26 and save up to 40%.",
+        "Black Friday Sale .",
+        "Flash Sale Today Only: Buy one night, Get one free!",
         "Apply Promo",
-        "Holiday Savings Flash Sale",
-        "Save up to",
+        "Black Friday Sale",
+        "Get 1 night free",
         "Book your next getaway and save on your stay.",
         "View Deal",
         "Find The Best Deal For Your Pack",
@@ -536,25 +536,25 @@
         "Always Free. Always Fun.",
         "How can I get the best resort deal on my Great Wolf vacation?"
       ],
-      "line_hashes": "1016c81a 1a77f051 8ba9cfe4 4d3472ae 0d55d4f0 216dea27 3a0fc4ac 3c7d8c60 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 4050982d ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
+      "line_hashes": "1016c81a 1a77f051 435aa12a 8e5774b4 0d55d4f0 d3c2d482 b86bcf36 3c7d8c60 e65c0479 6196e3c2 c8359403 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 4050982d ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
       "first_seen_at": "2026-11-02T21:47:09.968Z",
-      "changed_at": "2026-11-23T14:54:43.748Z"
+      "changed_at": "2026-11-27T12:44:31.439Z"
     },
     "great-wolf-early-black-friday-sale": {
       "url": "https://www.greatwolf.com/poconos/deals/early-black-friday-sale",
       "source_sig": "b171d69fe0ef419b",
       "status": "ok",
       "headline": "Find The Best Deals For Your Pack in Poconos, PA",
-      "signal_hash": "3aa3ff425e668bdd3906cbb8755284e6",
-      "set_hash": "f90b072578be9436d5c388c49ae993c2",
+      "signal_hash": "d390b9817ed0c6a6a70a8ff2a99cac43",
+      "set_hash": "90e76c0cb8e58e999fae9d6a58857163",
       "signal": [
         "Book Now",
         "Promo Code",
-        "Holiday Savings Flash Sale .",
-        "Book by Nov 26 and save up to 40%.",
+        "Black Friday Sale .",
+        "Flash Sale Today Only: Buy one night, Get one free!",
         "Apply Promo",
-        "Holiday Savings Flash Sale",
-        "Save up to",
+        "Black Friday Sale",
+        "Get 1 night free",
         "Book your next getaway and save on your stay.",
         "View Deal",
         "Find The Best Deal For Your Pack",
@@ -573,9 +573,9 @@
         "Always Free. Always Fun.",
         "How can I get the best resort deal on my Great Wolf vacation?"
       ],
-      "line_hashes": "1016c81a 1a77f051 8ba9cfe4 4d3472ae 0d55d4f0 216dea27 3a0fc4ac 3c7d8c60 e65c0479 6196e3c2 51c24da7 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 4050982d ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
+      "line_hashes": "1016c81a 1a77f051 435aa12a 8e5774b4 0d55d4f0 d3c2d482 b86bcf36 3c7d8c60 e65c0479 6196e3c2 51c24da7 d2e4bd0b 78362bde a912d000 533e7ff8 169b8fe4 fdf55a91 1c9ab0c6 4050982d ea242563 9413d033 1623b5af bc5b2d76 f5270417 9ee3045d 2c48f3c6 6db0c279 c9b3e530 2bf53a87 8a8e0edf e74b1c64 a7f9da37 905ca777",
       "first_seen_at": "2026-11-10T01:38:45.972Z",
-      "changed_at": "2026-11-23T14:54:45.888Z"
+      "changed_at": "2026-11-27T12:44:33.963Z"
     },
     "beaches-turks-caicos-specials": {
       "url": "https://www.beaches.com/resorts/turks-caicos/specials/",
