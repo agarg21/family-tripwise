@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-26 transactions=19
-run: {id: 2026-11-27T03:04Z, started_at: 2026-11-27T03:04Z}
+today: 2026-11-26 transactions=20
+run: none
 last_public_release: 73bd0e9f G16 Orlando SeaWorld Miracles + deploy test fix (Nov 26)
 active: none
 
@@ -65,4 +65,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 02:05Z G16 trend: Orlando SeaWorld Miracles line + news to Dec 3; fixed red deploy (3a88567: cam-history test vs D57 live counts). Start resort-status.yml after 18:30Z Nov 27.
+- 11-27 03:04Z G16/G09w triage: NYC free-list lead served March content (stale), Orlando Merry Mobile shopping bus off-fit, Club Med countdown tick; 3 flags deleted, no site change. Start resort-status.yml after 18:30Z Nov 27.
