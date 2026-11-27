@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=2
-run: {id: 2026-11-27T07:04Z, started_at: 2026-11-27T07:04Z}
-last_public_release: a160221a G09w Busch Tampa Fun Card re-read; Williamsburg unlisted (Nov 27)
+today: 2026-11-27 transactions=3
+run: none
+last_public_release: 3ef032a1 G16 NYC parade Saturday plan (Mayor briefing; Nov 27)
 active: none
 
 ## Holds (what, unblock)
@@ -43,7 +43,7 @@ active: none
 - BF unpriced: Hersheypark to Nov 30.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
-- Macy's parade Sat Nov 28 (8:30 a.m., 11-26): Nov 27 search streets/subway.
+- Macy's parade Sat Nov 28: Saturday plan live from Mayor's Nov 25 briefing (11-27); MTA pages re-readable Dec 1-2 (after parade); lines self-drop Nov 28.
 - GSC: first run after 11:00Z Nov 30: did the scheduled snapshot commit on its own (Muse 11-27 Q4)? Hotel rows now uncapped (1000).
 - Universal USF new market (WESH 11-26): unverified; from Dec 1.
 
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 06:05Z Muse 11-27 answered (reviews/responses). GSC page rowLimit 100 -> 1000 (4 hotel pages had been cut from the 28-day table); QUEUE/STATE trimmed to ~90%. No site change.
+- 11-27 07:04Z G16: NYC Christmas page parade card now has the Saturday plan (8:30 a.m.-noon, 2026 banned items incl. strollers, F/C bypass 4-11 a.m., Friday closures) from the Mayor's Nov 25 briefing transcript; 2 trend flags cleared. Live 3ef032a1.
