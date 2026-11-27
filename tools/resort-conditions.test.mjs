@@ -117,7 +117,7 @@ test("the resort's own status leads with a short dated chip (persona review 11-1
   assert.match(ok, /Not open yet\s*Opens Sat, Nov 21 at 9 a.m./);
   assert.match(visible(resortPage("okemo", data, "2026-11-21")), /Opening day/);
   assert.doesNotMatch(visible(resortPage("okemo", data, "2026-11-22")), /Not open yet|Opening day/);
-  assert.match(visible(resortPage("killington", data, "2026-11-17")), /Passholders only today\s*Opens to everyone Wed, Nov 18/, "no 'Not open yet' on the passholder day");
+  assert.match(visible(resortPage("killington", data, "2026-11-17")), /Not open to the public today\s*Opens to everyone Wed, Nov 18/, "no 'Not open yet' on the passholder day");
   assert.match(visible(resortPage("killington", data, "2026-11-16")), /Not open yet/);
   const nr = { resorts: { "mount-snow": { publish: true, status: "No read", line: "no clear view (sun -8 deg below horizon, infrared mode)", read_at: "2026-11-16T22:10:00Z", cams_used: 0, cams_total: 5, fields: {}, cams: [] } } };
   const nrCard = visible(drawnRead("mount-snow", data, "2026-11-16", nr, new Date("2026-11-16T22:30:00Z")).card);
@@ -277,7 +277,20 @@ test("Jay Peak: public opening Nov 28 with a passholder day, family-of-4 ticket 
   const data = resortData();
   assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /Not open yet\s*Opens Sat, Nov 28/);
   assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /Jay Peak's opening weekend post, read/);
-  assert.match(visible(resortPage("jay-peak", data, "2026-11-27")), /Passholders only today\s*Opens to everyone Sat, Nov 28/);
+  const none = { resorts: {} };
+  assert.match(visible(resortPage("jay-peak", data, "2026-11-27", null, new Date("2026-11-27T19:05:00Z"), none)), /Not open to the public today\s*Opens to everyone Sat, Nov 28/);
+  // Lifts turning on the passholder day keep the passholder chip first; the count follows (11-27 deploy failure).
+  const turning = { resorts: { "jay-peak": { read_at: "2026-11-27T19:05:20Z", read_et: { date: "2026-11-27", time: "14:05" }, lifts: [1, 9], trails: [1, 82] } } };
+  const earlyHtml = resortPage("jay-peak", data, "2026-11-27", null, new Date("2026-11-27T19:10:00Z"), turning);
+  const early = visible(earlyHtml);
+  assert.match(earlyHtml, /deal-verdict-only_for">Not open to the public today/);
+  assert.match(early, /Not open to the public today\s*Opens to everyone Sat, Nov 28/);
+  assert.match(early, /Open to passholders today: 1 of 9 lifts open\.\s*1 of 82 trails \(about 1%\) open\. Checked/);
+  assert.doesNotMatch(earlyHtml, /deal-verdict-[a-z_]+">1 of 9 lifts open/);
+  const still = { resorts: { "jay-peak": { ...turning.resorts["jay-peak"], lifts: [0, 9], trails: [0, 82] } } };
+  const closed = visible(resortPage("jay-peak", data, "2026-11-27", null, new Date("2026-11-27T19:10:00Z"), still));
+  assert.match(closed, /Not open to the public today\s*Opens to everyone Sat, Nov 28/);
+  assert.doesNotMatch(closed, /Open to passholders today|No lifts open/, "a 0-lift read on the passholder day adds no count line");
   assert.match(visible(resortPage("jay-peak", data, "2026-11-16")), /about \$481 on a weekend, \$399 midweek/);
   assert.doesNotMatch(visible(resortPage("jay-peak", data, "2026-12-17")), /\$\d/);
 });

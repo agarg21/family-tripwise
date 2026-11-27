@@ -97,8 +97,15 @@
   // Today's count leads when lifts or trails are open, or from opening day on, so an early opening or a
   // postponed one is never hidden behind a date chip (integrity review 11-26).
   const live = liveStatus(r, today);
+  // A passholder-only day leads even when lifts turn: "1 of 9 lifts open" alone would send a family
+  // without passes up the mountain (deploy failure 11-27, Jay Peak). Today's count follows as a line.
+  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) {
+    // Own line, so today's count scans apart from the opening date (design review 11-27).
+    const count = live?.today && live.open ? `<br><strong>Open to passholders today: ${live.chip}.</strong> ${live.text.replace(" open too. ", " open. ")}` : "";
+    // Not "Passholders only": some resorts also let package guests ski the early day (persona review 11-27).
+    return { chip: "Not open to the public today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).${count}` };
+  }
   if (live && (live.open || (live.today && (!r.opening || today >= r.opening.date)))) return live;
-  if (r.opening && r.opening.early && today >= r.opening.early && today < r.opening.date) return { chip: "Passholders only today", variant: "only_for", text: `<strong>Opens to everyone ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   if (r.opening && today < r.opening.date) return { chip: "Not open yet", variant: "skip", text: `<strong>Opens ${e(r.opening.when)}</strong> (${poss(r.name)} ${e(r.opening.source ?? "hours page")}, read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
   // A target date the resort says can move with weather never earns a positive chip on the day (integrity review 11-18).
   if (r.opening && r.opening.target && today === r.opening.date) return { chip: "Target opening day", variant: "neutral", text: `${e(r.opening.text)} Check ${poss(r.name)} own status before you drive (read\u00a0${nb(r.opening.read ?? r.observed_on)}).` };
