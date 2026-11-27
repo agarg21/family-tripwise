@@ -4,7 +4,7 @@ authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 unt
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-26 transactions=19
 run: none
-last_public_release: <SHA> G16 Orlando SeaWorld Miracles + deploy test fix (Nov 26)
+last_public_release: 73bd0e9f G16 Orlando SeaWorld Miracles + deploy test fix (Nov 26)
 active: none
 
 ## Holds (one line each: what, unblock)
