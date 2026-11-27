@@ -588,21 +588,21 @@
     },
     {
       "id": "busch-gardens-tampa-2027-fun-card",
-      "hub_deadline": "none in the official page text (checked November 20, 2026); banner file names say \"ends soon\" with no date.",
+      "hub_deadline": "none in the official page text (checked November 27, 2026); banner file names say Nov 27, so it may end then.",
       "og_card": "$94.99 a person for unlimited Busch Gardens Tampa Bay visits for the rest of 2026 and all of 2027; parking extra",
       "operator": "Busch Gardens Tampa Bay",
       "category": "Theme park pass",
       "title": "Busch Gardens Tampa Bay 2027 Fun Card: unlimited visits for the rest of 2026 and all of 2027, now $94.99 a person",
       "headline": "A Black Friday price of USD 94.99 a person (the page says \"Save up to 40%\" beside USD 148.99) covers unlimited Busch Gardens Tampa Bay visits from now through December 31, 2027 (Adventure Island added for USD 118.99), but no child price is shown, and parking, tax and service fees are not included.",
-      "family_of_four": "The Fun Card is priced per person: Busch Gardens' Fun Card, Limited-Time Offers and tickets pages show USD 94.99 each for Busch Gardens only and USD 118.99 each for Busch Gardens + Adventure Island (read November 20, 2026), online in advance only, with no separate child price. Busch Gardens' tickets page says children 2 and under do not need a ticket for entry (read November 20). Parking is not included (the Fun Card page's FAQ says parking starts at USD 34), and taxes and service fees are extra. Busch Gardens is blocked out on 8 days in 2027 and Adventure Island on 7 summer days in 2027; the page lists no 2026 blockout dates.",
+      "family_of_four": "The Fun Card is priced per person: Busch Gardens' Fun Card and Limited-Time Offers pages show USD 94.99 each for Busch Gardens only and USD 118.99 each for Busch Gardens + Adventure Island (read November 27, 2026, the same as November 20), online in advance only, with no separate child price. Busch Gardens' tickets page says children 2 and under do not need a ticket for entry (read November 20). Parking is not included (the Fun Card page's FAQ says parking starts at USD 34), and taxes and service fees are extra. Busch Gardens is blocked out on 8 days in 2027 and Adventure Island on 7 summer days in 2027; the page lists no 2026 blockout dates.",
       "terms": [
         [
           "Headline",
-          "\"Black Friday: Save up to 40%\" on the Fun Card, Limited-Time Offers and tickets pages (November 20, 2026). On November 13 it read \"Black Friday Presale: Save 40%\"; on November 6, \"Black Friday Presale: Buy 2027 & Get the Rest of 2026 FREE\"."
+          "\"Black Friday: Save up to 40%\" on the Fun Card page (November 20 and 27, 2026). On November 13 it read \"Black Friday Presale: Save 40%\"; on November 6, \"Black Friday Presale: Buy 2027 & Get the Rest of 2026 FREE\"."
         ],
         [
           "Price shown",
-          "Busch Gardens only: USD 94.99 each (also shown: USD 148.99). Busch Gardens + Adventure Island: USD 118.99 each (also shown: USD 210.99). Read November 20, 2026 on the Fun Card, Limited-Time Offers and tickets pages (on November 13 the Busch Gardens-only card was USD 89.99; on November 6 the Fun Card page showed USD 129.99; on October 30 it was USD 129.99 for both). \"Discounted price applies to online advance purchases only and is not available at the park.\" Service fees and taxes not included."
+          "Busch Gardens only: USD 94.99 each (also shown: USD 148.99). Busch Gardens + Adventure Island: USD 118.99 each (also shown: USD 210.99). Read November 27, 2026 on the Fun Card and Limited-Time Offers pages, the same as November 20 (on November 13 the Busch Gardens-only card was USD 89.99; on November 6 the Fun Card page showed USD 129.99; on October 30 it was USD 129.99 for both). \"Discounted price applies to online advance purchases only and is not available at the park.\" Service fees and taxes not included."
         ],
         [
           "Parks",
@@ -614,7 +614,7 @@
         ],
         [
           "Book by",
-          "No purchase deadline is in the page text (November 20, 2026). Banner image file names on the Fun Card, Limited-Time Offers and tickets pages say \"endssoon\" with no date. Earlier file names said Nov 8 (read November 6) and Nov 15 (read November 13); the card was still on sale on November 20, at USD 94.99."
+          "No purchase deadline is in the page text (November 27, 2026). Banner image file names on the Fun Card and Limited-Time Offers pages say \"endsnov27\" (a file name, not a stated date). Earlier file names said Nov 8 (read November 6), Nov 15 (read November 13) and \"endssoon\" (read November 20); the card stayed on sale past each of those dates."
         ],
         [
           "Blockout dates, Busch Gardens 2027",
@@ -642,7 +642,7 @@
         ],
         [
           "Our estimate by number of days, family of 4",
-          "Busch Gardens-only card USD 94.99 against USD 71.99 lowest date-specific day tickets (both read November 20, 2026): 1 day USD 288 vs USD 380, so a day ticket is cheaper; 2 days USD 576 vs USD 380, about USD 196 saved."
+          "Busch Gardens-only card USD 94.99 against USD 71.99 lowest date-specific day tickets (both read November 27, 2026 on the Limited-Time Offers page, the same as November 20): 1 day USD 288 vs USD 380, so a day ticket is cheaper; 2 days USD 576 vs USD 380, about USD 196 saved."
         ],
         [
           "Prices on Busch Gardens' tickets page, for comparison",
@@ -665,12 +665,12 @@
       "family_total": null,
       "official_url": "https://buschgardens.com/tampa/limited-time-offers/",
       "source_label": "Busch Gardens Tampa Bay Limited-Time Offers page",
-      "observed_on": "2026-11-20",
+      "observed_on": "2026-11-27",
       "expires_on": "2026-11-27",
-      "expires_note": "no end date stated; listed for a week from our November 20 check of Busch Gardens' Fun Card page",
+      "expires_note": "no end date in the page text; banner image file names on the Fun Card and Limited-Time Offers pages say Nov 27",
       "deadline_stated": false,
       "score": {
-        "scored_on": "2026-11-20",
+        "scored_on": "2026-11-27",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed on the official site, so savings against the regular price cannot be rated. The card is priced per person with no child price shown."
@@ -733,7 +733,7 @@
                 "source": {
                   "label": "Busch Gardens Tampa Bay Limited-Time Offers page",
                   "url": "https://buschgardens.com/tampa/limited-time-offers/",
-                  "observed_on": "2026-11-20"
+                  "observed_on": "2026-11-27"
                 }
               }
             ]
@@ -749,7 +749,7 @@
                 "source": {
                   "label": "Busch Gardens Tampa Bay Fun Card page",
                   "url": "https://buschgardens.com/tampa/tickets/fun-card/",
-                  "observed_on": "2026-11-20"
+                  "observed_on": "2026-11-27"
                 }
               }
             ]
@@ -768,7 +768,7 @@
           "Want one day each at SeaWorld Orlando and Busch Gardens? The $93.99 Two Park ticket costs about the same as one card, but the second visit must be within 14 days of the first."
         ],
         "catch": [
-          "The $94.99 price may end soon: banners say \"ends soon\" with no date. It was $89.99 on November 13.",
+          "The $94.99 price may end after Nov 27: no end date is posted, but the sale banner's file name says Nov 27. It was $89.99 on November 13.",
           "No child price is shown, so each family member aged 3 and up likely needs their own card.",
           "Parking is not included (from $34, per the FAQ), and tax and service fees are extra."
         ],
@@ -781,7 +781,7 @@
           {
             "label": "Busch Gardens Tampa Bay Fun Card page",
             "url": "https://buschgardens.com/tampa/tickets/fun-card/",
-            "observed_on": "2026-11-20",
+            "observed_on": "2026-11-27",
             "covers": "the $94.99 and $118.99 card prices, validity dates, blockout dates, parking and card rules"
           },
           {
@@ -819,7 +819,7 @@
           "title": "Busch Gardens Tampa Bay: unlimited visits through 2027 for $94.99 a person",
           "hook": "Busch Gardens Tampa Bay, Florida: $94.99 a person, unlimited visits through 2027.",
           "verdict": "Only for 2+ park days; for one day, a $71.99 day ticket is cheaper.",
-          "catch": "The catch: may end soon; no kid price shown; parking extra."
+          "catch": "The catch: may end after Nov 27; no kid price shown; parking extra."
         },
         "hero_image": {
           "slug": "busch-gardens-tampa-bay",
@@ -827,6 +827,7 @@
           "caption": "A park train and roller coaster at Busch Gardens Tampa Bay (an older photo by Jeremy Thompson, not taken by Family Tripwise; rides and decorations may have changed)."
         },
         "verdict_pill": "Only for 2+ park days",
+        "saver_flag": "May end Nov 27",
         "og_image": "images/og/deals/busch-gardens-tampa-2027-fun-card.png"
       },
       "black_friday_offer": "Black Friday sale"
@@ -907,8 +908,8 @@
       "official_url": "https://buschgardens.com/williamsburg/tickets/fun-cards/",
       "source_label": "Busch Gardens Williamsburg Fun Cards page",
       "observed_on": "2026-11-20",
-      "expires_on": "2026-11-27",
-      "expires_note": "no end date stated; listed for a week from our November 20 check of Busch Gardens Williamsburg's Fun Cards page",
+      "expires_on": "2026-11-26",
+      "expires_note": "no end date stated; on November 27 the Fun Cards page no longer showed the $113.99 price",
       "deadline_stated": false,
       "score": {
         "scored_on": "2026-11-20",

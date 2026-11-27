@@ -456,12 +456,12 @@ test("v3 spend-vs-save: a saving under 5% says plainly on the hub that it is not
   const ss = b.v2.spend_save;
   // 4 x $119.99 Any Day tickets against 4 x $118.99 Busch Gardens + Adventure Island cards saves about $4 (1%).
   const small = { ...b, v2: { ...b.v2, spend_save: { ...ss, verdict_line: "Against the $119.99 Any Day ticket the $118.99 card is not really cheaper.", without: { ...ss.without, parts: [{ ...ss.without.parts[0], unit_amount: 119.99, qty: 4 }] }, with: { ...ss.with, parts: [{ ...ss.with.parts[0], unit_amount: 118.99, qty: 4 }] } } } };
-  const r = spendSave(small, "2026-11-20");
+  const r = spendSave(small, "2026-11-27");
   assert.deepEqual([r.ok, r.without, r.with, r.save, r.save_pct], [true, 480, 476, 4, 1]);
-  assert.match(dealsHubPage([small], "2026-11-20"), /<dd>≈ \$4 <small>\(1%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
-  const full = spendSave(b, "2026-11-20");
+  assert.match(dealsHubPage([small], "2026-11-27"), /<dd>≈ \$4 <small>\(1%\)<\/small><\/dd>.*class="hub-ss-flag">Not really cheaper\./s);
+  const full = spendSave(b, "2026-11-27");
   assert.deepEqual([full.without, full.with, full.save, full.save_pct], [576, 380, 196, 34]);
-  assert.doesNotMatch(dealsHubPage([b], "2026-11-20"), /hub-ss-flag/);
+  assert.doesNotMatch(dealsHubPage([b], "2026-11-27"), /hub-ss-flag/);
 });
 
 test("v3 spend-vs-save: the card says what is missing once the hotel price sample's stay starts, and the deal is not posted", () => {
@@ -588,7 +588,7 @@ test("D22 hub: the main list is in the same order as the Biggest savings box (la
 });
 
 test("D23 3b: hub break-even follows the page's stated pays_off_from, and deal pages keep ≤4 hero chips with the rest in 'Also note'", () => {
-  const hub = dealsHubPage(asOf("2026-11-20"), "2026-11-20");
+  const hub = dealsHubPage(asOf("2026-11-27"), "2026-11-27");
   const busch = hub.split('id="busch-gardens-tampa-2027-fun-card"')[1]?.split("</article>")[0] ?? "";
   assert.match(busch, /Pays off from your 2nd park day/, "the hub agrees with the Busch page ('Two days: the card saves…')");
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
