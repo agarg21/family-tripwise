@@ -15,7 +15,7 @@
     "sd-secret-san-diego": {"url":"https://secretsandiego.com/feed/","source_sig":"9a78a94fa9f367c7","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "sd-kpbs-arts-culture": {"url":"https://www.kpbs.org/news/arts-culture.rss","source_sig":"53658d44c90f710a","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "sd-times-of-san-diego-arts": {"url":"https://timesofsandiego.com/arts/feed/","source_sig":"8e31f49c077713ee","status":"ok","ok_since":"2026-11-03T16:52Z"},
-    "sd-fox5-local": {"url":"https://fox5sandiego.com/news/local-news/feed/","source_sig":"159f5fbed0fc29ba","status":"error","reason":"robots.txt unreachable (TypeError)","since":"2026-11-27T05:04Z","ok_since":"2026-11-03T16:52Z","errors":1},
+    "sd-fox5-local": {"url":"https://fox5sandiego.com/news/local-news/feed/","source_sig":"159f5fbed0fc29ba","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "sd-10news-local": {"url":"https://www.10news.com/news/local-news.rss","source_sig":"fcc3654d02b263ff","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "orl-clickorlando-theme-parks": {"url":"https://www.clickorlando.com/arc/outboundfeeds/rss/category/theme-parks/?outputType=xml","source_sig":"cfa5ea13ff038a04","status":"ok","ok_since":"2026-11-03T16:52Z"},
     "orl-clickorlando-local": {"url":"https://www.clickorlando.com/arc/outboundfeeds/rss/category/news/local/?outputType=xml","source_sig":"57194a0489d49378","status":"ok","ok_since":"2026-11-03T16:52Z"},
