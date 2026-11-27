@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=15
-run: {id: 2026-11-27T21:05:11Z, started_at: 2026-11-27T21:05:11Z}
-last_public_release: 6e8eec43 G19 deploy fix: passholder-day chip leads over the code-read count (Jay Peak); daily resort counts live (Nov 27)
+today: 2026-11-27 transactions=16
+run: none
+last_public_release: efa9c515 G16 Chicago: Navy Pier WonderFest re-read Nov 27 ($27 now 48h ahead; opening hours; NYE line fixed)
 active: none
 
 ## Holds (what, unblock)
@@ -43,8 +43,8 @@ active: none
 - BF unpriced: Gatorland passes to Nov 29 (read 11-27); Hersheypark to Nov 30; Meow Wolf LV to Dec 9 (self-drops). Neon Museum NEON40 (Attractions Mag): not on neonmuseum.org 11-27; Dec 4.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
-- Macy's parade Sat Nov 28: Saturday plan live from Mayor's Nov 25 briefing (11-27); MTA pages re-readable Dec 1-2 (after parade); lines self-drop Nov 28.
-- GSC: first run after 11:00Z Nov 30: did the scheduled snapshot commit on its own (Muse 11-27 Q4)? 
+- Macy's parade Nov 28: plan live (11-27); MTA pages from Dec 1; lines self-drop Nov 28.
+- GSC: after 11:00Z Nov 30: did the snapshot self-commit (Muse 11-27 Q4)?
 - SD BF leads (Patch 11-25) unread: Boomers code to Dec 6, SD Fair BOGO to Nov 30.
 - Adventuredome Cyber $40/$20 (press only, 11-27): official page from Nov 29.
 - Universal USF new market (WESH 11-26): unverified; from Dec 1.
@@ -59,4 +59,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 20:04Z G19 live defect: 19:06Z deploy failed (Jay Peak passholder test vs today's 1/9 count). Chip "Not open to the public today" leads, count on own line; live 6e8eec43.
+- 11-27 21:05Z G16 trend flag (WGN WonderFest opens): official page re-read; Chicago card + New-this-season line updated (48h advance $27, hours, NYE conflict fixed). Live efa9c515. WonderFest $ hides Dec 28.
