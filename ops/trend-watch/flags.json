@@ -1,6 +1,77 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-62daa5445d",
+      "city": "New York City",
+      "title": "First Alert Weather: Leftover rain on Friday, but eventual clearing",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-leftover-rain-on-friday-but-eventual-clearing/",
+          "published": "2026-11-27T04:26Z"
+        }
+      ],
+      "first_seen": "2026-11-27T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:friday",
+          "place:saturday's macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    },
+    {
+      "id": "t-712e30e600",
+      "city": "New York City",
+      "title": "Astronaut High cheer team works to extend New York trip after parade postponement",
+      "links": [
+        {
+          "outlet": "News 6 ClickOrlando (local news)",
+          "url": "https://www.clickorlando.com/news/local/2026/11/27/astronaut-high-cheer-team-works-to-extend-new-york-trip-after-parade-postponement/",
+          "published": "2026-11-27T04:22Z"
+        }
+      ],
+      "first_seen": "2026-11-27T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thursday"
+        ]
+      },
+      "matched_terms": [
+        "parade",
+        "new"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
