@@ -41,16 +41,6 @@
     "gdelt-washington-dc": {"url":"https://api.gdeltproject.org/api/v2/doc/doc?query=%22Washington+DC%22+%28christmas+OR+holiday+OR+holidays+OR+thanksgiving+OR+parade+OR+lights+OR+festival%29+%28kids+OR+family+OR+families+OR+children%29+sourcecountry%3AUS+sourcelang%3Aenglish&mode=ArtList&format=json&timespan=24h&maxrecords=75&sort=DateDesc","source_sig":"be80e87ebb8edee9","status":"error","reason":"HTTP 429","since":"2026-11-05T14:57Z","ok_since":"2026-11-03T17:35Z","errors":3}
   },
   "seen": {
-    "lf2bb03b38654": "2026-11-29T14:00Z",
-    "t2c60449e06ba": "2026-11-29T14:00Z",
-    "l21ba90d97939": "2026-11-29T14:00Z",
-    "t0069377666f2": "2026-11-29T14:00Z",
-    "lc4f2b151e8df": "2026-11-29T14:00Z",
-    "te5e198b48db4": "2026-11-29T14:00Z",
-    "lc016e760eaba": "2026-11-29T14:00Z",
-    "t56376eacf840": "2026-11-29T14:00Z",
-    "l9ae6468ecc99": "2026-11-29T14:00Z",
-    "t06eef9cd50ae": "2026-11-29T14:00Z",
     "l5ab965829746": "2026-11-29T14:00Z",
     "t4bb68864bcc6": "2026-11-29T14:00Z",
     "laafd30caf8ba": "2026-11-29T14:00Z",
@@ -820,7 +810,17 @@
     "l4a684e41fbfd": "2026-12-02T18:00Z",
     "t365a3ef098fb": "2026-12-02T18:00Z",
     "lb9f8b5fe7666": "2026-12-02T18:00Z",
-    "t4d830073e507": "2026-12-02T18:00Z"
+    "t4d830073e507": "2026-12-02T18:00Z",
+    "l2a67eea3df08": "2026-12-02T20:00Z",
+    "t56ec9b6576d3": "2026-12-02T20:00Z",
+    "l799c62a63e8c": "2026-12-02T20:00Z",
+    "tc448bfe6d9f8": "2026-12-02T20:00Z",
+    "l6b8132fcc242": "2026-12-02T20:00Z",
+    "t2f9ca3e7f3e0": "2026-12-02T20:00Z",
+    "le7049db01cec": "2026-12-02T20:00Z",
+    "ted86c2267c8a": "2026-12-02T20:00Z",
+    "l607a7b001154": "2026-12-02T20:00Z",
+    "t8932ce7939b3": "2026-12-02T20:00Z"
   },
   "recent": []
 }
