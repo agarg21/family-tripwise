@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=8
-run: {id: 2026-11-27T13:05:41Z, started_at: 2026-11-27T13:05:41Z}
+today: 2026-11-27 transactions=9
+run: none
 last_public_release: 16504960 G16 BF page: Gatorland annual pass sale (Nov 27)
 active: none
 
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 12:05Z G16 step 1: BF page adds Gatorland annual pass sale (family of 4 $161.96 vs $189.96, ≈$28/15% less, est.; one visit cheaper), live 16504960; NYC tree-price trend flag deleted (off-fit, article unreadable).
+- 11-27 13:05Z G09w: 7 flags. Great Wolf BF BOGO (today only, CT page read once; no price, no stay dates): no card. Club Med countdown, Six Flags "Ends TODAY", LEGOLAND CA "Last Chance" (no refetch): no change. Flags cleared.
