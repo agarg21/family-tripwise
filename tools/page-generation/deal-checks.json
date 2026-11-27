@@ -2585,21 +2585,23 @@
       "operator": "Atlantis Paradise Island",
       "category": "Resort stay offer",
       "title": "Atlantis Bahamas Cyber Sale: up to 30% off 4+ nights, resort credit up to USD 500",
-      "headline": "Book a 4+ night Atlantis stay by December 8 for December 1 to 27, 2026 or January 3 to November 15, 2027 and save up to 30% at The Coral, The Royal, The Reef or Harborside, with a per-room resort credit of USD 250 for 5 nights rising to USD 500 for 10+ nights; December 28 to January 1 and February 12 to March 28, 2027 are blacked out, and a 21% charge, a daily resort fee and mandatory gratuities are added.",
+      "headline": "Book a 4+ night Atlantis stay by November 29 (our watch saw the offer page change from December 8 on November 27) for December 1 to 27, 2026 or January 3 to November 15, 2027 and save up to 30% at The Coral, The Royal, The Reef or Harborside, with a per-room resort credit of USD 250 for 5 nights rising to USD 500 for 10+ nights; December 28 to January 1 and February 12 to March 28, 2027 are blacked out, and a 21% charge, a daily resort fee and mandatory gratuities are added.",
       "family_of_four": "For 2 adults and 2 children in one room, the resort credit is per room, per stay, so a family gets one credit, and none is listed for a 4-night stay: the tiers start at USD 250 for 5 nights. The credit can pay for Atlantis Kids Adventures, Dolphin & Marine Adventures or Atlantis restaurants, but not taxes, gratuities or retail. The offer lists \"Kids 5 & Under Eat Free\" without conditions. Mandatory gratuities are per person, per night for guests 12 and older, so the amount depends on your children's ages. \"Up to 30%\" is a maximum; the page does not say which rooms or dates get it.",
       "terms": [
         ["Headline", "\"Up to 30% + Resort Credit of Up to $500\" on stays of 4 or more nights."],
-        ["Book by", "December 8 (\"Book now through December 8\"); new reservations only."],
+        ["Book by", "November 29: on November 27 our automated watch of the offer page saw \"Book now through November 29\" replace \"Book now through December 8\" (the date we read on November 23), as the page became a Black Friday sale. Confirm it on the page; new reservations only."],
         ["Travel window", "December 1 to 27, 2026 and January 3 to November 15, 2027. All stay dates must fall inside one eligible period (no crossover dates)."],
         ["Blackout dates", "December 28, 2026 to January 1, 2027 and February 12 to March 28, 2027; the page adds that further blackout dates may apply."],
         ["Minimum nights", "4 nights for the discount; the resort credit starts at 5 nights."],
-        ["Hotels", "The Coral, The Royal, The Reef and Harborside for up to 30%. The Cove has a separate offer: up to 20% off and a resort credit of up to USD 600; its minimum stay read 4 nights on November 23, and our watch of the offer page saw it change to 5 nights on November 25, so confirm it there."],
-        ["Resort credit", "Per room, per stay at The Royal, The Coral, The Reef and Harborside: USD 250 for 5 nights, USD 300 for 6, USD 350 for 7 to 9 and USD 500 for 10 or more. Usable for Dolphin & Marine Adventures, Atlantis Kids Adventures, CRUSH, Lost City Escape Room, Good Lies and Atlantis food and beverage outlets; not for Atlantis LIVE performances, the spa, golf, the casino, retail shops, laundry, gratuities, transportation, taxes or energy surcharges. No cash value."],
+        ["Hotels", "The Coral, The Royal, The Reef and Harborside for up to 30%. The Cove has a separate offer: up to 20% off and a resort credit of up to USD 600; its minimum stay read 4 nights on November 23, our watch of the offer page saw 5 nights on November 25 and 4 nights again on November 27, so confirm it there."],
+        ["Resort credit", "Read November 23 and still listed when our watch saw the page on November 27: per room, per stay at The Royal, The Coral, The Reef and Harborside: USD 250 for 5 nights, USD 300 for 6, USD 350 for 7 to 9 and USD 500 for 10 or more. Usable for Dolphin & Marine Adventures, Atlantis Kids Adventures, CRUSH, Lost City Escape Room, Good Lies and Atlantis food and beverage outlets; not for Atlantis LIVE performances, the spa, golf, the casino, retail shops, laundry, gratuities, transportation, taxes or energy surcharges. No cash value."],
+        ["Black Friday bonuses", "Seen by our watch on November 27, not read in full: \"25% off Playtime with Dolphins\", \"25% off Swim & Wonder\", \"25% off Snorkel the Ruins of Atlantis\" and \"Save on Crush and Atlantis Kids Adventures\" (amount not stated). Terms and child prices unread; confirm on the page."],
         ["Child ages", "\"Kids 5 & Under Eat Free\" is listed as a highlight with no conditions on the offer page. Mandatory gratuities apply to guests 12 and older. No other child terms are stated."],
         ["Still charged", "A 21% charge on the nightly room rate (VAT and levies); a daily resort fee of USD 77.00 at The Coral and The Royal and USD 82.50 at The Cove and The Reef; mandatory gratuities for guests 12 and older of up to USD 14 per person per night at The Coral and The Royal, up to USD 30 at The Cove and up to USD 52 at The Reef; at Harborside, a USD 20.52 per person daily utility service fee and USD 6.25 per person daily gratuities (12 and older). All subject to change."],
         ["Combining", "Not combinable with other offers or consortia amenities; not valid for group or casino bookings; not honored for reservations cancelled and rebooked."]
       ],
       "unclear": [
+        "The page became a Black Friday sale on November 27; we saw the new book-by date and bonuses only through our automated watch, not a full read (next full read from November 30).",
         "Which room types or dates get the full 30% is not stated; \"up to\" is a maximum.",
         "The offer page lists no credit for a 4-night stay: the credit table starts at 5 nights.",
         "The conditions for \"Kids 5 & Under Eat Free\" are not shown on the offer page.",
@@ -2616,7 +2618,8 @@
       "official_url": "https://www.atlantisbahamas.com/offers/cyber-sale",
       "source_label": "Atlantis Exclusive Cyber Sale offer page",
       "observed_on": "2026-11-23",
-      "expires_on": "2026-12-08",
+      "expires_on": "2026-11-29",
+      "expires_note": "our reading of the offer page as our automated watch saw it on November 27; it said December 8 when we read it on November 23, so confirm it there",
       "score": {
         "scored_on": "2026-11-23",
         "family_value": {
@@ -2654,6 +2657,7 @@
           "observed_on": "2026-10-30",
           "covers": "what Atlantis is, where it is and what kids can do there"
         },
+        "date_note_short": "our Nov 27 reading",
         "verdict_pill": "Only for 5+ night stays",
         "big_number": "30%",
         "big_label": "off at most on 4+ nights, plus a $250 resort credit for your room from 5 nights ($500 at 10+)",
@@ -2671,7 +2675,7 @@
           "text": "No estimate: no Atlantis price seen for this family or regular rate; price The Coral on atlantisbahamas.com. Extra: 21% tax and levies, $77.00/day resort fee, required tips for ages 12+."
         },
         "cost": "Trip cost: we have no checked price for a family of 4. Fees, tax, meals and flights (for example from New York City) are extra.",
-        "saves": "Saves: up to 30% off the room on 4+ nights (a maximum), plus one room credit: $250 for 5 nights, $300 for 6, $350 for 7 to 9, $500 for 10+.",
+        "saves": "Saves: up to 30% off the room on 4+ nights (a maximum), plus one room credit (read Nov 23, still listed Nov 27): $250 for 5 nights, $300 for 6, $350 for 7 to 9, $500 for 10+.",
         "family": "Example family of 4: 2 adults and 2 kids aged 4 and 8, in one room for 5 nights at The Coral.",
         "get": [
           "Up to 30% off the room rate at The Coral, The Royal, The Reef or Harborside; the page does not say which rooms or dates get the full 30%.",
@@ -2689,7 +2693,7 @@
           "21% tax and levies, the daily resort fee and gratuities for everyone 12 and older are added to the room price."
         ],
         "how": [
-          "Book a new reservation of 4 or more nights at The Coral, The Royal, The Reef or Harborside by December 8 (The Cove has its own up-to-20% offer).",
+          "Book a new reservation of 4 or more nights at The Coral, The Royal, The Reef or Harborside by November 29 (was December 8 until November 27; The Cove has its own up-to-20% offer).",
           "Stay December 1 to 27, 2026 or January 3 to November 15, 2027, avoiding the blackout dates; all nights must fall in one period.",
           "Before you pay, compare the price with and without the sale and read the cancellation and deposit terms."
         ],
@@ -2709,7 +2713,7 @@
         },
         "pros": [
           "The resort credit can pay for the kids club or a dolphin or marine activity.",
-          "Stays can run to November 15, 2027, so summer 2027 trips qualify (book by Dec 8).",
+          "Stays can run to November 15, 2027, so summer 2027 trips qualify (book by Nov 29).",
           "Kids 5 and under are listed as eating free."
         ],
         "cons": [
@@ -2720,7 +2724,7 @@
         "post": {
           "title": "Atlantis Bahamas Cyber Sale: up to 30% off 4+ nights, $250 credit from 5 nights",
           "hook": "Atlantis, Bahamas: up to 30% off 4+ nights, plus a $250 resort credit from 5 nights.",
-          "verdict": "Only for families staying 5+ nights outside mid-Feb to late March; book by Dec 8.",
+          "verdict": "Only for families staying 5+ nights outside mid-Feb to late March; book by Nov 29.",
           "catch": "The catch: from $77.00/day resort fee, gratuities for everyone 12+, 21% tax and levies."
         },
         "hero_image": {
