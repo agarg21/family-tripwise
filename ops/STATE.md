@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=4
-run: {id: 2026-11-27T09:05Z, started_at: 2026-11-27T09:05Z}
-last_public_release: 3ef032a1 G16 NYC parade Saturday plan (Mayor briefing; Nov 27)
+today: 2026-11-27 transactions=5
+run: none
+last_public_release: 43f1c1c8 G16 NYC Dyker Heights card re-read (Nov 27)
 active: none
 
 ## Holds (what, unblock)
@@ -17,7 +17,7 @@ active: none
 - SD December Nights: Getting There PDF from Dec 1.
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Lightscape Dec 26); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB from Nov 27; NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
 - NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: prices hide Dec 4 (Bronx Zoo 11-25: $ Dec 26, train/parking Dec 15; FAQs from Dec 1); Nov 25. Grand Central trains: from Nov 28. Santa selfies: guide re-read 11-26, still no hours (from Dec 3). Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
-- Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: from Nov 27.
+- Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: tour page read 11-27 ($ hide Dec 28; sold-out notice); next from Dec 4.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
 - NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking line: re-read or soften); next Dec 4.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 08:05Z G09w/G16-1: Six Flags GA/GE/FT BF pages re-read: same prices, all end 11/27 (GA "Ends TODAY!"), no extension; no page change (checks self-drop Nov 28). docs/research/deal-checks-2026-11-27-six-flags.md.
+- 11-27 09:05Z G16: Dyker Heights tour page re-read ($35/$75 unchanged, bus restroom, sold-out notice) + 2026 guide (few bathrooms); NYC card + /this-week/ live 43f1c1c8; older sources keep Nov 4 dates.
