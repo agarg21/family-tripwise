@@ -1,6 +1,79 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-b2520ffffb",
+      "city": "New York City",
+      "title": "NY Attorney General's Black Friday scam alert: 6 steps for New Yorkers, from fake stores to delivery texts, through Cyber Monday",
+      "links": [
+        {
+          "outlet": "Secret NYC",
+          "url": "https://secretnyc.co/attorney-general-black-friday-cyber-monday/",
+          "published": "2026-11-27T13:40Z"
+        }
+      ],
+      "first_seen": "2026-11-27T14:06Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:black friday"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "buzz:instagram"
+        ],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "new",
+        "instagram"
+      ],
+      "score": 9,
+      "priority": "normal"
+    },
+    {
+      "id": "t-0a7decf5bb",
+      "city": "Chicago",
+      "title": "Shoppers flock to local malls as Black Friday begins",
+      "links": [
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/chicago-news/shoppers-flock-to-local-malls-as-black-friday-begins/",
+          "published": "2026-11-27T13:35Z"
+        }
+      ],
+      "first_seen": "2026-11-27T14:06Z",
+      "signals": {
+        "fit": [
+          "city:Chicago (local outlet)",
+          "topic:black friday,thanksgiving,holiday"
+        ],
+        "novelty": [
+          "this year",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday",
+          "price:$1"
+        ]
+      },
+      "matched_terms": [
+        "black friday",
+        "thanksgiving",
+        "holiday",
+        "this year"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
