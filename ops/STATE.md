@@ -9,7 +9,7 @@ active: none
 
 ## Holds (one line each: what, unblock)
 - LEGOLAND CA pass: BF $139 to Nov 29 (11-21); FL pass BF $99 to Nov 29; re-read both from Nov 28. CA hotel pkg fetch withdrawn 2x.
-- /deals/ checks end Nov 27 (Sesame Philly + SeaWorld Orlando, re-read 11-20), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
+- /deals/ checks end Nov 27 (Sesame Philly; SWO read 11-26, files say Nov 27: from Nov 28), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
 - /this-week/ expires daily: deploy (05:17 UTC) refreshes live; first run each ET day: `node tools/this-week.mjs`, commit. SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only. Skips: Six Flags GA P2s; LEGOLAND NY unit_short "by Jan 2"; reword Air and Space, Bronx birds; Gaylord ice! (no $). SeaWorld SA queueable (11-22). Records change → regenerate queue + cards together.
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
@@ -29,28 +29,21 @@ active: none
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); from Nov 29. SA teens: Holiday in the Park line drops by Jan 5. Bass Pro Santa card ends Dec 24 (self-drops).
 - Jay Peak, Stowe: $ hide Dec 17; Stowe opening TBD (11-25; Dec 2). Club Med BF (page timer ends ~Dec 1): retry Dec 1.
-- Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26.
-- Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
-- Killington: tubing $ hide Dec 17; day ticket $ unread.
-- Stratton: $ hide Dec 16; opening postponed, no date (11-23; from Nov 30). Seven Springs: no opening day (11-24); chip hides Dec 2, from Dec 1; parking $ hide ~Dec 17.
+- Holiday Valley: chip Nov 27; $ hide Dec 16; hours page 2025-26. Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
+- Killington: tubing $ hide Dec 17; day $ unread. Stratton: $ hide Dec 16; opening postponed, no date (11-23; from Nov 30). Seven Springs: no opening day (11-24); chip hides Dec 2, from Dec 1; parking $ hide ~Dec 17.
 - Breckenridge: childcare $ hide Dec 17; hours 11-24 (no season dates; status line held). Park City: target Nov 25 (11-24); status pages not granted 11-25; $ hide Dec 17; from Dec 1.
-- Vail $ hide Dec 17; due: Vail childcare, Keystone hours, Copper tubing/tickets.
-- Crested Butte: hours 11-24; basecamp due. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
+- Vail $ hide Dec 17; due: Vail childcare, Keystone hours, Copper tubing/tickets. Crested Butte: hours 11-24; basecamp due. Snowbird: neutral chip Nov 27; $ hide Dec 17; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26, $ Dec 17); Bogus Basin opening/hours/tubing/bus ($ Dec 17); Winter Park tubing + kids $ (status Nov 24, $ Dec 17); Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - RC Black Friday (up to $900 off, BF page read 11-26, no window): terms re-read Nov 28. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
-- Epic Universe passes: no price (11-19); re-search Nov 28. SWO sale banner: re-read Nov 27.; Gracie: no 2026 page, Nov 30.
-- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28.
-- NYC Met tree: Thu hours conflict; stroller unread; from Dec 3.
+- Epic Universe passes: no price (11-19); re-search Nov 28. Gracie: no 2026 page, Nov 30.
+- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28. NYC Met tree: Thu hours conflict; stroller unread; from Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
-- Boston Frog Pond: no dates/$ (11-22); re-search Nov 29.
-- Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
+- Boston Frog Pond: no dates/$ (11-22); Nov 29. Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-24; Nov 27). SI Mall rink: news only (Nov 29).
-- Saks times, Chanukah on Ice: Nov 28. Bloomingdale's windows: page stub 11-26; Dec 3.
-- NYE row 10: SA pages unreadable 11-23; Nov 30.
+- Saks times, Chanukah on Ice: Nov 28. Bloomingdale's windows: page stub 11-26; Dec 3. NYE row 10: SA pages unreadable 11-23; Nov 30.
 - BF unpriced: Hersheypark to Nov 30; Fun Spot, Schlitterbahn, Mingei self-drop.
-- Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2).
-- Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
+- Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - Macy's parade Sat Nov 28 (8:30 a.m., 11-26): Nov 27 search streets/subway.
 - Universal USF new market (WESH 11-26): unverified; from Dec 1.
