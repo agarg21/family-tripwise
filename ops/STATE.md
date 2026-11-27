@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=9
-run: {id: 2026-11-27T14:05:57Z, started_at: 2026-11-27T14:05:57Z}
-last_public_release: 16504960 G16 BF page: Gatorland annual pass sale (Nov 27)
+today: 2026-11-27 transactions=10
+run: none
+last_public_release: 2aaf4b81 G19 openings: Holiday Valley Dec 4, Snowbird moved up to Nov 25, Jackson Hole re-read (Nov 27)
 active: none
 
 ## Holds (what, unblock)
@@ -27,11 +27,11 @@ active: none
 - SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
 - SA kids: Morgan's closed through at least Dec 5 (11-22); from Nov 29. SA teens: Holiday in the Park line drops by Jan 5.
 - Ski ticket/tubing/childcare $ hide Dec 16-17 on most resort pages (self-hiding). Stowe opening TBD (11-25; Dec 2).
-- Holiday Valley: chip Nov 27; hours page 2025-26. Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
+- Holiday Valley: opening moved to Dec 4, tentative (read 11-27; page summary still Nov 27); re-read opening page from Dec 3; hours page 2025-26. Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
 - Killington: day $ unread. Stratton: opening postponed, no date (11-23; from Nov 30). Seven Springs: no opening day (11-24); chip hides Dec 2, from Dec 1; parking $ hide ~Dec 17.
 - Breckenridge: hours 11-24 (no season dates; status held). Park City: target Nov 25 (11-24); status pages not granted 11-25; from Dec 1.
-- Due: Vail childcare, Keystone hours, Copper tubing/tickets. Crested Butte: hours 11-24; basecamp due. Snowbird: neutral chip Nov 27; re-read opening/tickets. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
-- Jackson Hole: chip Nov 27; parking $ last winter's; Kids on Snow drops Dec 13.
+- Due: Vail childcare, Keystone hours, Copper tubing/tickets. Crested Butte: hours 11-24; basecamp due. Snowbird: opened-up chip "moved up to Nov 25" (read 11-27, self-drops Dec 4); tickets re-read. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
+- Jackson Hole: opening re-read 11-27 ("It's Opening Day!"); parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26); Bogus Basin opening/hours/tubing/bus; Winter Park tubing + kids $; Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - RC BF (up to $900 off, read 11-26, no window): G09w. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. Gracie: no 2026 page, Nov 30.
@@ -57,4 +57,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 13:05Z G09w: 7 flags. Great Wolf BF BOGO (today only, CT page read once; no price, no stay dates): no card. Club Med countdown, Six Flags "Ends TODAY", LEGOLAND CA "Last Chance" (no refetch): no change. Flags cleared.
+- 11-27 14:06Z G19 openings: Holiday Valley now tentative Dec 4 (was Nov 27 target chip today), Snowbird moved up to Nov 25 (new neutral status_chip), Jackson Hole re-read. Live 2aaf4b81.
