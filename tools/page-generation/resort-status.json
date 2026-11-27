@@ -3,18 +3,18 @@
   "resorts": {
     "okemo": {
       "url": "https://www.okemo.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx",
-      "read_at": "2026-11-27T01:52:17.465Z",
+      "read_at": "2026-11-27T19:05:11.866Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "mount-snow": {
       "url": "https://www.mountsnow.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
-      "read_at": "2026-11-27T01:52:19.731Z",
+      "read_at": "2026-11-27T19:05:14.016Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
         0,
@@ -31,10 +31,10 @@
     },
     "hunter-mountain": {
       "url": "https://www.huntermtn.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
-      "read_at": "2026-11-27T01:52:21.800Z",
+      "read_at": "2026-11-27T19:05:16.215Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
         0,
@@ -51,10 +51,10 @@
     },
     "windham": {
       "url": "https://www.windhammountainclub.com/mountain-report/",
-      "read_at": "2026-11-27T01:52:23.515Z",
+      "read_at": "2026-11-27T19:05:17.809Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
         0,
@@ -71,45 +71,50 @@
     },
     "killington": {
       "url": "https://killington.com/mountain-report",
-      "read_at": "2026-11-27T01:52:25.127Z",
+      "read_at": "2026-11-27T19:05:19.434Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
-      "trails": [
+      "lifts": [
         3,
-        155
+        19
       ],
       "evidence": {
-        "trails": "Open Trails 3/155"
-      }
+        "lifts": "Open Lifts 3/19",
+        "trails": "Open Trails 7/155"
+      },
+      "trails": [
+        7,
+        155
+      ]
     },
     "jay-peak": {
       "url": "https://digital.jaypeakresort.com/conditions/snow-report/",
-      "read_at": "2026-11-27T01:52:26.606Z",
+      "read_at": "2026-11-27T19:05:20.737Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
-        0,
+        1,
         9
       ],
       "evidence": {
-        "lifts": "Open Lifts 0 / 9",
-        "trails": "Open Trails 0 / 82"
+        "lifts": "Open Lifts 1 / 9",
+        "trails": "Open Trails 1 / 82"
       },
       "trails": [
-        0,
+        1,
         82
       ]
     },
     "stowe": {
       "url": "https://www.stowe.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:52:28.838Z",
+      "read_at": "2026-11-27T19:05:22.787Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
         0,
@@ -126,10 +131,10 @@
     },
     "sugarbush": {
       "url": "https://www.sugarbush.com/mountain/conditions",
-      "read_at": "2026-11-27T01:52:30.070Z",
+      "read_at": "2026-11-27T19:05:24.193Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "stratton": {
@@ -144,10 +149,10 @@
     },
     "seven-springs": {
       "url": "https://www.7springs.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
-      "read_at": "2026-11-27T01:52:33.435Z",
+      "read_at": "2026-11-27T19:05:26.702Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
         0,
@@ -164,46 +169,46 @@
     },
     "winter-park": {
       "url": "https://www.winterparkresort.com/the-mountain/mountain-report",
-      "read_at": "2026-11-27T01:52:34.742Z",
+      "read_at": "2026-11-27T19:05:28.572Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "bogus-basin": {
       "url": "https://bogusbasin.org/your-mountain/conditions-webcams/",
-      "read_at": "2026-11-27T01:52:36.445Z",
+      "read_at": "2026-11-27T19:05:30.820Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "breckenridge": {
       "url": "https://www.breckenridge.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:52:38.741Z",
+      "read_at": "2026-11-27T19:05:32.829Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
-        0,
+        19,
         35
       ],
       "evidence": {
-        "lifts": "0 / 35 Lifts Open",
-        "trails": "6 / 226 trails Open"
+        "lifts": "19 / 35 Lifts Open",
+        "trails": "7 / 226 trails Open"
       },
       "trails": [
-        6,
+        7,
         226
       ]
     },
     "park-city": {
       "url": "https://www.parkcitymountain.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:52:41.147Z",
+      "read_at": "2026-11-27T19:05:34.856Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
         8,
@@ -220,17 +225,17 @@
     },
     "vail": {
       "url": "https://www.vail.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:52:43.920Z",
+      "read_at": "2026-11-27T19:05:36.907Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
-        1,
+        7,
         34
       ],
       "evidence": {
-        "lifts": "1 / 34 Lifts Open",
+        "lifts": "7 / 34 Lifts Open",
         "trails": "14 / 277 trails Open"
       },
       "trails": [
@@ -240,17 +245,17 @@
     },
     "keystone": {
       "url": "https://www.keystoneresort.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:52:46.021Z",
+      "read_at": "2026-11-27T19:05:38.981Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
-        1,
+        9,
         21
       ],
       "evidence": {
-        "lifts": "1 / 21 Lifts Open",
+        "lifts": "9 / 21 Lifts Open",
         "trails": "10 / 144 trails Open"
       },
       "trails": [
@@ -260,33 +265,33 @@
     },
     "copper-mountain": {
       "url": "https://www.coppercolorado.com/the-mountain/trail-lift-info/lift-hours/",
-      "read_at": "2026-11-27T01:52:47.356Z",
+      "read_at": "2026-11-27T19:05:40.354Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "telluride": {
       "url": "https://tellurideskiresort.com/ski/",
-      "read_at": "2026-11-27T01:52:48.734Z",
+      "read_at": "2026-11-27T19:05:41.612Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "crested-butte": {
       "url": "https://www.skicb.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
-      "read_at": "2026-11-27T01:52:51.250Z",
+      "read_at": "2026-11-27T19:05:44.029Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       },
       "lifts": [
-        0,
+        2,
         15
       ],
       "evidence": {
-        "lifts": "0 / 15 Lifts Open",
+        "lifts": "2 / 15 Lifts Open",
         "trails": "6 / 168 trails Open"
       },
       "trails": [
@@ -296,77 +301,77 @@
     },
     "snowbird": {
       "url": "https://www.snowbird.com/the-mountain/mountain-report/current-conditions-weather/",
-      "read_at": "2026-11-27T01:52:52.604Z",
+      "read_at": "2026-11-27T19:05:45.390Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "alta": {
       "url": "https://www.alta.com/weather",
-      "read_at": "2026-11-27T01:52:53.917Z",
+      "read_at": "2026-11-27T19:05:46.756Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "jackson-hole": {
       "url": "https://www.jacksonhole.com/mountain-report",
-      "read_at": "2026-11-27T01:52:55.062Z",
+      "read_at": "2026-11-27T19:05:48.302Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "mt-bachelor": {
       "url": "https://www.mtbachelor.com/the-mountain/mountain-report/",
-      "read_at": "2026-11-27T01:52:56.393Z",
+      "read_at": "2026-11-27T19:05:49.819Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:52"
+        "date": "2026-11-27",
+        "time": "14:05"
       }
     },
     "timberline": {
       "url": "https://timberlinelodge.com/conditions/",
-      "read_at": "2026-11-27T01:53:06.659Z",
+      "read_at": "2026-11-27T19:06:00.333Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       }
     },
     "heavenly": {
       "url": "https://www.skiheavenly.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:53:08.561Z",
+      "read_at": "2026-11-27T19:06:02.422Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       },
       "lifts": [
-        0,
+        9,
         27
       ],
       "evidence": {
-        "lifts": "0 / 27 Lifts Open",
-        "trails": "28 / 113 trails Open"
+        "lifts": "9 / 27 Lifts Open",
+        "trails": "29 / 113 trails Open"
       },
       "trails": [
-        28,
+        29,
         113
       ]
     },
     "kirkwood": {
       "url": "https://www.kirkwood.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:53:10.438Z",
+      "read_at": "2026-11-27T19:06:04.490Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       },
       "lifts": [
-        0,
+        5,
         13
       ],
       "evidence": {
-        "lifts": "0 / 13 Lifts Open",
+        "lifts": "5 / 13 Lifts Open",
         "trails": "47 / 84 trails Open"
       },
       "trails": [
@@ -376,17 +381,17 @@
     },
     "northstar": {
       "url": "https://www.northstarcalifornia.com/the-mountain/mountain-conditions/terrain-and-lift-status.aspx",
-      "read_at": "2026-11-27T01:53:12.345Z",
+      "read_at": "2026-11-27T19:06:06.571Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       },
       "lifts": [
-        1,
+        7,
         19
       ],
       "evidence": {
-        "lifts": "1 / 19 Lifts Open",
+        "lifts": "7 / 19 Lifts Open",
         "trails": "41 / 108 trails Open"
       },
       "trails": [
@@ -396,36 +401,34 @@
     },
     "stevens-pass": {
       "url": "https://www.stevenspass.com/the-mountain/mountain-conditions/lift-and-terrain-status.aspx",
-      "read_at": "2026-11-27T01:53:14.394Z",
+      "read_at": "2026-11-27T19:06:09.081Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       }
     },
     "wolf-creek": {
       "url": "https://wolfcreekski.com/wcs-snow-report/",
-      "read_at": "2026-11-27T01:53:14.843Z",
+      "read_at": "2026-11-27T19:06:11.495Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
-      },
-      "kind": "robots",
-      "error": "robots.txt is an HTML page, not rules"
+        "date": "2026-11-27",
+        "time": "14:06"
+      }
     },
     "deer-valley": {
       "url": "https://www.deervalley.com/explore-the-mountain/hours-of-operation",
-      "read_at": "2026-11-27T01:53:16.270Z",
+      "read_at": "2026-11-27T19:06:13.079Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       }
     },
     "holiday-valley": {
       "url": "https://www.holidayvalley.com/snow-report/",
-      "read_at": "2026-11-27T01:53:17.904Z",
+      "read_at": "2026-11-27T19:06:14.548Z",
       "read_et": {
-        "date": "2026-11-26",
-        "time": "20:53"
+        "date": "2026-11-27",
+        "time": "14:06"
       },
       "lifts": [
         0,
