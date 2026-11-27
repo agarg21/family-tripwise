@@ -105,6 +105,8 @@ Crystal Mountain (webcam), Winter Park and Jay Peak (snow report), Bogus Basin a
   Sipapu, Ski Santa Fe, Snow Trails, Snowbasin, Summit at Snoqualmie, Sunlight, Tamarack, Terry Peak, White Pass,
   Whitetail, Wildcat, Wilmot, Wintergreen, Winterplace, Wisp. Same rule, plus: build a page only once the feed lists
   the resort with `cams_total` 2 or more (one-cam resorts wait; thin pages are not the goal). Order by search demand.
+  Also from 11-27, read from public live video streams (owner OK): Appalachian Ski Mtn, Massanutten, Ski Cooper,
+  Spirit Mountain, Bryce Resort, Cataloochee. Same rules.
 - Intent fit: "<resort> snow report" searchers want new snow, base depth and lifts open. Cam reads answer part of
   that; do not title these pages "snow report" unless the page carries the resort's own dated report numbers.
 
