@@ -1,0 +1,43 @@
+# HOLDS (dated re-reads and waits; moved out of STATE 2026-11-28, Muse 11-28 #1; keep ≤16 KB)
+Format: `- <act-from date ET or "owner"> | <what; unblock>`. One line per subject; overwrite, never append a second line for the same subject.
+Each run: `node tools/holds-due.mjs` prints only the lines due today (read those, not the whole file). When a hold is done, delete its line; when it moves, change its date. Owner lines belong to an owner session.
+
+- 2026-11-28 | Due: Vail childcare, Keystone hours, Copper tubing/tickets. Crested Butte: hours 11-24; basecamp due. Snowbird: opened-up chip "moved up to Nov 25" (read 11-27, self-drops Dec 4); tickets re-read. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
+- 2026-11-28 | Jackson Hole: opening re-read 11-27 ("It's Opening Day!"); parking $ last winter's; Kids on Snow drops Dec 13.
+- 2026-11-28 | G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26); Bogus Basin opening/hours/tubing/bus; Winter Park tubing + kids $; Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
+- 2026-11-28 | RC BF terms read 11-28: card live to Nov 29 (book Nov 26-29); Cyber Bonus OBC to Dec 1 not carried after. Villa del Palmar Cancun BF: read 11-28, Nov 23-27 phase ended, stays dropped; PV "Black Friday Extended" sidebar lead unread (G09w, from Nov 28). Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
+- 2026-11-28 | Saks times, Chanukah on Ice: due. Bloomingdale's windows: page stub 11-26; Dec 3. NYE row 10: SA pages unreadable 11-23; Nov 30.
+- 2026-11-28 | G09w re-reads: SeaWorld SA read 11-22 (to Nov 29; next from Nov 29); SWO LTO 11-28 00:20 ET (held: STATE active); Busch Tampa from Dec 4; RC terms read 11-28 (next from Dec 5); NCL terms read 11-26 (BF card to Dec 1; next Dec 3); Margaritaville BF row read 11-28 (banner "ends tonight", listed to Nov 28; drops Nov 29); early-access ($50/night) due; Club Med BF (from Dec 1); LEGOLAND CA/FL pass BF re-read 11-27 (unchanged, drop after Nov 29); Atlantis Cyber Nov 30 (Cove 5 nights?).
+- 2026-11-28 | SD Christmas page: Wonderland/North Pole/LEGOLAND re-read 11-28 (LEGOLAND $ hides after Nov 29); zoo + Safari Park $ (Nov 1) hide Dec 2: tickets from Dec 1. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read 11-27 (unchanged, no single $; from Dec 4); NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
+- 2026-11-28 | Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: tour page read 11-27 ($ hide Dec 28; sold-out notice); next from Dec 4.
+- 2026-11-28 | Killington: day $ unread. Stratton: opening postponed, no date (11-23; from Nov 30). Seven Springs: no opening day (11-24); chip hides Dec 2, from Dec 1; parking $ hide ~Dec 17.
+- 2026-11-28 | NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: prices hide Dec 4 (Bronx Zoo 11-25: $ Dec 26, train/parking Dec 15; FAQs from Dec 1); Nov 25. Santa selfies: guide re-read 11-26, still no hours (from Dec 3). Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA fleet card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
+- 2026-11-29 | LEGOLAND CA ($139) / FL ($99) BF passes to Nov 29: re-read via G09w. CA hotel pkg fetch withdrawn 2x.
+- 2026-11-29 | /deals/ checks end Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
+- 2026-11-29 | DC ZooLights (read Nov 10): re-read before queueing. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
+- 2026-11-29 | SA kids: Morgan's closed through at least Dec 5 (11-22); from Nov 29. SA teens: Holiday in the Park line drops by Jan 5.
+- 2026-11-29 | Boston Frog Pond: no dates/$ (11-22); Nov 29. Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
+- 2026-11-29 | AIC lion wreaths: no 2026 artic.edu page (11-27; Dec 1). SI Mall rink: news only (Nov 29).
+- 2026-11-29 | BF unpriced: Gatorland passes to Nov 29 (read 11-27); Hersheypark to Nov 30; Meow Wolf LV to Dec 9 (self-drops). Neon Museum NEON40 (Attractions Mag): not on neonmuseum.org 11-27; Dec 4.
+- 2026-11-29 | SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
+- 2026-11-29 | Adventuredome Cyber $40/$20 (press): Nov 29. Universal USF (WESH): Dec 1.
+- 2026-11-29 | G16 re-reads Nov 29: Brookfield, Orlando Carol, NYC carousel, Magic Show.
+- 2026-11-30 | Epic passes: none posted (11-28); Dec 2. Gracie: no 2026 page, Nov 30.
+- 2026-11-30 | Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindl FAQ error 11-28 (no retry); plan page Dec 5. Met tree: Thu hours conflict; Dec 3.
+- 2026-11-30 | Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
+- 2026-11-30 | Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
+- 2026-12-01 | NYC Union Square Holiday Market (trend flag 11-28, Secret NYC: open, ~200 vendors, free entry, beer/wine): unverified. urbanspacenyc.com market page 302s to hfbrandsandmarkets.com root (fetch not granted 11-28; no unchanged retry); unionsquarenyc.org has no market page. From Dec 1 re-search the operator's new domain for a market page; card only if dates/hours read there.
+- 2026-12-01 | SD December Nights: Getting There PDF from Dec 1.
+- 2026-12-01 | NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking: re-read/soften); Dec 4.
+- 2026-12-01 | SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.
+- 2026-12-01 | Holiday Valley: opening moved to Dec 4, tentative (read 11-27; page summary still Nov 27); re-read opening page from Dec 3; hours page 2025-26. Deer Valley: chip Dec 5; ticket $ JS-only; home/hours Dec 1.
+- 2026-12-01 | Breckenridge: hours 11-24 (no season dates; status held). Park City: target Nov 25 (11-24); status pages not granted 11-25; from Dec 1.
+- 2026-12-02 | SD itin.: zoo hours (11-25: only Nov 1-25 shown) from Dec 2; Balboa parking to end 2026.
+- 2026-12-02 | Stowe opening TBD (11-25; Dec 2).
+- 2026-12-04 | DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
+- 2026-12-05 | Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
+- 2026-12-09 | JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
+- 2026-12-10 | Ski ticket/tubing/childcare $ hide Dec 16-17 on most resort pages (self-hiding).
+- 2026-12-14 | G18/Q19 hotels (+Cancun, PV): regen by Dec 18 (Xmas drops), Dec 25 (NY), Jan 12 (LV/Chi/SA Jan 19 $), Jan 15; Jan 8: PV example-stay, SD/NYC/Orlando/London listings; guard tests.
+- 2026-12-15 | LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
+- owner | Disney On Ice Cyber Week (to Dec 6, 3rd party): robots fetch refused twice (owner session).

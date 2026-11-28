@@ -74,7 +74,7 @@ This repository is for building a family travel planning site and AI product. Th
 
 - Keep research in `docs/research/`.
 - Keep execution and product planning in `docs/plan/`.
-- Operator state lives in three small files: `ops/STATE.md` (working state, ≤8 KB), `ops/QUEUE.md` (ordered work, ≤15 items) and `ops/OWNER.md` (owner decisions and owner-only tasks). Run notes go in `ops/runs/YYYY-MM.md`. Codex-era logs are frozen in `archive/2026-10/`; grep them only when a queue item needs a past decision, never edit them.
+- Operator state lives in three small files: `ops/STATE.md` (working state, ≤8 KB), `ops/QUEUE.md` (ordered work, ≤15 items) and `ops/OWNER.md` (owner decisions and owner-only tasks), plus `ops/HOLDS.md` (dated re-reads and waits, ≤16 KB; each run reads only `node tools/holds-due.mjs`, not the whole file). Run notes go in `ops/runs/YYYY-MM.md`; run `node tools/runs-rollover.mjs` before appending (moves it to the next part file past 40 KB). Codex-era logs are frozen in `archive/2026-10/`; grep them only when a queue item needs a past decision, never edit them.
 - Keep dated, public-safe GSC decision summaries in `ops/gsc-snapshots/`. Never commit GSC credentials, tokens, complete raw query exports, country/device rows, or user data.
 - Keep source code in `src/` once implementation starts.
 - Keep content templates in `docs/plan/content-strategy.md` until a CMS or content model exists.

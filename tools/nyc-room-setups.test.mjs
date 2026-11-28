@@ -33,6 +33,7 @@ test("page: one section per setup, one card per hotel, plain labels and no stale
   for (const h of data.hotels) assert.match(html, new RegExp(`<section id="${h.id}" class="london-room">`));
   assert.match(html, /Cheapest room Google Hotels showed for 4/);
   assert.match(html, /A family reported:/);
+  assert.match(html, /<section id="booked">/);
   const later = roomSetupsPage("2027-01-15");
   assert.doesNotMatch(later, /≈ \$/);
   assert.match(later, /Check live rates/);

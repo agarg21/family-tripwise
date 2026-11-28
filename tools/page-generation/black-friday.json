@@ -100,19 +100,20 @@
     },
     {
       "operator": "Margaritaville at Sea, cruises from Florida",
-      "deadline": "book Nov 4 to 29",
+      "deadline": "book by Nov 28 to be safe (banner: ends tonight; terms: Nov 29)",
       "kind": "Cruise sale",
-      "text": "Up to 60% off fares; 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay. Book Nov 4 to 29; sailing dates not listed. Taxes, fees and port costs apply to all 4. A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night; the page doesn't say if that is per person or per room. On select dates you can book with a $50 deposit per person; the rest is due by the final payment date.",
+      "text": "Up to 60% off fares; 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay. On Nov 28 the page banner said \"ends tonight\"; the terms say book by Nov 29, so book by Nov 28 to be safe. No sailing dates or per-room price, so we can't total it for a family of 4. Sailing dates not listed. Taxes, fees and port costs apply to all 4. A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night; the page doesn't say if that is per person or per room. On select dates you can book with a $50 deposit per person; the rest is due by the final payment date.",
       "lines": [
         "Up to 60% off fares. 3rd and 4th guests pay $0 fare on select sailings when 2 guests pay.",
+        "No sailing dates or per-room price, so we can't total it for a family of 4.",
         "Sailing dates not listed. Taxes, fees and port costs apply to all 4.",
         "A 7-night Eastern Caribbean cruise on the ship Beachcomber shows from $64 a night. The page doesn't say if that is per person or per room.",
         "On select dates you can book with a $50 deposit per person; the rest is due by the final payment date."
       ],
       "source_label": "Margaritaville at Sea Black Friday Sale page",
       "url": "https://www.margaritavilleatsea.com/current-offers/black-friday-sale",
-      "observed_on": "2026-11-21",
-      "list_until": "2026-11-29"
+      "observed_on": "2026-11-28",
+      "list_until": "2026-11-28"
     },
     {
       "operator": "Royal Caribbean, cruises",
@@ -131,6 +132,24 @@
       "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
       "observed_on": "2026-11-21",
       "list_until": "2026-12-07"
+    },
+    {
+      "operator": "Royal Caribbean Black Friday Sale, cruises",
+      "deadline": "book Nov 26 to 29, 2026",
+      "kind": "Cruise sale",
+      "text": "Book Nov 26 to 29 for cruises leaving Nov 27 or later. Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $1,000 Suite on 6+ nights; $125, $200 and $400 on 5 nights or less. The terms say it combines with the free 3rd and 4th fares and the 60% off the 2nd guest above; their blackout dates still apply. Not with Crown & Anchor member discounts. Separate Cyber Bonus, book Nov 26 to Dec 1: onboard credit per cabin of $50, $75 or $250 on 6+ nights; $25, $50 or $100 on 5 nights or less. Taxes, fees and port costs apply to all 4 guests. Eligible ports and ships not listed. No fares shown, so we can't total it.",
+      "lines": [
+        "Book Nov 26 to 29 for cruises leaving Nov 27 or later.",
+        "Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $1,000 Suite on 6+ nights.",
+        "On 5 nights or less: $125 Inside or Ocean View, $200 Balcony, $400 Suite. Not with Crown & Anchor member discounts.",
+        "The terms say it combines with the free 3rd and 4th fares and the 60% off the 2nd guest above; their blackout dates still apply.",
+        "Separate Cyber Bonus, book Nov 26 to Dec 1: onboard credit per cabin of $50, $75 or $250 on 6+ nights; $25, $50 or $100 on 5 nights or less.",
+        "Taxes, fees and port costs apply to all 4 guests. Eligible ports and ships not listed. No fares shown, so we can't total it."
+      ],
+      "source_label": "Royal Caribbean promotion terms",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
+      "observed_on": "2026-11-28",
+      "list_until": "2026-11-29"
     },
     {
       "operator": "Royal Caribbean Black Friday Preview Sale, cruises",

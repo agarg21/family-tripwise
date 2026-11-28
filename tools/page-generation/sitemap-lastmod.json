@@ -22,23 +22,23 @@
       "lastmod": "2026-11-08"
     },
     "this-week/index.html": {
-      "sha256": "c31189d3d1469ce417961e2beeef9e232b8124cb37152200b46088e5c3566995",
+      "sha256": "af219a6dacc1128c79ff15ffbd2a620793ff91f1d831e5628fc28ec09e128ea8",
       "lastmod": "2026-11-28"
     },
     "deals/index.html": {
-      "sha256": "505525ed9acaa239c6586e3c70afd64fe36cc69f21d7ab3e42ce5cf61f6c3591",
+      "sha256": "406a2f6735d9b5e20ff5d7c6a7cb6fcde8d6c75cbbe1104ddbd32d284299c454",
       "lastmod": "2026-11-28"
     },
     "deals/black-friday-family-travel-deals.html": {
-      "sha256": "61331130c9669459508754c4c9127e571b9b09bbf4254d1fff63ca6c8c5576ff",
+      "sha256": "cce326654a9e00fd3b2bf96e256a482be2c00918c45f8d9ef7291fedf0716687",
       "lastmod": "2026-11-28"
     },
     "deals/seaworld-passes.html": {
-      "sha256": "013b5c9f391689c36e49155d00eae58e1e86772d747764d853f4880e3ad34842",
+      "sha256": "51f297eaae57b502f210ea91092afec0f082ecf1ed213e21e4de8229ae8590af",
       "lastmod": "2026-11-28"
     },
     "deals/six-flags-passes.html": {
-      "sha256": "50339be2f0cefa544cfe7ca91990e429d15ad9bce1662008abe4ac177ed106eb",
+      "sha256": "5bcc447bd6282c5c0a03da2b8572b298cbddff65bfd7e2b451164f2235b8ca2a",
       "lastmod": "2026-11-28"
     },
     "deals/sesame-place-passes.html": {
@@ -54,52 +54,64 @@
       "lastmod": "2026-11-28"
     },
     "deals/club-med-all-inclusive-kids-under-4.html": {
-      "sha256": "52a3f0297f9e37b7a0161658470f7d420ed77dc491ee6f05765776185e43199b",
+      "sha256": "eb287759cee97a0d97f2da160a886fe1fa76299ba4babeb452322b93e3386b2d",
       "lastmod": "2026-11-28"
     },
     "deals/seaworld-orlando-2027-fun-card.html": {
-      "sha256": "3bdb384835c80fc501fdd5d38239f64623d7471a60c7ae776e7bb4fc27d1a8f5",
+      "sha256": "920d176b8d05211d2be698cce681dfacedef01b504b5c7cf3e1749bc1b286071",
       "lastmod": "2026-11-28"
     },
     "deals/seaworld-san-antonio-2027-season-pass.html": {
-      "sha256": "5054e242390881202433c1de9efc3d0cfab8aaa1db0ccd3254001b4f17057469",
+      "sha256": "2bd5dbdfd1c4f6305d5dcb8c43b1078b258e6778b0a3066a0c00d813f68db577",
       "lastmod": "2026-11-28"
     },
     "deals/sesame-place-san-diego-2027-silver-pass.html": {
-      "sha256": "4eff1c2f41e7d02bdb511f98ff1d128311eab21f51d225478a6966039eda4af2",
+      "sha256": "32b8780eb5cd0fc62507c871c9c05e5e3c8b2773d24a56b3c62d29a04d9d4e92",
       "lastmod": "2026-11-28"
     },
     "deals/atlantis-bahamas-cyber-sale-2026.html": {
-      "sha256": "5f8e3203e808b26887e27f59d1346712c20434e8808ce879c5fe2cf368746fd9",
+      "sha256": "806e02c768722346804939fb88dec5bf5e80c05ea634fcd3bcb006090d6486b1",
       "lastmod": "2026-11-28"
     },
     "deals/legoland-new-york-2027-season-pass.html": {
-      "sha256": "7255ec937f0316cabd56e938288f935d4ba27f50c585b64b86a84ad3592ba206",
+      "sha256": "216f00a6ce3fc0f8eec2e14346bdccd7bbbce6107ec464f8bfdc107603358fec",
       "lastmod": "2026-11-28"
     },
     "deals/legoland-california-annual-pass.html": {
-      "sha256": "fdd4213616cc6605f8db146892805ca7fde44f9309e145d6e41e152400ca36af",
+      "sha256": "925c3fafd67bce1f66061de537da74298f2b066bd1c720abe5498dbd59234dc2",
       "lastmod": "2026-11-28"
     },
     "deals/legoland-florida-annual-pass.html": {
-      "sha256": "878c60de2e87c236ef64d1f6a3aa44300aa596120a453fc4f2f025687d6f35ce",
+      "sha256": "94b185c78b605437bb5b5de551feb848cd60e195f8a19625a6274d8ee866a877",
       "lastmod": "2026-11-28"
     },
     "deals/deer-valley-kids-ski-free-week.html": {
-      "sha256": "25906f0aa88ba450badba2fab995687a093410786e5b4ce5d55a1d39de7d632a",
+      "sha256": "3b33f373891d5acbf923929e14f1efbbfb29b14f96f4556b10e0d21735b186c5",
       "lastmod": "2026-11-28"
     },
     "deals/beaches-black-friday-unlocked-2026.html": {
-      "sha256": "83ba9cea09e16535cc9d5bb4c76ac47cd4fe639699487cad9a049b2f32d20141",
+      "sha256": "43b5727a630cc773f49010fc543a5bc53aa258c5190058a4481cc2218b41f72e",
+      "lastmod": "2026-11-28"
+    },
+    "deals/six-flags-great-adventure-2027-silver-pass.html": {
+      "sha256": "3a5659eb737bb99a3aff0e3d2a0437a558849b53c9e7a133eff9efa86929360d",
+      "lastmod": "2026-11-28"
+    },
+    "deals/six-flags-fiesta-texas-2027-silver-pass.html": {
+      "sha256": "f589864b4f79e844f1a65f2e1a6891a2ee851493159b15a989d1b33a4a87fd9e",
+      "lastmod": "2026-11-28"
+    },
+    "deals/six-flags-great-america-2027-silver-pass.html": {
+      "sha256": "34a81bf04c6d8aabb5f7f87acf8a6d4a83425f0aa0f51460923abb257dcc8a8f",
       "lastmod": "2026-11-28"
     },
     "holidays/theme-park-christmas-events-with-kids.html": {
-      "sha256": "c101dbafab37588d4b67dff07e1ab90a41ec0ed68f0c38bdcadef1de7fb8fafa",
-      "lastmod": "2026-11-26"
+      "sha256": "bd0da4c35c9b8fd556d5ee7b2986ff3aa2daeb49386ff331e6fa89ffa26bd6fa",
+      "lastmod": "2026-11-28"
     },
     "holidays/san-diego-christmas-with-kids.html": {
-      "sha256": "ff56930927db76cd6b675e48990c79643cb7ec31817cbd6ee4e62fffe8d318ad",
-      "lastmod": "2026-11-25"
+      "sha256": "111ab80fb883ace369d475d461a8ba1e3a66cebcc4265b63ae9345b4e7d5492f",
+      "lastmod": "2026-11-28"
     },
     "holidays/orlando-christmas-with-kids.html": {
       "sha256": "be76e59fb3032f263a06815931928da078ba68ad4a7c8e3232d5583f618b19ed",
@@ -114,7 +126,7 @@
       "lastmod": "2026-11-25"
     },
     "holidays/new-york-city-christmas-with-kids.html": {
-      "sha256": "bafd4befc4615e726698ffb2c4d696f5c2c8dadd876a3f55ada93cf2f2f597b2",
+      "sha256": "c1dcb5ed7418e0e17fde734e24b67441e2b6b1acb7ce86d64de56ca449db6e71",
       "lastmod": "2026-11-28"
     },
     "holidays/chicago-christmas-with-kids.html": {
@@ -334,8 +346,8 @@
       "lastmod": "2026-11-27"
     },
     "where-to-stay/new-york-city-family-hotel-rooms.html": {
-      "sha256": "39f1bcad0e8c7197d852193d12c3dc16060ca3b9f09dcac9dee32a45a506d025",
-      "lastmod": "2026-11-27"
+      "sha256": "4ccb1d34de0f8beae6e4c24fcfa20419e99c990bc8d2985ba401cf090385014e",
+      "lastmod": "2026-11-28"
     },
     "where-to-stay/san-antonio-family-hotels.html": {
       "sha256": "e7d361ccaba7298f40169c132c8986f9a607c5ac015cf4d6ad610e275daeed99",

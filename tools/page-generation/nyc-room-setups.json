@@ -68,11 +68,6 @@
         "label": "Expedia listing",
         "url": "https://www.expedia.co.uk/New-York-Hotels-Paramount-Times-Square.h24245.Hotel-Information"
       },
-      "reported": {
-        "text": "A family of 4 posted that they booked the quad bunk room for a November 2026 trip to see shows nearby.",
-        "label": "Tripadvisor forum thread",
-        "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15586956-Best_Hotels_for_Trip_with_Kids-New_York_City_New_York.html"
-      },
       "notes": {
         "bunk": "Classic Quadruple, 4 twin bunks",
         "sleeps5": "Private 6 Bed Room, 6 twin bunks"
@@ -562,6 +557,175 @@
         "url": "https://www.empirehotelnyc.com/rooms/empire-junior-suite-two-double-beds"
       },
       "crib": "Not stated"
+    },
+    {
+      "id": "seville",
+      "name": "Hotel Seville NoMad",
+      "area": "NoMad",
+      "price_title": "Hotel Seville NoMad - The Unbound Collection by Hyatt",
+      "setups": [
+        "two-queens",
+        "connecting",
+        "sleeps5"
+      ],
+      "room": "Deluxe Suite 2 Queens",
+      "beds": "2 queen beds plus a sleeper sofa in the living space. Deluxe rooms have 2 queens (300 sq ft).",
+      "sleeps": "Not stated by the hotel; a larger suite with 2 queens and a double sofa bed is listed for 6",
+      "size": "475 sq ft",
+      "door": "Not stated (living space)",
+      "bathrooms": "2 (suite)",
+      "kitchen": "Not stated",
+      "breakfast": "Not stated",
+      "connecting": "Listed as available (Expedia)",
+      "crib": "Free cribs listed (Expedia)",
+      "catch": "A boutique hotel; the 6-person suite is a booking-site listing, so confirm the beds with the hotel.",
+      "notes": {
+        "two-queens": "Deluxe room or Deluxe Suite with 2 queens",
+        "connecting": "Connecting rooms listed",
+        "sleeps5": "Suite with 2 queens + sofa bed, listed for 6"
+      },
+      "source": {
+        "kind": "official",
+        "label": "Hyatt room page",
+        "url": "https://www.hyatt.com/unbound-collection/en-US/nycud-hotel-seville-nomad/rooms"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Expedia listing",
+        "url": "https://www.expedia.co.uk/New-York-Hotels-The-James-New-York-NoMad.h17939186.Hotel-Information"
+      }
+    },
+    {
+      "id": "mint-house",
+      "name": "Mint House at 70 Pine",
+      "area": "Financial District",
+      "price_title": "Mint House at 70 Pine",
+      "setups": [
+        "suite",
+        "kitchen",
+        "sleeps5"
+      ],
+      "room": "2 Bedroom Plus, 2 Bath",
+      "beds": "A king, a queen and a sofa bed across 2 bedrooms.",
+      "sleeps": "6",
+      "size": "About 1,100 sq ft",
+      "door": "Not stated (2 bedrooms)",
+      "bathrooms": "2",
+      "kitchen": "Full kitchen with oven, stove and fridge (listing)",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "crib": "Not stated",
+      "catch": "Apartment-style: check what housekeeping and front-desk hours your rate includes.",
+      "notes": {
+        "suite": "Two-bedroom suite, 2 bathrooms",
+        "kitchen": "Full kitchen with oven and stove (listing)",
+        "sleeps5": "Two-bedroom suite, sleeps 6"
+      },
+      "source": {
+        "kind": "booking",
+        "label": "Suiteness listing",
+        "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/lyric-at-70-pine/2-bedroom-plus-2-bath/amp"
+      }
+    },
+    {
+      "id": "bayard",
+      "name": "The Bayard",
+      "area": "Midtown East (Turtle Bay)",
+      "price_title": "The Bayard Hotel",
+      "setups": [
+        "suite",
+        "kitchen",
+        "breakfast",
+        "sleeps5"
+      ],
+      "room": "Family Two-Bedroom Apartment",
+      "beds": "A king, 2 twins and a queen sofa bed across 2 bedrooms. The One-Bedroom King Apartment has a king and a queen sofa bed.",
+      "sleeps": "6 (two-bedroom); 4 (one-bedroom)",
+      "size": "1,103 sq ft",
+      "door": "Not stated (2 bedrooms)",
+      "bathrooms": "Not stated",
+      "kitchen": "Fridge, microwave, coffee maker and cookware (listing)",
+      "breakfast": "Free buffet breakfast (listing)",
+      "connecting": "Not stated",
+      "crib": "Free cribs listed (Orbitz)",
+      "catch": "A small 35-room hotel, renovated in 2025: few family apartments, so book early.",
+      "notes": {
+        "suite": "One- or two-bedroom apartments",
+        "kitchen": "Kitchen items listed (Orbitz)",
+        "breakfast": "Free buffet breakfast (listing)",
+        "sleeps5": "Family Two-Bedroom Apartment, sleeps 6"
+      },
+      "source": {
+        "kind": "booking",
+        "label": "Orbitz listing",
+        "url": "https://www.orbitz.com/New-York-Hotels-The-Bayard.h888641.Hotel-Information"
+      }
+    },
+    {
+      "id": "springhill-park",
+      "name": "SpringHill Suites Park Avenue",
+      "area": "Midtown (Murray Hill)",
+      "price_title": "SpringHill Suites by Marriott New York Midtown Manhattan/Park Avenue",
+      "setups": [
+        "breakfast"
+      ],
+      "room": "Suite, 2 Double Beds",
+      "beds": "2 double beds in a studio; listed as an all-studio hotel.",
+      "sleeps": "4 (listing)",
+      "size": "Not stated",
+      "door": "No (studio)",
+      "bathrooms": "Not stated",
+      "kitchen": "Not stated",
+      "breakfast": "Free buffet breakfast, 7-9 a.m. (listing)",
+      "connecting": "Not stated",
+      "crib": "Not stated",
+      "catch": "The beds are doubles, not queens, and everyone shares one studio.",
+      "notes": {
+        "breakfast": "Free buffet breakfast, 7-9 a.m. (listing)"
+      },
+      "source": {
+        "kind": "booking",
+        "label": "Expedia listing",
+        "url": "https://www.expedia.com/New-York-Hotels-SpringHill-Suites-By-Marriott-New-York-Midtown-ManhattanPark-Avenue.h36968921.Hotel-Information"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Travelocity listing",
+        "url": "https://www.travelocity.com/New-York-Hotels-SpringHill-Suites-By-Marriott-New-York-Midtown-ManhattanPark-Avenue.h36968921.Hotel-Information"
+      }
+    },
+    {
+      "id": "ac-downtown",
+      "name": "AC Hotel New York Downtown",
+      "area": "Financial District",
+      "price_title": "AC Hotel New York Downtown",
+      "setups": [
+        "sleeps5"
+      ],
+      "room": "Room, Multiple Beds",
+      "beds": "2 double beds; the Multiple Beds room adds a double sofa bed. No suites.",
+      "sleeps": "4 (2 doubles); 5 (with sofa bed)",
+      "size": "Not stated",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "No (fridge and coffee maker)",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "crib": "Not stated",
+      "catch": "A regular hotel with no suites, so the family shares one room.",
+      "notes": {
+        "sleeps5": "Room, Multiple Beds: 2 doubles + sofa bed, sleeps 5"
+      },
+      "source": {
+        "kind": "booking",
+        "label": "Wotif listing",
+        "url": "https://www.wotif.com/New-York-Hotels-AC-Hotel-By-Marriott-New-York-Downtown.h22514703.Hotel-Information"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "HotelPlanner listing",
+        "url": "https://hotelplanner.com/Hotels/274172/Reservations-AC-Hotel-by-Marriott-New-York-Downtown-New-York-151-Maiden-Ln-10038?gencall=1"
+      }
     }
   ],
   "sections": {
@@ -599,5 +763,98 @@
       "intro": "Most NYC rooms sleep 4. These list 5 or more, often counting a sofa bed.",
       "check": "Book for everyone, kids included, and ask whether the sofa bed is counted in the number."
     }
-  }
+  },
+  "booked": [
+    {
+      "party": "3 adults + an 18-month-old",
+      "when": "Oct 2026",
+      "stay": "One room at Hyatt Place Long Island City",
+      "hotel": "hyatt-place-lic",
+      "what": "Chose it for a big room and a bathtub; the post covers getting around the subway with a stroller.",
+      "label": "Reddit trip report",
+      "url": "https://www.reddit.com/r/Travelwithkids/comments/1xc4vd5/travel_to_nyc_with_toddler_success_story/"
+    },
+    {
+      "party": "2 adults, kids 4 and 10 months",
+      "when": "Jun 2026",
+      "stay": "One room at AC Hotel Downtown",
+      "hotel": "ac-downtown",
+      "what": "Liked the space for gear and the quiet nights; the post covers subway stations with a stroller.",
+      "label": "Reddit trip report",
+      "url": "https://www.reddit.com/r/visitingnyc/comments/1uc1azm/nyc_trip_report_june_2026_what_took_us_so_long_to/"
+    },
+    {
+      "party": "2 adults, teens 15 and 16",
+      "when": "Jun 2026",
+      "stay": "One room at the Westin Times Square, then two rooms at SpringHill Suites Park Avenue",
+      "hotel": "springhill-park",
+      "what": "Booked separate rooms for parents and kids, on points; would skip Times Square when choosing themselves.",
+      "label": "Reddit trip report",
+      "url": "https://www.reddit.com/r/visitingnyc/comments/1uq5flj/trip_report_family_with_2_teens_times_square/"
+    },
+    {
+      "party": "1 parent, teens 17 and 14",
+      "when": "Oct 2026, 5 nights",
+      "stay": "Junior suite with a kitchen at Hotel Beacon (flight + hotel package)",
+      "hotel": "beacon",
+      "what": "Used the kitchen and dining area for takeout and leftovers.",
+      "label": "Reddit trip report",
+      "url": "https://www.reddit.com/r/visitingnyc/comments/1xfz0sr/trip_report_fall_in_new_york_mom_52_and_2/"
+    },
+    {
+      "party": "2 adults + 3 kids",
+      "when": "Date not stated",
+      "stay": "Suite with 2 queens and a queen pull-out at Hotel Seville NoMad, on points",
+      "hotel": "seville",
+      "what": "Two bathrooms and breakfast helped; the adults found it noisy.",
+      "label": "Reddit post",
+      "url": "https://www.reddit.com/r/hyatt/comments/1sifpqt/hotel_seville_nomad_nyc/"
+    },
+    {
+      "party": "Family of 5",
+      "when": "Dec 2025",
+      "stay": "Apartment-style suite at Mint House at 70 Pine",
+      "hotel": "mint-house",
+      "what": "Liked the supermarket downstairs and the subway nearby.",
+      "label": "Reddit reply",
+      "url": "https://www.reddit.com/r/travel/comments/1svbyo7/nyc_hotel_with_kids/"
+    },
+    {
+      "party": "Family of 4",
+      "when": "Nov 2026",
+      "stay": "Quad bunk room at Paramount Times Square",
+      "hotel": "paramount",
+      "what": "Booked it to be near two shows, despite warnings that the rooms are small.",
+      "label": "Tripadvisor forum",
+      "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15586956-Best_Hotels_for_Trip_with_Kids-New_York_City_New_York.html"
+    },
+    {
+      "party": "4, with teens 19 and 16",
+      "when": "Jul 2026",
+      "stay": "The Fifty Sonesta",
+      "hotel": "fifty",
+      "what": "Liked the space and being able to walk to things.",
+      "label": "Tripadvisor trip report",
+      "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15554577-Summer_Trip_Report_NYC_With_Teens_and_Autism_and_Celiac-New_York_City_New_York.html"
+    },
+    {
+      "party": "2 adults + 3 teens",
+      "when": "Date not stated",
+      "stay": "Two rooms near 23rd St and 7th Ave (hotel not named)",
+      "hotel": null,
+      "what": "The inside room was better for sleep; the street-facing one had the view.",
+      "label": "Reddit trip report",
+      "url": "https://www.reddit.com/r/visitingnyc/comments/1s2w71s/post_nyc_trip_recap/"
+    },
+    {
+      "party": "2 adults, kids 12 and 7",
+      "when": "Jun 2026",
+      "stay": "A hotel near Bryant Park (not named)",
+      "hotel": null,
+      "what": "Went back to the room midday to cool off and eat leftovers.",
+      "label": "Reddit trip report",
+      "url": "https://www.reddit.com/r/visitingnyc/comments/1u7gyw9/4_days_with_family_of_4/"
+    }
+  ],
+  "booked_read_on": "2026-11-27"
 }

@@ -129,7 +129,7 @@ test("G02b: terms table keeps table semantics when stacked; status line does not
 test("SeaWorld Fun Card check keeps the record's per-person basis, unclear prices and no family total", () => {
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
   assert.ok(sw, "added 2026-10-28 (docs/research/deal-checks-2026-10-28.md)");
-  assert.equal(sw.official_url, "https://seaworld.com/orlando/limited-time-offers/", "re-read November 28, 2026 (docs/research/deal-checks-2026-11-28-seaworld-orlando.md)");
+  assert.equal(sw.official_url, "https://seaworld.com/orlando/tickets/fun-card-b/", "2027 Fun Card page read midday ET November 28, 2026 (docs/research/deal-checks-2026-11-28-seaworld-orlando.md)");
   assert.ok(sw.v2.extra_sources.some((src) => src.url === "https://seaworld.com/orlando/tickets/fun-card/"), "the Fun Card page (read November 13) stays a dated source");
   assert.ok(sw.v2.extra_sources.some((src) => src.url === "https://seaworld.com/orlando/limited-time-offers/" && src.observed_on === "2026-11-28"), "the offers page (annual pass price) stays a dated source");
   assert.ok(sw.unclear.some((u) => /Fun Card page showed USD 144\.99/.test(u)), "the conflicting Fun Card page read stays flagged");

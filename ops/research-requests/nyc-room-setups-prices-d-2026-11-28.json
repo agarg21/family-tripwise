@@ -1,0 +1,84 @@
+{
+  "action": "G18",
+  "purpose": "NYC room-setups page: 5 hotels from the family-stay research (owner 11-28)",
+  "hotel_searches": [
+    {
+      "label": "nycr-ac-downtown-jan22-1n",
+      "keyword": "AC Hotel by Marriott New York Downtown",
+      "location_coordinate": "40.7058,-74.0051",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "AC Hotel"
+    },
+    {
+      "label": "nycr-ac-downtown-jan23-1n",
+      "keyword": "AC Hotel by Marriott New York Downtown",
+      "location_coordinate": "40.7058,-74.0051",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "AC Hotel"
+    },
+    {
+      "label": "nycr-seville-jan22-1n",
+      "keyword": "Hotel Seville NoMad New York",
+      "location_coordinate": "40.7449,-73.9864",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Seville"
+    },
+    {
+      "label": "nycr-seville-jan23-1n",
+      "keyword": "Hotel Seville NoMad New York",
+      "location_coordinate": "40.7449,-73.9864",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Seville"
+    },
+    {
+      "label": "nycr-mint-pine-jan22-1n",
+      "keyword": "Mint House at 70 Pine New York",
+      "location_coordinate": "40.7066,-74.0076",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Mint House"
+    },
+    {
+      "label": "nycr-mint-pine-jan23-1n",
+      "keyword": "Mint House at 70 Pine New York",
+      "location_coordinate": "40.7066,-74.0076",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Mint House"
+    }
+  ]
+}

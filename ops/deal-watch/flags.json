@@ -1,4 +1,58 @@
 {
   "note": "Pending deal-watch flags (QUEUE G09). The operator verifies each on the official page, then deletes the flag. A flag is a lead, not a fact.",
-  "flags": []
+  "flags": [
+    {
+      "source_id": "seaworld-orlando-tickets",
+      "operator": "SeaWorld Orlando",
+      "url": "https://seaworld.com/orlando/tickets/",
+      "check_id": null,
+      "kind": "changed",
+      "detected_at": "2026-11-28T13:13:31.525Z",
+      "previous_headline": "SeaWorld Orlando Tickets & Admission",
+      "headline": "SeaWorld Orlando Tickets & Admission",
+      "added": [
+        "Cyber Monday",
+        "Cyber Monday: Tickets as low as $61.99",
+        "Cyber Monday: Save up to 40%",
+        "Cyber Monday: Save up to 60%",
+        "Cyber Monday: Save Over 20%",
+        "Cyber Monday: Save Up to 45%",
+        "Cyber Monday: Save Over 40%"
+      ],
+      "removed": [
+        "Black Friday",
+        "Black Friday: Tickets as low as $61.99",
+        "Black Friday: Save up to 40%",
+        "Black Friday: Save up to 60%",
+        "Black Friday: Save Over 20%",
+        "Black Friday: Save Up to 45%"
+      ],
+      "added_count": 7,
+      "removed_count": 7
+    },
+    {
+      "source_id": "seaworld-orlando-fun-card",
+      "operator": "SeaWorld Orlando",
+      "url": "https://seaworld.com/orlando/tickets/fun-card/",
+      "check_id": "seaworld-orlando-2027-fun-card",
+      "kind": "changed",
+      "detected_at": "2026-11-28T13:13:33.036Z",
+      "previous_headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
+      "headline": "SeaWorld Orlando Fun Card: Unlimited Visits All Year",
+      "added": [
+        "Cyber Monday",
+        "Cyber Monday: Save Up to 40%",
+        "Cyber Monday: Save Up to 25%",
+        "Cyber Monday: Save Up to 30%",
+        "Cyber Monday: Save 35%"
+      ],
+      "removed": [
+        "Black Friday",
+        "Black Friday: Save Up to 40%",
+        "Black Friday: Save Up to 25%"
+      ],
+      "added_count": 5,
+      "removed_count": 5
+    }
+  ]
 }

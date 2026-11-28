@@ -837,7 +837,7 @@
       "type": "event",
       "city": "New York City",
       "title": "Holiday Train Show at Grand Central: free model trains, no strollers",
-      "when": "Opens Friday, November 13, at the New York Transit Museum's Grand Central Gallery, in the Shuttle Passage off the Main Concourse. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays. The museum's pages give no closing date.",
+      "when": "Open now through Feb 21, 2027, per the museum's 2026 sponsor deck (its visitor pages give no closing date), at the New York Transit Museum's Grand Central Gallery, in the Shuttle Passage off the Main Concourse. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Christmas Day, New Year's Day and other listed holidays.",
       "cost": "Free. The museum lists admission as free; its visitor guide says no tickets are needed.",
       "booking": "No booking listed. The museum's visitor guide says it can be crowded and loud, and people take turns at the display.",
       "family": "Strollers are not allowed in the gallery, and unattended strollers are not allowed anywhere in the terminal, so the museum suggests leaving yours at home. Per its visitor guide (no year shown), model trains are in a large case, kids can't touch, and you can ask for a scavenger hunt sheet. The museum says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt; it doesn't describe the route to the gallery.",
@@ -849,19 +849,23 @@
           "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
         },
         {
-          "label": "Transit Museum: train show visitor guide (no year shown)",
+          "label": "Transit Museum: 2026 train show sponsor deck (dates)",
+          "url": "https://www.nytransitmuseum.org/wp-content/uploads/2026/10/2026-New-York-Transit-Museum-Holiday-Train-Show-Sponsorship-Deck.pdf"
+        },
+        {
+          "label": "Transit Museum: train show visitor guide (no year shown, read Nov 4)",
           "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
         }
       ],
-      "observed_on": "2026-11-04",
+      "observed_on": "2026-11-28",
       "starts_on": "2026-11-13",
       "sort_on": "2026-11-13",
       "expires_on": "2026-11-30",
       "third_party": false,
       "post": {
-        "when": "Opens Fri, Nov 13, Grand Central, NYC. Weekdays 10 to 7:30, weekends 10 to 6. No end date posted.",
+        "when": "Open now to Feb 21, 2027, per the museum. Grand Central, NYC. Weekdays 10 to 7:30, weekends 10 to 6.",
         "cost": "Free, no tickets needed, per the museum.",
-        "catch": "No strollers in the gallery. Closed Thanksgiving and Christmas Day."
+        "catch": "No strollers in the gallery. Closed Christmas Day and New Year's Day."
       }
     },
     {

@@ -106,7 +106,7 @@ function figure(ev, today) {
   if (paidCard(ev, today)) return `<p class="holiday-figure">${range(ev)}<small>tickets for 4, estimate${ev.cost_basis ? `; ${e(ev.cost_basis)}` : " from published prices"}, ${checked}</small></p>`;
   // figure_note_priced: a short pointer to dated price text in the card details (cost_priced), shown only while that text shows.
   if (!priced(ev) && ev.figure_note_priced && ev.cost_priced && fresh(ev, today)) return `<p class="holiday-figure holiday-figure-text">Check live<small>${e(ev.figure_note_priced)}</small></p>`;
-  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? `our last price check, ${short(ev.observed_on)}, is too old to show` : `we couldn't read a price on ${short(ev.price_read_on ?? ev.observed_on)}`}</small></p>`;
+  return `<p class="holiday-figure holiday-figure-text">Check live<small>${priced(ev) ? (ev.price_until && today > ev.price_until ? `the sale price we read on ${short(ev.observed_on)} showed only to ${short(ev.price_until)}; it may have ended` : `our last price check, ${short(ev.observed_on)}, is too old to show`) : `we couldn't read a price on ${short(ev.price_read_on ?? ev.observed_on)}`}</small></p>`;
 }
 const kidLine = (k, today) => {
   if (typeof k === "string") return k;

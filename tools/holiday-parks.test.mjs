@@ -78,3 +78,12 @@ test("SeaWorld San Antonio sale price (read Nov 22, no end stated) shows to Nov 
   assert.doesNotMatch(after, /about \$150|≈ \$200/);
   assert.match(after, /Nov 12 to Jan 4 is from our Nov 3 read/);
 });
+
+test("a sale price hides after price_until with its own reason", () => {
+  const lego = data.parks.find((p) => p.id === "legoland-california");
+  assert.equal(priceIsFresh(lego, "2026-11-29"), true);
+  assert.equal(priceIsFresh(lego, "2026-11-30"), false);
+  const card = holidayParksPage(data, "2026-11-30").match(/<article id="legoland-california"[\s\S]*?<\/article>/)[0];
+  assert.doesNotMatch(card, /\$64|\$256|too old to show/);
+  assert.match(card, /sale price we read on Nov 28 showed only to Nov 29; it may have ended/);
+});

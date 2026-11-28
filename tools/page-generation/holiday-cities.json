@@ -179,7 +179,7 @@
           "cost_note": "Fares are starting prices and rise closer to Christmas. The best seats sell out quickly.",
           "cost_priced": "Classic Coach from $30 adults, $15 ages 1 to 17; Business from $50 / $35; First from $65 / $50.",
           "watch": "Online sales close 30 minutes before departure. The page doesn't mention strollers.",
-          "observed_on": "2026-11-04",
+          "observed_on": "2026-11-28",
           "sources": [
             {
               "label": "Pacific Southwest Railway Museum",
@@ -237,10 +237,10 @@
           "start_on": "2026-12-04",
           "end_on": "2026-12-23",
           "table_when": "Select dates, Dec 4 to 23",
-          "cost_low": 100,
-          "cost_high": 100,
+          "cost_low": 96,
+          "cost_high": 96,
           "cost_from": true,
-          "cost_basis": "from about $25 each, by date and time; same price for kids",
+          "cost_basis": "from $24 each, by date and time; same price for kids; under 36 inches free with a ticketed adult",
           "kids": [
             "Sledding on real snow, carousel, Christmas train, carnival games",
             "Meeting Santa is in the ticket"
@@ -248,16 +248,16 @@
           "extra": "Food. We didn't see a parking price.",
           "extra_stale": "Food. We didn't see a parking price.",
           "cost_note": "Children and adults pay the same; the price varies by date and time. All attractions are included. The Padres' page gives no year; San Diego's tourism board lists 2026.",
-          "cost_priced": "Starts around $25 a person.",
-          "watch": "Check sledding age or height limits and hours: the page gives none, and no stroller rules or free age. Nightly snowfall is listed.",
-          "observed_on": "2026-11-04",
+          "cost_priced": "Starts at $24 a person; the page says service fees are in the price shown at checkout.",
+          "watch": "All ticket holders enter at 4 p.m., whatever time the ticket shows. Children under 36 inches get in free with a ticketed adult. The page gives no sledding age or height limits and no stroller or parking rules. Nightly snowfall is listed.",
+          "observed_on": "2026-11-28",
           "sources": [
             {
               "label": "Padres event page",
               "url": "https://www.mlb.com/padres/tickets/events/holiday-wonderland"
             },
             {
-              "label": "San Diego Tourism",
+              "label": "San Diego Tourism (read Nov 4)",
               "url": "https://www.sandiego.org/plan-your-trip/plan-by-season/holidays/holiday-attraction-action"
             }
           ]
@@ -484,27 +484,28 @@
           "start_on": "2026-11-21",
           "end_on": "2027-01-03",
           "table_when": "Select dates, Nov 21 to Jan 3",
-          "cost_low": 276,
-          "cost_high": 276,
+          "cost_low": 256,
+          "cost_high": 256,
           "cost_from": true,
-          "cost_basis": "from $69 each online; gate price $139",
-          "cost_read": "price checked Nov 3",
+          "cost_basis": "from $64 each online (Black Friday price, ends Nov 29); gate price $139",
+          "cost_read": "price checked Nov 28",
           "kids": [
-            "Feed LEGO reindeer, dance around the giant LEGO tree",
+            "Feed LEGO reindeer; the giant LEGO tree lights up with snow at 5 p.m. on event nights",
             "Photos with LEGO characters"
           ],
           "extra": "Parking and tax.",
           "extra_stale": "Parking and tax.",
           "cost_note": "Included with park admission. The dates on LEGOLAND's page carry no year; we read them as this season.",
-          "watch": "Fireworks on Dec 5, Dec 12 and Dec 19 to 31 only. Early ride access and the dance party are for hotel guests.",
-          "observed_on": "2026-11-03",
+          "watch": "Fireworks on Dec 5, Dec 12 and Dec 19 to 31 only. Early ride access and the dance party come with the Holiday Sleepover hotel stay.",
+          "observed_on": "2026-11-28",
           "sources": [
             {
               "label": "LEGOLAND California",
               "url": "https://www.legoland.com/california/things-to-do/seasonal-events/holidays/"
             }
           ],
-          "table_cost_note": "$556 at the gate"
+          "table_cost_note": "$556 at the gate",
+          "price_until": "2026-11-29"
         },
         {
           "id": "jingle-jets",
@@ -3564,11 +3565,11 @@
           "id": "grand-central-train-show",
           "name": "Holiday Train Show at Grand Central",
           "place": "New York Transit Museum Gallery, Grand Central Terminal, Midtown: Shuttle Passage off the Main Concourse",
-          "dates": "Opens Nov 13; no closing date on the museum's pages. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays.",
-          "table_when": "From Nov 13, closing date not posted",
-          "answer_when": "from Nov 13",
+          "dates": "Open now through Feb 21, 2027, per the museum's 2026 sponsor deck; its visitor pages give no closing date. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Christmas Day, New Year's Day, MLK Day and Presidents' Day, per the museum.",
+          "table_when": "Through Feb 21, 2027, per the museum",
+          "answer_when": "through Feb 21, 2027, per the museum",
           "start_on": "2026-11-13",
-          "end_on": "2026-11-30",
+          "end_on": "2027-02-21",
           "end_unconfirmed": true,
           "free": true,
           "cost_note": "Free, per the Transit Museum; its visitor guide says no tickets.",
@@ -3579,7 +3580,7 @@
           "extra_label": "Also here",
           "extra": "The show is next to the museum store, per the same guide.",
           "watch": "None left unattended anywhere in the terminal either; the museum suggests leaving strollers at home. It says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt. It doesn't describe the route to the gallery.",
-          "observed_on": "2026-11-04",
+          "observed_on": "2026-11-28",
           "sources": [
             {
               "label": "Transit Museum exhibits page",
@@ -3590,7 +3591,11 @@
               "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
             },
             {
-              "label": "Transit Museum train show guide, no year shown",
+              "label": "Transit Museum 2026 train show sponsor deck (dates)",
+              "url": "https://www.nytransitmuseum.org/wp-content/uploads/2026/10/2026-New-York-Transit-Museum-Holiday-Train-Show-Sponsorship-Deck.pdf"
+            },
+            {
+              "label": "Transit Museum train show guide, no year shown (read Nov 4)",
               "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
             }
           ]
