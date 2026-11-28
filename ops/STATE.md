@@ -2,10 +2,10 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-28 transactions=7
-run: {id: 2026-11-28T17:04:59Z, started_at: 2026-11-28T17:04:59Z}
-last_public_release: eaec8c63 G09w Six Flags Silver Pass BF extended to Nov 30 (release.json 14:5xZ Nov 28)
-active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
+today: 2026-11-28 transactions=8
+run: none
+last_public_release: 118e0959 G09w SeaWorld Orlando Fun Card relabelled Cyber Monday, listed to Nov 30 (release.json 17:3xZ Nov 28)
+active: none
 
 ## Holds (what, unblock)
 - Dated holds and re-reads: ops/HOLDS.md. Each run: `node tools/holds-due.mjs` (prints only what is due today ET).
@@ -25,4 +25,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 16:05Z G16 step 2: 2 normal trend flags closed after a search-only first check (Orlando Fringe Winter Mini-Fest Jan 7-11: ticketed fringe theatre, outside the holiday window; SA Peace Market shopper gallery: off family-trip fit). No fetch, no public change. G09w-swo waits for its 12:00 ET read.
+- 11-28 17:05Z G09w-swo delivered 118e0959: seaworld.com/orlando/ (home) and tickets/fun-card-b/ read once at 12:10 ET: sale now "Cyber Monday: Save Up to 40%", $104.99/$144.99 unchanged, file name endsnov30 (file name only). Card listed to Nov 30; main source fun-card-b. Integrity PASS_WITH_P3; persona 3.8 PASS (D34); design PASS_WITH_P3 4.0. 2 SWO flags cleared.
