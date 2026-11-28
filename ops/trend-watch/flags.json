@@ -1,6 +1,89 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-4f04162061",
+      "city": "New York City",
+      "title": "100th Macy's Thanksgiving Day Parade steps off Saturday after weather postponement",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/100th-macys-thanksgiving-day-parade-steps-off-saturday-after-weather-postponement/",
+          "published": "2026-11-28T04:09Z"
+        },
+        {
+          "outlet": "WGN-TV (Chicago news)",
+          "url": "https://wgntv.com/news/illinois/thousands-raised-to-support-marching-illini-through-macys-thanksgiving-day-parade-postponement/",
+          "published": "2026-11-28T03:18Z"
+        },
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/first-alert-weather-fine-for-macys-thanksgiving-day-parade-in-new-york-112726/",
+          "published": "2026-11-28T04:26Z"
+        }
+      ],
+      "first_seen": "2026-11-28T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "first",
+          "new",
+          "published<24h"
+        ],
+        "momentum": [
+          "outlets:2"
+        ],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "first",
+        "new"
+      ],
+      "score": 10,
+      "priority": "normal"
+    },
+    {
+      "id": "t-de60f873c1",
+      "city": "New York City",
+      "title": "Queens families cleaning up after Thanksgiving storm",
+      "links": [
+        {
+          "outlet": "CBS New York",
+          "url": "https://www.cbsnews.com/newyork/video/queens-families-cleaning-up-after-thanksgiving-storm/",
+          "published": "2026-11-28T04:14Z"
+        }
+      ],
+      "first_seen": "2026-11-28T05:04Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "family:families",
+          "topic:thanksgiving"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": []
+      },
+      "matched_terms": [
+        "families",
+        "thanksgiving",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
