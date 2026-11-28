@@ -367,7 +367,7 @@
     },
     {
       "id": "seaworld-orlando-2027-fun-card",
-      "black_friday_offer": "Black Friday sale",
+      "black_friday_offer": "Black Friday / Cyber Monday sale",
       "og_card": "$104.99 a person for unlimited SeaWorld Orlando visits through 2027; parking extra",
       "operator": "SeaWorld Orlando",
       "category": "Theme park pass",
@@ -391,7 +391,7 @@
       ],
       "unclear": [
         "The Fun Card offer pages show USD 151.99 and USD 242.99 beside the prices without labelling them; SeaWorld's pricing guide (read October 30, 2026) calls them gate prices. The checkout shows the price you pay.",
-        "No end date is shown in the text for the Black Friday sale; the banner image file names say \"endsnov27\" (a file name, not a stated date), but on November 28 the sale was relabelled Cyber Monday with a file name saying \"endsnov30\" (also a file name only), so the price may change after November 30.",
+        "No end date is shown in the text for the Black Friday sale; the banner image file names said \"endsnov27\" (a file name, not a stated date), but on November 28 the sale was relabelled Cyber Monday with a file name saying \"endsnov30\" (also a file name only), so the price may change after November 30.",
         "On November 13 the Tickets page showed the USD 104.99 presale price while our read of the Fun Card page showed USD 144.99 with no presale banner; on November 20 and 26 both pages showed USD 104.99. The checkout shows the price you pay.",
         "No child price and no free-under age are shown on the Fun Card offer; day tickets are listed for ages 3 and up.",
         "Whether the price includes tax is not stated.",
