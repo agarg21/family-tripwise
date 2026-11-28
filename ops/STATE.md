@@ -48,7 +48,7 @@ active: none
 - GSC: after 11:00Z Nov 30: snapshot self-committed? (Muse 11-27 Q4)
 - SD BF leads (Patch 11-25) unread: Boomers code to Dec 6, SD Fair BOGO to Nov 30.
 - Adventuredome Cyber $40/$20 (press): official Nov 29. Universal USF market (WESH): Dec 1.
-- Disney On Ice Cyber Week (3rd party: GFT35P, 35% off, to Dec 6): official /en-us/cyber-week-2026/ found; robots.txt permission unanswered 11-27 and 11-28 03Z (no retry); owner session only.
+- Disney On Ice Cyber Week (3rd party: GFT35P, 35% off, to Dec 6): robots fetch not granted 11-27, 11-28 (no retry; owner session).
 
 ## Scoreboard (Mondays: newest ops/gsc-snapshots/*.md + live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -60,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 03:04Z G16 step 1: Disney On Ice Cyber Week official page found, robots.txt fetch permission unanswered again (no retry, owner session only). No flags; no public change.
+- 11-28 03:04Z G16: Disney On Ice fetch not granted again (owner session only). No public change.
