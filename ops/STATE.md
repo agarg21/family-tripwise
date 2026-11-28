@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-28 transactions=5
-run: {id: 2026-11-28T14:05:16Z, started_at: 2026-11-28T14:05:16Z}
-last_public_release: cd2e8740 G16 Margaritaville BF row re-read (release.json 13:4xZ Nov 28)
+today: 2026-11-28 transactions=6
+run: none
+last_public_release: eaec8c63 G09w Six Flags Silver Pass BF extended to Nov 30 (release.json 14:5xZ Nov 28)
 active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
 ## Holds (what, unblock)
@@ -25,4 +25,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 13:05Z G16: Margaritaville at Sea BF page re-read; "ENDS TONIGHT" banner vs Nov 29 terms -> BF row "book by Nov 28 to be safe", listed to Nov 28; live cd2e8740. 8 deal-watch flags landed 13:2xZ (incl. SeaWorld Orlando tickets + Fun Card: fold into active G09w-swo) for the next runs.
+- 11-28 14:05Z G09w: Six Flags GE/FT/GA Black Friday Silver Pass extended to Nov 30 (watcher 13:13Z + Daily Tickets reads); 3 checks re-listed, save 19/23/50%; live eaec8c63. GE/FT Daily Tickets still said 11/27 (conflict shown). Macy's trend flag closed (already on NYC page). Left flags: Club Med countdown (noise), Great Wolf BOGO one-day extension, SeaWorld Orlando Cyber Monday (fold into active G09w-swo after 12:00 ET).
