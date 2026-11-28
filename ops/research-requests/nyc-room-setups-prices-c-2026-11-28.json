@@ -1,0 +1,58 @@
+{
+  "action": "G18",
+  "purpose": "NYC room-setups page: own family-of-4 searches for two hotels priced only from other hotels' result lists (integrity review 11-27)",
+  "hotel_searches": [
+    {
+      "label": "nycr-riu-manhattan-jan22-1n",
+      "keyword": "Hotel Riu Plaza Manhattan Times Square",
+      "location_coordinate": "40.7590,-73.9830",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Riu Plaza Manhattan"
+    },
+    {
+      "label": "nycr-riu-manhattan-jan23-1n",
+      "keyword": "Hotel Riu Plaza Manhattan Times Square",
+      "location_coordinate": "40.7590,-73.9830",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Riu Plaza Manhattan"
+    },
+    {
+      "label": "nycr-empire-jan22-1n",
+      "keyword": "The Empire Hotel New York",
+      "location_coordinate": "40.7714,-73.9823",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Empire Hotel"
+    },
+    {
+      "label": "nycr-empire-jan23-1n",
+      "keyword": "The Empire Hotel New York",
+      "location_coordinate": "40.7714,-73.9823",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Empire Hotel"
+    }
+  ]
+}
