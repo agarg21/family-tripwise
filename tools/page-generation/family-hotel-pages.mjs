@@ -2559,6 +2559,7 @@ ${holidayTables}        </div>
           <h1>New York City Family Hotels</h1>
           ${contributorCredit()}
           <p>${esc(liveFour ? (holidayNames.length ? "12 hotels for a family of 4, with weekend and holiday prices" : "12 hotels for a family of 4, with weekend prices") : "12 hotels for a family of 4")}: pick by kitchen, breakfast or pool.</p>
+          <p>Need bunk beds, two queens or a suite with a door? <a href="./new-york-city-family-hotel-rooms.html">Compare NYC hotel rooms by bed setup</a>.</p>
         </div>
       </section>
 ${nycGlance(hotels, [

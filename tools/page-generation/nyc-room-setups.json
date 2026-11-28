@@ -1,0 +1,603 @@
+{
+  "path": "where-to-stay/new-york-city-family-hotel-rooms.html",
+  "read_on": "2026-11-27",
+  "party": {
+    "adults": 2,
+    "child_ages": [
+      5,
+      8
+    ]
+  },
+  "weekend": {
+    "fri": "2027-01-22",
+    "sat": "2027-01-23",
+    "label": "Fri–Sun, Jan 22–24, 2027"
+  },
+  "setups": {
+    "bunk": {
+      "title": "Bunk beds",
+      "short": "Bunk beds"
+    },
+    "two-queens": {
+      "title": "Two queen beds",
+      "short": "2 queens"
+    },
+    "suite": {
+      "title": "Suites with a separate bedroom",
+      "short": "Separate bedroom"
+    },
+    "connecting": {
+      "title": "Connecting rooms",
+      "short": "Connecting"
+    },
+    "kitchen": {
+      "title": "Kitchen or kitchenette",
+      "short": "Kitchen"
+    },
+    "breakfast": {
+      "title": "Free breakfast",
+      "short": "Free breakfast"
+    },
+    "sleeps5": {
+      "title": "Rooms for 5 or more",
+      "short": "Sleeps 5+"
+    }
+  },
+  "hotels": [
+    {
+      "id": "paramount",
+      "name": "Paramount Times Square",
+      "area": "Times Square",
+      "price_title": "Paramount Times Square - A Generator Hotel",
+      "setups": [
+        "bunk",
+        "sleeps5"
+      ],
+      "room": "Classic Quadruple room",
+      "beds": "2 sets of twin bunk beds (4 beds). A Private 6 Bed Room has 3 sets of twin bunks.",
+      "sleeps": "4 (quadruple); 6 (6-bed room)",
+      "size": "6-bed room 248 sq ft",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "Not stated",
+      "breakfast": "Not included (Expedia lists a paid to-go breakfast)",
+      "connecting": "Not stated",
+      "catch": "Every bed is a twin bunk, so the adults sleep in bunks too.",
+      "source": {
+        "kind": "booking",
+        "label": "Expedia listing",
+        "url": "https://www.expedia.co.uk/New-York-Hotels-Paramount-Times-Square.h24245.Hotel-Information"
+      },
+      "reported": {
+        "text": "A family of 4 posted that they booked the quad bunk room for a November 2026 trip to see shows nearby.",
+        "label": "Tripadvisor forum thread",
+        "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15586956-Best_Hotels_for_Trip_with_Kids-New_York_City_New_York.html"
+      },
+      "notes": {
+        "bunk": "Classic Quadruple, 4 twin bunks",
+        "sleeps5": "Private 6 Bed Room, 6 twin bunks"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "motto-chelsea",
+      "name": "Motto by Hilton New York City Chelsea",
+      "area": "Chelsea",
+      "price_title": "Motto by Hilton New York City Chelsea",
+      "setups": [
+        "bunk",
+        "connecting"
+      ],
+      "room": "Room with 4 twin bunk beds",
+      "beds": "4 twin beds as bunks. Another room has a king plus a twin bunk (sleeps 3).",
+      "sleeps": "4 (bunk room)",
+      "size": "Bunk room about 205 sq ft",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "No",
+      "breakfast": "Not stated",
+      "connecting": "Connecting rooms listed (Hotels.com)",
+      "catch": "Rooms are small (about 200 sq ft); for a family of 4, two connecting rooms give more space.",
+      "source": {
+        "kind": "booking",
+        "label": "Hotels.com listing",
+        "url": "https://kr.hotels.com/es/ho2180292448/motto-by-hilton-new-york-city-chelsea-nueva-york-estados-unidos"
+      },
+      "notes": {
+        "bunk": "4 twin bunk beds, sleeps 4",
+        "connecting": "Connecting rooms listed"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "nu-hotel",
+      "name": "NU Hotel Brooklyn",
+      "area": "Boerum Hill, Brooklyn",
+      "price_title": "NU Hotel Brooklyn",
+      "setups": [
+        "bunk"
+      ],
+      "room": "Bunk-Bed Suite",
+      "beds": "1 queen bed plus twin bunk beds.",
+      "sleeps": "Described as right for a family of 4; number not stated",
+      "size": "Not stated",
+      "door": "Not stated",
+      "bathrooms": "Not stated",
+      "kitchen": "No (café table)",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "A Brooklyn base: Midtown sights take a subway ride.",
+      "source": {
+        "kind": "official",
+        "label": "NU Hotel room page",
+        "url": "https://nuhotelbrooklyn.com/rooms/bunkbed-suite"
+      },
+      "notes": {
+        "bunk": "Queen + twin bunks"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "tryp",
+      "name": "TRYP by Wyndham Times Square / Midtown",
+      "area": "Penn Station / Midtown West",
+      "price_title": "TRYP by Wyndham New York City Times Square South",
+      "setups": [
+        "bunk",
+        "two-queens",
+        "sleeps5",
+        "connecting"
+      ],
+      "room": "Family Room",
+      "beds": "2 queen beds, a twin bunk bed and a twin sofa bed. Listings disagree on the exact beds, so confirm.",
+      "sleeps": "Listed for 8",
+      "size": "About 300-333 sq ft",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "No (fridge)",
+      "breakfast": "Not stated",
+      "connecting": "Listed as available (request)",
+      "catch": "Up to 8 people in about 300 sq ft is tight.",
+      "source": {
+        "kind": "booking",
+        "label": "Expedia listing",
+        "url": "https://www.expedia.com/New-York-Hotels-TRYP-By-Wyndham-New-York-City-Times-Square-South.h4621019.Hotel-Information"
+      },
+      "notes": {
+        "bunk": "Family Room: 2 queens, bunk and sofa bed",
+        "two-queens": "Two-queen room or Family Room",
+        "sleeps5": "Family Room, listed for 8",
+        "connecting": "Listed as available (request)"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "riu-manhattan",
+      "name": "Riu Plaza Manhattan Times Square",
+      "area": "Times Square, 47th St",
+      "price_title": "Hotel Riu Plaza Manhattan Times Square",
+      "setups": [
+        "two-queens"
+      ],
+      "room": "Deluxe two Queen beds",
+      "beds": "2 queen beds. A Deluxe family twin room has two beds and a sofa bed.",
+      "sleeps": "Not stated on the hotel's page (a tour operator lists the two-queen room for 4)",
+      "size": "About 226 sq ft (two queens); 269 sq ft (family twin)",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "No",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "The Deluxe family king room is smaller: a tour operator lists it for at most 3 guests.",
+      "source": {
+        "kind": "official",
+        "label": "Riu room page",
+        "url": "https://www.riu.com/en/hotel/united-states/new-york/hotel-riu-plaza-manhattan-times-square/rooms"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "WestJet Vacations listing",
+        "url": "https://westjetvacations.com/en/hotels/united-states/new-york/riu-plaza-manhattan-times-square"
+      },
+      "notes": {
+        "two-queens": "Deluxe two Queen beds"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "hyatt-place-lic",
+      "name": "Hyatt Place Long Island City",
+      "area": "Long Island City, Queens",
+      "price_title": "Hyatt Place Long Island City / New York City",
+      "setups": [
+        "two-queens",
+        "breakfast",
+        "sleeps5"
+      ],
+      "room": "Room with 2 queens and a sofa bed",
+      "beds": "2 queen beds plus a double sofa bed.",
+      "sleeps": "Listed for 6",
+      "size": "About 325 sq ft (30 m²)",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "No (fridge)",
+      "breakfast": "Free buffet breakfast (listing)",
+      "connecting": "Not stated",
+      "catch": "Outside Manhattan: Court Sq and Queens Plaza stations are a few minutes' walk (listings differ), then a subway ride to Midtown.",
+      "source": {
+        "kind": "booking",
+        "label": "Travelocity listing",
+        "url": "https://travelocity.ca/fr/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Description-Hotel"
+      },
+      "notes": {
+        "two-queens": "2 queens + sofa bed",
+        "breakfast": "Free breakfast buffet",
+        "sleeps5": "2 queens + sofa bed, listed for 6"
+      },
+      "crib": "Free cribs listed",
+      "source2": {
+        "kind": "booking",
+        "label": "Expedia listing",
+        "url": "https://www.expedia.com/es/New-York-Hoteles-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Informacion-Hotel"
+      }
+    },
+    {
+      "id": "homewood",
+      "name": "Homewood Suites Midtown Times Square-South",
+      "area": "Midtown South, near Penn Station",
+      "price_title": "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY",
+      "setups": [
+        "two-queens",
+        "kitchen",
+        "breakfast",
+        "connecting"
+      ],
+      "room": "Two Queen Studio",
+      "beds": "2 queen beds in a studio. A One Bedroom King Suite has a separate bedroom.",
+      "sleeps": "4 (studio); some two-queen rooms are listed for 5",
+      "size": "About 310 sq ft",
+      "door": "Only in the one-bedroom suite",
+      "bathrooms": "Not stated",
+      "kitchen": "In-room kitchen",
+      "breakfast": "Free hot breakfast (Hilton); Hotels.com describes it as to-go",
+      "connecting": "Listed on Hilton's page",
+      "catch": "The two-queen room is a studio, so parents and kids share one room.",
+      "source": {
+        "kind": "official",
+        "label": "Hilton hotel page",
+        "url": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Hotels.com listing",
+        "url": "https://ca.hotels.com/ho446818/homewood-suites-new-york-midtown-manhattan-times-square-new-york-united-states-of-america"
+      },
+      "notes": {
+        "two-queens": "Two Queen Studio",
+        "kitchen": "In-room kitchen",
+        "breakfast": "Free hot breakfast",
+        "connecting": "Connecting rooms listed by Hilton"
+      },
+      "crib": "Free cribs listed (Hotels.com)"
+    },
+    {
+      "id": "beacon",
+      "name": "Hotel Beacon",
+      "area": "Upper West Side",
+      "price_title": "Hotel Beacon",
+      "setups": [
+        "suite",
+        "kitchen",
+        "sleeps5"
+      ],
+      "room": "Deluxe Suite, Two Double Beds",
+      "beds": "Bedroom with 2 double beds; sofa bed in a separate living room. The Two Bedroom Suite has a king, 2 doubles and a sofa bed.",
+      "sleeps": "4 (one-bedroom suite); 6 (two-bedroom suite)",
+      "size": "About 469 sq ft; two-bedroom about 796 sq ft",
+      "door": "Not stated (separate living room)",
+      "bathrooms": "1; 2 in the two-bedroom suite",
+      "kitchen": "Kitchenette (appliances not stated)",
+      "breakfast": "Extra charge (listing)",
+      "connecting": "Not stated",
+      "catch": "The beds are doubles, not queens.",
+      "source": {
+        "kind": "booking",
+        "label": "Suiteness listing",
+        "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/hotel-beacon/deluxe-suite-two-double-beds/amp"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Suiteness two-bedroom listing",
+        "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/hotel-beacon/two-bedroom-suite"
+      },
+      "notes": {
+        "suite": "Bedroom with 2 doubles; sofa bed in living room",
+        "kitchen": "Kitchenette",
+        "sleeps5": "Two Bedroom Suite, sleeps 6, 2 bathrooms"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "fifty",
+      "name": "The Fifty Sonesta",
+      "area": "Midtown East",
+      "price_title": "The Fifty Sonesta Hotel New York",
+      "setups": [
+        "suite",
+        "kitchen"
+      ],
+      "room": "One-Bedroom Apartment",
+      "beds": "Bedroom with a closed door; sleeper sofa in a living room that also has a door. Bed sizes not stated.",
+      "sleeps": "Not stated",
+      "size": "790 sq ft",
+      "door": "Yes (closed-door bedroom)",
+      "bathrooms": "Not stated",
+      "kitchen": "Full kitchen with fridge, stovetop and microwave",
+      "breakfast": "A continental breakfast is served in the Club Room; the hotel does not say it is free with every rate",
+      "connecting": "Not stated",
+      "catch": "The hotel does not publish bed sizes or how many the suite sleeps.",
+      "source": {
+        "kind": "official",
+        "label": "Sonesta family-suite guide",
+        "url": "https://nyc.sonesta.com/the-fifty/1-bedroom-suite-guide/"
+      },
+      "notes": {
+        "suite": "One-Bedroom Apartment, 790 sq ft",
+        "kitchen": "Full kitchen with stovetop"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "kimberly",
+      "name": "The Kimberly Hotel",
+      "area": "Midtown East",
+      "price_title": "The Kimberly Hotel",
+      "setups": [
+        "suite",
+        "kitchen"
+      ],
+      "room": "Luxury One-Bedroom Suite with Two Full Bathrooms",
+      "beds": "King bed in the bedroom; queen sofa sleeper in the living room. Deluxe rooms have 2 double beds.",
+      "sleeps": "Not stated",
+      "size": "Not stated",
+      "door": "Not stated (separate living room)",
+      "bathrooms": "2 (one-bedroom suite)",
+      "kitchen": "Kitchenette: mini-fridge, coffee maker and microwave (hotel's page)",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "Kids share the sofa sleeper; no stove is listed in the kitchenette.",
+      "source": {
+        "kind": "official",
+        "label": "Kimberly accommodations page",
+        "url": "https://www.kimberlyhotel.com/accommodations"
+      },
+      "notes": {
+        "suite": "One-bedroom suite with two full bathrooms",
+        "kitchen": "Kitchenette, no stove listed"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "radio-city-apartments",
+      "name": "Radio City Apartments",
+      "area": "Rockefeller Center / Times Square",
+      "price_title": "Radio City Apartments",
+      "setups": [
+        "suite",
+        "kitchen",
+        "sleeps5"
+      ],
+      "room": "Two-bedroom apartment",
+      "beds": "Listings disagree: 1 queen, 2 twins and a double sofa bed (Travelocity) or 1 full, 2 twins and a sofa bed (Suiteness). A one-bedroom apartment has 2 queens and a sofa bed.",
+      "sleeps": "5-6 (listings differ)",
+      "size": "About 470 sq ft",
+      "door": "Not stated (2 bedrooms)",
+      "bathrooms": "1",
+      "kitchen": "Kitchenette",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "One bathroom for the whole apartment.",
+      "source": {
+        "kind": "booking",
+        "label": "Travelocity listing",
+        "url": "https://www.travelocity.com/es/New-York-Hoteles-Radio-City-Apartments.h6842904.Informacion-Hotel"
+      },
+      "reported": {
+        "text": "Parents of two teens who each needed their own bed were weighing a Radio City two-bedroom on the forum in 2026.",
+        "label": "Tripadvisor forum thread",
+        "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15538074-New_York_hotel_with_teenagers-New_York_City_New_York.html"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Suiteness listing",
+        "url": "https://assets-www.suiteness.com/suites/united-states/new-york/new-york/radio-city-apartments/two-bedroom-apartment"
+      },
+      "notes": {
+        "suite": "Two-bedroom apartment",
+        "kitchen": "Kitchenette",
+        "sleeps5": "Two-bedroom apartment, sleeps 5-6 (listings differ)"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "new-yorker",
+      "name": "The New Yorker, a Wyndham Hotel",
+      "area": "Penn Station / Herald Square",
+      "price_title": "The New Yorker Hotel",
+      "setups": [
+        "suite",
+        "sleeps5"
+      ],
+      "room": "Family Suite",
+      "beds": "2 double beds in the bedroom plus a sofa bed in the living area.",
+      "sleeps": "4-6",
+      "size": "465-505 sq ft",
+      "door": "Not stated (separate bedroom entrance)",
+      "bathrooms": "Not stated",
+      "kitchen": "No (fridge on request)",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "The beds are doubles, not queens.",
+      "source": {
+        "kind": "official",
+        "label": "New Yorker family-suite page",
+        "url": "https://www.newyorkerhotel.com/rooms/family-suite"
+      },
+      "notes": {
+        "suite": "Family Suite with a separate bedroom",
+        "sleeps5": "Family Suite, sleeps 4-6"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "lotte-palace",
+      "name": "Lotte New York Palace",
+      "area": "Midtown East",
+      "price_title": "Lotte New York Palace",
+      "setups": [
+        "suite",
+        "sleeps5"
+      ],
+      "room": "Palace Family Suite",
+      "beds": "2 bedrooms: a king plus a sofa bed in one, a king in the other.",
+      "sleeps": "6 (listing)",
+      "size": "765 sq ft",
+      "door": "Not stated (2 bedrooms)",
+      "bathrooms": "2",
+      "kitchen": "Not stated",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "The family suite has its own rate; the price shown here is for whatever room Google found for 4.",
+      "source": {
+        "kind": "booking",
+        "label": "Suiteness listing",
+        "url": "https://assets-www.suiteness.com/suites/united-states/new-york/new-york/lotte-new-york-palace/palace-family-suite-king-king"
+      },
+      "notes": {
+        "suite": "Two-bedroom Family Suite, 2 bathrooms",
+        "sleeps5": "Family Suite, sleeps 6"
+      },
+      "crib": "Free crib on request (listing)"
+    },
+    {
+      "id": "marquis",
+      "name": "New York Marriott Marquis",
+      "area": "Times Square",
+      "price_title": "New York Marriott Marquis",
+      "setups": [
+        "connecting"
+      ],
+      "room": "Family Connector",
+      "beds": "2 bedrooms: a king in one, 2 doubles in the other, plus a sofa bed. Standard rooms have 2 doubles.",
+      "sleeps": "Not stated",
+      "size": "Not stated",
+      "door": "Yes (two connected rooms)",
+      "bathrooms": "2",
+      "kitchen": "No (mini fridge)",
+      "breakfast": "Extra charge (listing)",
+      "connecting": "Booked as one room type, the Family Connector",
+      "catch": "The hotel says the layout may vary.",
+      "source": {
+        "kind": "official",
+        "label": "Marriott premium-rooms page",
+        "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/premium-accommodations"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Suiteness listing",
+        "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/new-york-marriott-marquis/renovated-deluxe-guest-room-2-double/amp"
+      },
+      "notes": {
+        "connecting": "Family Connector: 2 rooms, 2 bathrooms, booked as one room type"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "riu-ny",
+      "name": "Riu Plaza New York Times Square",
+      "area": "Hell's Kitchen, 46th St and 8th Ave",
+      "price_title": "Hotel Riu Plaza New York Times Square",
+      "setups": [],
+      "room": "Deluxe family double beds with sofa bed",
+      "beds": "Double beds plus a sofa bed. A Family Suite (about 463 sq ft) is also listed; its beds are not stated.",
+      "sleeps": "Not stated on the hotel's page",
+      "size": "About 258 sq ft",
+      "door": "No",
+      "bathrooms": "Not stated",
+      "kitchen": "No",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "A nightly facility fee (about $33 a room, per a tour operator) is paid at the hotel.",
+      "source": {
+        "kind": "official",
+        "label": "Riu room page",
+        "url": "https://www.riu.com/en/hotel/united-states/new-york/hotel-riu-plaza-new-york-times-square/rooms"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "Blue Bay Travel listing",
+        "url": "https://bluebaytravel.co.uk/holidays/united-states-of-america/new-york/riu-plaza-new-york-times-square"
+      },
+      "crib": "Not stated"
+    },
+    {
+      "id": "empire",
+      "name": "The Empire Hotel",
+      "area": "Lincoln Center / Upper West Side",
+      "price_title": "The Empire Hotel",
+      "setups": [],
+      "room": "Junior Suite, Two Double Beds",
+      "beds": "2 double beds plus a pull-out sleeper sofa.",
+      "sleeps": "Up to 4",
+      "size": "325-385 sq ft",
+      "door": "Not stated",
+      "bathrooms": "1 described (shower and separate tub)",
+      "kitchen": "No (mini fridge)",
+      "breakfast": "Not stated",
+      "connecting": "Not stated",
+      "catch": "The beds are doubles, not queens.",
+      "source": {
+        "kind": "official",
+        "label": "Empire Hotel room page",
+        "url": "https://www.empirehotelnyc.com/rooms/empire-junior-suite-two-double-beds"
+      },
+      "crib": "Not stated"
+    }
+  ],
+  "sections": {
+    "bunk": {
+      "intro": "Bunk rooms let each child have a bed without paying for two rooms. Most NYC bunk beds are twins.",
+      "check": "Ask the age or height limit for the top bunk and whether there is a rail."
+    },
+    "two-queens": {
+      "intro": "Many NYC \"two-bed\" rooms have two doubles. A double (full) is about 54 inches wide; a queen is about 60.",
+      "check": "On the booking page, look for the word \"queen\". \"Two beds\" often means two doubles."
+    },
+    "suite": {
+      "intro": "A separate bedroom lets kids sleep while parents stay up. Many \"suites\" are one big room.",
+      "check": "Look at the floor plan or photos for a real door, and ask who sleeps on the sofa bed."
+    },
+    "connecting": {
+      "intro": "Two rooms joined by an inside door give two bathrooms and more beds.",
+      "check": "Ask whether the connection is guaranteed at booking, and get it in writing.",
+      "reported": {
+        "text": "A regular forum poster said a Hilton booking with \"confirmed\" connecting rooms was not connecting at check-in in January 2026.",
+        "label": "Tripadvisor forum thread",
+        "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15525136-Favorite_Hotel_w_Adjoining_Rooms_or_Suites-New_York_City_New_York.html",
+        "who": "A forum poster reported"
+      }
+    },
+    "kitchen": {
+      "intro": "A kitchen or kitchenette saves on breakfasts and early dinners with tired kids.",
+      "check": "\"Kitchenette\" can mean just a fridge and microwave. Check for a stovetop if you plan to cook."
+    },
+    "breakfast": {
+      "intro": "Free breakfast can save a family of 4 a real amount over a few days.",
+      "check": "Check it is included in your rate, and the hours."
+    },
+    "sleeps5": {
+      "intro": "Most NYC rooms sleep 4. These list 5 or more, often counting a sofa bed.",
+      "check": "Book for everyone, kids included, and ask whether the sofa bed is counted in the number."
+    }
+  }
+}

@@ -1,10 +1,10 @@
-// Test helper: the expected sitemap size. Non-deal pages are pinned (87 on 2026-11-24 with the DC ski page; change it when a
+// Test helper: the expected sitemap size. Non-deal pages are pinned (87 on 2026-11-24 with the DC ski page; 89 on 2026-11-28 with the NYC room-setups page; change it when a
 // page is added or removed on purpose). Deal pages follow the calendar (OWNER D46 #5: ended checks leave
 // the sitemap the day after they end), judged by the sitemap's own build date, not the test machine's clock.
 import { readFileSync } from "node:fs";
 import { dealSitemapUrls, readDealChecks } from "./page-generation/deals-pages.mjs";
 
-export const NON_DEAL_SITEMAP_URLS = 88;
+export const NON_DEAL_SITEMAP_URLS = 89;
 const sitemapPath = new URL("../site/sitemap.xml", import.meta.url);
 
 /** Newest <lastmod> in the committed sitemap (/this-week/ changes daily, so this is the build date). */
