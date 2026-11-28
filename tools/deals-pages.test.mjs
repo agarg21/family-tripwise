@@ -129,9 +129,9 @@ test("G02b: terms table keeps table semantics when stacked; status line does not
 test("SeaWorld Fun Card check keeps the record's per-person basis, unclear prices and no family total", () => {
   const sw = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
   assert.ok(sw, "added 2026-10-28 (docs/research/deal-checks-2026-10-28.md)");
-  assert.equal(sw.official_url, "https://seaworld.com/orlando/tickets/", "re-read November 13, 2026 (docs/research/deal-checks-2026-11-13-seaworld-orlando.md)");
+  assert.equal(sw.official_url, "https://seaworld.com/orlando/limited-time-offers/", "re-read November 28, 2026 (docs/research/deal-checks-2026-11-28-seaworld-orlando.md)");
   assert.ok(sw.v2.extra_sources.some((src) => src.url === "https://seaworld.com/orlando/tickets/fun-card/"), "the Fun Card page (read November 13) stays a dated source");
-  assert.ok(sw.v2.extra_sources.some((src) => src.url === "https://seaworld.com/orlando/limited-time-offers/" && src.observed_on === "2026-11-10"), "the offers page (annual pass price) stays a dated source");
+  assert.ok(sw.v2.extra_sources.some((src) => src.url === "https://seaworld.com/orlando/limited-time-offers/" && src.observed_on === "2026-11-28"), "the offers page (annual pass price) stays a dated source");
   assert.ok(sw.unclear.some((u) => /Fun Card page showed USD 144\.99/.test(u)), "the conflicting Fun Card page read stays flagged");
   assert.equal(sw.family_total, null);
   assert.match(sw.family_of_four, /no separate child price/);
@@ -638,8 +638,9 @@ test("hide_big keeps an unpriced deal's top figure out of the hero tile", () => 
 const saving300 = (list, d) => spendSave(list.find((c) => c.id === "seaworld-orlando-2027-fun-card"), d).save;
 test("Black Friday page: built from the same checks, ended offers drop, no unbacked wait claims, committed page is current", () => {
   assert.equal(readFileSync(new URL(blackFridayPath, site), "utf8"), blackFridayPage(checks, today), "run node tools/generate-pages.mjs or node tools/this-week.mjs");
-  const season = { black_friday: "2026-11-27", cyber_monday: "2026-11-30", unconfirmed: [{ operator: "Example Line", text: "advertises a big sale without readable terms.", source_label: "Example page", url: "https://example.com/promo", observed_on: "2026-11-03", list_until: "2026-11-26" }] };
-  const day = "2026-11-26"; // SeaWorld Orlando re-read Nov 26 ($61.99 day tickets)
+  // Fixture season: Black Friday on Nov 28 puts the Nov 28 SeaWorld Orlando re-read before the sale (the real page switches its lead after Nov 27).
+  const season = { black_friday: "2026-11-28", cyber_monday: "2026-11-30", unconfirmed: [{ operator: "Example Line", text: "advertises a big sale without readable terms.", source_label: "Example page", url: "https://example.com/promo", observed_on: "2026-11-03", list_until: "2026-11-28" }] };
+  const day = "2026-11-28"; // SeaWorld Orlando re-read Nov 28 ($61.99 day tickets)
   const live = asOf(day);
   const html = blackFridayPage(live, day, season);
   const open = currentChecks(live, day);
@@ -655,8 +656,8 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
   assert.match(leadLine, /^Biggest saving: ≈.\$324 for a family of 4 on a SeaWorld Orlando pass \(\$744 without, \$420 with, 3 visits; estimate\)\. No offer we read promises deeper Black Friday cuts\.$/);
   assert.ok(leadLine.split(/\s+/).length <= 30, "Black Friday lead stays within the 30-word limit");
   assert.match(html, /<h3>Example Line<\/h3>/);
-  assert.doesNotMatch(blackFridayPage(live, "2026-11-27", season), /<h3>Example Line<\/h3>/, "unconfirmed headlines drop after list_until");
-  const after = blackFridayPage(live, "2026-11-28", season);
+  assert.doesNotMatch(blackFridayPage(live, "2026-11-29", season), /<h3>Example Line<\/h3>/, "unconfirmed headlines drop after list_until");
+  const after = blackFridayPage(live, "2026-11-29", season);
   assert.match(after, /Black Friday has passed/);
   assert.doesNotMatch(after, /Should you wait/);
   const waitLine = /Waiting can cost you\.<\/strong> ([^<]*)</.exec(html)?.[1] ?? "";
@@ -714,20 +715,20 @@ test("Black Friday page: built from the same checks, ended offers drop, no unbac
 test("saver_flag: shows a possible end on hub and Black Friday rows, follows expires_on, drops with the check", () => {
   // The biggest current saving, so the flag shows in the hub savings box too.
   const busch = checks.find((c) => c.id === "seaworld-orlando-2027-fun-card");
-  const day = "2026-11-26";
-  const flagged = { ...busch, expires_on: "2026-11-27", hub_deadline: "a promo file name says Nov 27, so it may end then.", v2: { ...busch.v2, saver_flag: "May end Nov 27" } };
-  const plain = { ...busch, expires_on: "2026-11-27", hub_deadline: undefined, v2: { ...busch.v2, saver_flag: undefined } };
+  const day = "2026-11-28";
+  const flagged = { ...busch, expires_on: "2026-11-30", hub_deadline: "a promo file name says Nov 30, so it may end then.", v2: { ...busch.v2, saver_flag: "May end Nov 30" } };
+  const plain = { ...busch, expires_on: "2026-11-30", hub_deadline: undefined, v2: { ...busch.v2, saver_flag: undefined } };
   const withOthers = (c) => asOf(day).map((x) => (x.id === c.id ? c : x));
   for (const render of [(l) => dealsHubPage(l, day), (l) => blackFridayPage(l, day)]) {
-    assert.match(render(withOthers(flagged)), /May end Nov 27/);
-    assert.doesNotMatch(render(withOthers(plain)), /May end Nov 27/);
+    assert.match(render(withOthers(flagged)), /May end Nov 30/);
+    assert.doesNotMatch(render(withOthers(plain)), /May end Nov 30/);
   }
-  assert.match(blackFridayPage(withOthers(flagged), day), /SeaWorld Orlando may end Nov 27\./);
-  assert.match(dealsHubPage(withOthers(flagged), day), /Deadline:<\/strong> a promo file name says Nov 27/);
-  assert.doesNotMatch(dealsHubPage(withOthers(flagged), "2026-11-28"), /May end Nov 27/, "gone after the listing date");
+  assert.match(blackFridayPage(withOthers(flagged), day, { black_friday: "2026-11-28", cyber_monday: "2026-11-30", unconfirmed: [] }), /SeaWorld Orlando may end Nov 30\./, "the wait line shows before the sale (fixture season)");
+  assert.match(dealsHubPage(withOthers(flagged), day), /Deadline:<\/strong> a promo file name says Nov 30/);
+  assert.doesNotMatch(dealsHubPage(withOthers(flagged), "2026-12-01"), /May end Nov 30/, "gone after the listing date");
   const problems = (c) => validateDealChecks(withOthers(c), { today: day }).join(" ");
   assert.equal(problems(flagged).includes("saver_flag"), false);
-  assert.match(problems({ ...flagged, expires_on: "2026-11-29" }), /saver_flag must read "May end Nov 29"/, "extending the check forces a re-read");
+  assert.match(problems({ ...flagged, expires_on: "2026-12-02" }), /saver_flag must read "May end Dec 2"/, "extending the check forces a re-read");
   assert.match(problems({ ...flagged, hub_deadline: "none posted" }), /hub_deadline must give the same date/);
   assert.match(problems({ ...flagged, deadline_stated: true }), /only for a date the page does not state/);
 });
