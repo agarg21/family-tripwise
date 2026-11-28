@@ -64,6 +64,7 @@ export function roomSetupPrice(data, hotel, today, all = searches()) {
   return { fri, sat, both, average: both ? Math.round((fri.price + sat.price) / 2) : (fri ?? sat).price, total: both ? fri.price + sat.price : null, seen: [fri, sat].filter(Boolean).map((n) => n.seen).sort().at(-1) };
 }
 
+const rank = (p) => (p ? (p.both ? 0 : 1e6) + p.average : 1e9);
 const e = (v) => String(readableText(v)).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 const link = (u, t) => `<a href="${e(u)}">${e(t)}</a>`;
 const monthDay = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
@@ -87,7 +88,7 @@ function card(data, h, p) {
 
 function setupSection(data, key, hotels, prices, basis) {
   const sec = data.sections[key];
-  const list = hotels.filter((h) => h.setups.includes(key)).sort((a, b) => (prices[a.id]?.average ?? 1e9) - (prices[b.id]?.average ?? 1e9));
+  const list = hotels.filter((h) => h.setups.includes(key)).sort((a, b) => rank(prices[a.id]) - rank(prices[b.id]));
   const item = (h) => `<li>${link(`#${h.id}`, h.name)} · ${e(h.area)}: ${e(h.notes[key])}${prices[h.id] ? ` · <strong>${e(nightText(prices[h.id]))}</strong>` : " · check live rate"}</li>`;
   return `<section id="${e(key)}"><h2>${e(data.setups[key].title)}</h2><p>${e(sec.intro)}${key === "sleeps5" ? " Prices are for 4; check the live rate for your party." : ""}</p><ul>${list.map(item).join("")}</ul><p><strong>Check before booking:</strong> ${e(sec.check)}</p>${sec.reported ? `${reportedLine(sec.reported)}${basis ? `<p class="london-source">${e(basis)}</p>` : ""}` : ""}</section>`;
 }
@@ -105,7 +106,7 @@ export function roomSetupsPage(today = process.env.FT_BUILD_DATE || easternDate(
   const all = searches();
   const prices = Object.fromEntries(data.hotels.map((h) => [h.id, roomSetupPrice(data, h, today, all)]));
   const priced = data.hotels.filter((h) => prices[h.id]);
-  const sorted = [...data.hotels].sort((a, b) => (prices[a.id]?.average ?? 1e9) - (prices[b.id]?.average ?? 1e9));
+  const sorted = [...data.hotels].sort((a, b) => rank(prices[a.id]) - rank(prices[b.id]));
   const both = priced.map((h) => prices[h.id]).filter((p) => p.both).map((p) => p.average);
   const seen = priced.map((h) => prices[h.id].seen).sort();
   const n = data.hotels.length, keys = Object.keys(data.setups);
