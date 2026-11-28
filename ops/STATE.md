@@ -25,4 +25,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 12:04Z G16 trend flags: Macy\'s parade (Sat Nov 28) already on NYC Christmas page, deleted; Union Square Holiday Market unverifiable on official page (urbanspacenyc.com 302s to new-brand root, fetch not granted), held to Dec 1 in HOLDS. No public change.
+- 11-28 12:04Z G16 trend flags: Macy's parade (Sat Nov 28) already on NYC Christmas page, deleted; Union Square Holiday Market unverifiable on official page (urbanspacenyc.com 302s to new-brand root, fetch not granted), held to Dec 1 in HOLDS. No public change.
