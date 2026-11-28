@@ -3564,11 +3564,11 @@
           "id": "grand-central-train-show",
           "name": "Holiday Train Show at Grand Central",
           "place": "New York Transit Museum Gallery, Grand Central Terminal, Midtown: Shuttle Passage off the Main Concourse",
-          "dates": "Opens Nov 13; no closing date on the museum's pages. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Thanksgiving, Christmas and other listed holidays.",
-          "table_when": "From Nov 13, closing date not posted",
-          "answer_when": "from Nov 13",
+          "dates": "Open now through Feb 21, 2027, per the museum's 2026 sponsor deck; its visitor pages give no closing date. Gallery hours: weekdays 10 a.m. to 7:30 p.m., weekends 10 a.m. to 6 p.m. Closed Christmas Day, New Year's Day, MLK Day and Presidents' Day, per the museum.",
+          "table_when": "Through Feb 21, 2027, per the museum",
+          "answer_when": "through Feb 21, 2027, per the museum",
           "start_on": "2026-11-13",
-          "end_on": "2026-11-30",
+          "end_on": "2027-02-21",
           "end_unconfirmed": true,
           "free": true,
           "cost_note": "Free, per the Transit Museum; its visitor guide says no tickets.",
@@ -3579,7 +3579,7 @@
           "extra_label": "Also here",
           "extra": "The show is next to the museum store, per the same guide.",
           "watch": "None left unattended anywhere in the terminal either; the museum suggests leaving strollers at home. It says the Main Concourse is wheelchair accessible from Lexington Avenue and 42nd Street, not Vanderbilt. It doesn't describe the route to the gallery.",
-          "observed_on": "2026-11-04",
+          "observed_on": "2026-11-28",
           "sources": [
             {
               "label": "Transit Museum exhibits page",
@@ -3590,7 +3590,11 @@
               "url": "https://www.nytransitmuseum.org/know-before-you-visit/#gct"
             },
             {
-              "label": "Transit Museum train show guide, no year shown",
+              "label": "Transit Museum 2026 train show sponsor deck (dates)",
+              "url": "https://www.nytransitmuseum.org/wp-content/uploads/2026/10/2026-New-York-Transit-Museum-Holiday-Train-Show-Sponsorship-Deck.pdf"
+            },
+            {
+              "label": "Transit Museum train show guide, no year shown (read Nov 4)",
               "url": "https://www.nytransitmuseum.org/wp-content/uploads/2024/12/Social-Narrative-for-Holiday-Train-Show.pdf"
             }
           ]
