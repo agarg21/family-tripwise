@@ -77,12 +77,7 @@
         "bunk": "Classic Quadruple, 4 twin bunks",
         "sleeps5": "Private 6 Bed Room, 6 twin bunks"
       },
-      "crib": "Free cribs listed (Hotels.com)",
-      "source2": {
-        "kind": "booking",
-        "label": "Hotels.com listing",
-        "url": "https://ae.hotels.com/es/ho145146/paramount-times-square-nueva-york-estados-unidos"
-      }
+      "crib": "Not stated"
     },
     {
       "id": "motto-chelsea",
@@ -228,11 +223,11 @@
       "kitchen": "No (fridge)",
       "breakfast": "Free buffet breakfast (listing)",
       "connecting": "Not stated",
-      "catch": "Outside Manhattan: Court Sq station is about a 4-minute walk, then a subway ride to Midtown.",
+      "catch": "Outside Manhattan: Court Sq and Queens Plaza stations are a few minutes' walk (listings differ), then a subway ride to Midtown.",
       "source": {
         "kind": "booking",
-        "label": "ebookers listing",
-        "url": "https://ebookers.ch/en/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Hotel-Information"
+        "label": "Travelocity listing",
+        "url": "https://travelocity.ca/fr/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Description-Hotel"
       },
       "notes": {
         "two-queens": "2 queens + sofa bed",
@@ -242,8 +237,8 @@
       "crib": "Free cribs listed",
       "source2": {
         "kind": "booking",
-        "label": "Travelocity listing",
-        "url": "https://travelocity.ca/fr/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Description-Hotel"
+        "label": "Expedia listing",
+        "url": "https://www.expedia.com/es/New-York-Hoteles-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Informacion-Hotel"
       }
     },
     {
@@ -365,9 +360,9 @@
       "beds": "King bed in the bedroom; queen sofa sleeper in the living room. Deluxe rooms have 2 double beds.",
       "sleeps": "Not stated",
       "size": "Not stated",
-      "door": "Yes",
+      "door": "Not stated (separate living room)",
       "bathrooms": "2 (one-bedroom suite)",
-      "kitchen": "Kitchenette: mini-fridge, coffee maker and microwave (no stove listed)",
+      "kitchen": "Kitchenette: mini-fridge, coffee maker and microwave (hotel's page)",
       "breakfast": "Not stated",
       "connecting": "Not stated",
       "catch": "Kids share the sofa sleeper; the kitchenette has no stove.",
@@ -396,7 +391,7 @@
       "beds": "Listings disagree: 1 queen, 2 twins and a double sofa bed (Travelocity) or 1 full, 2 twins and a sofa bed (Suiteness). A one-bedroom apartment has 2 queens and a sofa bed.",
       "sleeps": "5-6 (listings differ)",
       "size": "About 470 sq ft",
-      "door": "Yes",
+      "door": "Not stated (2 bedrooms)",
       "bathrooms": "1",
       "kitchen": "Kitchenette",
       "breakfast": "Not stated",
@@ -532,7 +527,7 @@
       "kitchen": "No",
       "breakfast": "Not stated",
       "connecting": "Not stated",
-      "catch": "A nightly facility fee (about $29-$33 a room on booking and tour sites) is paid at the hotel.",
+      "catch": "A nightly facility fee (about $33 a room, per a tour operator) is paid at the hotel.",
       "source": {
         "kind": "official",
         "label": "Riu room page",
