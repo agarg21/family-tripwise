@@ -10,6 +10,7 @@ on:
     paths:
       - "ops/**"
       - "tools/ops-state.test.mjs"
+      - "tools/holds-due.test.mjs"
       - ".github/workflows/ops-hygiene.yml"
   workflow_dispatch:
   schedule:
@@ -45,4 +46,4 @@ jobs:
             fi
           fi
       - name: Ops state and size checks
-        run: node --test --test-reporter=dot tools/ops-state.test.mjs
+        run: node --test --test-reporter=dot tools/ops-state.test.mjs tools/holds-due.test.mjs
