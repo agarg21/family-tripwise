@@ -13,4 +13,4 @@ Check `seaworld-orlando-2027-fun-card` dropped after Nov 27 (banner file-name hi
 
 Not on this page (kept from Nov 26 Fun Card page read): "rest of 2026" wording, 2027 blockout lists, card rules (named person, non-refundable), Any Day ticket $119.99.
 
-Decision: re-list the check, observed Nov 28, listed through Cyber Monday Nov 30 (no stated end; the file-name date has passed, so no "May end" flag). Spend-vs-save unchanged (2 adults + 2 kids 4 and 8, 3 visits: ≈ $744 vs ≈ $420, save ≈ $324, 44%). Re-read from Dec 1 if still wanted (Tickets/Fun Card pages from Dec 3).
+Decision: re-list the check, observed Nov 28, listed through Cyber Monday Nov 30 (no stated end; the file-name date has passed, so no "May end" flag). Spend-vs-save unchanged (2 adults + 2 kids 4 and 8, 3 visits: ≈ $744 vs ≈ $420, save ≈ $324, 44%). Integrity review (c1): 00:20 ET is 21:20 PT Nov 27, so this read does not show the sale outlived Nov 27 everywhere; wording says "just after midnight ET". Held for a later-in-the-day read of an unread official page (seaworld.com/orlando/ home) before release. Limited-Time Offers page next from Dec 5; Tickets/Fun Card pages from Dec 3.
