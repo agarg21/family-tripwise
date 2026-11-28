@@ -26,6 +26,7 @@ Each run: `node tools/holds-due.mjs` prints only the lines due today (read those
 - 2026-11-30 | Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindl FAQ error 11-28 (no retry); plan page Dec 5. Met tree: Thu hours conflict; Dec 3.
 - 2026-11-30 | Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
 - 2026-11-30 | Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
+- 2026-12-01 | NYC Union Square Holiday Market (trend flag 11-28, Secret NYC: open, ~200 vendors, free entry, beer/wine): unverified. urbanspacenyc.com market page 302s to hfbrandsandmarkets.com root (fetch not granted 11-28; no unchanged retry); unionsquarenyc.org has no market page. From Dec 1 re-search the operator's new domain for a market page; card only if dates/hours read there.
 - 2026-12-01 | SD December Nights: Getting There PDF from Dec 1.
 - 2026-12-01 | NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking: re-read/soften); Dec 4.
 - 2026-12-01 | SA Briscoe (read 11-22): drops after Dec 6. Alamo scaffolding news line (notice Nov 23) drops Dec 6; re-read the notice from Dec 1.

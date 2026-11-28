@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-28 transactions=4
-run: {id: 2026-11-28T12:04Z, started_at: 2026-11-28T12:04Z}
+run: none
 last_public_release: 347fedc0 G16 RC Black Friday Sale card on BF page (release.json 11:4xZ Nov 28)
 active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
@@ -25,4 +25,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 11:04Z G16: RC promotions terms re-read; Black Friday Sale (book Nov 26-29, $125-$1,000/cabin, stacks w/ free 3rd-4th + BOGO60) + Cyber Bonus card on BF page, live 347fedc0. 2 NYC trend flags (Union Sq market, Macy's parade Sat) left for next run.
+- 11-28 12:04Z G16 trend flags: Macy\'s parade (Sat Nov 28) already on NYC Christmas page, deleted; Union Square Holiday Market unverifiable on official page (urbanspacenyc.com 302s to new-brand root, fetch not granted), held to Dec 1 in HOLDS. No public change.
