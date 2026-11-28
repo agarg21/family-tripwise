@@ -73,66 +73,6 @@
       "removed_count": 5
     },
     {
-      "source_id": "six-flags-great-adventure-silver-pass",
-      "operator": "Six Flags Great Adventure",
-      "url": "https://www.sixflags.com/greatadventure/special-offers",
-      "check_id": "six-flags-great-adventure-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-28T13:13:36.785Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [
-        "Black Friday Deal EXTENDED through 11/30",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Extended through 11/30!"
-      ],
-      "removed": [
-        "Hurry! Black Friday Deal Ends 11/27",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends TODAY!"
-      ],
-      "added_count": 2,
-      "removed_count": 2
-    },
-    {
-      "source_id": "six-flags-fiesta-texas-silver-pass",
-      "operator": "Six Flags Fiesta Texas",
-      "url": "https://www.sixflags.com/fiestatexas/special-offers",
-      "check_id": "six-flags-fiesta-texas-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-28T13:13:37.891Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [
-        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30."
-      ],
-      "removed": [
-        "Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/27."
-      ],
-      "added_count": 1,
-      "removed_count": 1
-    },
-    {
-      "source_id": "six-flags-great-america-silver-pass",
-      "operator": "Six Flags Great America",
-      "url": "https://www.sixflags.com/greatamerica/special-offers",
-      "check_id": "six-flags-great-america-2027-silver-pass",
-      "kind": "changed",
-      "detected_at": "2026-11-28T13:13:38.869Z",
-      "previous_headline": "Special Offers",
-      "headline": "Special Offers",
-      "added": [
-        "Black Friday Deal EXTENDED: a season of visits for the price of a day",
-        "Get a 2027 Silver Pass for $69. EXTENDED through 11/30. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Extended through 11/30!"
-      ],
-      "removed": [
-        "Black Friday Deal: a season of visits for the price of a day",
-        "Get a 2027 Silver Pass for $69. Ends 11/27. Plus, a FREE Bring-A-Friend ticket with new passes, renewals and memberships.",
-        "Black Friday Deal: Buy a Day, Get the Summer Free. Ends TODAY!"
-      ],
-      "added_count": 3,
-      "removed_count": 3
-    },
-    {
       "source_id": "great-wolf-november-web-sale",
       "operator": "Great Wolf Lodge",
       "url": "https://greatwolf.com/sandusky/deals/november-web-sale",
