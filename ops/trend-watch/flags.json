@@ -1,6 +1,41 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-a3b7b86682",
+      "city": "San Diego",
+      "title": "Christmas tree shopping gets underway in San Diego on Black Friday",
+      "links": [
+        {
+          "outlet": "FOX 5 San Diego (local news)",
+          "url": "https://fox5sandiego.com/news/local-news/san-diego/carmel-valley-holiday-tree-shopping/",
+          "published": "2026-11-28T02:55Z"
+        }
+      ],
+      "first_seen": "2026-11-28T03:04Z",
+      "signals": {
+        "fit": [
+          "city:San Diego",
+          "family:families",
+          "topic:christmas,black friday"
+        ],
+        "novelty": [
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:black friday"
+        ]
+      },
+      "matched_terms": [
+        "families",
+        "christmas",
+        "black friday"
+      ],
+      "score": 7,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
