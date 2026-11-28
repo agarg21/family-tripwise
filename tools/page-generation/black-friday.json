@@ -133,6 +133,24 @@
       "list_until": "2026-12-07"
     },
     {
+      "operator": "Royal Caribbean Black Friday Sale, cruises",
+      "deadline": "book Nov 26 to 29, 2026",
+      "kind": "Cruise sale",
+      "text": "Book Nov 26 to 29 for cruises leaving Nov 27 or later. Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $1,000 Suite on 6+ nights; $125, $200 and $400 on 5 nights or less. The terms say it combines with the free 3rd and 4th fares and the 60% off the 2nd guest above; their blackout dates still apply. Not with Crown & Anchor member discounts. Separate Cyber Bonus, book Nov 26 to Dec 1: onboard credit per cabin of $50, $75 or $250 on 6+ nights; $25, $50 or $100 on 5 nights or less. Taxes, fees and port costs apply to all 4 guests. Eligible ports and ships not listed. No fares shown, so we can't total it.",
+      "lines": [
+        "Book Nov 26 to 29 for cruises leaving Nov 27 or later.",
+        "Instant savings per cabin, not per person: $225 Inside or Ocean View, $300 Balcony, $1,000 Suite on 6+ nights.",
+        "On 5 nights or less: $125 Inside or Ocean View, $200 Balcony, $400 Suite. Not with Crown & Anchor member discounts.",
+        "The terms say it combines with the free 3rd and 4th fares and the 60% off the 2nd guest above; their blackout dates still apply.",
+        "Separate Cyber Bonus, book Nov 26 to Dec 1: onboard credit per cabin of $50, $75 or $250 on 6+ nights; $25, $50 or $100 on 5 nights or less.",
+        "Taxes, fees and port costs apply to all 4 guests. Eligible ports and ships not listed. No fares shown, so we can't total it."
+      ],
+      "source_label": "Royal Caribbean promotion terms",
+      "url": "https://www.royalcaribbean.com/terms-and-conditions/promotions",
+      "observed_on": "2026-11-28",
+      "list_until": "2026-11-29"
+    },
+    {
       "operator": "Royal Caribbean Black Friday Preview Sale, cruises",
       "deadline": "book Nov 20 to 23, 2026",
       "kind": "Cruise sale",
