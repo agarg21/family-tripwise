@@ -10,3 +10,5 @@ QUEUE G09w re-read due "Nov 28" (STATE hold; pages last read 11-19 to 11-21, wee
 | legoland.com/florida/deals/black-friday-sale/ | Tickets "On Sale $49 Per Person", front gate $129; dates Nov 16, 2026 – May 23, 2027; passes "Starting From $99"; "Offer ends November 29, 2026"; no Cyber Monday mention | Same (11-20) |
 
 Decision: both checks re-dated observed 2026-11-27, still listed to Nov 29 (stated). Spend-vs-save unchanged: CA ≈ $768 vs ≈ $556 (3 visits, family of 4); FL ≈ $588 vs ≈ $396. Not re-read: CA Black Friday pass help article (11-21). Next: cards drop themselves after Nov 29; re-read only if a Cyber Monday extension is reported.
+
+Scope note: renewal cancellation (Member Portal) and non-refundable wording were not re-confirmed on Nov 27 (both pass-page reads were cut off); those lines stand on the Nov 21 reads. The CA monthly amounts are shown without tier mapping, and the CA $49 FAQ blockout figure is labelled Nov 21.
