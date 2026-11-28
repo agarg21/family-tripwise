@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-28 transactions=0
-run: {id: 2026-11-28T06:05:28Z, started_at: 2026-11-28T06:05:28Z}
-last_public_release: fda32280 G09w LEGOLAND CA/FL pass BF re-read Nov 27 (unchanged, to Nov 29)
+today: 2026-11-28 transactions=1
+run: none
+last_public_release: aeb17405 G16 NYC Grand Central train show re-read Nov 28 (through Feb 21, 2027)
 active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
 ## Holds (what, unblock)
@@ -17,7 +17,7 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 - Boston itin. facts 11-21 (due Dec 5); Aquarium $, MBTA fares unknown (mbta.com robots blocks AI).
 - SD December Nights: Getting There PDF from Dec 1.
 - SD Christmas page: prices hide Dec 2-5 (SeaWorld Dec 15, Lightscape Dec 26); from Nov 28. Orlando: Nutcracker unpriced (11-25; Dec 2); Choc. Nutcracker fetch failed 11-25; Magic Show $ (Jan 2 page) hides Dec 22, re-read Nov 29; Crayola/Gatorland $ hide Dec 21, rest Dec 3-5; Mickey's party ends Dec 22. SA Christmas page: SeaWorld price hides Dec 2, rest Dec 5; Zoo Lights priced 2120d18e ($ hides Dec 9-11); caverns $ hides ~Dec 11 (hours/parking: from Nov 18). DC: TWB re-read 11-27 (unchanged, no single $; from Dec 4); NPS tree visits read 11-25; lighting text: edit Dec 4; Enchant free-kid nights live (drop Dec 10), ticket $ JS-only; ice! price JS-only.
-- NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: prices hide Dec 4 (Bronx Zoo 11-25: $ Dec 26, train/parking Dec 15; FAQs from Dec 1); Nov 25. Grand Central trains: from Nov 28. Santa selfies: guide re-read 11-26, still no hours (from Dec 3). Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
+- NYC Rockefeller: ceremony page 11-25; viewing hours unread. NYC Christmas page: prices hide Dec 4 (Bronx Zoo 11-25: $ Dec 26, train/parking Dec 15; FAQs from Dec 1); Nov 25. Santa selfies: guide re-read 11-26, still no hours (from Dec 3). Chicago page: ZooLights read 11-20 ($ hide Dec 20); CTA holiday fleet news line drops Nov 28, card Dec 23; Garfield re-read 11-25 (flower-shows page from Dec 2); Lightscape cue 11-25 (tickets page from Dec 2; EBT page 2025-26); prices hide Dec 5 (Metra Dec 14), Nov 26; parade conflict kept (11-25).
 - Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: tour page read 11-27 ($ hide Dec 28; sold-out notice); next from Dec 4.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
@@ -34,7 +34,7 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 - Due: Vail childcare, Keystone hours, Copper tubing/tickets. Crested Butte: hours 11-24; basecamp due. Snowbird: opened-up chip "moved up to Nov 25" (read 11-27, self-drops Dec 4); tickets re-read. Alta: opening re-read 11-24 (neutral chip); tickets unread. Mt Bachelor: opening target:true by Dec 4.
 - Jackson Hole: opening re-read 11-27 ("It's Opening Day!"); parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26); Bogus Basin opening/hours/tubing/bus; Winter Park tubing + kids $; Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
-- RC BF (up to $900 off, read 11-26, no window): G09w. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
+- RC BF (up to $900 off, read 11-26, no window): G09w. Villa del Palmar BF: re-read Nov 28 (daytime). Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic passes: re-search due. Gracie: no 2026 page, Nov 30.
 - Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket due. NYC Met tree: Thu hours conflict, stroller unread; Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
@@ -45,9 +45,9 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
 - GSC: after 11:00Z Nov 30: snapshot self-committed?
-- SD BF leads (Patch 11-25): Boomers to Dec 6, SD Fair BOGO to Nov 30.
-- Adventuredome Cyber $40/$20 (press): official Nov 29. Universal USF market (WESH): Dec 1.
-- Disney On Ice Cyber Week (3rd party: GFT35P, 35% off, to Dec 6): robots fetch not granted 11-27, 11-28 (owner session).
+- SD BF leads (Patch): Boomers Dec 6, Fair BOGO Nov 30.
+- Adventuredome Cyber $40/$20 (press): Nov 29. Universal USF market (WESH): Dec 1.
+- Disney On Ice Cyber Week (GFT35P, to Dec 6, 3rd party): robots fetch not granted twice (owner session).
 
 ## Scoreboard (Mondays: newest ops/gsc-snapshots/*.md + live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
@@ -59,4 +59,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 04:04Z G09w/G16: Club Med countdown-only flag (plan from Dec 1) and SD tree-lot trend flag (off-fit) cleared, no fetches. No public change.
+- 11-28 06:05Z G16: NYC Grand Central train show re-read; museum's 2026 sponsor deck gives Nov 13-Feb 21, 2027, so the card stays past Nov 30 (live aeb17405). /this-week/ item still expires Nov 30.
