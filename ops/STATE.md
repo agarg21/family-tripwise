@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=16
-run: {id: 2026-11-28T00:04Z, started_at: 2026-11-28T00:04Z}
-last_public_release: efa9c515 G16 Chicago: Navy Pier WonderFest re-read Nov 27 ($27 now 48h ahead; opening hours; NYE line fixed)
+today: 2026-11-27 transactions=17
+run: none
+last_public_release: dd7a3a3a G16 Orlando: Frontyard re-read Nov 27 (opening day; Santa photo/movie times no longer listed)
 active: none
 
 ## Holds (what, unblock)
@@ -22,7 +22,7 @@ active: none
 - Holiday parks: re-read other $ by Nov 29 (GE $49 read 11-26; next Dec 3). Dyker: tour page read 11-27 ($ hide Dec 28; sold-out notice); next from Dec 4.
 - JetBlue bag card: read 11-25 (unchanged), expires Dec 16; re-read legal/fees from Dec 9 to extend through Jan 18.
 - LV Glittering Lights: $ hides Dec 22 (re-read before); Santa Tram nights undated (conflict).
-- NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking line: re-read or soften); next Dec 4.
+- NYC teens: High Line re-read Dec 1; broadway.org, NYC Parks July 26. Orlando kids: facts 11-20 (Disney Springs parking: re-read/soften); Dec 4.
 - SD itin.: zoo hours (11-25: only Nov 1-25 shown) from Dec 2; Balboa parking to end 2026.
 - G18/Q19 hotels (+Cancun, PV): regen by Dec 18 (Xmas drops), Dec 25 (NY), Jan 12 (LV/Chi/SA Jan 19 $), Jan 15; Jan 8: PV example-stay, SD/NYC/Orlando/London listings; guard tests.
 - DC ZooLights (read Nov 10): re-read before queueing. NYC lantern: no age $ or end date (11-22; Queens end Nov 26). Polar Express: peak trains/times unstated (11-22; from Nov 29). Herald carousel re-read 11-22 (next from Nov 29).
@@ -37,7 +37,7 @@ active: none
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26); Bogus Basin opening/hours/tubing/bus; Winter Park tubing + kids $; Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - RC BF (up to $900 off, read 11-26, no window): G09w. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
 - Epic Universe passes: no price (11-19); re-search Nov 28. Gracie: no 2026 page, Nov 30.
-- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28. NYC Met tree: Thu hours conflict; stroller unread; from Dec 3.
+- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28. NYC Met tree: Thu hours conflict, stroller unread; Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); Nov 29. Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-27; Dec 1). SI Mall rink: news only (Nov 29).
@@ -45,10 +45,9 @@ active: none
 - BF unpriced: Gatorland passes to Nov 29 (read 11-27); Hersheypark to Nov 30; Meow Wolf LV to Dec 9 (self-drops). Neon Museum NEON40 (Attractions Mag): not on neonmuseum.org 11-27; Dec 4.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
-- GSC: after 11:00Z Nov 30: did the snapshot self-commit (Muse 11-27 Q4)?
+- GSC: after 11:00Z Nov 30: snapshot self-committed? (Muse 11-27 Q4)
 - SD BF leads (Patch 11-25) unread: Boomers code to Dec 6, SD Fair BOGO to Nov 30.
-- Adventuredome Cyber $40/$20 (press): official from Nov 29.
-- Universal USF new market (WESH 11-26): unverified; from Dec 1.
+- Adventuredome Cyber $40/$20 (press): official Nov 29. Universal USF market (WESH): Dec 1.
 - Disney On Ice Cyber Week (3rd party: GFT35P, 35% off, to Dec 6): official page unread 11-27 (robots unread); next run.
 
 ## Scoreboard (Mondays: newest ops/gsc-snapshots/*.md + live checks)
@@ -61,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-27 23:05Z G09w Atlantis BF: watch flags triaged; fix on branch, held (persona 3.47 < 3.5). Nothing released.
+- 11-28 00:04Z G16 trend flags: Orlando Frontyard re-read on opening day, card refreshed, live dd7a3a3a; 4 NYC flags covered/off-fit.
