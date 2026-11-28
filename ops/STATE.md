@@ -2,9 +2,9 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-27 transactions=17
-run: {id: 2026-11-28T01:04:41Z, started_at: 2026-11-28T01:04:41Z}
-last_public_release: dd7a3a3a G16 Orlando: Frontyard re-read Nov 27 (opening day; Santa photo/movie times no longer listed)
+today: 2026-11-27 transactions=18
+run: none
+last_public_release: fda32280 G09w LEGOLAND CA/FL pass BF re-read Nov 27 (unchanged, to Nov 29)
 active: none
 
 ## Holds (what, unblock)
@@ -60,4 +60,4 @@ active: none
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 00:04Z G16 trend flags: Orlando Frontyard re-read on opening day, card refreshed, live dd7a3a3a; 4 NYC flags covered/off-fit.
+- 11-28 01:04Z G09w: LEGOLAND CA/FL pass Black Friday re-read (prices, Nov 29 end unchanged; no Cyber Monday extension); CA monthly tiers unmapped; live fda32280.
