@@ -37,6 +37,7 @@ Approved.
 - D56 (11-26): Approved: R2 school breaks + DataForSEO; expand deals/snow; no local parent FB groups.
 - D58 (11-27): Approved: OWNER.md limit 4 KB -> 6 KB; Muse reviews answered daily (AGENTS).
 - D59 (11-27): Approved: ~55 more resort conditions pages (cam scan 11-27) as each resort passes the automated read check; snowcam code repo public, model and frames stay private.
+- D60 (11-28): Approved: room-setup pages (NYC model, where-to-stay/<city>-family-hotel-rooms.html) per city in demand order Chicago, Orlando, Las Vegas, San Diego, Boston, DC (FT-RES-199); only with 10+ hotels with sourced room facts. NYC page: add a "What NYC families actually booked" section (paraphrased, linked).
 
 ## Owner tasks
 - T3 (open): Zernio connections, ZERNIO_API_KEY (D14); PINTEREST_BOARD_ID.
