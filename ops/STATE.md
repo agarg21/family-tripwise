@@ -3,15 +3,14 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-28 transactions=0
-run: {id: 2026-11-28T05:04Z, started_at: 2026-11-28T05:04Z}
+run: none
 last_public_release: fda32280 G09w LEGOLAND CA/FL pass BF re-read Nov 27 (unchanged, to Nov 29)
-active: none
+active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
 ## Holds (what, unblock)
 - Atlantis BF: branch q/G09w-atlantis-bf (Dec 8 -> Nov 29, watch 11-27); persona 3.47. Unblock: O53 yes -> merge; else read Nov 30.
-- Macy's parade: MTA pages from Dec 1.
 - LEGOLAND CA ($139) / FL ($99) BF passes to Nov 29: re-read via G09w. CA hotel pkg fetch withdrawn 2x.
-- /deals/ checks end Nov 27 (Sesame Philly; SWO, Busch Tampa: G09w), Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
+- /deals/ checks end Dec 1 (Beaches BF), Dec 2 (LEGOLAND NY, stated), Jan 4 (Club Med); SeaWorld SA + Sesame SD to Nov 29 (read 11-22, no end stated; from Nov 29).
 - /this-week/: first run each ET day `node tools/this-week.mjs`, commit (deploy refreshes live). SD kids/teens ticket $ (11-01): re-observe after Dec 1.
 - Zernio: FB only. Skips: Six Flags GA P2s; LEGOLAND NY unit_short "by Jan 2"; reword Air and Space, Bronx birds; Gaylord ice! (no $). SeaWorld SA queueable (11-22).
 - DC itin. facts 11-20 (due Dec 4); NMNH tips/dining, Zoo summer hours, NMAH hours 11-06; NASM pass FAQ unread.
@@ -36,19 +35,19 @@ active: none
 - Jackson Hole: opening re-read 11-27 ("It's Opening Day!"); parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26); Bogus Basin opening/hours/tubing/bus; Winter Park tubing + kids $; Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - RC BF (up to $900 off, read 11-26, no window): G09w. Villa del Palmar BF: re-read Nov 28. Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
-- Epic Universe passes: no price (11-19); re-search Nov 28. Gracie: no 2026 page, Nov 30.
-- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket 11-28. NYC Met tree: Thu hours conflict, stroller unread; Dec 3.
+- Epic passes: re-search due. Gracie: no 2026 page, Nov 30.
+- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket due. NYC Met tree: Thu hours conflict, stroller unread; Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); Nov 29. Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
-- No 2026 page: Union Sq, Blue Man Chi, TRU GC (Nov 26). AIC lion wreaths: no 2026 artic.edu page (11-27; Dec 1). SI Mall rink: news only (Nov 29).
-- Saks times, Chanukah on Ice: Nov 28. Bloomingdale's windows: page stub 11-26; Dec 3. NYE row 10: SA pages unreadable 11-23; Nov 30.
+- AIC lion wreaths: no 2026 artic.edu page (11-27; Dec 1). SI Mall rink: news only (Nov 29).
+- Saks times, Chanukah on Ice: due. Bloomingdale's windows: page stub 11-26; Dec 3. NYE row 10: SA pages unreadable 11-23; Nov 30.
 - BF unpriced: Gatorland passes to Nov 29 (read 11-27); Hersheypark to Nov 30; Meow Wolf LV to Dec 9 (self-drops). Neon Museum NEON40 (Attractions Mag): not on neonmuseum.org 11-27; Dec 4.
 - Goodman Carol no $ (from Nov 30). Boston Pops no $ (Dec 2). Orlando leads: Heritage Square Dec 4, Luminary Dec 16; from Dec 1.
 - SA: Hemisfair card no $ (ends Dec 31); Grinch $ hide ~Dec 19. SeaWorld SA Xmas $49.99 (11-22) hides after Nov 29 (sale clock): re-read tickets from Nov 29; SA kids/teens/itin. still $53.99 (Nov 1) to Dec 1: move to the new read or check live.
-- GSC: after 11:00Z Nov 30: snapshot self-committed? (Muse 11-27 Q4)
-- SD BF leads (Patch 11-25) unread: Boomers code to Dec 6, SD Fair BOGO to Nov 30.
+- GSC: after 11:00Z Nov 30: snapshot self-committed?
+- SD BF leads (Patch 11-25): Boomers to Dec 6, SD Fair BOGO to Nov 30.
 - Adventuredome Cyber $40/$20 (press): official Nov 29. Universal USF market (WESH): Dec 1.
-- Disney On Ice Cyber Week (3rd party: GFT35P, 35% off, to Dec 6): robots fetch not granted 11-27, 11-28 (no retry; owner session).
+- Disney On Ice Cyber Week (3rd party: GFT35P, 35% off, to Dec 6): robots fetch not granted 11-27, 11-28 (owner session).
 
 ## Scoreboard (Mondays: newest ops/gsc-snapshots/*.md + live checks)
 | Metric | Baseline 2026-10-27 | Target 2026-11-13 |
