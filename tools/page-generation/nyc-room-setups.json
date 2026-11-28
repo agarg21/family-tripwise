@@ -576,8 +576,8 @@
       "bathrooms": "2 (suite)",
       "kitchen": "Not stated",
       "breakfast": "Not stated",
-      "connecting": "Listed as available (Hoteles.com)",
-      "crib": "Free cribs listed (Hoteles.com)",
+      "connecting": "Listed as available (Expedia)",
+      "crib": "Free cribs listed (Expedia)",
       "catch": "A boutique hotel; the 6-person suite is a booking-site listing, so confirm the beds with the hotel.",
       "notes": {
         "two-queens": "Deluxe room or Deluxe Suite with 2 queens",
@@ -605,28 +605,23 @@
         "kitchen",
         "sleeps5"
       ],
-      "room": "Two Bedroom Suite",
-      "beds": "A king, a queen and a double sofa bed across 2 bedrooms. One-bedroom suites have a king and a double sofa bed.",
-      "sleeps": "6 (two-bedroom); 4 (one-bedroom)",
-      "size": "About 1,055 sq ft (98 m²)",
+      "room": "2 Bedroom Plus, 2 Bath",
+      "beds": "A king, a queen and a sofa bed across 2 bedrooms.",
+      "sleeps": "6",
+      "size": "About 1,100 sq ft",
       "door": "Not stated (2 bedrooms)",
-      "bathrooms": "1 or 2, by suite type",
-      "kitchen": "Kitchen with microwave, coffee maker and kettle (listing)",
+      "bathrooms": "2",
+      "kitchen": "Full kitchen with oven, stove and fridge (listing)",
       "breakfast": "Not stated",
       "connecting": "Not stated",
       "crib": "Not stated",
       "catch": "Apartment-style: check what housekeeping and front-desk hours your rate includes.",
       "notes": {
-        "suite": "One- or two-bedroom suites",
-        "kitchen": "Kitchen in the suites",
-        "sleeps5": "Two Bedroom Suite, sleeps 6"
+        "suite": "Two-bedroom suite, 2 bathrooms",
+        "kitchen": "Full kitchen with oven and stove (listing)",
+        "sleeps5": "Two-bedroom suite, sleeps 6"
       },
       "source": {
-        "kind": "booking",
-        "label": "Travelocity listing",
-        "url": "https://www.travelocity.ca/fr/New-York-Hotels-Mint-House-At-70-Pine.h10389117.Evaluations-Hotel"
-      },
-      "source2": {
         "kind": "booking",
         "label": "Suiteness listing",
         "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/lyric-at-70-pine/2-bedroom-plus-2-bath/amp"
@@ -644,7 +639,7 @@
         "sleeps5"
       ],
       "room": "Family Two-Bedroom Apartment",
-      "beds": "Listings disagree: 2 queens and a queen sofa bed, or a king, 2 twins and a queen sofa bed. The One-Bedroom King Apartment has a king and a queen sofa bed.",
+      "beds": "A king, 2 twins and a queen sofa bed across 2 bedrooms. The One-Bedroom King Apartment has a king and a queen sofa bed.",
       "sleeps": "6 (two-bedroom); 4 (one-bedroom)",
       "size": "1,103 sq ft",
       "door": "Not stated (2 bedrooms)",
@@ -652,7 +647,7 @@
       "kitchen": "Fridge, microwave, coffee maker and cookware (listing)",
       "breakfast": "Free buffet breakfast (listing)",
       "connecting": "Not stated",
-      "crib": "Free cribs listed (Expedia)",
+      "crib": "Free cribs listed (Orbitz)",
       "catch": "A small 35-room hotel, renovated in 2025: few family apartments, so book early.",
       "notes": {
         "suite": "One- or two-bedroom apartments",
@@ -664,11 +659,6 @@
         "kind": "booking",
         "label": "Orbitz listing",
         "url": "https://www.orbitz.com/New-York-Hotels-The-Bayard.h888641.Hotel-Information"
-      },
-      "source2": {
-        "kind": "booking",
-        "label": "Travelocity listing",
-        "url": "https://www.travelocity.com/New-York-Hotels-The-Bayard.h888641.Hotel-Reviews"
       }
     },
     {
@@ -680,8 +670,8 @@
         "breakfast"
       ],
       "room": "Suite, 2 Double Beds",
-      "beds": "2 double beds in a studio. Marriott calls it an all-studio hotel.",
-      "sleeps": "Listed for 4 (one booking site says 5)",
+      "beds": "2 double beds in a studio; listed as an all-studio hotel.",
+      "sleeps": "4 (listing)",
       "size": "Not stated",
       "door": "No (studio)",
       "bathrooms": "Not stated",
@@ -709,10 +699,12 @@
       "name": "AC Hotel New York Downtown",
       "area": "Financial District",
       "price_title": "AC Hotel New York Downtown",
-      "setups": [],
-      "room": "Room with two beds",
-      "beds": "73 of its 274 rooms have two beds; bed sizes not stated. No suites.",
-      "sleeps": "Not stated",
+      "setups": [
+        "sleeps5"
+      ],
+      "room": "Room, Multiple Beds",
+      "beds": "2 double beds; the Multiple Beds room adds a double sofa bed. No suites.",
+      "sleeps": "4 (2 doubles); 5 (with sofa bed)",
       "size": "Not stated",
       "door": "No",
       "bathrooms": "Not stated",
@@ -720,17 +712,19 @@
       "breakfast": "Not stated",
       "connecting": "Not stated",
       "crib": "Not stated",
-      "catch": "A regular hotel room: no family room type is listed, so check the two-bed room fits your family.",
-      "notes": {},
-      "source": {
-        "kind": "booking",
-        "label": "HotelPlanner listing",
-        "url": "https://hotelplanner.com/Hotels/274172/Reservations-AC-Hotel-by-Marriott-New-York-Downtown-New-York-151-Maiden-Ln-10038?gencall=1"
+      "catch": "A regular hotel with no suites, so the family shares one room.",
+      "notes": {
+        "sleeps5": "Room, Multiple Beds: 2 doubles + sofa bed, sleeps 5"
       },
-      "source2": {
+      "source": {
         "kind": "booking",
         "label": "Wotif listing",
         "url": "https://www.wotif.com/New-York-Hotels-AC-Hotel-By-Marriott-New-York-Downtown.h22514703.Hotel-Information"
+      },
+      "source2": {
+        "kind": "booking",
+        "label": "HotelPlanner listing",
+        "url": "https://hotelplanner.com/Hotels/274172/Reservations-AC-Hotel-by-Marriott-New-York-Downtown-New-York-151-Maiden-Ln-10038?gencall=1"
       }
     }
   ],
@@ -776,7 +770,7 @@
       "when": "Oct 2026",
       "stay": "One room at Hyatt Place Long Island City",
       "hotel": "hyatt-place-lic",
-      "what": "Chose it for a big room, a bathtub and two nearby stations with elevators for the stroller.",
+      "what": "Chose it for a big room and a bathtub; the post covers getting around the subway with a stroller.",
       "label": "Reddit trip report",
       "url": "https://www.reddit.com/r/Travelwithkids/comments/1xc4vd5/travel_to_nyc_with_toddler_success_story/"
     },
@@ -785,7 +779,7 @@
       "when": "Jun 2026",
       "stay": "One room at AC Hotel Downtown",
       "hotel": "ac-downtown",
-      "what": "Liked the space for gear and the quiet nights; carried or folded the stroller at stations without elevators.",
+      "what": "Liked the space for gear and the quiet nights; the post covers subway stations with a stroller.",
       "label": "Reddit trip report",
       "url": "https://www.reddit.com/r/visitingnyc/comments/1uc1azm/nyc_trip_report_june_2026_what_took_us_so_long_to/"
     },
