@@ -12,13 +12,13 @@ test("city records validate and family ranges follow their published prices", ()
   assert.deepEqual(validateHolidayCity(sd), []);
   assert.equal(by.lightscape.cost_low, 2 * 28 + 2 * 18);
   assert.equal(by["north-pole-limited"].cost_low, 2 * 30 + 2 * 15);
-  assert.equal(by["holiday-wonderland"].cost_low, 4 * 25);
+  assert.equal(by["holiday-wonderland"].cost_low, 4 * 24);
   assert.equal(by["skating-by-the-sea"].cost_low, 4 * 35);
   assert.equal(by["skating-by-the-sea"].cost_high, 4 * 45);
   assert.equal(by["jungle-bells"].cost_low, 2 * 73 + 2 * 63);
   assert.equal(by["jungle-bells"].cost_high, 2 * 78 + 2 * 68);
   assert.equal(by["seaworld-christmas"].cost_low, Math.round(4 * 59.99));
-  assert.equal(by["legoland-bricktacular"].cost_low, 4 * 69);
+  assert.equal(by["legoland-bricktacular"].cost_low, 4 * 64);
 });
 
 test("the page leads with what is free and the paid range", () => {
@@ -518,4 +518,12 @@ test("NYC parade move credits the Mayor's Office (Nov 25); 8:30 a.m. start credi
   const after = holidayCityPage("new-york-city", data, "2026-11-29");
   assert.doesNotMatch(after, /Thursday&#39;s storm \(Mayor&#39;s Office, Nov 25\)/);
   assert.doesNotMatch(after, /per NYC Event Management \(read Nov 26/);
+});
+
+test("a sale price hides after price_until with its own reason", () => {
+  assert.equal(priceIsFresh(by["legoland-bricktacular"], "2026-11-29"), true);
+  assert.equal(priceIsFresh(by["legoland-bricktacular"], "2026-11-30"), false);
+  const card = holidayCityPage("san-diego", data, "2026-11-30").match(/<article id="legoland-bricktacular"[\s\S]*?<\/article>/)[0];
+  assert.doesNotMatch(card, /\$64|\$256|too old to show/);
+  assert.match(card, /sale price we read on Nov 28 showed only to Nov 29; it may have ended/);
 });

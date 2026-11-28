@@ -47,7 +47,7 @@ function card(p, today) {
   return `          <article id="${e(p.id)}" class="holiday-card">
             <h3>${e(p.name)}</h3>
             <p class="holiday-place">${e(p.event)} · ${e(p.place)}</p>
-            ${priceIsFresh(p, today) ? `<p class="holiday-figure">from ≈ $${familyCost(p)}<small>tickets for 4, one day, estimate, lowest price we saw, read ${short(priceObservedOn(p))}</small></p>` : `<p class="holiday-figure">Check live<small>our last price read, ${short(priceObservedOn(p))}, is too old to show</small></p>`}
+            ${priceIsFresh(p, today) ? `<p class="holiday-figure">from ≈ $${familyCost(p)}<small>tickets for 4, one day, estimate, lowest price we saw, read ${short(priceObservedOn(p))}</small></p>` : `<p class="holiday-figure">Check live<small>${p.price_until && today > p.price_until ? `the sale price we read on ${short(priceObservedOn(p))} showed only to ${short(p.price_until)}; it may have ended` : `our last price read, ${short(priceObservedOn(p))}, is too old to show`}</small></p>`}
             <p class="holiday-dates"><strong>When:</strong> ${e(p.dates)}</p>
             <ul>${p.kids.map((k) => `<li>${e(k)}</li>`).join("")}</ul>
             <p><strong>Costs extra:</strong> ${e(p.extra)}</p>
