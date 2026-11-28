@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join } from "node:path";
+import { parseHolds } from "./holds-due.mjs";
 
 // Keeps the operator's start-of-run state small enough to read every run.
 const root = new URL("..", import.meta.url).pathname;
@@ -46,4 +47,13 @@ test("archived Codex-era logs are not recreated", () => {
     "ops/current-cycle.md", "ops/needs-user.md", "backlog/product-learning-ledger.md"]) {
     assert.ok(!existsSync(join(root, p)), `${p} was archived; use ops/STATE.md, QUEUE.md or runs/`);
   }
+});
+
+test("every ops/HOLDS.md entry has a date or owner prefix, and the file stays ≤16 KB", () => {
+  const text = read("ops/HOLDS.md");
+  const { holds, bad } = parseHolds(text);
+  assert.deepEqual(bad, [], "HOLDS lines must start with '- YYYY-MM-DD | ' or '- owner | '");
+  assert.ok(holds.length >= 1);
+  assert.ok(Buffer.byteLength(text) <= 16 * 1024, "ops/HOLDS.md must be ≤16 KB; delete done holds");
+  for (const h of holds) if (h.from !== "owner") assert.ok(!Number.isNaN(Date.parse(h.from)), h.from);
 });

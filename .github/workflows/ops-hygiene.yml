@@ -10,7 +10,8 @@ on:
     paths:
       - "ops/**"
       - "tools/ops-state.test.mjs"
-      - "tools/holds-due.test.mjs"
+      - "tools/holds-due*.mjs"
+      - "tools/runs-rollover.mjs"
       - ".github/workflows/ops-hygiene.yml"
   workflow_dispatch:
   schedule:
