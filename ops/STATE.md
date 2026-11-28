@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-28 transactions=7
-run: {id: 2026-11-28T16:04:51Z, started_at: 2026-11-28T16:04:51Z}
+run: none
 last_public_release: eaec8c63 G09w Six Flags Silver Pass BF extended to Nov 30 (release.json 14:5xZ Nov 28)
 active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
@@ -25,4 +25,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 15:05Z G09w: Great Wolf "Extended One Day Only" BOGO + Club Med countdown flags deleted, no fetch (weekly limit), no public change (no family-of-4 price). SeaWorld Orlando Cyber Monday flags kept for G09w-swo after 12:00 ET.
+- 11-28 16:05Z G16 step 2: 2 normal trend flags closed after a search-only first check (Orlando Fringe Winter Mini-Fest Jan 7-11: ticketed fringe theatre, outside the holiday window; SA Peace Market shopper gallery: off family-trip fit). No fetch, no public change. G09w-swo waits for its 12:00 ET read.
