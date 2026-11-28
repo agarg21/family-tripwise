@@ -92,11 +92,11 @@
       "source_sig": "8f5f02519786d221",
       "status": "ok",
       "headline": "All-Inclusive Vacations",
-      "signal_hash": "8e6dcf24860320f386f54c1b59dff990",
-      "set_hash": "7220155d18320c2cdcc3ca55816daf19",
+      "signal_hash": "cb13d53a15a58d58a16c2c3b6e1f0490",
+      "set_hash": "4c52e3d74056607189259c906001ee2f",
       "signal": [
         "Alerts and promotions",
-        "Ends in: 3 days, 18 hours, 41 minutes and 28 seconds",
+        "Ends in: 2 days, 22 hours, 46 minutes and 31 seconds",
         "Black Friday's Biggest Savings End Soon",
         "Caribbean, Mexico, Canada, the Alps and more destinations with up to 50% Off*",
         "The Art of Free Time",
@@ -116,9 +116,9 @@
         "Some resorts offer skiing, trapeze lessons, or scuba diving (additional cost).",
         "Kids’ Clubs: Supervised activities for ages 4 months to 17 years."
       ],
-      "line_hashes": "72e0403c 98c173de 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
+      "line_hashes": "72e0403c 7ecf42c4 282e4d70 7cfce433 ec53ad30 0a560b71 00c8d063 251d75e0 1c84bf2e 0a065336 b8f50cbe 495beed4 2f4979b0 cbb0e8b7 cd5cf8fe 92c89e5b a9d51c95 e99b0b3b e6016283 a316d3ae 029f66f2 de17339b d59532bb dfb04a91 618bbd4d c2e27f9f 72191699",
       "first_seen_at": "2026-10-29T18:59:50.517Z",
-      "changed_at": "2026-11-27T12:44:14.111Z"
+      "changed_at": "2026-11-28T03:59:06.608Z"
     },
     "seaworld-orlando-tickets": {
       "url": "https://seaworld.com/orlando/tickets/",
