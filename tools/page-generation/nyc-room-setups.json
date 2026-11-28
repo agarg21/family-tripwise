@@ -23,8 +23,8 @@
       "short": "2 queens"
     },
     "suite": {
-      "title": "Suites with a door between rooms",
-      "short": "Suite with a door"
+      "title": "Suites with a separate bedroom",
+      "short": "Separate bedroom"
     },
     "connecting": {
       "title": "Connecting rooms",
@@ -59,8 +59,8 @@
       "size": "6-bed room 248 sq ft",
       "door": "No",
       "bathrooms": "Not stated",
-      "kitchen": "No",
-      "breakfast": "Not stated",
+      "kitchen": "Not stated",
+      "breakfast": "Not included (Expedia lists a paid to-go breakfast)",
       "connecting": "Not stated",
       "catch": "Every bed is a twin bunk, so the adults sleep in bunks too.",
       "source": {
@@ -91,33 +91,26 @@
       "price_title": "Motto by Hilton New York City Chelsea",
       "setups": [
         "bunk",
-        "connecting",
-        "sleeps5"
+        "connecting"
       ],
       "room": "Room with 4 twin bunk beds",
-      "beds": "4 twin beds as bunks. Other rooms: a king plus a twin bunk (sleeps 3), or a king, a king Murphy bed and a twin bunk (listed for 5).",
-      "sleeps": "4 (bunk room); 5 (Murphy-bed room)",
-      "size": "Bunk room 207 sq ft",
+      "beds": "4 twin beds as bunks. Another room has a king plus a twin bunk (sleeps 3).",
+      "sleeps": "4 (bunk room)",
+      "size": "Bunk room about 205 sq ft",
       "door": "No",
       "bathrooms": "Not stated",
       "kitchen": "No",
       "breakfast": "Not stated",
-      "connecting": "Listed as available. Hilton launched its Confirmed Connecting Rooms booking at this hotel.",
+      "connecting": "Connecting rooms listed (Hotels.com)",
       "catch": "Rooms are small (about 200 sq ft); for a family of 4, two connecting rooms give more space.",
       "source": {
         "kind": "booking",
         "label": "Hotels.com listing",
         "url": "https://kr.hotels.com/es/ho2180292448/motto-by-hilton-new-york-city-chelsea-nueva-york-estados-unidos"
       },
-      "source2": {
-        "kind": "press",
-        "label": "Trade press on Confirmed Connecting Rooms",
-        "url": "https://www.connectingtravel.com/news/hilton-opens-its-first-lifestyle-hotel-in-new-york"
-      },
       "notes": {
         "bunk": "4 twin bunk beds, sleeps 4",
-        "connecting": "Connecting rooms listed; Hilton launched Confirmed Connecting Rooms here",
-        "sleeps5": "King + king Murphy bed + bunk, listed for 5"
+        "connecting": "Connecting rooms listed"
       },
       "crib": "Not stated"
     },
@@ -169,7 +162,7 @@
       "kitchen": "No (fridge)",
       "breakfast": "Not stated",
       "connecting": "Listed as available (request)",
-      "catch": "8 people in about 300 sq ft with one bathroom is tight.",
+      "catch": "Up to 8 people in about 300 sq ft is tight.",
       "source": {
         "kind": "booking",
         "label": "Expedia listing",
@@ -200,7 +193,7 @@
       "kitchen": "No",
       "breakfast": "Not stated",
       "connecting": "Not stated",
-      "catch": "The Deluxe family king room is not for 4: a tour operator lists it for 2 adults and 1 child, with no rollaways.",
+      "catch": "The Deluxe family king room is smaller: a tour operator lists it for at most 3 guests.",
       "source": {
         "kind": "official",
         "label": "Riu room page",
@@ -229,17 +222,17 @@
       "room": "Room with 2 queens and a sofa bed",
       "beds": "2 queen beds plus a double sofa bed.",
       "sleeps": "Listed for 6",
-      "size": "325 sq ft",
+      "size": "About 325 sq ft (30 m²)",
       "door": "No",
       "bathrooms": "Not stated",
       "kitchen": "No (fridge)",
-      "breakfast": "Free breakfast buffet",
+      "breakfast": "Free buffet breakfast (listing)",
       "connecting": "Not stated",
       "catch": "Outside Manhattan: Court Sq station is about a 4-minute walk, then a subway ride to Midtown.",
       "source": {
         "kind": "booking",
-        "label": "Orbitz listing",
-        "url": "https://www.orbitz.com/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Hotel-Reviews"
+        "label": "ebookers listing",
+        "url": "https://ebookers.ch/en/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Hotel-Information"
       },
       "notes": {
         "two-queens": "2 queens + sofa bed",
@@ -249,8 +242,8 @@
       "crib": "Free cribs listed",
       "source2": {
         "kind": "booking",
-        "label": "Expedia listing",
-        "url": "https://www.expedia.com/es/New-York-Hoteles-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Informacion-Hotel"
+        "label": "Travelocity listing",
+        "url": "https://travelocity.ca/fr/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Description-Hotel"
       }
     },
     {
@@ -261,17 +254,18 @@
       "setups": [
         "two-queens",
         "kitchen",
-        "breakfast"
+        "breakfast",
+        "connecting"
       ],
       "room": "Two Queen Studio",
       "beds": "2 queen beds in a studio. A One Bedroom King Suite has a separate bedroom.",
       "sleeps": "4 (studio); some two-queen rooms are listed for 5",
       "size": "About 310 sq ft",
       "door": "Only in the one-bedroom suite",
-      "bathrooms": "1",
+      "bathrooms": "Not stated",
       "kitchen": "In-room kitchen",
-      "breakfast": "Free breakfast (booking sites differ on whether it is a hot buffet or to-go)",
-      "connecting": "Not stated",
+      "breakfast": "Free hot breakfast (Hilton); Hotels.com describes it as to-go",
+      "connecting": "Listed on Hilton's page",
       "catch": "The two-queen room is a studio, so parents and kids share one room.",
       "source": {
         "kind": "official",
@@ -286,7 +280,8 @@
       "notes": {
         "two-queens": "Two Queen Studio",
         "kitchen": "In-room kitchen",
-        "breakfast": "Free breakfast"
+        "breakfast": "Free hot breakfast",
+        "connecting": "Connecting rooms listed by Hilton"
       },
       "crib": "Free cribs listed (Hotels.com)"
     },
@@ -304,10 +299,10 @@
       "beds": "Bedroom with 2 double beds; queen sofa bed in a separate living room. The Two Bedroom Suite has a king, 2 doubles and a sofa bed.",
       "sleeps": "4 (one-bedroom suite); 6 (two-bedroom suite)",
       "size": "About 469 sq ft; two-bedroom about 796 sq ft",
-      "door": "Yes",
+      "door": "Not stated (separate living room)",
       "bathrooms": "1; 2 in the two-bedroom suite",
       "kitchen": "Kitchenette with fridge, microwave and stove",
-      "breakfast": "Not stated",
+      "breakfast": "Extra charge (listing)",
       "connecting": "Not stated",
       "catch": "The beds are doubles, not queens.",
       "source": {
@@ -340,7 +335,7 @@
       "beds": "Bedroom with a closed door; sleeper sofa in a living room that also has a door. Bed sizes not stated.",
       "sleeps": "Not stated",
       "size": "790 sq ft",
-      "door": "Yes",
+      "door": "Yes (closed-door bedroom)",
       "bathrooms": "Not stated",
       "kitchen": "Full kitchen with fridge, stovetop and microwave",
       "breakfast": "A continental breakfast is served in the Club Room; the hotel does not say it is free with every rate",
@@ -366,10 +361,10 @@
         "suite",
         "kitchen"
       ],
-      "room": "Luxury One-Bedroom Suite",
+      "room": "Luxury One-Bedroom Suite with Two Full Bathrooms",
       "beds": "King bed in the bedroom; queen sofa sleeper in the living room. Deluxe rooms have 2 double beds.",
-      "sleeps": "Up to 4 (listing)",
-      "size": "Deluxe two-double room 260-320 sq ft",
+      "sleeps": "Not stated",
+      "size": "Not stated",
       "door": "Yes",
       "bathrooms": "2 (one-bedroom suite)",
       "kitchen": "Kitchenette: mini-fridge, coffee maker and microwave (no stove listed)",
@@ -381,13 +376,8 @@
         "label": "Kimberly accommodations page",
         "url": "https://www.kimberlyhotel.com/accommodations"
       },
-      "source2": {
-        "kind": "booking",
-        "label": "BringFido listing",
-        "url": "https://www.bringfido.ca/lodging/87730"
-      },
       "notes": {
-        "suite": "One-bedroom suite, 2 bathrooms",
+        "suite": "One-bedroom suite with two full bathrooms",
         "kitchen": "Kitchenette, no stove listed"
       },
       "crib": "Not stated"
@@ -403,8 +393,8 @@
         "sleeps5"
       ],
       "room": "Two-bedroom apartment",
-      "beds": "1 queen, 2 twins and a double sofa bed. A one-bedroom apartment has 2 doubles and a sofa bed.",
-      "sleeps": "5 (two-bedroom, listing)",
+      "beds": "Listings disagree: 1 queen, 2 twins and a double sofa bed (Travelocity) or 1 full, 2 twins and a sofa bed (Suiteness). A one-bedroom apartment has 2 queens and a sofa bed.",
+      "sleeps": "5-6 (listings differ)",
       "size": "About 470 sq ft",
       "door": "Yes",
       "bathrooms": "1",
@@ -430,7 +420,7 @@
       "notes": {
         "suite": "Two-bedroom apartment",
         "kitchen": "Kitchenette",
-        "sleeps5": "Two-bedroom apartment, sleeps 5"
+        "sleeps5": "Two-bedroom apartment, sleeps 5-6 (listings differ)"
       },
       "crib": "Not stated"
     },
@@ -447,7 +437,7 @@
       "beds": "2 double beds in the bedroom plus a sofa bed in the living area.",
       "sleeps": "4-6",
       "size": "465-505 sq ft",
-      "door": "Yes (separate bedroom entrance)",
+      "door": "Not stated (separate bedroom entrance)",
       "bathrooms": "Not stated",
       "kitchen": "No (fridge on request)",
       "breakfast": "Not stated",
@@ -477,7 +467,7 @@
       "beds": "2 bedrooms: a king plus a sofa bed in one, a king in the other.",
       "sleeps": "6 (listing)",
       "size": "765 sq ft",
-      "door": "Yes",
+      "door": "Not stated (2 bedrooms)",
       "bathrooms": "2",
       "kitchen": "Not stated",
       "breakfast": "Not stated",
@@ -509,7 +499,7 @@
       "door": "Yes (two connected rooms)",
       "bathrooms": "2",
       "kitchen": "No (mini fridge)",
-      "breakfast": "Some rates include it",
+      "breakfast": "Extra charge (listing)",
       "connecting": "Booked as one room type, the Family Connector",
       "catch": "The hotel says the layout may vary.",
       "source": {
@@ -542,7 +532,7 @@
       "kitchen": "No",
       "breakfast": "Not stated",
       "connecting": "Not stated",
-      "catch": "Booking sites list a facility fee of about $29-$33 a room a night, paid at the hotel.",
+      "catch": "A nightly facility fee (about $29-$33 a room on booking and tour sites) is paid at the hotel.",
       "source": {
         "kind": "official",
         "label": "Riu room page",
@@ -550,8 +540,8 @@
       },
       "source2": {
         "kind": "booking",
-        "label": "Booking.com listing",
-        "url": "https://www.booking.com/hotel/us/riu-plaza-new-york-times-square.html?aid=336004"
+        "label": "Blue Bay Travel listing",
+        "url": "https://bluebaytravel.co.uk/holidays/united-states-of-america/new-york/riu-plaza-new-york-times-square"
       },
       "crib": "Not stated"
     },
@@ -589,7 +579,7 @@
       "check": "On the booking page, look for the word \"queen\". \"Two beds\" often means two doubles."
     },
     "suite": {
-      "intro": "A suite with a door lets kids sleep while parents stay up. Many \"suites\" are one big room, so check for a door.",
+      "intro": "A separate bedroom lets kids sleep while parents stay up. Many \"suites\" are one big room.",
       "check": "Look at the floor plan or photos for a real door, and ask who sleeps on the sofa bed."
     },
     "connecting": {
@@ -598,7 +588,8 @@
       "reported": {
         "text": "A regular forum poster said a Hilton booking with \"confirmed\" connecting rooms was not connecting at check-in in January 2026.",
         "label": "Tripadvisor forum thread",
-        "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15525136-Favorite_Hotel_w_Adjoining_Rooms_or_Suites-New_York_City_New_York.html"
+        "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15525136-Favorite_Hotel_w_Adjoining_Rooms_or_Suites-New_York_City_New_York.html",
+        "who": "A forum poster reported"
       }
     },
     "kitchen": {

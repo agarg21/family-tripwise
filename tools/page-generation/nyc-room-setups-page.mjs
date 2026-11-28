@@ -5,7 +5,7 @@
 // Jan 22-24, 2027 weekend (G18 receipts of Nov 21 and FT-RES-198 receipts of Nov 28). Google does not say which room it
 // priced, so the price is the cheapest room Google showed for 4, not necessarily the family room on the card. Prices drop
 // 7 days before the first night (tools/this-week.mjs re-renders the page daily).
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { contributorCredit } from "./contributors.mjs";
 import { siteHeader, siteEnd, addHolidayLink } from "./site-chrome.mjs";
 import { readableText } from "./readable-text.mjs";
@@ -16,7 +16,7 @@ import { easternDate } from "./sitemap.mjs";
 export const roomSetupsData = () => JSON.parse(readFileSync(new URL("./nyc-room-setups.json", import.meta.url), "utf8"));
 export const roomSetupsPath = roomSetupsData().path;
 export const roomSetupsUrl = `https://familytripwise.com/${roomSetupsPath}`;
-const receipts = [..."abcdefghij"].map((p) => `dataforseo-g18-nyc-${p}-2026-11-21.json`).concat(["a", "b"].map((p) => `dataforseo-nyc-room-setups-prices-${p}-2026-11-28.json`));
+const receipts = [..."abcdefghij"].map((p) => `dataforseo-g18-nyc-${p}-2026-11-21.json`).concat(["a", "b", "c"].map((p) => `dataforseo-nyc-room-setups-prices-${p}-2026-11-28.json`)).filter((file) => existsSync(new URL(`../../docs/research/${file}`, import.meta.url)));
 const searches = () => receipts.flatMap((file) => readReceipt(file).searches);
 const KINDS = { official: "Hotel's own page", booking: "Booking-site listing", press: "Trade press" };
 const FIELDS = ["id", "name", "area", "price_title", "setups", "room", "beds", "sleeps", "size", "door", "bathrooms", "kitchen", "breakfast", "connecting", "crib", "catch", "source"];
@@ -40,12 +40,15 @@ const priceOf = (search, title) => {
   return rows.length === 1 && !rows[0].is_paid && rows[0].currency === "USD" && Number.isInteger(rows[0].price) && rows[0].price > 0 ? rows[0].price : null;
 };
 const etDay = (stamp) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(stamp.replace(" +00:00", "Z").replace(" ", "T")));
-// One night: the newest search (same night, same party) that shows this exact Google title with a price.
+// One night: the hotel's own keyword search (its exact Google title in `matched`), newest by checked_at. If that newest
+// search shows no price, the night is unpriced: an older figure is never carried forward.
 function night(all, title, checkIn, kids) {
-  const hits = all.filter((s) => s.nights === 1 && s.check_in === checkIn && s.party.adults === 2 && s.party.child_ages.join() === kids.join())
-    .map((s) => ({ price: priceOf(s, title), seen: etDay(s.checked_at) })).filter((x) => x.price !== null)
-    .sort((a, b) => b.seen.localeCompare(a.seen));
-  return hits[0] ?? null;
+  const own = all.filter((s) => s.nights === 1 && s.check_in === checkIn && s.party.adults === 2 && s.party.child_ages.join() === kids.join() && (s.matched ?? []).some((row) => row.title === title))
+    .sort((a, b) => b.checked_at.localeCompare(a.checked_at));
+  if (!own.length) return null;
+  const rows = own[0].matched.filter((row) => row.title === title);
+  const price = rows.length === 1 && !rows[0].is_paid && rows[0].currency === "USD" && Number.isInteger(rows[0].price) && rows[0].price > 0 ? rows[0].price : null;
+  return price === null ? null : { price, seen: etDay(own[0].checked_at) };
 }
 export function roomSetupPrice(data, hotel, today, all = searches()) {
   const drop = new Date(Date.parse(`${data.weekend.fri}T12:00:00Z`) - 7 * 86400000).toISOString().slice(0, 10);
@@ -64,11 +67,11 @@ const nightText = (p) => p.both ? `≈ ${dollars(p.average)} a\u00a0night` : `�
 const cellText = (p) => p.both ? `≈ ${dollars(p.average)}` : `≈ ${dollars(p.average)} (${p.fri ? "Fri" : "Sat"} only)`;
 const seenDays = (p) => [...new Set([p.fri, p.sat].filter(Boolean).map((n) => n.seen))].sort().map(monthDay).join(" and ");
 const priceNote = (data, p) => p.both ? `${dollars(p.total)} for ${data.weekend.label}. Seen ${seenDays(p)}.` : `${data.weekend.label}; Google showed one night only. Seen ${seenDays(p)}.`;
-const reportedLine = (r) => `<p class="london-note"><strong>A family reported:</strong> ${e(r.text)} ${link(r.url, r.label)} (a forum post, not checked by us).</p>`;
+const reportedLine = (r) => `<p class="london-note"><strong>${e(r.who ?? "A family reported")}:</strong> ${e(r.text)} ${link(r.url, r.label)} (a forum post, not checked by us).</p>`;
 
 function card(data, h, p) {
   const price = p ? `<strong>${e(nightText(p))}</strong>. ${e(priceNote(data, p))}` : "Check live rate: no current Google price for a family of 4.";
-  const facts = [["Where", h.area], ["Family room", h.room], ["Beds", h.beds], ["Sleeps", h.sleeps], ["Size", h.size], ["Door between rooms", h.door], ["Bathrooms", h.bathrooms], ["Kitchen", h.kitchen], ["Breakfast", h.breakfast], ["Connecting rooms", h.connecting], ["Crib", h.crib]];
+  const facts = [["Where", h.area], ["Family room", h.room], ["Beds", h.beds], ["Sleeps", h.sleeps], ["Size", h.size], ["Separate bedroom", h.door], ["Bathrooms", h.bathrooms], ["Kitchen", h.kitchen], ["Breakfast", h.breakfast], ["Connecting rooms", h.connecting], ["Crib", h.crib]];
   const stated = facts.filter(([, v]) => v !== "Not stated"), missing = facts.filter(([, v]) => v === "Not stated").map(([k]) => k.toLowerCase());
   const rows = [...stated.slice(0, 2), ["Price", null], ...stated.slice(2)];
   const srcs = [h.source, h.source2].filter(Boolean).map((s) => `${link(s.url, s.label)} (${e(KINDS[s.kind].toLowerCase())})`).join(" · ");
@@ -78,7 +81,7 @@ function card(data, h, p) {
 function setupSection(data, key, hotels, prices, basis) {
   const sec = data.sections[key];
   const list = hotels.filter((h) => h.setups.includes(key)).sort((a, b) => (prices[a.id]?.average ?? 1e9) - (prices[b.id]?.average ?? 1e9));
-  const item = (h) => `<li>${link(`#${h.id}`, h.name)} · ${e(h.area)}: ${e(h.notes[key])}${prices[h.id] ? ` · ${key === "sleeps5" ? "cheapest room for 4: " : ""}<strong>${e(nightText(prices[h.id]))}</strong>` : " · check live rate"}</li>`;
+  const item = (h) => `<li>${link(`#${h.id}`, h.name)} · ${e(h.area)}: ${e(h.notes[key])}${prices[h.id] ? ` · cheapest room for 4: <strong>${e(nightText(prices[h.id]))}</strong>` : " · check live rate"}</li>`;
   return `<section id="${e(key)}"><h2>${e(data.setups[key].title)}</h2><p>${e(sec.intro)}${key === "sleeps5" ? " Prices are for 4; check the live rate for your party." : ""}</p><ul>${list.map(item).join("")}</ul><p><strong>Check before booking:</strong> ${e(sec.check)}</p>${sec.reported ? `${reportedLine(sec.reported)}${basis ? `<p class="london-source">${e(basis)}</p>` : ""}` : ""}</section>`;
 }
 
@@ -108,6 +111,6 @@ ${keys.map((k) => setupSection(data, k, data.hotels, prices, priced.length ? `Pr
 <section id="hotels"><h2>Hotel by hotel</h2><p>Each card says where its facts come from. "Listing" means a booking site, not the hotel itself. Each price is the cheapest room Google showed for a family of 4, maybe not the family room.</p></section>
 ${sorted.map((h) => card(data, h, prices[h.id])).join("\n")}
 <section id="before-booking"><h2>Before you book any of them</h2><ul><li>Search for everyone who will stay, with each child's age.</li><li>Book the named room type, not "run of house" or "room assigned at check-in".</li><li>Ask the hotel to confirm beds, sofa bed, crib and any connection in writing.</li><li>Get the full price with taxes and any nightly fee.</li></ul><p>Comparing areas and prices instead? ${link("./new-york-city-family-hotels.html", "NYC family hotels by trip style")} · ${link("./new-york-city-with-kids.html", "Where to stay in NYC with kids")}</p></section>
-<section id="methodology"><h2>How we checked this page</h2><p>Desk research, not firsthand stays or a ranking.</p><details class="how-checked"><summary>Sources, prices and limits</summary><p>Room facts were read on ${e(longDate(data.read_on))} from each hotel's own room page where it publishes them, and otherwise from a named booking-site listing. Each card says which. Booking sites sometimes disagree with each other; where they did, the card says so. "Not stated" means our source did not say.</p><p>${priced.length ? `Prices are Google Hotels listing prices pulled through DataForSEO on ${e(seen.map(longDate).filter((d, i, a) => a.indexOf(d) === i).join(" and "))}: one 1-night search per night for 2 adults and kids 5 and 8. The headline is the average of Friday and Saturday; the weekend figure is their sum, both estimates. Google does not show which room it priced, or which taxes and fees it includes. Prices leave the page a week before the first night.` : "Google Hotels prices leave this page a week before the first sampled night, so none is shown now."}</p><p>"A family reported" notes are forum posts we read; we did not check them. No safety, stroller or stay experience is claimed. ${link("../about.html", "Our research and uncertainty policy")}</p></details></section></main>${siteEnd("../", roomSetupsPath)}</body></html>\n`);
+<section id="methodology"><h2>How we checked this page</h2><p>Desk research, not firsthand stays or a ranking.</p><details class="how-checked"><summary>Sources, prices and limits</summary><p>Room facts were read on ${e(longDate(data.read_on))} from each hotel's own room page where it publishes them, and otherwise from a named booking-site listing. Each card says which. Booking sites sometimes disagree with each other; where they did, the card says so. "Not stated" means our source did not say.</p><p>${priced.length ? `Prices are Google Hotels listing prices pulled through DataForSEO on ${e(seen.map(longDate).filter((d, i, a) => a.indexOf(d) === i).join(" and "))}: one 1-night search per night for 2 adults and kids 5 and 8. Each night uses the hotel's own search, newest first; if that search showed no price, the night is left blank rather than filled from an older one. The headline is the average of Friday and Saturday; the weekend figure is their sum, both estimates. Google does not show which room it priced, or which taxes and fees it includes. Prices leave the page a week before the first night.` : "Google Hotels prices leave this page a week before the first sampled night, so none is shown now."}</p><p>"A family reported" notes are forum posts we read; we did not check them. No safety, stroller or stay experience is claimed. ${link("../about.html", "Our research and uncertainty policy")}</p></details></section></main>${siteEnd("../", roomSetupsPath)}</body></html>\n`);
 }
 export function writeRoomSetupsPage(writeSite, today = process.env.FT_BUILD_DATE || easternDate()) { writeSite(roomSetupsPath, addHolidayLink(roomSetupsPage(today), roomSetupsPath)); }
