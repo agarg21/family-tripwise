@@ -291,12 +291,12 @@
         "sleeps5"
       ],
       "room": "Deluxe Suite, Two Double Beds",
-      "beds": "Bedroom with 2 double beds; queen sofa bed in a separate living room. The Two Bedroom Suite has a king, 2 doubles and a sofa bed.",
+      "beds": "Bedroom with 2 double beds; sofa bed in a separate living room. The Two Bedroom Suite has a king, 2 doubles and a sofa bed.",
       "sleeps": "4 (one-bedroom suite); 6 (two-bedroom suite)",
       "size": "About 469 sq ft; two-bedroom about 796 sq ft",
       "door": "Not stated (separate living room)",
       "bathrooms": "1; 2 in the two-bedroom suite",
-      "kitchen": "Kitchenette with fridge, microwave and stove",
+      "kitchen": "Kitchenette (appliances not stated)",
       "breakfast": "Extra charge (listing)",
       "connecting": "Not stated",
       "catch": "The beds are doubles, not queens.",
@@ -312,7 +312,7 @@
       },
       "notes": {
         "suite": "Bedroom with 2 doubles; sofa bed in living room",
-        "kitchen": "Kitchenette with stove",
+        "kitchen": "Kitchenette",
         "sleeps5": "Two Bedroom Suite, sleeps 6, 2 bathrooms"
       },
       "crib": "Not stated"
@@ -365,7 +365,7 @@
       "kitchen": "Kitchenette: mini-fridge, coffee maker and microwave (hotel's page)",
       "breakfast": "Not stated",
       "connecting": "Not stated",
-      "catch": "Kids share the sofa sleeper; the kitchenette has no stove.",
+      "catch": "Kids share the sofa sleeper; no stove is listed in the kitchenette.",
       "source": {
         "kind": "official",
         "label": "Kimberly accommodations page",
