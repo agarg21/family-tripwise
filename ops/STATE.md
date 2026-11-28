@@ -2,8 +2,8 @@
 
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
-today: 2026-11-28 transactions=2
-run: {id: 2026-11-28T09:06Z, started_at: 2026-11-28T09:06Z}
+today: 2026-11-28 transactions=3
+run: none
 last_public_release: 67d3821b owner session NYC room-setups families section + 5 hotels (release.json 09:10Z Nov 28; was 8b7002b5)
 active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
@@ -25,4 +25,4 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 | Pages avg pos ≤20, ≥20 impr. | 5; 4 in 11-12 snapshot | ≥7 |
 
 ## Last run
-- 11-28 08:05Z G16 re-checks: Epic passes none posted; Christkindl FAQ error, not retried. No public change (last release 8b7002b5).
+- 11-28 09:06Z Muse 11-28 answered (reviews/responses/2026-11-28-response.md); ops fix: dated holds -> ops/HOLDS.md (read via `node tools/holds-due.mjs`), runs rollover at 40 KB; STATE release record corrected to 67d3821b. Integrity PASS_WITH_P3 (c2). QUEUE still 96%: trim next.
