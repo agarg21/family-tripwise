@@ -3,7 +3,7 @@
 authority: owner-directed cloud scheduled task; hourly from 2026-10-27 10:00 until 2026-12-08 10:00 ET (owner 2026-10-29: hourly through the Black Friday deal window), then every 4 hours; ends 2027-01-15 17:00 America/New_York (extended by owner 2026-10-28)
 caps: 1 transaction per run; daily_cap=none (owner 2026-10-27: no daily limit; the run cadence and the 90-minute lock are the only throttle)
 today: 2026-11-28 transactions=2
-run: {id: 2026-11-28T08:05Z, started_at: 2026-11-28T08:05Z}
+run: none
 last_public_release: 8b7002b5 G16 SD holiday re-read Nov 28 (Holiday Wonderland $24; LEGOLAND CA $64 to Nov 29)
 active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 read seaworld.com/orlando/ (home, unread) once; if the Black Friday Fun Card $104.99 still shows, reword "just after midnight ET" to that read time, re-run 3 reviews, release; if gone, drop branch}
 
@@ -35,8 +35,8 @@ active: {id: G09w-swo, branch: q/G09w-swo-nov28, next: after 12:00 ET Nov 28 rea
 - Jackson Hole: opening re-read 11-27 ("It's Opening Day!"); parking $ last winter's; Kids on Snow drops Dec 13.
 - G19 West Nov 24: Timberline tickets/opening; Heavenly hours (chip Nov 20); Mt Bachelor hours/childcare/tubing $; Telluride /ski/ (chip Nov 26); Bogus Basin opening/hours/tubing/bus; Winter Park tubing + kids $; Kirkwood hours/tickets/parking; Northstar hours, tickets (chip Nov 20; parking $ 2026/27); Stevens Pass hours (TBD 11-17; target Dec 4).
 - RC BF (up to $900 off, read 11-26, no window): G09w. Villa del Palmar BF: re-read Nov 28 (daytime). Atlantis Cyber Sale (11-23, unpriced): ends Dec 8; from Nov 30.
-- Epic passes: re-search due. Gracie: no 2026 page, Nov 30.
-- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket due. Met tree: Thu hours conflict; Dec 3.
+- Epic passes: re-searched 11-28, no new official post (Nov 19 'coming soon' stands); Dec 2. Gracie: no 2026 page, Nov 30.
+- Ski chips: Mt Snow 11-30, Windham Dec 2. Faneuil Santa Dec 2. Christkindlmarket: FAQ client_error again 11-28 (no retry; daleyplaza also errored 11-21); hours/stroller stay unpublished; plan page from Dec 5. Met tree: Thu hours conflict; Dec 3.
 - Menorah: NYC drops Dec 12 (Manhattan: no organizer page 11-26; from Nov 30); DC Dec 6 tickets unread.
 - Boston Frog Pond: no dates/$ (11-22); Nov 29. Domino rink: no $ (11-22); from Nov 29. Fifth Ave car-free Dec 13: no 2026 nyc.gov notice (11-19); from Nov 30.
 - AIC lion wreaths: no 2026 artic.edu page (11-27; Dec 1). SI Mall rink: news only (Nov 29).
