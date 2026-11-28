@@ -1,0 +1,110 @@
+{
+  "action": "FT-RES-198",
+  "purpose": "NYC room-setups page (owner 11-28): family-of-4 Fri/Sat Jan 22-23, 2027 for hotels not in the G18 set (part a)",
+  "hotel_searches": [
+    {
+      "label": "nycr-newyorker-jan22-1n",
+      "keyword": "Wyndham New Yorker Hotel",
+      "location_coordinate": "40.7526,-73.9934",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "New Yorker"
+    },
+    {
+      "label": "nycr-newyorker-jan23-1n",
+      "keyword": "Wyndham New Yorker Hotel",
+      "location_coordinate": "40.7526,-73.9934",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "New Yorker"
+    },
+    {
+      "label": "nycr-riu-ts-jan22-1n",
+      "keyword": "Hotel Riu Plaza New York Times Square",
+      "location_coordinate": "40.7598,-73.9878",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Riu Plaza New York"
+    },
+    {
+      "label": "nycr-riu-ts-jan23-1n",
+      "keyword": "Hotel Riu Plaza New York Times Square",
+      "location_coordinate": "40.7598,-73.9878",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Riu Plaza New York"
+    },
+    {
+      "label": "nycr-motto-jan22-1n",
+      "keyword": "Motto by Hilton New York City Chelsea",
+      "location_coordinate": "40.7440,-73.9926",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Motto"
+    },
+    {
+      "label": "nycr-motto-jan23-1n",
+      "keyword": "Motto by Hilton New York City Chelsea",
+      "location_coordinate": "40.7440,-73.9926",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Motto"
+    },
+    {
+      "label": "nycr-nu-jan22-1n",
+      "keyword": "NU Hotel Brooklyn",
+      "location_coordinate": "40.6886,-73.9866",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "NU Hotel"
+    },
+    {
+      "label": "nycr-nu-jan23-1n",
+      "keyword": "NU Hotel Brooklyn",
+      "location_coordinate": "40.6886,-73.9866",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "NU Hotel"
+    }
+  ]
+}

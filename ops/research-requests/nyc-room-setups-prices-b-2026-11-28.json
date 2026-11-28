@@ -1,0 +1,110 @@
+{
+  "action": "FT-RES-198",
+  "purpose": "NYC room-setups page (owner 11-28): family-of-4 Fri/Sat Jan 22-23, 2027 for hotels not in the G18 set (part b)",
+  "hotel_searches": [
+    {
+      "label": "nycr-hyatt-lic-jan22-1n",
+      "keyword": "Hyatt Place Long Island City New York City",
+      "location_coordinate": "40.7474,-73.9420",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Hyatt Place Long Island City"
+    },
+    {
+      "label": "nycr-hyatt-lic-jan23-1n",
+      "keyword": "Hyatt Place Long Island City New York City",
+      "location_coordinate": "40.7474,-73.9420",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Hyatt Place Long Island City"
+    },
+    {
+      "label": "nycr-paramount-jan22-1n",
+      "keyword": "Paramount Times Square A Generator Hotel",
+      "location_coordinate": "40.7591,-73.9867",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Paramount"
+    },
+    {
+      "label": "nycr-paramount-jan23-1n",
+      "keyword": "Paramount Times Square A Generator Hotel",
+      "location_coordinate": "40.7591,-73.9867",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Paramount"
+    },
+    {
+      "label": "nycr-fifty-jan22-1n",
+      "keyword": "The Fifty Sonesta Hotel New York",
+      "location_coordinate": "40.7555,-73.9696",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Fifty"
+    },
+    {
+      "label": "nycr-fifty-jan23-1n",
+      "keyword": "The Fifty Sonesta Hotel New York",
+      "location_coordinate": "40.7555,-73.9696",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Fifty"
+    },
+    {
+      "label": "nycr-kimberly-jan22-1n",
+      "keyword": "The Kimberly Hotel New York",
+      "location_coordinate": "40.7562,-73.9711",
+      "check_in": "2027-01-22",
+      "check_out": "2027-01-23",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Kimberly"
+    },
+    {
+      "label": "nycr-kimberly-jan23-1n",
+      "keyword": "The Kimberly Hotel New York",
+      "location_coordinate": "40.7562,-73.9711",
+      "check_in": "2027-01-23",
+      "check_out": "2027-01-24",
+      "adults": 2,
+      "children": [
+        5,
+        8
+      ],
+      "match": "Kimberly"
+    }
+  ]
+}
