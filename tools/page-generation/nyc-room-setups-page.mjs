@@ -16,7 +16,7 @@ import { easternDate } from "./sitemap.mjs";
 export const roomSetupsData = () => JSON.parse(readFileSync(new URL("./nyc-room-setups.json", import.meta.url), "utf8"));
 export const roomSetupsPath = roomSetupsData().path;
 export const roomSetupsUrl = `https://familytripwise.com/${roomSetupsPath}`;
-const receipts = [..."abcdefghij"].map((p) => `dataforseo-g18-nyc-${p}-2026-11-21.json`).concat(["a", "b", "c"].map((p) => `dataforseo-nyc-room-setups-prices-${p}-2026-11-28.json`)).filter((file) => existsSync(new URL(`../../docs/research/${file}`, import.meta.url)));
+const receipts = [..."abcdefghij"].map((p) => `dataforseo-g18-nyc-${p}-2026-11-21.json`).concat(["a", "b", "c", "d", "e"].map((p) => `dataforseo-nyc-room-setups-prices-${p}-2026-11-28.json`)).filter((file) => existsSync(new URL(`../../docs/research/${file}`, import.meta.url)));
 const searches = () => receipts.flatMap((file) => readReceipt(file).searches);
 const KINDS = { official: "Hotel's own page", booking: "Booking-site listing", press: "Trade press" };
 const FIELDS = ["id", "name", "area", "price_title", "setups", "room", "beds", "sleeps", "size", "door", "bathrooms", "kitchen", "breakfast", "connecting", "crib", "catch", "source"];
@@ -32,6 +32,11 @@ export function validateRoomSetups(data) {
     for (const src of [h.source, h.source2].filter(Boolean)) if (!KINDS[src.kind]) throw new Error(`${h.id}: unknown source kind`);
   }
   for (const s of Object.keys(data.setups)) if (!data.sections[s]) throw new Error(`missing section ${s}`);
+  for (const b of data.booked ?? []) {
+    for (const f of ["party", "when", "stay", "what", "label", "url"]) if (!b[f]) throw new Error(`booked row: missing ${f}`);
+    if (!/^https:\/\/www\.(reddit|tripadvisor)\.com\//.test(b.url)) throw new Error(`booked row: ${b.url} is not a Reddit or Tripadvisor post`);
+    if (b.hotel && !ids.has(b.hotel)) throw new Error(`booked row: unknown hotel ${b.hotel}`);
+  }
   return data;
 }
 
@@ -85,6 +90,13 @@ function setupSection(data, key, hotels, prices, basis) {
   return `<section id="${e(key)}"><h2>${e(data.setups[key].title)}</h2><p>${e(sec.intro)}${key === "sleeps5" ? " Prices are for 4; check the live rate for your party." : ""}</p><ul>${list.map(item).join("")}</ul><p><strong>Check before booking:</strong> ${e(sec.check)}</p>${sec.reported ? reportedLine(sec.reported) : ""}${basis ? `<p class="london-source">${e(basis)}</p>` : ""}</section>`;
 }
 
+function bookedSection(data) {
+  const rows = data.booked ?? [];
+  if (!rows.length) return "";
+  const stay = (b) => b.hotel ? `${e(b.stay)} ${link(`#${b.hotel}`, "(card)")}` : e(b.stay);
+  return `<section id="booked"><h2>What NYC families actually booked</h2><p>${rows.length} families' own posts from 2025-2026, in our words. Posts read by ${e(monthDay(data.booked_read_on))}, 2026; we did not check what they say.</p><div class="london-scroll" tabindex="0" role="region" aria-label="What NYC families booked"><table class="london-comparison london-rooms"><caption>Trip reports and forum posts by parents. Paraphrased; follow the link for the full post.</caption><thead><tr><th scope="col">Family</th><th scope="col">Where they stayed</th><th scope="col">What they said</th><th scope="col">Post</th></tr></thead><tbody>${rows.map((b) => `<tr><th scope="row">${e(b.party)}<small>${e(b.when)}</small></th><td data-label="Where they stayed">${stay(b)}</td><td data-label="What they said">${e(b.what)}</td><td data-label="Post">${link(b.url, b.label)}</td></tr>`).join("")}</tbody></table></div></section>`;
+}
+
 export function roomSetupsPage(today = process.env.FT_BUILD_DATE || easternDate(), data = validateRoomSetups(roomSetupsData())) {
   const all = searches();
   const prices = Object.fromEntries(data.hotels.map((h) => [h.id, roomSetupPrice(data, h, today, all)]));
@@ -107,6 +119,7 @@ export function roomSetupsPage(today = process.env.FT_BUILD_DATE || easternDate(
 <main id="main"><section class="london-intro"><p class="eyebrow">New York City · family hotel rooms</p><h1>NYC hotel rooms that fit a family</h1>
 ${contributorCredit()}<p class="london-lead">${n} hotels sorted by the room you need: bunk beds, two queens, a separate bedroom, connecting rooms, a kitchen or free breakfast.</p><section id="glance" class="answer-box price-answer" aria-label="Price at a glance">${glance}<p class="pick-heading"><strong>Jump to the room you need</strong></p><ul class="pick-list">${picks}</ul><p class="price-catch"><strong>Main catch:</strong> many NYC "two-bed" rooms are two doubles, and many "suites" have no door. Check both before you book.</p></section><p class="london-source">Room facts read ${e(longDate(data.read_on))} on each hotel's page or a named booking site. Research, not our own stays.</p><figure class="licensed-photo hero-photo"><img src="../images/new-york-city-brooklyn-bridge-park-skyline-2014.webp" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async" alt="The Manhattan skyline seen across the East River from Brooklyn Bridge Park."><figcaption>Manhattan from Brooklyn Bridge Park. Photo by Arribas91 via ${link("https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg", "Wikimedia Commons")}, ${link("https://creativecommons.org/licenses/by-sa/3.0", "CC BY-SA 3.0")}. Resized and cropped.</figcaption></figure></section>
 <section id="compare"><h2>All ${n} hotels at a glance</h2><p>Sorted by price. The price is the hotel\'s cheapest room for 4 on Google, not always the family room. Tap a hotel for its beds, door, kitchen and the catch.</p>${table}</section>
+${bookedSection(data)}
 ${keys.map((k) => setupSection(data, k, data.hotels, prices, priced.length ? `Prices: family of 4, ${data.weekend.label}, Google Hotels, seen ${seen.map(monthDay).filter((d, i, a) => a.indexOf(d) === i).join(" and ")}, 2026. Not quotes.` : "")).join("\n")}
 <section id="hotels"><h2>Hotel by hotel</h2><p>Each card says where its facts come from. "Listing" means a booking site, not the hotel itself. Each price is the cheapest room Google showed for a family of 4, maybe not the family room.</p></section>
 ${sorted.map((h) => card(data, h, prices[h.id])).join("\n")}
