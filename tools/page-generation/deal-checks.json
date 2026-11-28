@@ -3215,11 +3215,11 @@
       "terms": [
         [
           "Headline",
-          "\"Black Friday Sale: Save up to $120\" (Annual Passes page, read November 21, 2026)."
+          "\"Black Friday Sale: Save up to $120\" (Annual Passes page, read November 21 and again November 27, 2026)."
         ],
         [
           "Price shown",
-          "Standard USD 139 (\"Save $50\", full price USD 189); Preferred USD 189 (\"Save $100\", full price USD 289); Premium USD 229 (\"Save $120\", full price USD 349). Each pass is for one named person. Prepaid in full for the first 12 months, then monthly auto-renewal at USD 10.75 (Standard), USD 14.92 (Preferred) or USD 18.25 (Premium) a month plus taxes; payments are non-refundable. No other taxes or fees are mentioned."
+          "Standard USD 139 (\"Save $50\", full price USD 189); Preferred USD 189 (\"Save $100\", full price USD 289); Premium USD 229 (\"Save $120\", full price USD 349). Each pass is for one named person. Prepaid in full for the first 12 months, then monthly auto-renewal; the Annual Passes page lists USD 10.75, 14.92 and 18.25 a month plus taxes without naming the tier for each (read November 27). The upfront payment and monthly fees already charged are non-refundable. No other taxes or fees are mentioned."
         ],
         [
           "Travel window",
@@ -3227,7 +3227,7 @@
         ],
         [
           "Book by",
-          "\"Offer ends November 29, 2026\" (LEGOLAND California help article on the Black Friday Annual Pass offers, read November 21, 2026). LEGOLAND's Black Friday page (read November 19) gives purchases from November 16; it also lists day tickets \"Starting From $64 Per Person\" to November 29."
+          "\"Offer ends November 29, 2026\" (LEGOLAND California help article on the Black Friday Annual Pass offers, read November 21, 2026). LEGOLAND's Black Friday page, read again November 27, says the offer is \"valid for purchases made starting November 16 through November 29\" and \"can end at any time without notice\"; it also lists day tickets \"Starting From $64 Per Person\" to November 29. No Cyber Monday extension is mentioned."
         ],
         [
           "Child ages",
@@ -3239,7 +3239,7 @@
         ],
         [
           "Prices on LEGOLAND California's tickets pages, for comparison",
-          "Black Friday page, read November 19, 2026: 1-day tickets \"Starting From $64 Per Person\" online to November 29 (party and age basis not stated), front gate USD 139 a person. Tickets page, read November 14: from USD 69 online."
+          "Black Friday page, read November 19 and again November 27, 2026: 1-day tickets \"Starting From $64 Per Person\" online to November 29 (party and age basis not stated), front gate USD 139 a person. Tickets page, read November 14: from USD 69 online."
         ]
       ],
       "unclear": [
@@ -3257,12 +3257,12 @@
       "family_total": null,
       "official_url": "https://www.legoland.com/california/tickets-passes/annual-passes/",
       "source_label": "LEGOLAND California Annual Passes page",
-      "observed_on": "2026-11-21",
+      "observed_on": "2026-11-27",
       "expires_on": "2026-11-29",
       "expires_note": "Black Friday sale ends Nov 29",
       "deadline_stated": true,
       "score": {
-        "scored_on": "2026-11-21",
+        "scored_on": "2026-11-27",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and Standard parking is extra at an unstated price."
@@ -3307,7 +3307,7 @@
           "unit_short": "3 park visits",
           "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $64 sale day tickets cost less.",
           "basis": "Taxes, fees and parking not counted.",
-          "note": "Rough estimate, not a quote: $64 is the lowest \"starting from\" day-ticket price in the Black Friday sale (read Nov 19), and many dates cost more, which favours the pass. Pass prices read Nov 21. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
+          "note": "Rough estimate, not a quote: $64 is the lowest \"starting from\" day-ticket price in the Black Friday sale (read Nov 19, unchanged Nov 27), and many dates cost more, which favours the pass. Pass prices read Nov 21, unchanged Nov 27. The 86 Standard blockout dates are not listed. Taxes, fees and parking are not counted.",
           "without": {
             "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the lowest Black Friday online price; no parking.",
             "parts": [
@@ -3319,7 +3319,7 @@
                 "source": {
                   "label": "LEGOLAND California Black Friday page",
                   "url": "https://www.legoland.com/california/deals/black-friday-sale/",
-                  "observed_on": "2026-11-19"
+                  "observed_on": "2026-11-27"
                 }
               }
             ]
@@ -3335,7 +3335,7 @@
                 "source": {
                   "label": "LEGOLAND California Annual Passes page",
                   "url": "https://www.legoland.com/california/tickets-passes/annual-passes/",
-                  "observed_on": "2026-11-21"
+                  "observed_on": "2026-11-27"
                 }
               }
             ]
@@ -3374,7 +3374,7 @@
           {
             "label": "LEGOLAND California Black Friday page",
             "url": "https://www.legoland.com/california/deals/black-friday-sale/",
-            "observed_on": "2026-11-19",
+            "observed_on": "2026-11-27",
             "covers": "the $64 sale day-ticket price used for the comparison and purchases from Nov 16"
           },
           {
@@ -3436,7 +3436,7 @@
       "terms": [
         [
           "Headline",
-          "\"Black Friday Sale: Save up to $100\" (Annual Passes page, read November 21, 2026)."
+          "\"Black Friday Sale: Save up to $100\" (Annual Passes page, read November 21 and again November 27, 2026)."
         ],
         [
           "Price shown",
@@ -3448,7 +3448,7 @@
         ],
         [
           "Book by",
-          "LEGOLAND Florida's Black Friday page (read November 20, 2026) lists annual passes \"Starting From $99\" with \"Offer ends November 29, 2026\". The Annual Passes page (read November 21) shows the sale prices but no end date."
+          "LEGOLAND Florida's Black Friday page (read November 20 and again November 27, 2026) lists annual passes \"Starting From $99\" with \"Offer ends November 29, 2026\". The Annual Passes page (read November 27) shows the same sale prices but no end date. No Cyber Monday extension is mentioned."
         ],
         [
           "Child ages",
@@ -3460,13 +3460,13 @@
         ],
         [
           "Prices on LEGOLAND Florida's ticket pages, for comparison",
-          "Black Friday page, read November 20, 2026: 1-day theme park ticket with SEA LIFE \"On Sale $49 Per Person\" for one date you pick through May 23, 2027 (ages 2 and up; water park and parking not included; non-refundable), front gate USD 129 a person. Tickets page, read November 14: from USD 69."
+          "Black Friday page, read November 20, 2026 ($49 and the date window unchanged November 27): 1-day theme park ticket with SEA LIFE \"On Sale $49 Per Person\" for one date you pick through May 23, 2027 (ages 2 and up; water park and parking not included; non-refundable), front gate USD 129 a person. Tickets page, read November 14: from USD 69."
         ]
       ],
       "unclear": [
         "The pass page does not list the 83 Standard blockout dates in text.",
         "The pass page states no age rule for passes; we count a pass for everyone aged 2 and up, as for tickets.",
-        "The pass page gives a blockout-date ticket for Standard passholders as USD 39 in one place and USD 25 in another.",
+        "The pass page gives USD 25 for a blockout-date ticket for Standard passholders; USD 39 appears as a guest-ticket price for Preferred and Premium passholders (read November 27; our page read was cut off before the end).",
         "Parking prices are not shown."
       ],
       "before_booking": [
@@ -3477,12 +3477,12 @@
       "family_total": null,
       "official_url": "https://www.legoland.com/florida/tickets-passes/annual-passes/",
       "source_label": "LEGOLAND Florida Annual Passes page",
-      "observed_on": "2026-11-21",
+      "observed_on": "2026-11-27",
       "expires_on": "2026-11-29",
       "expires_note": "Black Friday sale",
       "deadline_stated": true,
       "score": {
-        "scored_on": "2026-11-21",
+        "scored_on": "2026-11-27",
         "family_value": {
           "level": "unknown",
           "basis": "No family total for a named party and dates was observed; passes are priced per person with no child price, and Standard parking is extra at an unstated price."
@@ -3527,7 +3527,7 @@
           "unit_short": "3 park visits",
           "verdict_line": "Worth it only for 3+ visits in 12 months on unblocked dates. For 1 or 2 visits, $49 sale day tickets cost less.",
           "basis": "Sales tax and parking not counted.",
-          "note": "Rough estimate, not a quote: $49 is the Black Friday day-ticket price (read Nov 20) for one date you pick through May 23, 2027; after the sale, day tickets were from $69 (Nov 14). Pass prices read Nov 21. The 83 Standard blockout dates are not listed. Sales tax and parking are not counted.",
+          "note": "Rough estimate, not a quote: $49 is the Black Friday day-ticket price (read Nov 20, unchanged Nov 27) for one date you pick through May 23, 2027; after the sale, day tickets were from $69 (Nov 14). Pass prices read Nov 21, unchanged Nov 27. The 83 Standard blockout dates are not listed. Sales tax and parking are not counted.",
           "without": {
             "includes": "Four 1-day theme park tickets with SEA LIFE for each visit, at the Black Friday sale price; no water park, no parking.",
             "parts": [
@@ -3539,7 +3539,7 @@
                 "source": {
                   "label": "LEGOLAND Florida Black Friday page",
                   "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
-                  "observed_on": "2026-11-20"
+                  "observed_on": "2026-11-27"
                 }
               }
             ]
@@ -3555,7 +3555,7 @@
                 "source": {
                   "label": "LEGOLAND Florida Annual Passes page",
                   "url": "https://www.legoland.com/florida/tickets-passes/annual-passes/",
-                  "observed_on": "2026-11-21"
+                  "observed_on": "2026-11-27"
                 }
               }
             ]
@@ -3588,7 +3588,7 @@
           {
             "label": "LEGOLAND Florida Black Friday page",
             "url": "https://www.legoland.com/florida/deals/black-friday-sale/",
-            "observed_on": "2026-11-20",
+            "observed_on": "2026-11-27",
             "covers": "the $49 Black Friday day-ticket price used for the comparison, the $129 front-gate price and the November 29 end date"
           },
           {

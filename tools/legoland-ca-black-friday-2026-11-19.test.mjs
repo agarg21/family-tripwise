@@ -11,9 +11,9 @@ test("LEGOLAND California Black Friday sale (read Nov 19): annual pass page no l
   const c = checks.find((x) => x.id === "legoland-california-annual-pass");
   const text = JSON.stringify(c.v2.catch) + JSON.stringify(c.v2.how) + JSON.stringify(c.v2.cons) + c.headline;
   assert.doesNotMatch(text, /not a sale|Not on sale/);
-  assert.ok(c.v2.extra_sources.some((s) => /black-friday-sale/.test(s.url) && s.observed_on === "2026-11-19"));
-  // Re-read Nov 21: the pass page and help article name the tier, Standard $139 (regularly $189), to Nov 29.
-  assert.equal(c.observed_on, "2026-11-21");
+  assert.ok(c.v2.extra_sources.some((s) => /black-friday-sale/.test(s.url) && s.observed_on === "2026-11-27"));
+  // Re-read Nov 21: the pass page and help article name the tier, Standard $139 (regularly $189), to Nov 29. Re-read Nov 27: unchanged.
+  assert.equal(c.observed_on, "2026-11-27");
   assert.equal(c.expires_on, "2026-11-29");
   assert.equal(c.deadline_stated, true);
   assert.equal(c.v2.spend_save.with.parts[0].unit_amount, 139);
