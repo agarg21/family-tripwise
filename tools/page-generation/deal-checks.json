@@ -4379,7 +4379,7 @@
       "headline": "Six Flags Great Adventure sells a 2027 Silver Pass for USD 79 a person through November 30 (Black Friday Deal extended), with general parking and the water park and safari, but no child price or age rule is shown and processing fees and tax are extra.",
       "family_of_four": "Passes are priced per person at USD 79, so a family of 2 adults and 2 kids pays about USD 316 before a processing fee of up to USD 9.99 and tax. The pages show no child price or age rule, so we count four people. No family total for named dates was observed.",
       "terms": [
-        ["Headline", "\"Black Friday Deal: Buy a Day, Get the Summer Free. Extended through 11/30!\" and \"Black Friday Deal EXTENDED through 11/30\" (our deal watcher's read of the Special Offers page, November 28, 2026; it said \"Ends TODAY!\" for 11/27 before). The Daily Tickets page, read the same morning, still showed \"Hurry! Black Friday Deal Ends 11/27\", so buy by the earlier of the two you see."],
+        ["Headline", "\"Black Friday Deal: Buy a Day, Get the Summer Free. Extended through 11/30!\" and \"Black Friday Deal EXTENDED through 11/30\" (our deal watcher's read of the Special Offers page, November 28, 2026; it said \"Ends TODAY!\" for 11/27 before). The Daily Tickets page, read the same morning, still showed \"Hurry! Black Friday Deal Ends 11/27\"; if checkout still shows 11/27, the extension may not apply there."],
         ["Price shown", "Silver Pass USD 79 each and Good Any Day Ticket USD 79 each, \"$0 more for Silver\" (Daily Tickets page, read November 28, 2026, unchanged from November 19). No regular pass price is shown. Season Passes page, read November 6: Silver Bundle USD 179 each with a dining and drink plan; Gold Pass USD 105 each; Prestige Pass USD 249 each. Plus a processing fee of up to USD 9.99 and applicable taxes."],
         ["Travel window", "\"Visits Thru Labor Day 2027.\" No start date is stated. The comparison chart marks Fright Fest and Holiday in the Park admission for Silver as \"2026 Only\", with a footnote we could not read."],
         ["Book by", "Extended to 11/30 on the Special Offers page (November 28); it was 11/27 on November 19 and 27, and 11/30 on November 13."],
@@ -4571,7 +4571,7 @@
       "headline": "Six Flags Fiesta Texas sells a 2027 Silver Pass for USD 69 a person, with general parking and the water park; the Black Friday Deal now ends 11/30 on the offers page (the Daily Tickets page still said 11/27 on November 28). No child price or age rule is shown and processing fees and tax are extra.",
       "family_of_four": "Passes are priced per person at USD 69, so a family of 2 adults and 2 kids pays about USD 276 before a processing fee of up to USD 9.99 and tax. The pages show no child price or age rule, so we count four people. No family total for named dates was observed.",
       "terms": [
-        ["Headline", "\"Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30.\" (our deal watcher's read of the Special Offers page, November 28, 2026; it said \"Ends 11/27.\" before). The Daily Tickets page, read the same morning, still showed \"Get a 2027 Silver Pass for $69. Ends 11/27.\", so buy by the earlier of the two you see. No year is printed; we read it as 2026."],
+        ["Headline", "\"Black Friday Deal: Buy a Day, Get the Year Free. Ends 11/30.\" (our deal watcher's read of the Special Offers page, November 28, 2026; it said \"Ends 11/27.\" before). The Daily Tickets page, read the same morning, still showed \"Get a 2027 Silver Pass for $69. Ends 11/27.\"; if checkout still shows 11/27, the extension may not apply there. No year is printed; we read it as 2026."],
         ["Price shown", "Silver Pass USD 69 each and Good Any Day Ticket USD 69 each, \"$0 more for Silver\" (Daily Tickets page, read November 28, 2026, unchanged from November 19). Season Passes page, read November 19: Silver Bundle USD 159 each with a meal and drink plan; Gold Pass USD 99 each; Prestige Pass USD 199 each. No regular pass price is shown. Plus a processing fee of up to USD 9.99 and applicable taxes."],
         ["Travel window", "\"Visits All of 2027.\" The Silver chart does not say the rest of 2026 is included, while Gold and Prestige are \"Valid all 2026 & 2027\"."],
         ["Book by", "Ends 11/30 on the Special Offers page (November 28); the Daily Tickets page still showed 11/27 that morning. It was 11/27 on November 19 and 27, and 11/30 on November 13."],
@@ -4786,8 +4786,8 @@
         "Check 2027 ticket prices if you plan just one visit; only the $69 ticket was shown on November 28."
       ],
       "family_total": null,
-      "official_url": "https://www.sixflags.com/greatamerica/black-friday-deal",
-      "source_label": "Six Flags Great America Black Friday Deal page",
+      "official_url": "https://www.sixflags.com/greatamerica/daily-tickets",
+      "source_label": "Six Flags Great America Daily Tickets page",
       "observed_on": "2026-11-28",
       "expires_on": "2026-11-30",
       "deadline_stated": true,
@@ -4885,7 +4885,7 @@
           "A fee of up to $9.99 and tax are extra; all sales are final, blackout dates are not stated, and free parking has a footnote with no text on the page."
         ],
         "how": [
-          "Buy online on the Six Flags Great America Special Offers, Black Friday Deal or Season Passes page by Nov 30.",
+          "Buy online on the Six Flags Great America Special Offers, Daily Tickets or Season Passes page by Nov 30.",
           "Pick Silver ($69), not the $169 Silver Bundle, unless you want the meal plan.",
           "For a child aged 3 to 5, check the free Pre-K Pass before paying for a fourth pass."
         ],
