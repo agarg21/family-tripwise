@@ -6,7 +6,11 @@ name: Resort status
 # show 0 lifts overnight. Then it starts a deploy so the pages show the new counts.
 on:
   schedule:
+    # Three tries a day (GitHub often runs crons hours late or skips them). The reader reads once per ET day and only
+    # 12:30-15:29 ET, so a late run that lands at night does nothing and a second on-time run is a no-op.
+    - cron: "41 17 * * *"
     - cron: "31 18 * * *"
+    - cron: "13 19 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
