@@ -19,7 +19,7 @@ export const roomSetupsUrl = `https://familytripwise.com/${roomSetupsPath}`;
 const receipts = [..."abcdefghij"].map((p) => `dataforseo-g18-nyc-${p}-2026-11-21.json`).concat(["a", "b"].map((p) => `dataforseo-nyc-room-setups-prices-${p}-2026-11-28.json`));
 const searches = () => receipts.flatMap((file) => readReceipt(file).searches);
 const KINDS = { official: "Hotel's own page", booking: "Booking-site listing", press: "Trade press" };
-const FIELDS = ["id", "name", "area", "price_title", "setups", "room", "beds", "sleeps", "size", "door", "bathrooms", "kitchen", "breakfast", "connecting", "catch", "source"];
+const FIELDS = ["id", "name", "area", "price_title", "setups", "room", "beds", "sleeps", "size", "door", "bathrooms", "kitchen", "breakfast", "connecting", "crib", "catch", "source"];
 
 export function validateRoomSetups(data) {
   const ids = new Set();
@@ -27,7 +27,7 @@ export function validateRoomSetups(data) {
     for (const f of FIELDS) if (h[f] === undefined || h[f] === "") throw new Error(`${h.id ?? "hotel"}: missing ${f}`);
     if (ids.has(h.id)) throw new Error(`duplicate ${h.id}`);
     ids.add(h.id);
-    for (const s of h.setups) if (!data.setups[s]) throw new Error(`${h.id}: unknown setup ${s}`);
+    for (const s of h.setups) { if (!data.setups[s]) throw new Error(`${h.id}: unknown setup ${s}`); if (!h.notes?.[s]) throw new Error(`${h.id}: no ${s} note`); }
     for (const src of [h.source, h.source2, h.reported].filter(Boolean)) if (!/^https:\/\//.test(src.url) || !src.label) throw new Error(`${h.id}: bad source`);
     for (const src of [h.source, h.source2].filter(Boolean)) if (!KINDS[src.kind]) throw new Error(`${h.id}: unknown source kind`);
   }
@@ -39,7 +39,7 @@ const priceOf = (search, title) => {
   const rows = search.results.filter((row) => row.title === title);
   return rows.length === 1 && !rows[0].is_paid && rows[0].currency === "USD" && Number.isInteger(rows[0].price) && rows[0].price > 0 ? rows[0].price : null;
 };
-const etDay = (stamp) => stamp.slice(0, 10);
+const etDay = (stamp) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(stamp.replace(" +00:00", "Z").replace(" ", "T")));
 // One night: the newest search (same night, same party) that shows this exact Google title with a price.
 function night(all, title, checkIn, kids) {
   const hits = all.filter((s) => s.nights === 1 && s.check_in === checkIn && s.party.adults === 2 && s.party.child_ages.join() === kids.join())
@@ -60,21 +60,26 @@ const e = (v) => String(readableText(v)).replaceAll("&", "&amp;").replaceAll("<"
 const link = (u, t) => `<a href="${e(u)}">${e(t)}</a>`;
 const monthDay = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 const longDate = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-const nightText = (p) => p.both ? `≈ ${dollars(p.average)} a night` : `≈ ${dollars(p.average)} ${p.fri ? "Friday" : "Saturday"} only`;
-const priceNote = (data, p) => p.both ? `${dollars(p.total)} for ${data.weekend.label}. Seen ${monthDay(p.seen)}.` : `${data.weekend.label}; Google showed one night only. Seen ${monthDay(p.seen)}.`;
+const nightText = (p) => p.both ? `≈ ${dollars(p.average)} a\u00a0night` : `≈ ${dollars(p.average)} ${p.fri ? "Friday" : "Saturday"}\u00a0only`;
+const cellText = (p) => p.both ? `≈ ${dollars(p.average)}` : `≈ ${dollars(p.average)} (${p.fri ? "Fri" : "Sat"} only)`;
+const seenDays = (p) => [...new Set([p.fri, p.sat].filter(Boolean).map((n) => n.seen))].sort().map(monthDay).join(" and ");
+const priceNote = (data, p) => p.both ? `${dollars(p.total)} for ${data.weekend.label}. Seen ${seenDays(p)}.` : `${data.weekend.label}; Google showed one night only. Seen ${seenDays(p)}.`;
 const reportedLine = (r) => `<p class="london-note"><strong>A family reported:</strong> ${e(r.text)} ${link(r.url, r.label)} (a forum post, not checked by us).</p>`;
 
-function card(data, h, p, today) {
-  const rows = [["Where", h.area], ["Family room", h.room], ["Beds", h.beds], ["Sleeps", h.sleeps], ["Size", h.size], ["Door between rooms", h.door], ["Bathrooms", h.bathrooms], ["Kitchen", h.kitchen], ["Breakfast", h.breakfast], ["Connecting rooms", h.connecting]];
-  const price = p ? `<strong>${e(nightText(p))}</strong> for a family of 4. ${e(priceNote(data, p))} Cheapest room Google showed for 4, maybe not this one.` : "Check live rate: no current Google price for a family of 4.";
+function card(data, h, p) {
+  const price = p ? `<strong>${e(nightText(p))}</strong> for a family of 4. ${e(priceNote(data, p))} This is the cheapest room Google showed for 4, maybe not the family room.` : "Check live rate: no current Google price for a family of 4.";
+  const facts = [["Where", h.area], ["Family room", h.room], ["Beds", h.beds], ["Sleeps", h.sleeps], ["Size", h.size], ["Door between rooms", h.door], ["Bathrooms", h.bathrooms], ["Kitchen", h.kitchen], ["Breakfast", h.breakfast], ["Connecting rooms", h.connecting], ["Crib", h.crib]];
+  const stated = facts.filter(([, v]) => v !== "Not stated"), missing = facts.filter(([, v]) => v === "Not stated").map(([k]) => k.toLowerCase());
+  const rows = [...stated.slice(0, 2), ["Price", null], ...stated.slice(2)];
   const srcs = [h.source, h.source2].filter(Boolean).map((s) => `${link(s.url, s.label)} (${e(KINDS[s.kind].toLowerCase())})`).join(" · ");
-  return `<section id="${e(h.id)}" class="london-room"><h2>${e(h.name)}</h2><ul class="room-facts">${rows.map(([k, v]) => `<li><strong>${e(k)}:</strong> ${e(v)}</li>`).join("")}<li><strong>Price:</strong> ${price}</li></ul><p class="room-pick"><strong>The catch:</strong> ${e(h.catch)}</p>${h.reported ? reportedLine(h.reported) : ""}<details class="how-checked"><summary>Where these facts come from</summary><p>Read ${e(longDate(data.read_on))}: ${srcs}. "Not stated" means the source did not say; ask the hotel.</p></details></section>`;
+  return `<section id="${e(h.id)}" class="london-room"><h2>${e(h.name)}</h2><ul class="room-facts">${rows.map(([k, v]) => `<li><strong>${e(k)}:</strong> ${v === null ? price : e(v)}</li>`).join("")}<li><strong>The catch:</strong> ${e(h.catch)}</li>${missing.length ? `<li><strong>Not stated:</strong> ${e(missing.join(", "))}. Ask the hotel.</li>` : ""}</ul>${h.reported ? reportedLine(h.reported) : ""}<details class="how-checked"><summary>Where these facts come from</summary><p>Read ${e(longDate(data.read_on))}: ${srcs}.</p></details></section>`;
 }
 
 function setupSection(data, key, hotels, prices, basis) {
-  const s = data.sections[key], list = hotels.filter((h) => h.setups.includes(key));
-  const item = (h) => `<li>${link(`#${h.id}`, h.name)} (${e(h.area)}): ${e(h.room)}. ${e(h.beds.split(". ")[0].replace(/\.$/, ""))}.${prices[h.id] ? ` <strong>${e(nightText(prices[h.id]))}</strong>` : ""}</li>`;
-  return `<section id="${e(key)}"><h2>${e(data.setups[key].title)}</h2><p>${e(s.intro)}</p><ul>${list.map(item).join("")}</ul><p><strong>Check before booking:</strong> ${e(s.check)}</p>${s.reported ? reportedLine(s.reported) : ""}${basis ? `<p class="london-source">${e(basis)}</p>` : ""}</section>`;
+  const sec = data.sections[key];
+  const list = hotels.filter((h) => h.setups.includes(key)).sort((a, b) => (prices[a.id]?.average ?? 1e9) - (prices[b.id]?.average ?? 1e9));
+  const item = (h) => `<li>${link(`#${h.id}`, h.name)} · ${e(h.area)}: ${e(h.notes[key])}${prices[h.id] ? ` · <strong>${e(nightText(prices[h.id]))}</strong>` : " · check live rate"}</li>`;
+  return `<section id="${e(key)}"><h2>${e(data.setups[key].title)}</h2><p>${e(sec.intro)}</p><ul>${list.map(item).join("")}</ul><p><strong>Check before booking:</strong> ${e(sec.check)}</p>${sec.reported ? `${reportedLine(sec.reported)}${basis ? `<p class="london-source">${e(basis)}</p>` : ""}` : ""}</section>`;
 }
 
 export function roomSetupsPage(today = process.env.FT_BUILD_DATE || easternDate(), data = validateRoomSetups(roomSetupsData())) {
@@ -89,18 +94,19 @@ export function roomSetupsPage(today = process.env.FT_BUILD_DATE || easternDate(
   const title = "NYC Family Hotel Rooms: Suites, Bunk Beds & 2 Queens";
   const description = `${n} New York City hotels by room type for families: bunk beds, two queen beds, suites with a door, connecting rooms, kitchenettes and free breakfast, with sources.`;
   const glance = priced.length && both.length
-    ? `<p class="price-answer-label">Family of 4 (2 adults + kids 5, 8) · ${e(data.weekend.label)}</p><p class="price-figure">About ${e(dollars(Math.min(...both)))}–${e(dollars(Math.max(...both)))} a night</p><p class="price-basis">Cheapest room Google Hotels showed for 4 at each hotel, seen ${e(seen[0] === seen.at(-1) ? monthDay(seen[0]) : `${monthDay(seen[0])}–${seen.at(-1).slice(8).replace(/^0/, "")}`)}, 2026. It may not be the family room named here. Taxes and fees may be extra. Estimate, not a quote.</p>`
+    ? `<p class="price-answer-label">Family of 4 (2 adults + kids 5, 8) · ${e(data.weekend.label)}</p><p class="price-figure">About ${e(dollars(Math.min(...both)))}–${e(dollars(Math.max(...both)))} a\u00a0night</p><p class="price-basis">Cheapest room Google Hotels showed for 4 at each hotel, seen ${e(seen[0] === seen.at(-1) ? monthDay(seen[0]) : `${monthDay(seen[0])}–${seen.at(-1).slice(8).replace(/^0/, "")}`)}, 2026. It may not be the family room named here. NYC hotel tax and any nightly fee are extra. Estimate, not a quote.</p>`
     : `<p class="price-answer-label">Family of 4 (2 adults + kids 5, 8)</p><p class="price-figure">Check live rates</p><p class="price-basis">No current Google prices for these hotels. Enter every child's age when you search.</p>`;
-  const picks = keys.map((k) => `<li><span class="pick-chip">${e(data.setups[k].short)}</span> <span>${link(`#${k}`, `${count(k)} hotels`)}</span></li>`).join("");
-  const table = `<div class="london-scroll" tabindex="0" role="region" aria-label="NYC family hotel rooms compared"><table class="london-comparison london-rooms"><caption>${priced.length ? `Price: US dollars a night, cheapest room Google showed for a family of 4, ${e(data.weekend.label)}. Not quotes.` : "Room types and beds. Check live rates."}</caption><thead><tr><th scope="col">Hotel</th><th scope="col">Family room</th><th scope="col">Beds</th><th scope="col">Sleeps</th><th scope="col">Cheapest room for 4</th></tr></thead><tbody>${sorted.map((h) => `<tr><th scope="row">${link(`#${h.id}`, h.name)}<small>${e(h.area)}</small></th><td data-label="Family room">${e(h.room)}</td><td data-label="Beds">${e(h.beds.split(". ")[0].replace(/\.$/, ""))}</td><td data-label="Sleeps">${e(h.sleeps)}</td><td data-label="Cheapest room for 4">${prices[h.id] ? `<strong>${e(nightText(prices[h.id]))}</strong>` : "Check live rate"}</td></tr>`).join("")}</tbody></table></div>`;
+  const from = (k) => { const ps = data.hotels.filter((h) => h.setups.includes(k) && prices[h.id]).map((h) => prices[h.id].average); return ps.length ? `, from ≈ ${dollars(Math.min(...ps))}` : ""; };
+  const picks = keys.map((k) => `<li><span class="pick-chip">${e(data.setups[k].short)}</span> <span>${link(`#${k}`, `${count(k)} hotels`)}${e(from(k))}</span></li>`).join("");
+  const table = `<div class="london-scroll" tabindex="0" role="region" aria-label="NYC family hotel rooms compared"><table class="london-comparison london-rooms"><caption>${priced.length ? `Price: US dollars a night, cheapest room Google showed for a family of 4, ${e(data.weekend.label)}. Not quotes.` : "Room types and beds. Check live rates."}</caption><thead><tr><th scope="col">Hotel</th><th scope="col">Cheapest room for 4, a night</th><th scope="col">Family room</th><th scope="col">Beds</th><th scope="col">Sleeps</th></tr></thead><tbody>${sorted.map((h) => `<tr><th scope="row">${link(`#${h.id}`, h.name)}<small>${e(h.area)}</small></th><td data-label="Cheapest room for 4, a night">${prices[h.id] ? `<strong>${e(cellText(prices[h.id]))}</strong><small>Any room for 4</small>` : "Check live rate"}</td><td data-label="Family room">${e(h.room)}</td><td data-label="Beds">${e(h.beds.split(". ")[0].replace(/\.$/, ""))}</td><td data-label="Sleeps">${e(h.sleeps)}</td></tr>`).join("")}</tbody></table></div>`;
   const schema = { "@context": "https://schema.org", "@type": "WebPage", name: "NYC family hotel rooms by bed setup", url: roomSetupsUrl, description };
   return withLinkPreview(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(description)}"><link rel="canonical" href="${roomSetupsUrl}"><link rel="stylesheet" href="../styles.css"><script type="application/ld+json">${JSON.stringify(schema)}</script></head><body class="london-page">${siteHeader("../", roomSetupsPath)}
 <main id="main"><section class="london-intro"><p class="eyebrow">New York City · family hotel rooms</p><h1>NYC hotel rooms that fit a family</h1>
 ${contributorCredit()}<p class="london-lead">${n} hotels sorted by the room you need: bunk beds, two queens, a suite with a door, connecting rooms, a kitchen or free breakfast.</p><section id="glance" class="answer-box price-answer" aria-label="Price at a glance">${glance}<p class="pick-heading"><strong>Jump to the room you need</strong></p><ul class="pick-list">${picks}</ul><p class="price-catch"><strong>Main catch:</strong> many NYC "two-bed" rooms are two doubles, and many "suites" have no door. Check both before you book.</p></section><p class="london-source">Room facts read ${e(longDate(data.read_on))} on each hotel's page or a named booking site. Research, not our own stays.</p><figure class="licensed-photo hero-photo"><img src="../images/new-york-city-brooklyn-bridge-park-skyline-2014.webp" width="1600" height="1200" loading="eager" fetchpriority="high" decoding="async" alt="The Manhattan skyline seen across the East River from Brooklyn Bridge Park."><figcaption>Manhattan from Brooklyn Bridge Park. Photo by Arribas91 via ${link("https://commons.wikimedia.org/wiki/File:Manhattan_Skyline_from_Brooklyn_Bridge_Park.jpg", "Wikimedia Commons")}, ${link("https://creativecommons.org/licenses/by-sa/3.0", "CC BY-SA 3.0")}. Resized and cropped.</figcaption></figure></section>
-<section id="compare"><h2>All ${n} hotels at a glance</h2><p>Sorted by price. Tap a hotel for its beds, door, bathrooms, kitchen and the catch.</p>${table}</section>
+<section id="compare"><h2>All ${n} hotels at a glance</h2><p>Sorted by price. The price is the hotel\'s cheapest room for 4 on Google, not always the family room. Tap a hotel for its beds, door, kitchen and the catch.</p>${table}</section>
 ${keys.map((k) => setupSection(data, k, data.hotels, prices, priced.length ? `Prices: family of 4, ${data.weekend.label}, Google Hotels, seen ${seen.map(monthDay).filter((d, i, a) => a.indexOf(d) === i).join(" and ")}, 2026. Not quotes.` : "")).join("\n")}
 <section id="hotels"><h2>Hotel by hotel</h2><p>Each card says where its facts come from. "Listing" means a booking site, not the hotel itself.</p></section>
-${sorted.map((h) => card(data, h, prices[h.id], today)).join("\n")}
+${sorted.map((h) => card(data, h, prices[h.id])).join("\n")}
 <section id="before-booking"><h2>Before you book any of them</h2><ul><li>Search for everyone who will stay, with each child's age.</li><li>Book the named room type, not "run of house" or "room assigned at check-in".</li><li>Ask the hotel to confirm beds, sofa bed, crib and any connection in writing.</li><li>Get the full price with taxes and any nightly fee.</li></ul><p>Comparing areas and prices instead? ${link("./new-york-city-family-hotels.html", "NYC family hotels by trip style")} · ${link("./new-york-city-with-kids.html", "Where to stay in NYC with kids")}</p></section>
 <section id="methodology"><h2>How we checked this page</h2><p>Desk research, not firsthand stays or a ranking.</p><details class="how-checked"><summary>Sources, prices and limits</summary><p>Room facts were read on ${e(longDate(data.read_on))} from each hotel's own room page where it publishes them, and otherwise from a named booking-site listing. Each card says which. Booking sites sometimes disagree with each other; where they did, the card says so. "Not stated" means our source did not say.</p><p>${priced.length ? `Prices are Google Hotels listing prices pulled through DataForSEO on ${e(seen.map(longDate).filter((d, i, a) => a.indexOf(d) === i).join(" and "))}: one 1-night search per night for 2 adults and kids 5 and 8. The headline is the average of Friday and Saturday; the weekend figure is their sum, both estimates. Google does not show which room it priced, or which taxes and fees it includes. Prices leave the page a week before the first night.` : "Google Hotels prices leave this page a week before the first sampled night, so none is shown now."}</p><p>"A family reported" notes are forum posts we read; we did not check them. No safety, stroller or stay experience is claimed. ${link("../about.html", "Our research and uncertainty policy")}</p></details></section></main>${siteEnd("../", roomSetupsPath)}</body></html>\n`);
 }

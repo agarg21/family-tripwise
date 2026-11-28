@@ -1,6 +1,6 @@
 {
   "path": "where-to-stay/new-york-city-family-hotel-rooms.html",
-  "read_on": "2026-11-28",
+  "read_on": "2026-11-27",
   "party": {
     "adults": 2,
     "child_ages": [
@@ -72,6 +72,16 @@
         "text": "A family of 4 posted that they booked the quad bunk room for a November 2026 trip to see shows nearby.",
         "label": "Tripadvisor forum thread",
         "url": "https://www.tripadvisor.com/ShowTopic-g60763-i5-k15586956-Best_Hotels_for_Trip_with_Kids-New_York_City_New_York.html"
+      },
+      "notes": {
+        "bunk": "Classic Quadruple, 4 twin bunks",
+        "sleeps5": "Private 6 Bed Room, 6 twin bunks"
+      },
+      "crib": "Free cribs listed (Hotels.com)",
+      "source2": {
+        "kind": "booking",
+        "label": "Hotels.com listing",
+        "url": "https://ae.hotels.com/es/ho145146/paramount-times-square-nueva-york-estados-unidos"
       }
     },
     {
@@ -103,7 +113,13 @@
         "kind": "press",
         "label": "Trade press on Confirmed Connecting Rooms",
         "url": "https://www.connectingtravel.com/news/hilton-opens-its-first-lifestyle-hotel-in-new-york"
-      }
+      },
+      "notes": {
+        "bunk": "4 twin bunk beds, sleeps 4",
+        "connecting": "Connecting rooms listed; Hilton launched Confirmed Connecting Rooms here",
+        "sleeps5": "King + king Murphy bed + bunk, listed for 5"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "nu-hotel",
@@ -127,7 +143,11 @@
         "kind": "official",
         "label": "NU Hotel room page",
         "url": "https://nuhotelbrooklyn.com/rooms/bunkbed-suite"
-      }
+      },
+      "notes": {
+        "bunk": "Queen + twin bunks"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "tryp",
@@ -154,12 +174,19 @@
         "kind": "booking",
         "label": "Expedia listing",
         "url": "https://www.expedia.com/New-York-Hotels-TRYP-By-Wyndham-New-York-City-Times-Square-South.h4621019.Hotel-Information"
-      }
+      },
+      "notes": {
+        "bunk": "Family Room: 2 queens, bunk and sofa bed",
+        "two-queens": "Two-queen room or Family Room",
+        "sleeps5": "Family Room, listed for 8",
+        "connecting": "Listed as available (request)"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "riu-manhattan",
       "name": "Riu Plaza Manhattan Times Square",
-      "area": "Times Square (47th St)",
+      "area": "Times Square, 47th St",
       "price_title": "Hotel Riu Plaza Manhattan Times Square",
       "setups": [
         "two-queens"
@@ -183,7 +210,11 @@
         "kind": "booking",
         "label": "WestJet Vacations listing",
         "url": "https://westjetvacations.com/en/hotels/united-states/new-york/riu-plaza-manhattan-times-square"
-      }
+      },
+      "notes": {
+        "two-queens": "Deluxe two Queen beds"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "hyatt-place-lic",
@@ -209,12 +240,23 @@
         "kind": "booking",
         "label": "Orbitz listing",
         "url": "https://www.orbitz.com/New-York-Hotels-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Hotel-Reviews"
+      },
+      "notes": {
+        "two-queens": "2 queens + sofa bed",
+        "breakfast": "Free breakfast buffet",
+        "sleeps5": "2 queens + sofa bed, listed for 6"
+      },
+      "crib": "Free cribs listed",
+      "source2": {
+        "kind": "booking",
+        "label": "Expedia listing",
+        "url": "https://www.expedia.com/es/New-York-Hoteles-Hyatt-Place-Long-Island-CityNew-York-City.h19176542.Informacion-Hotel"
       }
     },
     {
       "id": "homewood",
       "name": "Homewood Suites Midtown Times Square-South",
-      "area": "Midtown South (near Penn Station)",
+      "area": "Midtown South, near Penn Station",
       "price_title": "Homewood Suites by Hilton New York/Midtown Manhattan Times Square-South, NY",
       "setups": [
         "two-queens",
@@ -239,8 +281,14 @@
       "source2": {
         "kind": "booking",
         "label": "Hotels.com listing",
-        "url": "https://uk.hotels.com/ho446818/homewood-suites-new-york-midtown-manhattan-times-square-new-york-united-states-of-america/"
-      }
+        "url": "https://ca.hotels.com/ho446818/homewood-suites-new-york-midtown-manhattan-times-square-new-york-united-states-of-america"
+      },
+      "notes": {
+        "two-queens": "Two Queen Studio",
+        "kitchen": "In-room kitchen",
+        "breakfast": "Free breakfast"
+      },
+      "crib": "Free cribs listed (Hotels.com)"
     },
     {
       "id": "beacon",
@@ -271,7 +319,13 @@
         "kind": "booking",
         "label": "Suiteness two-bedroom listing",
         "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/hotel-beacon/two-bedroom-suite"
-      }
+      },
+      "notes": {
+        "suite": "Bedroom with 2 doubles; sofa bed in living room",
+        "kitchen": "Kitchenette with stove",
+        "sleeps5": "Two Bedroom Suite, sleeps 6, 2 bathrooms"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "fifty",
@@ -296,7 +350,12 @@
         "kind": "official",
         "label": "Sonesta family-suite guide",
         "url": "https://nyc.sonesta.com/the-fifty/1-bedroom-suite-guide/"
-      }
+      },
+      "notes": {
+        "suite": "One-Bedroom Apartment, 790 sq ft",
+        "kitchen": "Full kitchen with stovetop"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "kimberly",
@@ -326,7 +385,12 @@
         "kind": "booking",
         "label": "BringFido listing",
         "url": "https://www.bringfido.ca/lodging/87730"
-      }
+      },
+      "notes": {
+        "suite": "One-bedroom suite, 2 bathrooms",
+        "kitchen": "Kitchenette, no stove listed"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "radio-city-apartments",
@@ -362,7 +426,13 @@
         "kind": "booking",
         "label": "Suiteness listing",
         "url": "https://assets-www.suiteness.com/suites/united-states/new-york/new-york/radio-city-apartments/two-bedroom-apartment"
-      }
+      },
+      "notes": {
+        "suite": "Two-bedroom apartment",
+        "kitchen": "Kitchenette",
+        "sleeps5": "Two-bedroom apartment, sleeps 5"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "new-yorker",
@@ -387,7 +457,12 @@
         "kind": "official",
         "label": "New Yorker family-suite page",
         "url": "https://www.newyorkerhotel.com/rooms/family-suite"
-      }
+      },
+      "notes": {
+        "suite": "Family Suite with a separate bedroom",
+        "sleeps5": "Family Suite, sleeps 4-6"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "lotte-palace",
@@ -412,7 +487,12 @@
         "kind": "booking",
         "label": "Suiteness listing",
         "url": "https://assets-www.suiteness.com/suites/united-states/new-york/new-york/lotte-new-york-palace/palace-family-suite-king-king"
-      }
+      },
+      "notes": {
+        "suite": "Two-bedroom Family Suite, 2 bathrooms",
+        "sleeps5": "Family Suite, sleeps 6"
+      },
+      "crib": "Free crib on request (listing)"
     },
     {
       "id": "marquis",
@@ -420,8 +500,7 @@
       "area": "Times Square",
       "price_title": "New York Marriott Marquis",
       "setups": [
-        "connecting",
-        "sleeps5"
+        "connecting"
       ],
       "room": "Family Connector",
       "beds": "2 bedrooms: a king in one, 2 doubles in the other, plus a sofa bed. Standard rooms have 2 doubles.",
@@ -442,12 +521,16 @@
         "kind": "booking",
         "label": "Suiteness listing",
         "url": "https://www.suiteness.com/suites/united-states/new-york/new-york/new-york-marriott-marquis/renovated-deluxe-guest-room-2-double/amp"
-      }
+      },
+      "notes": {
+        "connecting": "Family Connector: 2 rooms, 2 bathrooms, booked as one room type"
+      },
+      "crib": "Not stated"
     },
     {
       "id": "riu-ny",
       "name": "Riu Plaza New York Times Square",
-      "area": "Hell's Kitchen (46th St & 8th Ave)",
+      "area": "Hell's Kitchen, 46th St and 8th Ave",
       "price_title": "Hotel Riu Plaza New York Times Square",
       "setups": [],
       "room": "Deluxe family double beds with sofa bed",
@@ -469,7 +552,8 @@
         "kind": "booking",
         "label": "Booking.com listing",
         "url": "https://www.booking.com/hotel/us/riu-plaza-new-york-times-square.html?aid=336004"
-      }
+      },
+      "crib": "Not stated"
     },
     {
       "id": "empire",
@@ -491,7 +575,8 @@
         "kind": "official",
         "label": "Empire Hotel room page",
         "url": "https://www.empirehotelnyc.com/rooms/empire-junior-suite-two-double-beds"
-      }
+      },
+      "crib": "Not stated"
     }
   ],
   "sections": {
