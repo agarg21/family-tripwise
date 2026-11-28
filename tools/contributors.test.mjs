@@ -10,8 +10,8 @@ const sitemap = readFileSync("site/sitemap.xml", "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 const guides = urls.filter(url => /\/(where-to-stay|things-to-do|family-itinerary)\//.test(url));
 
-test("all 35 guides have one disclosed AI credit immediately after their title", () => {
-  assert.equal(guides.length, 35);
+test("all 36 guides have one disclosed AI credit immediately after their title", () => {
+  assert.equal(guides.length, 36);
   for (const url of guides) {
     const path = `site${new URL(url).pathname}`;
     const html = readFileSync(path, "utf8");

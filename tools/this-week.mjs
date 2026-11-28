@@ -16,6 +16,7 @@ import { writeCancunResortPage } from "./page-generation/cancun-resort-page.mjs"
 import { writePuertoVallartaFamilyResortsPage } from "./page-generation/puerto-vallarta-family-resorts-page.mjs";
 import { writeBostonFamilyHotelsPage } from "./page-generation/boston-family-hotels-page.mjs";
 import { writeLondonFamilyHotelsPage } from "./page-generation/london-family-hotels-page.mjs";
+import { writeRoomSetupsPage } from "./page-generation/nyc-room-setups-page.mjs";
 import { writeWashingtonDcFamilyHotelsPage } from "./page-generation/washington-dc-family-hotels-page.mjs";
 import { easternDate, writeSitemap } from "./page-generation/sitemap.mjs";
 import { addSiteSchema } from "./page-generation/site-schema.mjs";
@@ -78,6 +79,12 @@ writeBostonFamilyHotelsPage((path, contents) => {
 }, today);
 // G18: the London page's dated samples also drop 7 days before their stays.
 writeLondonFamilyHotelsPage((path, contents) => {
+  const full = join(siteDir, path);
+  mkdirSync(dirname(full), { recursive: true });
+  writeFileSync(full, contents);
+}, today);
+// The NYC room-setups page's Google prices also drop 7 days before their stay.
+writeRoomSetupsPage((path, contents) => {
   const full = join(siteDir, path);
   mkdirSync(dirname(full), { recursive: true });
   writeFileSync(full, contents);
