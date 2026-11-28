@@ -1,6 +1,42 @@
 {
   "note": "Pending trend-watch leads (QUEUE G16, docs/plan/trend-fast-lane.md). A flag is a lead, never a fact: verify on the primary source, build per section 3, then delete the flag in the same commit. source_alerts: feeds that went dark (blocked or unreachable).",
-  "flags": [],
+  "flags": [
+    {
+      "id": "t-7464bc8a0f",
+      "city": "New York City",
+      "title": "Austin cheer team raises enough money to stay in New York despite Macy's Thanksgiving Day Parade being postponed",
+      "links": [
+        {
+          "outlet": "KENS 5 (local news)",
+          "url": "https://www.kens5.com/article/news/local/legacy-ranch-cheer-team-community-support-macys-thanksgiving-day-parade-postponed/269-11385994-2232-4225-9a55-108f20df7d1c",
+          "published": "2026-11-28T12:27Z"
+        }
+      ],
+      "first_seen": "2026-11-28T13:05Z",
+      "signals": {
+        "fit": [
+          "city:New York City",
+          "topic:thanksgiving,parade"
+        ],
+        "novelty": [
+          "new",
+          "published<24h"
+        ],
+        "momentum": [],
+        "actionable": [
+          "date:thanksgiving day",
+          "place:macy's thanksgiving day parade"
+        ]
+      },
+      "matched_terms": [
+        "thanksgiving",
+        "parade",
+        "new"
+      ],
+      "score": 8,
+      "priority": "normal"
+    }
+  ],
   "source_alerts": [
     {
       "source_id": "gdelt-new-york-city",
@@ -57,6 +93,14 @@
       "kind": "blocked",
       "reason": "robots.txt HTTP 403",
       "detected_at": "2026-11-15T05:05Z"
+    },
+    {
+      "source_id": "nyc-amny-lifestyle",
+      "city": "New York City",
+      "url": "https://www.amny.com/lifestyle/feed/",
+      "kind": "blocked",
+      "reason": "HTTP 403",
+      "detected_at": "2026-11-28T13:05Z"
     }
   ]
 }
